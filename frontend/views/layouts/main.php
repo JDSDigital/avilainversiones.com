@@ -28,39 +28,110 @@ AppAsset::register($this);
 
 <div class="wrap">
     <?php
-    NavBar::begin([
-        'brandLabel' => Yii::$app->name,
-        'brandUrl' => Yii::$app->homeUrl,
-        'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
-        ],
-    ]);
-    $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'About', 'url' => ['/site/about']],
-        ['label' => 'Contact', 'url' => ['/site/contact']],
-    ];
-    if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
-        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
-    } else {
-        $menuItems[] = '<li>'
-            . Html::beginForm(['/site/logout'], 'post')
-            . Html::submitButton(
-                'Logout (' . Yii::$app->user->identity->username . ')',
-                ['class' => 'btn btn-link logout']
-            )
-            . Html::endForm()
-            . '</li>';
-    }
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
-        'items' => $menuItems,
-    ]);
-    NavBar::end();
+    // NavBar::begin([
+    //     'brandLabel' => Yii::$app->name,
+    //     'brandUrl' => Yii::$app->homeUrl,
+    //     'options' => [
+    //         'class' => 'navbar-inverse navbar-fixed-top',
+    //     ],
+    // ]);
+    // $menuItems = [
+    //     ['label' => 'Home', 'url' => ['/site/index']],
+    //     ['label' => 'About', 'url' => ['/site/about']],
+    //     ['label' => 'Contact', 'url' => ['/site/contact']],
+    // ];
+    // if (Yii::$app->user->isGuest) {
+    //     $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
+    //     $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
+    // } else {
+    //     $menuItems[] = '<li>'
+    //         . Html::beginForm(['/site/logout'], 'post')
+    //         . Html::submitButton(
+    //             'Logout (' . Yii::$app->user->identity->username . ')',
+    //             ['class' => 'btn btn-link logout']
+    //         )
+    //         . Html::endForm()
+    //         . '</li>';
+    // }
+    // echo Nav::widget([
+    //     'options' => ['class' => 'navbar-nav navbar-right'],
+    //     'items' => $menuItems,
+    // ]);
+    // NavBar::end();
     ?>
 
-    <div class="container">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar--bold  navbar-transparent navbar-inverse bg-dark ">
+        <div class="container navbar-container">
+            <!-- Brand/Logo -->
+            <?=
+                Html::a(
+                    Html::img('@web/images/logo/isotipo-golden.png', ['class' => 'img-responsive', 'alt' => Yii::$app->name]),
+                    ['site/index'],
+                    ['class' => 'navbar-brand']
+                )
+            ?>
+            
+            <div class="d-inline-block">
+                <!-- Navbar toggler  -->
+                <button class="navbar-toggler hamburger hamburger-js hamburger--spring" type="button" data-toggle="collapse" data-target="#navbar_main" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse align-items-center justify-content-end" id="navbar_main">
+            <!-- Navbar search - For small resolutions -->
+            <div class="navbar-search-widget b-xs-bottom py-3 d-lg-none d-none">
+                <form class="" role="form">
+                    <div class="input-group input-group-lg">
+                        <input type="text" class="form-control" placeholder="Search for...">
+                        <span class="input-group-btn">
+                        <button class="btn btn-base-3" type="button">Go!</button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown megamenu">
+                    <a class="nav-link" href="../../index.html">
+                        Inicio
+                    </a>
+                </li>
+                <li class="nav-item dropdown megamenu">
+                    <a class="nav-link" href="../../index.html">
+                        Asesorias
+                    </a>
+                </li>
+                <li class="nav-item dropdown megamenu">
+                    <a class="nav-link" href="../../index.html">
+                        Cursos
+                    </a>
+                </li>
+                <li class="nav-item dropdown megamenu">
+                    <a class="nav-link" href="../../index.html">
+                        Nosotros
+                    </a>
+                </li>
+                <li class="nav-item dropdown megamenu">
+                    <a class="nav-link" href="../../index.html">
+                        Contacto
+                    </a>
+                </li>
+                <li class="nav-item dropdown megamenu">
+                    <a class="nav-link" href="../../index.html">
+                        Blog
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <div class="">
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
@@ -69,11 +140,62 @@ AppAsset::register($this);
     </div>
 </div>
 
-<footer class="footer">
-    <div class="container">
-        <p class="pull-left">&copy; <?= Html::encode(Yii::$app->name) ?> <?= date('Y') ?></p>
+<footer id="footer" class="footer">
+    <div class="footer-bottom bg-black py-3">
+        <div class="container">
+            <div class="row cols-xs-space col-sm-space align-items-center">
+                <div class="col-md-7 col-12">
+                    <div class="text-xs-center text-sm-left">
+                        <ul class="footer-menu">
+                            <li>
+                                <a href="#" style="padding-left: 0;">Home</a>
+                            </li>
+                            <li>
+                                <a href="#">About us</a>
+                            </li>
+                            <li>
+                                <a href="#">Services</a>
+                            </li>
+                        </ul>
 
-        <p class="pull-right"><?= Yii::powered() ?></p>
+                        <div class="copyright mt-1">
+                            <ul class="copy-links">
+                                <li>
+                                    &copy; <?= date('Y') . ' ' . Html::encode(Yii::$app->name) ?>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-5">
+                    <div class="text-xs-center text-sm-right">
+                        <ul class="social-media social-media--style-1-v4">
+                            <li>
+                                <a href="#" class="facebook" target="_blank" data-toggle="tooltip" data-original-title="Facebook">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="instagram" target="_blank" data-toggle="tooltip" data-original-title="Instagram">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="dribbble" target="_blank" data-toggle="tooltip" data-original-title="Dribbble">
+                                    <i class="fa fa-dribbble"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="dribbble" target="_blank" data-toggle="tooltip" data-original-title="Github">
+                                    <i class="fa fa-github"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </footer>
 
