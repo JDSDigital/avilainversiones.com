@@ -19,17 +19,14 @@ $this->title = Yii::$app->name;
                                 <div class="container d-flex align-items-center">
                                     <div class="col">
                                         <div class="row text-center">
-                                            <div class="col-12">
-                                                <h2 class="heading heading-xxl strong-600 text-uppercase animated" data-animation-in="fadeInDownBig" data-animation-delay="200">
-                                                    Stay and Wander
+                                            <div class="col-7">
+                                                <h2 class="heading heading-lg strong-600 text-uppercase animated" data-animation-in="fadeInDownBig" data-animation-delay="200">
+                                                    ¿Deseas invertir en bienes raíces?
                                                 </h2>
                                                 <p class="lead animated" data-animation-in="fadeInUpBig" data-animation-delay="200">
-                                                    We do not remember days, we remember moments.
+                                                    Aprende uno de los negocios mas lucrativos del mundo de la mano de expertos.
                                                 </p>
-
-                                                <a href="#" data-scroll-to="#scrollToSection" class="btn btn-styled btn-lg btn-white btn-circle btn-outline mt-5 animated" data-animation-in="fadeInUpBig" data-animation-delay="1000">
-                                                    Learn more
-                                                </a>
+                                                <a href="#" class="btn btn-styled btn-golden btn-circle mt-3 text-uppercase strong-400 animated" data-animation-in="fadeInUpBig" data-animation-delay="1000">Action button</a>
                                             </div>
                                         </div>
                                     </div>
@@ -43,11 +40,42 @@ $this->title = Yii::$app->name;
     </div>
 </section>
 
+<section class="slice-lg has-bg-cover bg-size-cover" style="background-image: url('./images/backgrounds/slider/img-11.jpg');">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-md-8 ml-lg-auto">
+                <div class="px-5 py-5 z-depth-1-bottom">
+                    <h2 class="heading heading-2 strong-400 c-gray-dark">
+                        <?= Html::encode('Inversiones a tu alcance') ?>
+                    </h2>
+                    <div class="">
+                        <p class="c-light-gray mt-4">
+                            Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna.
+                        </p>
+                        <div class="btn-container mt-5">
+                            <a href="#" class="btn btn-styled btn-golden btn-circle text-uppercase strong-400">Action button</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="slice sct-color-1">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-6">
-                <h3 class="heading heading-6 strong-600 text-uppercase mb-0"><?= Html::encode('Blog') ?></h3>
+            <div class="col-12">
+                <div class="row align-items-center">
+                    <div class="col-12">
+                        <div class="section-title section-title--style-1 text-center mb-4">
+                            <h3 class="section-title-inner heading-2 text-uppercase strong-400">
+                                <span><?= Html::encode('Blog') ?></span>
+                            </h3>
+                            <span class="section-title-delimiter clearfix"></span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -225,12 +253,17 @@ $this->title = Yii::$app->name;
     </div>
 </section>
 
-
 <section class="slice-lg sct-color-1">
     <div class="container container-lg">
+
         <div class="row align-items-center">
-            <div class="col-6">
-                <h3 class="heading heading-6 strong-600 text-uppercase mb-0"><?= Html::encode('Servicios Adicionales') ?></h3>
+            <div class="col-12">
+                <div class="section-title section-title--style-1 text-center mb-4">
+                    <h3 class="section-title-inner heading-2 strong-400">
+                        <span><?= Html::encode('Servicios Adicionales') ?></span>
+                    </h3>
+                    <span class="section-title-delimiter clearfix"></span>
+                </div>
             </div>
         </div>
         
@@ -244,7 +277,7 @@ $this->title = Yii::$app->name;
                         <span class="mask mask-dark alpha-8 alpha-5--hover"></span>
                         <div class="card-body px-5 py-5">
                             <div style="min-height: 400px;">
-                                <h3 class="heading heading-inverse heading-2 strong-600 mb-3">Digital Art</h3>
+                                <h3 class="heading heading-inverse heading-2 strong-600 mb-3"><?= Html::encode('Arriendo') ?></h3>
                                 <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
                             </div>
                             <span href="#" class="link link--style-4 heading-sm text-uppercase strong-500">
@@ -263,7 +296,7 @@ $this->title = Yii::$app->name;
                         <span class="mask mask-dark alpha-8 alpha-5--hover"></span>
                         <div class="card-body px-5 py-5">
                             <div style="min-height: 400px;">
-                                <h3 class="heading heading-inverse heading-2 strong-600 mb-3">Photography</h3>
+                                <h3 class="heading heading-inverse heading-2 strong-600 mb-3"><?= Html::encode('Crédito Hipotecario') ?></h3>
                                 <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
                             </div>
                             <span href="#" class="link link--style-4 heading-sm text-uppercase strong-500">
@@ -282,7 +315,7 @@ $this->title = Yii::$app->name;
                         <span class="mask mask-dark alpha-8 alpha-5--hover"></span>
                         <div class="card-body px-5 py-5">
                             <div style="min-height: 400px;">
-                                <h3 class="heading heading-inverse heading-2 strong-600 mb-3">Movies</h3>
+                                <h3 class="heading heading-inverse heading-2 strong-600 mb-3"><?= Html::encode('Oportunidades de Inversión') ?></h3>
                                 <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
                             </div>
                             <a href="#" class="link link--style-4 heading-sm text-uppercase strong-500">
@@ -301,7 +334,7 @@ $this->title = Yii::$app->name;
                         <span class="mask mask-dark alpha-8 alpha-5--hover"></span>
                         <div class="card-body px-5 py-5">
                             <div style="min-height: 400px;">
-                                <h3 class="heading heading-inverse heading-2 strong-600 mb-3">Digital Art</h3>
+                                <h3 class="heading heading-inverse heading-2 strong-600 mb-3"><?= Html::encode('Departamento Legal') ?></h3>
                                 <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
                             </div>
                             <span href="#" class="link link--style-4 heading-sm text-uppercase strong-500">

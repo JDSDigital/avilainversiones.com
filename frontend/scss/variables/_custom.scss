@@ -8,6 +8,26 @@ Uncomment the lines you want to edit. Remove the ones you don't need or add new 
 
 */
 
+$golden-light-1: rgba(255, 215, 0, 1);
+$golden-light-2: rgba(255, 215, 0, 0.9);
+$golden-light-3: rgba(255, 215, 0, 0.7);
+
+$golden-dark-1: rgba(190, 148, 24, 1);
+$golden-dark-2: rgba(190, 148, 24, 0.9);
+$golden-dark-3: rgba(190, 148, 24, 0.7);
+
+$golden-gradient: linear-gradient(to right, $golden-dark-1, $golden-light-1, $golden-dark-1);
+$golden-gradient-inverse: linear-gradient(to right, $golden-light-1, $golden-dark-1, $golden-light-1);
+$golden-gradient-background: linear-gradient(110deg, $golden-dark-1, $golden-light-1, $golden-dark-1);
+$golden-gradient-background-inverse: linear-gradient(110deg, $golden-light-1, $golden-dark-1, $golden-light-1);
+
+$navbar-dark-nav-link-color: $golden-light-3;
+$navbar-dark-nav-link-color-hover: $golden-light-2;
+$navbar-dark-nav-link-color-active: $golden-light-1;
+
+$navbar-dark-toggle-color-hover: $golden-light-3;
+$navbar-dark-toggle-color-active: $golden-light-2;
+
 /* Body */
 //$body-bg: #fff;
 

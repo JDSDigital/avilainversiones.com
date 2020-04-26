@@ -166,7 +166,7 @@ Uncomment the lines you want to edit. Remove the ones you don't need or add new 
 }
 
 .navbar--inverse + .global-search .form-global-search .search-input {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 215, 0, 0.7);
 }
 
 .navbar--sm + .global-search .form-global-search .search-input {
@@ -649,7 +649,7 @@ Uncomment the lines you want to edit. Remove the ones you don't need or add new 
 }
 
 .top-navbar--inverse .top-navbar-menu > ul.top-menu > li > a {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 215, 0, 0.7);
 }
 
 .top-navbar--inverse .top-navbar-menu > ul.top-menu > li > a:hover {
@@ -944,20 +944,20 @@ Uncomment the lines you want to edit. Remove the ones you don't need or add new 
 }
 
 .navbar-inverse .navbar-nav .nav-link {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 215, 0, 0.7);
   background: transparent;
 }
 
 .navbar-inverse .navbar-nav .nav-link:focus,
 .navbar-inverse .navbar-nav .nav-link:hover {
-  color: rgba(0, 0, 0, 0.9);
+  color: rgba(255, 215, 0, 0.9);
   background: transparent;
 }
 
 .navbar-inverse .navbar-nav .show .nav-link,
 .navbar-inverse .navbar-nav .show .nav-link:focus,
 .navbar-inverse .navbar-nav .show .nav-link:hover {
-  color: rgba(0, 0, 0, 0.9);
+  color: rgba(255, 215, 0, 0.9);
   background: transparent;
 }
 
@@ -1214,11 +1214,11 @@ Uncomment the lines you want to edit. Remove the ones you don't need or add new 
 }
 
 .navbar-inverse .navbar-nav .nav-item-icon .nav-link {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 215, 0, 0.7);
 }
 
 .navbar-inverse .navbar-nav .nav-item-icon .nav-link:hover {
-  color: rgba(0, 0, 0, 0.9);
+  color: rgba(255, 215, 0, 0.9);
 }
 
 /* Navbar styles */
@@ -1725,7 +1725,7 @@ Uncomment the lines you want to edit. Remove the ones you don't need or add new 
     left: -6px;
   }
   .navbar-inverse .mega-dropdown-menu .meganav-section-title {
-    color: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 215, 0, 0.7);
   }
   .navbar-inverse .mega-dropdown-menu .dropdown-header {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -1838,7 +1838,7 @@ Uncomment the lines you want to edit. Remove the ones you don't need or add new 
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
   .navbar-inverse .dropdown-menu .dropdown-item {
-    color: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 215, 0, 0.7);
   }
   .navbar-inverse .dropdown-menu .dropdown-item:focus,
   .navbar-inverse .dropdown-menu .dropdown-item:hover {
@@ -1898,7 +1898,7 @@ Uncomment the lines you want to edit. Remove the ones you don't need or add new 
   }
   .navbar--inverse .navbar-toggle:focus .icon-bar,
   .navbar--inverse .navbar-toggle:hover .icon-bar {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 215, 0, 0.7);
   }
   .navbar--inverse .navbar-icon-btn {
     background-color: transparent;
@@ -1908,7 +1908,7 @@ Uncomment the lines you want to edit. Remove the ones you don't need or add new 
     color: rgba(255, 255, 255, 0.5);
   }
   .navbar--inverse .navbar-icon-btn:hover i {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 215, 0, 0.7);
   }
 }
 
@@ -15967,12 +15967,12 @@ span.flatpickr-weekday {
 .navbar-inverse .hamburger:hover:not(.is-active) .hamburger-inner,
 .navbar-inverse .hamburger:hover:not(.is-active) .hamburger-inner:after,
 .navbar-inverse .hamburger:hover:not(.is-active) .hamburger-inner:before {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 215, 0, 0.7);
 }
 
 .navbar-inverse .hamburger.is-active .hamburger-inner:after,
 .navbar-inverse .hamburger.is-active .hamburger-inner:before {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 215, 0, 0.9);
 }
 
 .milestone-counter {
@@ -22703,5 +22703,48 @@ pre {
 }
 
 .navbar-brand img {
-  max-height: 100px;
+  max-height: 60px;
+}
+
+.navbar-opaque.navbar-inverse .navbar-nav .nav-link {
+  color: rgba(255, 215, 0, 0.7);
+}
+
+.navbar-opaque.navbar-inverse .navbar-nav .nav-link:hover {
+  color: rgba(255, 215, 0, 0.9);
+}
+
+.navbar-opaque.navbar-inverse .navbar-nav .active .nav-link {
+  color: gold;
+}
+
+.navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .nav-link.active {
+  color: gold;
+}
+
+.sticky-top {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+}
+
+.section-title .section-title-delimiter::before {
+  background: linear-gradient(to right, #be9418, gold, #be9418);
+}
+
+.background-image-holder .container {
+  height: 80%;
+}
+
+.btn-golden {
+  color: #000;
+  background: linear-gradient(110deg, #be9418, gold, #be9418);
+  border: 2px solid #be9418;
+}
+
+.btn-golden:active, .btn-golden:hover {
+  border-color: gold;
+}
+
+.btn-golden:focus {
+  background: linear-gradient(110deg, gold, #be9418, gold);
 }

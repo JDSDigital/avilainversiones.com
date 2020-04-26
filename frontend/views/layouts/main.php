@@ -61,12 +61,12 @@ AppAsset::register($this);
     ?>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar--bold  navbar-transparent navbar-inverse bg-dark ">
+    <nav class="navbar navbar-expand-lg navbar--bold sticky-top navbar-opaque navbar-inverse bg-light">
         <div class="container navbar-container">
             <!-- Brand/Logo -->
             <?=
                 Html::a(
-                    Html::img('@web/images/logo/isotipo-golden.png', ['class' => 'img-responsive', 'alt' => Yii::$app->name]),
+                    Html::img('@web/images/logo/logo-navbar-golden.png', ['class' => 'img-responsive', 'alt' => Yii::$app->name]),
                     ['site/index'],
                     ['class' => 'navbar-brand']
                 )
@@ -82,52 +82,30 @@ AppAsset::register($this);
             </div>
 
             <div class="collapse navbar-collapse align-items-center justify-content-end" id="navbar_main">
-            <!-- Navbar search - For small resolutions -->
-            <div class="navbar-search-widget b-xs-bottom py-3 d-lg-none d-none">
-                <form class="" role="form">
-                    <div class="input-group input-group-lg">
-                        <input type="text" class="form-control" placeholder="Search for...">
-                        <span class="input-group-btn">
-                        <button class="btn btn-base-3" type="button">Go!</button>
-                        </span>
-                    </div>
-                </form>
+
+                <!-- Navbar links -->
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown megamenu "<?= (Yii::$app->controller->id == 'site' && Yii::$app->controller->action->id == 'index') ? 'action' : '' ?>>
+                        <?= Html::a(Html::encode('Inicio'), ['site/index'], ['class' => 'nav-link']) ?>
+                    </li>
+                    <li class="nav-item dropdown megamenu">
+                        <?= Html::a(Html::encode('Asesorías'), ['site/index'], ['class' => 'nav-link']) ?>
+                    </li>
+                    <li class="nav-item dropdown megamenu">
+                        <?= Html::a(Html::encode('Cursos'), ['site/index'], ['class' => 'nav-link']) ?>
+                    </li>
+                    <li class="nav-item dropdown megamenu "<?= (Yii::$app->controller->id == 'site' && Yii::$app->controller->action->id == 'about') ? 'action' : '' ?>>
+                        <?= Html::a(Html::encode('Empresa'), ['site/about'], ['class' => 'nav-link']) ?>
+                    </li>
+                    <li class="nav-item dropdown megamenu "<?= (Yii::$app->controller->id == 'site' && Yii::$app->controller->action->id == 'contact') ? 'action' : '' ?>>
+                        <?= Html::a(Html::encode('Contacto'), ['site/contact'], ['class' => 'nav-link']) ?>
+                    </li>
+                    <li class="nav-item dropdown megamenu">
+                        <?= Html::a(Html::encode('Blog'), ['site/index'], ['class' => 'nav-link']) ?>
+                    </li>
+                </ul>
+                
             </div>
-
-            <!-- Navbar links -->
-            <ul class="navbar-nav">
-                <li class="nav-item dropdown megamenu">
-                    <a class="nav-link" href="../../index.html">
-                        Inicio
-                    </a>
-                </li>
-                <li class="nav-item dropdown megamenu">
-                    <a class="nav-link" href="../../index.html">
-                        Asesorias
-                    </a>
-                </li>
-                <li class="nav-item dropdown megamenu">
-                    <a class="nav-link" href="../../index.html">
-                        Cursos
-                    </a>
-                </li>
-                <li class="nav-item dropdown megamenu">
-                    <a class="nav-link" href="../../index.html">
-                        Nosotros
-                    </a>
-                </li>
-                <li class="nav-item dropdown megamenu">
-                    <a class="nav-link" href="../../index.html">
-                        Contacto
-                    </a>
-                </li>
-                <li class="nav-item dropdown megamenu">
-                    <a class="nav-link" href="../../index.html">
-                        Blog
-                    </a>
-                </li>
-            </ul>
-
         </div>
     </nav>
 

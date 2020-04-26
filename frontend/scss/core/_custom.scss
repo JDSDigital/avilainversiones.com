@@ -1,4 +1,46 @@
 // Put here all the styles you want to add or edit
 .navbar-brand img {
-  max-height: 100px;
+  max-height: 60px;
+}
+
+.navbar-opaque.navbar-inverse .navbar-nav {
+  .nav-link {
+    color: $golden-light-3;
+  }
+
+  .nav-link:hover {
+    color: $golden-light-2;
+  }
+
+  .active .nav-link {
+    color: $golden-light-1;
+  }
+}
+
+.navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .nav-link.active {
+  color: $golden-light-1;
+}
+
+.sticky-top {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+}
+
+.section-title .section-title-delimiter::before {
+  background: $golden-gradient;
+}
+.background-image-holder .container {
+  height: 80%;
+}
+
+.btn-golden {
+  color: #000;
+  background: $golden-gradient-background;
+  border: 2px solid $golden-dark-1;
+}
+.btn-golden:active, .btn-golden:hover {
+  border-color: $golden-light-1;
+}
+.btn-golden:focus {
+  background: $golden-gradient-background-inverse;
 }

@@ -47,6 +47,8 @@ return [
             'showScriptName' => false,
             'rules' => [
                 '' => 'site/index',
+                'empresa' => 'site/about',
+                'contacto' => 'site/contact',
             ],
         ],
     ],
