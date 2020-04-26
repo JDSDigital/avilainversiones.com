@@ -44,3 +44,15 @@
 .btn-golden:focus {
   background: $golden-gradient-background-inverse;
 }
+.social-media.social-media--style-1-v2 > li > a {
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+
+  &:hover {
+    background: $golden-gradient-background;
+    color: #000;
+  }
+}
+.border-color-golden {
+  border-color: $golden-dark-1 !important;
+}

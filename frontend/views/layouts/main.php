@@ -85,7 +85,7 @@ AppAsset::register($this);
 
                 <!-- Navbar links -->
                 <ul class="navbar-nav">
-                    <li class="nav-item dropdown megamenu "<?= (Yii::$app->controller->id == 'site' && Yii::$app->controller->action->id == 'index') ? 'action' : '' ?>>
+                    <li class="nav-item dropdown megamenu <?= (Yii::$app->controller->id == 'site' && Yii::$app->controller->action->id == 'index') ? 'active' : '' ?>">
                         <?= Html::a(Html::encode('Inicio'), ['site/index'], ['class' => 'nav-link']) ?>
                     </li>
                     <li class="nav-item dropdown megamenu">
@@ -94,14 +94,20 @@ AppAsset::register($this);
                     <li class="nav-item dropdown megamenu">
                         <?= Html::a(Html::encode('Cursos'), ['site/index'], ['class' => 'nav-link']) ?>
                     </li>
-                    <li class="nav-item dropdown megamenu "<?= (Yii::$app->controller->id == 'site' && Yii::$app->controller->action->id == 'about') ? 'action' : '' ?>>
-                        <?= Html::a(Html::encode('Empresa'), ['site/about'], ['class' => 'nav-link']) ?>
-                    </li>
-                    <li class="nav-item dropdown megamenu "<?= (Yii::$app->controller->id == 'site' && Yii::$app->controller->action->id == 'contact') ? 'action' : '' ?>>
-                        <?= Html::a(Html::encode('Contacto'), ['site/contact'], ['class' => 'nav-link']) ?>
+                    <li class="nav-item dropdown megamenu">
+                        <?= Html::a(Html::encode('Eventos'), ['site/index'], ['class' => 'nav-link']) ?>
                     </li>
                     <li class="nav-item dropdown megamenu">
-                        <?= Html::a(Html::encode('Blog'), ['site/index'], ['class' => 'nav-link']) ?>
+                        <?= Html::a(Html::encode('Propiedades'), ['site/index'], ['class' => 'nav-link']) ?>
+                    </li>
+                    <li class="nav-item dropdown megamenu <?= (Yii::$app->controller->id == 'site' && Yii::$app->controller->action->id == 'about') ? 'active' : '' ?>">
+                        <?= Html::a(Html::encode('Empresa'), ['site/about'], ['class' => 'nav-link']) ?>
+                    </li>
+                    <li class="nav-item dropdown megamenu <?= (Yii::$app->controller->id == 'site' && Yii::$app->controller->action->id == 'contact') ? 'active' : '' ?>">
+                        <?= Html::a(Html::encode('Contacto'), ['site/contact'], ['class' => 'nav-link']) ?>
+                    </li>
+                    <li class="nav-item dropdown megamenu <?= (Yii::$app->controller->id == 'blog') ? 'active' : '' ?>">
+                        <?= Html::a(Html::encode('Blog'), ['blog/index'], ['class' => 'nav-link']) ?>
                     </li>
                 </ul>
                 

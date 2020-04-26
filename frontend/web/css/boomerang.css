@@ -22748,3 +22748,17 @@ pre {
 .btn-golden:focus {
   background: linear-gradient(110deg, gold, #be9418, gold);
 }
+
+.social-media.social-media--style-1-v2 > li > a {
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.social-media.social-media--style-1-v2 > li > a:hover {
+  background: linear-gradient(110deg, #be9418, gold, #be9418);
+  color: #000;
+}
+
+.border-color-golden {
+  border-color: #be9418 !important;
+}

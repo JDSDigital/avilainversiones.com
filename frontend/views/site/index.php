@@ -269,15 +269,15 @@ $this->title = Yii::$app->name;
         
         <span class="space-xs-lg"></span>
 
-        <div class="row cols-xs-space cols-sm-space cols-md-space">
-            <div class="col-lg-3">
-                <div class="card bg-dark alpha-wrapper text-white overflow--hidden border-0">
+        <div class="row cols-xs-space cols-sm-space cols-md-space justify-content-center">
+            <div class="col-3">
+                <div class="card bg-dark alpha-wrapper text-white overflow--hidden border-0 mb-5">
                     <a href="#">
                         <div class="card-img-bg" style="background-image: url('./images/prv/work/creative/img-square-1.jpg');"></div>
                         <span class="mask mask-dark alpha-8 alpha-5--hover"></span>
-                        <div class="card-body px-5 py-5">
-                            <div style="min-height: 400px;">
-                                <h3 class="heading heading-inverse heading-2 strong-600 mb-3"><?= Html::encode('Arriendo') ?></h3>
+                        <div class="card-body px-4 py-4">
+                            <div style="min-height: 300px;">
+                                <h3 class="heading heading-inverse heading-3 strong-600 mb-3"><?= Html::encode('Arriendo') ?></h3>
                                 <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
                             </div>
                             <span href="#" class="link link--style-4 heading-sm text-uppercase strong-500">
@@ -289,14 +289,14 @@ $this->title = Yii::$app->name;
                 </div>
             </div>
 
-            <div class="col-lg-3">
-                <div class="card bg-dark alpha-wrapper text-white overflow--hidden border-0">
+            <div class="col-3">
+                <div class="card bg-dark alpha-wrapper text-white overflow--hidden border-0 mb-5">
                     <a href="#">
                         <div class="card-img-bg" style="background-image: url('./images/prv/work/creative/img-square-2.jpg');"></div>
                         <span class="mask mask-dark alpha-8 alpha-5--hover"></span>
-                        <div class="card-body px-5 py-5">
-                            <div style="min-height: 400px;">
-                                <h3 class="heading heading-inverse heading-2 strong-600 mb-3"><?= Html::encode('Crédito Hipotecario') ?></h3>
+                        <div class="card-body px-4 py-4">
+                            <div style="min-height: 300px;">
+                                <h3 class="heading heading-inverse heading-3 strong-600 mb-3"><?= Html::encode('Crédito Hipotecario') ?></h3>
                                 <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
                             </div>
                             <span href="#" class="link link--style-4 heading-sm text-uppercase strong-500">
@@ -308,14 +308,14 @@ $this->title = Yii::$app->name;
                 </div>
             </div>
 
-            <div class="col-lg-3">
-                <div class="card bg-dark alpha-wrapper text-white overflow--hidden border-0">
+            <div class="col-3">
+                <div class="card bg-dark alpha-wrapper text-white overflow--hidden border-0 mb-5">
                     <a href="#">
                         <div class="card-img-bg" style="background-image: url('./images/prv/work/creative/img-square-3.jpg');"></div>
                         <span class="mask mask-dark alpha-8 alpha-5--hover"></span>
-                        <div class="card-body px-5 py-5">
-                            <div style="min-height: 400px;">
-                                <h3 class="heading heading-inverse heading-2 strong-600 mb-3"><?= Html::encode('Oportunidades de Inversión') ?></h3>
+                        <div class="card-body px-4 py-4">
+                            <div style="min-height: 300px;">
+                                <h3 class="heading heading-inverse heading-3 strong-600 mb-3"><?= Html::encode('Oportunidades de Inversión') ?></h3>
                                 <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
                             </div>
                             <a href="#" class="link link--style-4 heading-sm text-uppercase strong-500">
@@ -327,14 +327,71 @@ $this->title = Yii::$app->name;
                 </div>
             </div>
 
-            <div class="col-lg-3">
-                <div class="card bg-dark alpha-wrapper text-white overflow--hidden border-0">
+            <div class="col-3">
+                <div class="card bg-dark alpha-wrapper text-white overflow--hidden border-0 mb-5">
                     <a href="#">
                         <div class="card-img-bg" style="background-image: url('./images/prv/work/creative/img-square-1.jpg');"></div>
                         <span class="mask mask-dark alpha-8 alpha-5--hover"></span>
-                        <div class="card-body px-5 py-5">
-                            <div style="min-height: 400px;">
-                                <h3 class="heading heading-inverse heading-2 strong-600 mb-3"><?= Html::encode('Departamento Legal') ?></h3>
+                        <div class="card-body px-4 py-4">
+                            <div style="min-height: 300px;">
+                                <h3 class="heading heading-inverse heading-3 strong-600 mb-3"><?= Html::encode('Departamento Legal') ?></h3>
+                                <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                            </div>
+                            <span href="#" class="link link--style-4 heading-sm text-uppercase strong-500">
+                                See articles
+                                <i class="ion-ios-arrow-right ml-2"></i>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="card bg-dark alpha-wrapper text-white overflow--hidden border-0 mb-5">
+                    <a href="#">
+                        <div class="card-img-bg" style="background-image: url('./images/prv/work/creative/img-square-2.jpg');"></div>
+                        <span class="mask mask-dark alpha-8 alpha-5--hover"></span>
+                        <div class="card-body px-4 py-4">
+                            <div style="min-height: 300px;">
+                                <h3 class="heading heading-inverse heading-3 strong-600 mb-3"><?= Html::encode('Estadísticas') ?></h3>
+                                <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                            </div>
+                            <span href="#" class="link link--style-4 heading-sm text-uppercase strong-500">
+                                See articles
+                                <i class="ion-ios-arrow-right ml-2"></i>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="card bg-dark alpha-wrapper text-white overflow--hidden border-0 mb-5">
+                    <a href="#">
+                        <div class="card-img-bg" style="background-image: url('./images/prv/work/creative/img-square-3.jpg');"></div>
+                        <span class="mask mask-dark alpha-8 alpha-5--hover"></span>
+                        <div class="card-body px-4 py-4">
+                            <div style="min-height: 300px;">
+                                <h3 class="heading heading-inverse heading-3 strong-600 mb-3"><?= Html::encode('Alianzas') ?></h3>
+                                <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                            </div>
+                            <a href="#" class="link link--style-4 heading-sm text-uppercase strong-500">
+                                See articles
+                                <i class="ion-ios-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="card bg-dark alpha-wrapper text-white overflow--hidden border-0 mb-5">
+                    <a href="#">
+                        <div class="card-img-bg" style="background-image: url('./images/prv/work/creative/img-square-1.jpg');"></div>
+                        <span class="mask mask-dark alpha-8 alpha-5--hover"></span>
+                        <div class="card-body px-4 py-4">
+                            <div style="min-height: 300px;">
+                                <h3 class="heading heading-inverse heading-3 strong-600 mb-3"><?= Html::encode('Administración de Propiedades') ?></h3>
                                 <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
                             </div>
                             <span href="#" class="link link--style-4 heading-sm text-uppercase strong-500">
