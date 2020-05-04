@@ -51,6 +51,8 @@ return [
                 'empresa' => 'site/about',
                 'contacto' => 'site/contact',
                 'blog' => 'blog/index',
+                'propiedades' => 'properties/index',
+                'propiedades/1' => 'properties/view',
             ],
         ],
     ],

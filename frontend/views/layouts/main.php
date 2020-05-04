@@ -27,39 +27,6 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 
 <div class="wrap">
-    <?php
-    // NavBar::begin([
-    //     'brandLabel' => Yii::$app->name,
-    //     'brandUrl' => Yii::$app->homeUrl,
-    //     'options' => [
-    //         'class' => 'navbar-inverse navbar-fixed-top',
-    //     ],
-    // ]);
-    // $menuItems = [
-    //     ['label' => 'Home', 'url' => ['/site/index']],
-    //     ['label' => 'About', 'url' => ['/site/about']],
-    //     ['label' => 'Contact', 'url' => ['/site/contact']],
-    // ];
-    // if (Yii::$app->user->isGuest) {
-    //     $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
-    //     $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
-    // } else {
-    //     $menuItems[] = '<li>'
-    //         . Html::beginForm(['/site/logout'], 'post')
-    //         . Html::submitButton(
-    //             'Logout (' . Yii::$app->user->identity->username . ')',
-    //             ['class' => 'btn btn-link logout']
-    //         )
-    //         . Html::endForm()
-    //         . '</li>';
-    // }
-    // echo Nav::widget([
-    //     'options' => ['class' => 'navbar-nav navbar-right'],
-    //     'items' => $menuItems,
-    // ]);
-    // NavBar::end();
-    ?>
-
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar--bold sticky-top navbar-opaque navbar-inverse bg-light">
         <div class="container navbar-container">
@@ -97,8 +64,8 @@ AppAsset::register($this);
                     <li class="nav-item dropdown megamenu">
                         <?= Html::a(Html::encode('Eventos'), ['site/index'], ['class' => 'nav-link']) ?>
                     </li>
-                    <li class="nav-item dropdown megamenu">
-                        <?= Html::a(Html::encode('Propiedades'), ['site/index'], ['class' => 'nav-link']) ?>
+                    <li class="nav-item dropdown megamenu <?= (Yii::$app->controller->id == 'properties') ? 'active' : '' ?>">
+                        <?= Html::a(Html::encode('Propiedades'), ['properties/index'], ['class' => 'nav-link']) ?>
                     </li>
                     <li class="nav-item dropdown megamenu <?= (Yii::$app->controller->id == 'site' && Yii::$app->controller->action->id == 'about') ? 'active' : '' ?>">
                         <?= Html::a(Html::encode('Empresa'), ['site/about'], ['class' => 'nav-link']) ?>
@@ -128,17 +95,32 @@ AppAsset::register($this);
     <div class="footer-bottom bg-black py-3">
         <div class="container">
             <div class="row cols-xs-space col-sm-space align-items-center">
-                <div class="col-md-7 col-12">
+                <div class="col-md-10 col-12">
                     <div class="text-xs-center text-sm-left">
                         <ul class="footer-menu">
                             <li>
-                                <a href="#" style="padding-left: 0;">Home</a>
+                                <?= Html::a(Html::encode('Inicio'), ['site/index'], ['class' => 'pl-0']) ?>
                             </li>
                             <li>
-                                <a href="#">About us</a>
+                                <?= Html::a(Html::encode('Asesorías'), ['site/index']) ?>
                             </li>
                             <li>
-                                <a href="#">Services</a>
+                                <?= Html::a(Html::encode('Cursos'), ['site/index']) ?>
+                            </li>
+                            <li>
+                                <?= Html::a(Html::encode('Eventos'), ['site/index']) ?>
+                            </li>
+                            <li>
+                                <?= Html::a(Html::encode('Propiedades'), ['properties/index']) ?>
+                            </li>
+                            <li>
+                                <?= Html::a(Html::encode('Empresa'), ['site/about']) ?>
+                            </li>
+                            <li>
+                                <?= Html::a(Html::encode('Contacto'), ['site/contact']) ?>
+                            </li>
+                            <li>
+                                <?= Html::a(Html::encode('Blog'), ['blog/index']) ?>
                             </li>
                         </ul>
 
@@ -152,7 +134,7 @@ AppAsset::register($this);
                     </div>
                 </div>
 
-                <div class="col-md-5">
+                <div class="col-md-2">
                     <div class="text-xs-center text-sm-right">
                         <ul class="social-media social-media--style-1-v4">
                             <li>

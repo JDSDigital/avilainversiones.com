@@ -22762,3 +22762,7 @@ pre {
 .border-color-golden {
   border-color: #be9418 !important;
 }
+
+.block--style-3 .block-price {
+  color: rgba(255, 215, 0, 0.9);
+}
