@@ -58,11 +58,11 @@ AppAsset::register($this);
                     <li class="nav-item dropdown megamenu">
                         <?= Html::a(Html::encode('Asesorías'), ['site/index'], ['class' => 'nav-link']) ?>
                     </li>
-                    <li class="nav-item dropdown megamenu">
-                        <?= Html::a(Html::encode('Cursos'), ['site/index'], ['class' => 'nav-link']) ?>
+                    <li class="nav-item dropdown megamenu <?= (Yii::$app->controller->id == 'courses') ? 'active' : '' ?>">
+                        <?= Html::a(Html::encode('Cursos'), ['courses/index'], ['class' => 'nav-link']) ?>
                     </li>
-                    <li class="nav-item dropdown megamenu">
-                        <?= Html::a(Html::encode('Eventos'), ['site/index'], ['class' => 'nav-link']) ?>
+                    <li class="nav-item dropdown megamenu <?= (Yii::$app->controller->id == 'events') ? 'active' : '' ?>">
+                        <?= Html::a(Html::encode('Eventos'), ['events/index'], ['class' => 'nav-link']) ?>
                     </li>
                     <li class="nav-item dropdown megamenu <?= (Yii::$app->controller->id == 'properties') ? 'active' : '' ?>">
                         <?= Html::a(Html::encode('Propiedades'), ['properties/index'], ['class' => 'nav-link']) ?>
@@ -105,10 +105,10 @@ AppAsset::register($this);
                                 <?= Html::a(Html::encode('Asesorías'), ['site/index']) ?>
                             </li>
                             <li>
-                                <?= Html::a(Html::encode('Cursos'), ['site/index']) ?>
+                                <?= Html::a(Html::encode('Cursos'), ['courses/index']) ?>
                             </li>
                             <li>
-                                <?= Html::a(Html::encode('Eventos'), ['site/index']) ?>
+                                <?= Html::a(Html::encode('Eventos'), ['events/index']) ?>
                             </li>
                             <li>
                                 <?= Html::a(Html::encode('Propiedades'), ['properties/index']) ?>
