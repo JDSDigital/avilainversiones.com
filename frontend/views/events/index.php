@@ -193,6 +193,59 @@ $this->title = Html::encode('Eventos');
                     </div>
                 </div>
             </div>
+            <div class="col-lg-3 blog-sidebar">
+                <h4 class="heading heading-5 strong-600 line-height-1_8">
+                    Clientes
+                </h4>
+                <div class="row">
+                    <div class="post-thumb">
+                        <img src="./images/prv/magazine/person-1.jpg" alt="">
+                    </div>
+                    <div class="post-thumb">
+                        <img src="./images/prv/magazine/person-2.jpg" alt="">
+                    </div>
+                    <div class="post-thumb">
+                        <img src="./images/prv/magazine/person-3.jpg" alt="">
+                    </div>
+                    <div class="post-thumb">
+                        <img src="./images/prv/magazine/person-4.jpg" alt="">
+                    </div>
+                </div>
+                <h4 class="heading heading-5 strong-600 line-height-1_8 mt-3">
+                    Eventos
+                </h4>
+                <div class="row">
+                    <div class="post-thumb">
+                        <img src="./images/prv/magazine/person-5.jpg" alt="">
+                    </div>
+                    <div class="post-thumb">
+                        <img src="./images/prv/magazine/person-1.jpg" alt="">
+                    </div>
+                    <div class="post-thumb">
+                        <img src="./images/prv/magazine/person-2.jpg" alt="">
+                    </div>
+                    <div class="post-thumb">
+                        <img src="./images/prv/magazine/person-3.jpg" alt="">
+                    </div>
+                </div>
+                <h4 class="heading heading-5 strong-600 line-height-1_8 mt-3">
+                    Inversionistas
+                </h4>
+                <div class="row">
+                    <div class="post-thumb">
+                        <img src="./images/prv/magazine/person-4.jpg" alt="">
+                    </div>
+                    <div class="post-thumb">
+                        <img src="./images/prv/magazine/person-5.jpg" alt="">
+                    </div>
+                    <div class="post-thumb">
+                        <img src="./images/prv/magazine/person-1.jpg" alt="">
+                    </div>
+                    <div class="post-thumb">
+                        <img src="./images/prv/magazine/person-2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
