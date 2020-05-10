@@ -57,6 +57,7 @@ return [
                 'eventos/1' => 'events/view',
                 'cursos' => 'courses/index',
                 'cursos/1' => 'courses/view',
+                'asesorias' => 'consulting/index',
             ],
         ],
     ],

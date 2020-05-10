@@ -94,30 +94,6 @@ $this->title = 'Empresa';
                             Quisque ut nulla at nunc vehicula lacinia proin adipiscing porta tellus feugiat.
                         </p>
                     </div>
-                    <div class="block-footer border-top border-color-golden py-3">
-                        <ul class="social-media social-media--style-1-v4">
-                            <li>
-                                <a href="#" class="facebook" target="_blank" title="Facebook">
-                                    <i class="fa fa-facebook"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="instagram" target="_blank">
-                                    <i class="fa fa-instagram"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="dribbble" target="_blank">
-                                    <i class="fa fa-dribbble"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="dribbble" target="_blank">
-                                    <i class="fa fa-github"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </div>
             <div class="col-3">
@@ -133,30 +109,6 @@ $this->title = 'Empresa';
                         <p class="mb-0">
                             Quisque ut nulla at nunc vehicula lacinia proin adipiscing porta tellus feugiat.
                         </p>
-                    </div>
-                    <div class="block-footer border-top border-color-golden py-3">
-                        <ul class="social-media social-media--style-1-v4">
-                            <li>
-                                <a href="#" class="facebook" target="_blank" title="Facebook">
-                                    <i class="fa fa-facebook"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="instagram" target="_blank">
-                                    <i class="fa fa-instagram"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="dribbble" target="_blank">
-                                    <i class="fa fa-dribbble"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="dribbble" target="_blank">
-                                    <i class="fa fa-github"></i>
-                                </a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </div>
@@ -174,30 +126,6 @@ $this->title = 'Empresa';
                             Quisque ut nulla at nunc vehicula lacinia proin adipiscing porta tellus feugiat.
                         </p>
                     </div>
-                    <div class="block-footer border-top border-color-golden py-3">
-                        <ul class="social-media social-media--style-1-v4">
-                            <li>
-                                <a href="#" class="facebook" target="_blank" title="Facebook">
-                                    <i class="fa fa-facebook"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="instagram" target="_blank">
-                                    <i class="fa fa-instagram"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="dribbble" target="_blank">
-                                    <i class="fa fa-dribbble"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="dribbble" target="_blank">
-                                    <i class="fa fa-github"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </div>
             <div class="col-3">
@@ -213,30 +141,6 @@ $this->title = 'Empresa';
                         <p class="mb-0">
                             Quisque ut nulla at nunc vehicula lacinia proin adipiscing porta tellus feugiat.
                         </p>
-                    </div>
-                    <div class="block-footer border-top border-color-golden py-3">
-                        <ul class="social-media social-media--style-1-v4">
-                            <li>
-                                <a href="#" class="facebook" target="_blank" title="Facebook">
-                                    <i class="fa fa-facebook"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="instagram" target="_blank">
-                                    <i class="fa fa-instagram"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="dribbble" target="_blank">
-                                    <i class="fa fa-dribbble"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="dribbble" target="_blank">
-                                    <i class="fa fa-github"></i>
-                                </a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </div>

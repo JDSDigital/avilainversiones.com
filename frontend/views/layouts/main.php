@@ -55,8 +55,8 @@ AppAsset::register($this);
                     <li class="nav-item dropdown megamenu <?= (Yii::$app->controller->id == 'site' && Yii::$app->controller->action->id == 'index') ? 'active' : '' ?>">
                         <?= Html::a(Html::encode('Inicio'), ['site/index'], ['class' => 'nav-link']) ?>
                     </li>
-                    <li class="nav-item dropdown megamenu">
-                        <?= Html::a(Html::encode('Asesorías'), ['site/index'], ['class' => 'nav-link']) ?>
+                    <li class="nav-item dropdown megamenu <?= (Yii::$app->controller->id == 'consulting') ? 'active' : '' ?>">
+                        <?= Html::a(Html::encode('Asesorías'), ['consulting/index'], ['class' => 'nav-link']) ?>
                     </li>
                     <li class="nav-item dropdown megamenu <?= (Yii::$app->controller->id == 'courses') ? 'active' : '' ?>">
                         <?= Html::a(Html::encode('Cursos'), ['courses/index'], ['class' => 'nav-link']) ?>
@@ -102,7 +102,7 @@ AppAsset::register($this);
                                 <?= Html::a(Html::encode('Inicio'), ['site/index'], ['class' => 'pl-0']) ?>
                             </li>
                             <li>
-                                <?= Html::a(Html::encode('Asesorías'), ['site/index']) ?>
+                                <?= Html::a(Html::encode('Asesorías'), ['consulting/index']) ?>
                             </li>
                             <li>
                                 <?= Html::a(Html::encode('Cursos'), ['courses/index']) ?>

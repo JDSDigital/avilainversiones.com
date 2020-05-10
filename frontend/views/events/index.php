@@ -28,7 +28,7 @@ $this->title = Html::encode('Eventos');
 
 <section class="slice sct-color-1">
     <div class="container">
-        <div class="row cols-md-space cols-sm-space cols-xs-space">
+        <div class="row cols-md-space cols-sm-space cols-xs-space justify-content-md-center">
             <div class="col-lg-9">
                 <div class="card-wrapper">
                     <div class="card z-depth-2-top">
