@@ -6,7 +6,8 @@ use yii\helpers\Html;
 
 $this->title = 'Empresa';
 ?>
-<section class="slice-lg has-bg-cover bg-size-cover" style="background-image: url(./images/prv/blog/img-wide-lg-4.jpg);">
+<section class="slice-lg has-bg-cover bg-size-cover" style="background-image: url(./images/backgrounds/BannerEmpresa.jpg);">
+    <span class="mask mask-dark--style-2"></span>
     <div class="container">
         <div class="row">
             <div class="col-10 col-lg-6 ml-lg-auto">

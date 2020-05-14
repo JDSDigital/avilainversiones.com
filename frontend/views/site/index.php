@@ -15,7 +15,8 @@ $this->title = Yii::$app->name;
                     <div class="swiper-wrapper">
                         <!-- Slide -->
                         <div class="swiper-slide" data-swiper-autoplay="8000">
-                            <div class="slice holder-item holder-item-light has-bg-cover bg-size-cover" style="background-image: url(./images/backgrounds/slider/img-41.jpg); background-position: bottom center;">
+                            <div class="slice holder-item holder-item-light has-bg-cover bg-size-cover" style="background-image: url(./images/backgrounds/BannerHome.jpg); background-position: bottom center;">
+                            <span class="mask mask-dark--style-2"></span>
                                 <div class="container d-flex align-items-center">
                                     <div class="col">
                                         <div class="row text-center">

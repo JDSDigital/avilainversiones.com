@@ -8,8 +8,8 @@ use yii\helpers\Html;
 $this->title = Html::encode('Asesorías');
 ?>
 
-<section class="slice-xl slice--offset-top has-bg-cover bg-size-cover" style="background-image: url('./images/prv/blog/img-wide-lg-3.jpg'); background-position: bottom center;">
-    <span class="mask mask-dark--style-1"></span>
+<section class="slice-lg slice--offset-top has-bg-cover bg-size-cover" style="background-image: url('./images/backgrounds/BannerHomeSecciones.jpg'); background-position: bottom center;">
+    <span class="mask mask-dark--style-2"></span>
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
@@ -47,7 +47,7 @@ $this->title = Html::encode('Asesorías');
             </div>
 
             <div class="col col-md-6 col-sm-12 col-12">
-                <img src="./images/prv/app/img-4.jpg" class="img-fluid img-center rounded z-depth-3-top">
+                <img src="./images/elements/asesoria1.jpg" class="img-fluid img-center rounded z-depth-3-top">
             </div>
         </div>
     </div>
@@ -74,7 +74,7 @@ $this->title = Html::encode('Asesorías');
             </div>
 
             <div class="col-lg-4 ml-lg-auto order-lg-1">
-                <img src="./images/prv/app/img-2.png" class="img-fluid img-center">
+                <img src="./images/elements/asesoria2.jpg" class="img-fluid img-center">
             </div>
         </div>
     </div>
@@ -101,7 +101,7 @@ $this->title = Html::encode('Asesorías');
             </div>
 
             <div class="col col-md-6 col-sm-12 col-12">
-                <img src="./images/prv/app/img-4.jpg" class="img-fluid img-center rounded z-depth-3-top">
+                <img src="./images/elements/asesoria3.jpg" class="img-fluid img-center rounded z-depth-3-top">
             </div>
         </div>
     </div>
@@ -128,7 +128,7 @@ $this->title = Html::encode('Asesorías');
             </div>
 
             <div class="col-lg-4 ml-lg-auto order-lg-1">
-                <img src="./images/prv/app/img-2.png" class="img-fluid img-center">
+                <img src="./images/elements/asesoria4.jpg" class="img-fluid img-center">
             </div>
         </div>
     </div>

@@ -8,8 +8,8 @@ use yii\helpers\Html;
 $this->title = Html::encode('Cursos');
 ?>
 
-<section class="slice-xl slice--offset-top has-bg-cover bg-size-cover" style="background-image: url('./images/prv/blog/img-wide-lg-3.jpg'); background-position: bottom center;">
-    <span class="mask mask-dark--style-1"></span>
+<section class="slice-lg slice--offset-top has-bg-cover bg-size-cover" style="background-image: url('./images/backgrounds/BannerHomeSecciones.jpg'); background-position: bottom center;">
+    <span class="mask mask-dark--style-2"></span>
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
