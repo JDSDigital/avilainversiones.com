@@ -69,3 +69,6 @@
     }
   } 
 }
+.form-material .bar::after, .form-material .bar::before {
+  background: $golden-gradient;
+}

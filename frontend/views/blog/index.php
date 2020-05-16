@@ -33,7 +33,7 @@ $this->title = Html::encode('Blog');
                 <div class="card z-depth-2-top">
                     <div class="card-image">
                         <div class="view view-first">
-                            <a href="#">
+                            <a href="./blog/view">
                                 <img src="./images/prv/blog/img-tech-1.jpg">
                             </a>
                         </div>
@@ -41,7 +41,7 @@ $this->title = Html::encode('Blog');
 
                     <div class="card-body">
                         <h3 class="heading heading-5 strong-600 mb-0">
-                            <a href="#">Learn how to build your own website with Boomerang</a>
+                            <a href="./blog/view">Learn how to build your own website with Boomerang</a>
                         </h3>
                     </div>
 
@@ -75,7 +75,7 @@ $this->title = Html::encode('Blog');
                 <div class="card z-depth-2-top">
                     <div class="card-image">
                         <div class="view view-first">
-                            <a href="#">
+                            <a href="./blog/view">
                                 <img src="./images/prv/blog/img-tech-2.jpg">
                             </a>
                         </div>
@@ -83,7 +83,7 @@ $this->title = Html::encode('Blog');
 
                     <div class="card-body">
                         <h3 class="heading heading-5 strong-600 mb-0">
-                            <a href="#">15 Lessons about design you need to learn to succeed</a>
+                            <a href="./blog/view">15 Lessons about design you need to learn to succeed</a>
                         </h3>
                     </div>
 
@@ -117,7 +117,7 @@ $this->title = Html::encode('Blog');
                 <div class="card z-depth-2-top">
                     <div class="card-image">
                         <div class="view view-first">
-                            <a href="#">
+                            <a href="./blog/view">
                                 <img src="./images/prv/blog/img-tech-3.jpg">
                             </a>
                         </div>
@@ -125,7 +125,7 @@ $this->title = Html::encode('Blog');
 
                     <div class="card-body">
                         <h3 class="heading heading-5 strong-600 mb-0">
-                            <a href="#">Never changing design will eventually destroy you</a>
+                            <a href="./blog/view">Never changing design will eventually destroy you</a>
                         </h3>
                     </div>
 
@@ -163,7 +163,7 @@ $this->title = Html::encode('Blog');
                 <div class="card z-depth-2-top">
                     <div class="card-image">
                         <div class="view view-first">
-                            <a href="#">
+                            <a href="./blog/view">
                                 <img src="./images/prv/blog/img-tech-4.jpg">
                             </a>
                         </div>
@@ -171,7 +171,7 @@ $this->title = Html::encode('Blog');
 
                     <div class="card-body">
                         <h3 class="heading heading-5 strong-600 mb-0">
-                            <a href="#">Get better design results by following 3 simple steps</a>
+                            <a href="./blog/view">Get better design results by following 3 simple steps</a>
                         </h3>
                     </div>
 
@@ -205,7 +205,7 @@ $this->title = Html::encode('Blog');
                 <div class="card z-depth-2-top">
                     <div class="card-image">
                         <div class="view view-first">
-                            <a href="#">
+                            <a href="./blog/view">
                                 <img src="./images/prv/blog/img-tech-5.jpg">
                             </a>
                         </div>
@@ -213,7 +213,7 @@ $this->title = Html::encode('Blog');
 
                     <div class="card-body">
                         <h3 class="heading heading-5 strong-600 mb-0">
-                            <a href="#">3 ways you can reinvent design like a pro</a>
+                            <a href="./blog/view">3 ways you can reinvent design like a pro</a>
                         </h3>
                     </div>
 
@@ -247,7 +247,7 @@ $this->title = Html::encode('Blog');
                 <div class="card z-depth-2-top">
                     <div class="card-image">
                         <div class="view view-first">
-                            <a href="#">
+                            <a href="./blog/view">
                                 <img src="./images/prv/blog/img-tech-6.jpg">
                             </a>
                         </div>
@@ -255,7 +255,7 @@ $this->title = Html::encode('Blog');
 
                     <div class="card-body">
                         <h3 class="heading heading-5 strong-600 mb-0">
-                            <a href="#">15 Lessons about design you need to learn to succeed</a>
+                            <a href="./blog/view">15 Lessons about design you need to learn to succeed</a>
                         </h3>
                     </div>
 
@@ -293,7 +293,7 @@ $this->title = Html::encode('Blog');
                 <div class="card z-depth-2-top">
                     <div class="card-image">
                         <div class="view view-first">
-                            <a href="#">
+                            <a href="./blog/view">
                                 <img src="./images/prv/blog/img-tech-7.jpg">
                             </a>
                         </div>
@@ -301,7 +301,7 @@ $this->title = Html::encode('Blog');
 
                     <div class="card-body">
                         <h3 class="heading heading-5 strong-600 mb-0">
-                            <a href="#">This study will perfect your design: Read or miss out</a>
+                            <a href="./blog/view">This study will perfect your design: Read or miss out</a>
                         </h3>
                     </div>
 
@@ -335,7 +335,7 @@ $this->title = Html::encode('Blog');
                 <div class="card z-depth-2-top">
                     <div class="card-image">
                         <div class="view view-first">
-                            <a href="#">
+                            <a href="./blog/view">
                                 <img src="./images/prv/blog/img-tech-8.jpg">
                             </a>
                         </div>
@@ -343,7 +343,7 @@ $this->title = Html::encode('Blog');
 
                     <div class="card-body">
                         <h3 class="heading heading-5 strong-600 mb-0">
-                            <a href="#">Fascinating design tactics that can help your business grow</a>
+                            <a href="./blog/view">Fascinating design tactics that can help your business grow</a>
                         </h3>
                     </div>
 
@@ -377,7 +377,7 @@ $this->title = Html::encode('Blog');
                 <div class="card z-depth-2-top">
                     <div class="card-image">
                         <div class="view view-first">
-                            <a href="#">
+                            <a href="./blog/view">
                                 <img src="./images/prv/blog/img-tech-9.jpg">
                             </a>
                         </div>
@@ -385,7 +385,7 @@ $this->title = Html::encode('Blog');
 
                     <div class="card-body">
                         <h3 class="heading heading-5 strong-600 mb-0">
-                            <a href="#">The truth is you are not the only person concerned about design</a>
+                            <a href="./blog/view">The truth is you are not the only person concerned about design</a>
                         </h3>
                     </div>
 
