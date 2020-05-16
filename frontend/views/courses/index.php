@@ -29,71 +29,75 @@ $this->title = Html::encode('Cursos');
 <section class="slice-lg sct-color-1">
     <div class="container">
 
-        <div class="row cols-xs-space cols-sm-space cols-md-space">
-            <div class="col-lg-4">
-                <div class="block block--style-3">
-                    <div class="block-image relative">
-                        <div class="view view-first">
-                            <a href="#">
-                                <img src="./images/prv/news/creative/img-1.jpg">
-                            </a>
+        <div class="row cols-xs-space cols-sm-space cols-md-space justify-content-center">
+            <div class="col-lg-9">
+                <div class="card-wrapper">
+                    <div class="card z-depth-2-top">
+                        <div class="row ">
+                            <div class="col-md-5">
+                                <img src="./images/prv/news/creative/img-1.jpg" class="img-fluid">
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-body">
+                                    <h4 class="heading heading-5 strong-600 line-height-1_8">Curso para vender propiedades nuevas</h4>
+                                    <p class="card-text mt-3 mb-0">1. Lorem ipsum dolor sit amet consectetur elit.</p>
+                                    <p class="card-text mb-0">2. Lorem ipsum dolor sit amet consectetur elit.</p>
+                                    <p class="card-text">3. Lorem ipsum dolor sit amet consectetur elit.</p>
+                                    <div class="row align-items-right">
+                                        <div class="col-12">
+                                            <div class="text-right">
+                                                <a href="#" class="btn btn-styled btn-golden btn-circle text-uppercase strong-400">Comprar</a>
+                                            </div>
+                                        </div>
+                                    </div>                                              
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="block-body">
-                        <h3 class="heading heading-6 strong-600">
-                            <a href="">Curso para vender propiedades nuevas</a>
-                        </h3>
-                        <p>1. Lorem ipsum dolor sit amet consectetur elit.</p>
-                        <p>2. Lorem ipsum dolor sit amet consectetur elit.</p>
-                        <p>3. Lorem ipsum dolor sit amet consectetur elit.</p>
-                        <div class="btn-container mt-3 text-center">
-                            <a href="#" class="btn btn-styled btn-golden btn-circle text-uppercase strong-400">Comprar</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col-lg-4">
-                <div class="block block--style-3">
-                    <div class="block-image relative">
-                        <div class="view view-first">
-                            <a href="#">
-                                <img src="./images/prv/news/creative/img-2.jpg">
-                            </a>
+                    <div class="card z-depth-2-top">
+                        <div class="row ">
+                            <div class="col-md-5">
+                                <img src="./images/prv/news/creative/img-2.jpg" class="img-fluid">
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-body">
+                                    <h4 class="heading heading-5 strong-600 line-height-1_8">Curso para invertir en propiedades</h4>
+                                    <p class="card-text mt-3 mb-0">1. Lorem ipsum dolor sit amet consectetur elit.</p>
+                                    <p class="card-text mb-0">2. Lorem ipsum dolor sit amet consectetur elit.</p>
+                                    <p class="card-text">3. Lorem ipsum dolor sit amet consectetur elit.</p>
+                                    <div class="row align-items-right">
+                                        <div class="col-12">
+                                            <div class="text-right">
+                                                <a href="#" class="btn btn-styled btn-golden btn-circle text-uppercase strong-400">Comprar</a>
+                                            </div>
+                                        </div>
+                                    </div>                                              
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="block-body">
-                        <h3 class="heading heading-6 strong-600">
-                            <a href="">Curso para invertir en propiedades</a>
-                        </h3>
-                        <p>1. Lorem ipsum dolor sit amet consectetur elit.</p>
-                        <p>2. Lorem ipsum dolor sit amet consectetur elit.</p>
-                        <p>3. Lorem ipsum dolor sit amet consectetur elit.</p>
-                        <div class="btn-container mt-3 text-center">
-                            <a href="#" class="btn btn-styled btn-golden btn-circle text-uppercase strong-400">Comprar</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4">
-                <div class="block block--style-3">
-                    <div class="block-image relative">
-                        <div class="view view-first">
-                            <a href="#">
-                                <img src="./images/prv/news/creative/img-3.jpg">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="block-body">
-                        <h3 class="heading heading-6 strong-600">
-                            <a href="">Curso para invertir en la bolsa de valores</a>
-                        </h3>
-                        <p>1. Lorem ipsum dolor sit amet consectetur elit.</p>
-                        <p>2. Lorem ipsum dolor sit amet consectetur elit.</p>
-                        <p>3. Lorem ipsum dolor sit amet consectetur elit.</p>
-                        <div class="btn-container mt-3 text-center">
-                            <a href="#" class="btn btn-styled btn-golden btn-circle text-uppercase strong-400">Comprar</a>
+                    
+                    <div class="card z-depth-2-top">
+                        <div class="row ">
+                            <div class="col-md-5">
+                                <img src="./images/prv/news/creative/img-3.jpg" class="img-fluid">
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-body">
+                                    <h4 class="heading heading-5 strong-600 line-height-1_8">Curso para invertir en la bolsa de valores</h4>
+                                    <p class="card-text mt-3 mb-0">1. Lorem ipsum dolor sit amet consectetur elit.</p>
+                                    <p class="card-text mb-0">2. Lorem ipsum dolor sit amet consectetur elit.</p>
+                                    <p class="card-text">3. Lorem ipsum dolor sit amet consectetur elit.</p>
+                                    <div class="row align-items-right">
+                                        <div class="col-12">
+                                            <div class="text-right">
+                                                <a href="#" class="btn btn-styled btn-golden btn-circle text-uppercase strong-400">Comprar</a>
+                                            </div>
+                                        </div>
+                                    </div>                                              
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
