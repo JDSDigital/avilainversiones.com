@@ -52,25 +52,25 @@ $this->title = 'Empresa';
         <div class="row mt-5">
             <div class="col-lg-3 col-md-6">
                 <div class="milestone-counter text-center">
-                    <div class="milestone-count c-base-1 strong-600" data-from="0" data-to="3" data-speed="3000" data-refresh-interval="100"></div>
+                    <div class="milestone-count color-golden strong-600" data-from="0" data-to="3" data-speed="3000" data-refresh-interval="100"></div>
                     <h4 class="milestone-info heading-5 c-gray-light text-normal">Años de experiencia</h4>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
                 <div class="milestone-counter text-center">
-                    <div class="milestone-count c-base-1 strong-600" data-from="0" data-to="7" data-speed="3000" data-refresh-interval="50"></div>
+                    <div class="milestone-count color-golden strong-600" data-from="0" data-to="7" data-speed="3000" data-refresh-interval="50"></div>
                     <h4 class="milestone-info heading-5 c-gray-light text-normal">Eventos inmobiliarios</h4>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
                 <div class="milestone-counter text-center">
-                    <div class="milestone-count c-base-1 strong-600" data-from="0" data-to="2000" data-speed="3000" data-refresh-interval="80"></div>
+                    <div class="milestone-count color-golden strong-600" data-from="0" data-to="2000" data-speed="3000" data-refresh-interval="80"></div>
                     <h4 class="milestone-info heading-5 c-gray-light text-normal">Clientes</h4>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
                 <div class="milestone-counter text-center">
-                    <div class="milestone-count c-base-1 strong-600" data-from="0" data-to="20" data-speed="3000" data-refresh-interval="80"></div>
+                    <div class="milestone-count color-golden strong-600" data-from="0" data-to="20" data-speed="3000" data-refresh-interval="80"></div>
                     <h4 class="milestone-info heading-5 c-gray-light text-normal">Millones de dólares en venta</h4>
                 </div>
             </div>

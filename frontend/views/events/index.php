@@ -34,11 +34,21 @@ $this->title = Html::encode('Eventos');
                     <div class="card z-depth-2-top">
                         <div class="row ">
                             <div class="col-md-4">
-                                <img src="./images/prv/blog/img-tech-sq-1.jpg" class="img-fluid">
+                                <div class="card-image">
+                                    <div class="view view-first">
+                                        <a href="./events/view">
+                                            <img src="./images/prv/blog/img-tech-sq-1.jpg">
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
-                                    <h4 class="heading heading-5 strong-600 line-height-1_8">Learn how to build your own website with Boomerang</h4>
+                                    <h4 class="heading heading-5 strong-600 line-height-1_8">
+                                        <a href="./events/view">
+                                            Learn how to build your own website with Boomerang
+                                        </a>
+                                    </h4>
                                     <p class="card-text mt-3">
                                         Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. 
                                     </p>      
@@ -74,11 +84,21 @@ $this->title = Html::encode('Eventos');
                     <div class="card z-depth-2-top">
                         <div class="row ">
                             <div class="col-md-4">
-                                <img src="./images/prv/blog/img-tech-sq-2.jpg" class="img-fluid">
+                                <div class="card-image">
+                                    <div class="view view-first">
+                                        <a href="./events/view">
+                                            <img src="./images/prv/blog/img-tech-sq-2.jpg">
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
-                                    <h4 class="heading heading-5 strong-600 line-height-1_8">15 Lessons about design you need to learn to succeed</h4>
+                                    <h4 class="heading heading-5 strong-600 line-height-1_8">
+                                        <a href="./events/view">
+                                            15 Lessons about design you need to learn to succeed
+                                        </a>
+                                    </h4>
                                     <p class="card-text mt-3">
                                         Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. 
                                     </p>      
@@ -115,11 +135,21 @@ $this->title = Html::encode('Eventos');
                     <div class="card z-depth-2-top">
                         <div class="row ">
                             <div class="col-md-4">
-                                <img src="./images/prv/blog/img-tech-sq-3.jpg" class="img-fluid">
+                                <div class="card-image">
+                                    <div class="view view-first">
+                                        <a href="./events/view">
+                                            <img src="./images/prv/blog/img-tech-sq-3.jpg">
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
-                                    <h4 class="heading heading-5 strong-600 line-height-1_8">Never changing design will eventually destroy you</h4>
+                                    <h4 class="heading heading-5 strong-600 line-height-1_8">
+                                        <a href="./events/view">
+                                            Never changing design will eventually destroy you
+                                        </a>
+                                    </h4>
                                     <p class="card-text mt-3">
                                         Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. 
                                     </p>      
@@ -155,11 +185,21 @@ $this->title = Html::encode('Eventos');
                     <div class="card z-depth-2-top">
                         <div class="row ">
                             <div class="col-md-4">
-                                <img src="./images/prv/blog/img-tech-sq-4.jpg" class="img-fluid">
+                                <div class="card-image">
+                                    <div class="view view-first">
+                                        <a href="./events/view">
+                                            <img src="./images/prv/blog/img-tech-sq-4.jpg">
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
-                                    <h4 class="heading heading-5 strong-600 line-height-1_8">Get better design results by following 3 simple steps</h4>
+                                    <h4 class="heading heading-5 strong-600 line-height-1_8">
+                                        <a href="./events/view">
+                                            Get better design results by following 3 simple steps
+                                        </a>
+                                    </h4>
                                     <p class="card-text mt-3">
                                         Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. 
                                     </p>      

@@ -72,3 +72,12 @@
 .form-material .bar::after, .form-material .bar::before {
   background: $golden-gradient;
 }
+.heading:hover > a {
+  color: $golden-light-2 !important;
+}
+.block-author .author-info .author-name > a:hover {
+  color: $golden-light-2 !important;
+}
+.color-golden {
+  color: $golden-light-2 !important;
+}

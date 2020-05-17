@@ -22779,3 +22779,15 @@ pre {
 .form-material .bar::after, .form-material .bar::before {
   background: linear-gradient(to right, #be9418, gold, #be9418);
 }
+
+.heading:hover > a {
+  color: rgba(255, 215, 0, 0.9) !important;
+}
+
+.block-author .author-info .author-name > a:hover {
+  color: rgba(255, 215, 0, 0.9) !important;
+}
+
+.color-golden {
+  color: rgba(255, 215, 0, 0.9) !important;
+}
