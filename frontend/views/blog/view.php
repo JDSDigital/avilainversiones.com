@@ -2,7 +2,6 @@
 
 /* @var $this yii\web\View */
 
-use Yii;
 use yii\helpers\Html;
 
 $this->title = Html::encode('Blog');
