@@ -17,7 +17,7 @@ $this->title = Html::encode('Cursos');
                         Cursos
                     </h2>
                     <p class="lead c-white animated mt-3" data-animation-in="fadeInUpBig" data-animation-delay="200">
-                        There is not time to go slow.
+                        El conocimiento es tu mejor inversión.
                     </p>
                 </div>
             </div>

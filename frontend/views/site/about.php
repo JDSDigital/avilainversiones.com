@@ -12,10 +12,13 @@ $this->title = 'Empresa';
         <div class="row">
             <div class="col-10 col-lg-6 ml-lg-auto">
                 <h2 class="heading heading-1 strong-400 c-white mt-4">
-                    Building the supercharger network for the future
+                    Empresa
                 </h2>
                 <p class="c-white mt-4">
-                    Tesla created the Supercharger network to make long-distance travel a seamless experience for drivers. Cars have always represented independence and the freedom to travel wherever and whenever people want to go. To enable this freedom, building a charging network that provides quick and long-distance travel.
+                    <p class="mb-0">Una empresa es el respaldo de un sistema operativo que funciona por medio de equipos.</p>
+                    <p class="mb-0">Un equipo apoya una empresa a través del esfuerzo mancomunado de cada individuo.</p>
+                    <p class="mb-0">Un individuo es un eslabon fundamental para que se brinde un buen servicio.</p>
+                    <p class="mb-0">Un buen servicio solo se logra cuando todo trabaja junto y en armonía.</p>
                 </p>
 
                 <div class="btn-container mt-5">
@@ -81,7 +84,7 @@ $this->title = 'Empresa';
 <section class="slice-xl sct-color-1">
     <div class="container">
         <div class="row">
-            <div class="col-3">
+            <div class="col-lg-3 col-md-6">
                 <div class="block block--style-3 block--style-3-v2">
                     <div class="block-image">
                         <img src="./images/prv/team/business/img-b-3.jpg">
@@ -97,7 +100,7 @@ $this->title = 'Empresa';
                     </div>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-lg-3 col-md-6">
                 <div class="block block--style-3 block--style-3-v2">
                     <div class="block-image">
                         <img src="./images/prv/team/business/img-b-4.jpg">
@@ -113,7 +116,7 @@ $this->title = 'Empresa';
                     </div>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-lg-3 col-md-6">
                 <div class="block block--style-3 block--style-3-v2">
                     <div class="block-image">
                         <img src="./images/prv/team/business/img-b-6.jpg">
@@ -129,7 +132,7 @@ $this->title = 'Empresa';
                     </div>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-lg-3 col-md-6">
                 <div class="block block--style-3 block--style-3-v2">
                     <div class="block-image">
                         <img src="./images/prv/team/business/img-b-10.jpg">

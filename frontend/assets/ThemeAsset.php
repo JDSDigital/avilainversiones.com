@@ -44,6 +44,8 @@ class ThemeAsset extends AssetBundle
       'vendor/bootstrap/js/bootstrap.min.js',
       'js/slidebar/slidebar.js',
       'js/classie.js',
+      'js/jquery.maphilight.js',
+      'js/script.js',
 
       // Bootstrap Extensions
       'vendor/bootstrap-notify/bootstrap-growl.min.js',

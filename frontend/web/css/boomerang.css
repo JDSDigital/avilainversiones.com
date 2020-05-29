@@ -22702,8 +22702,12 @@ pre {
   font-size: 34px;
 }
 
+.navbar-brand {
+  width: 80%;
+}
+
 .navbar-brand img {
-  max-height: 60px;
+  max-height: 55px;
 }
 
 .navbar-opaque.navbar-inverse .navbar-nav .nav-link {
@@ -22790,4 +22794,8 @@ pre {
 
 .color-golden {
   color: rgba(255, 215, 0, 0.9) !important;
+}
+
+.footer .footer-menu > li > a {
+  padding: 0.25rem 0.4rem 0.25rem 0;
 }
