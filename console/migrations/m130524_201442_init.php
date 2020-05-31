@@ -27,7 +27,7 @@ class m130524_201442_init extends Migration
         $this->insert('{{%xsystem_users}}', [
             'email' => 'jdsosa@gmail.com',
             'auth_key' => Yii::$app->security->generateRandomString(),
-            'password_hash' => Yii::$app->security->generatePasswordHash('F0rb1dden'),
+            'password_hash' => Yii::$app->security->generatePasswordHash(''),
 
             'created_at' => date('U'),
             'updated_at' => date('U'),
