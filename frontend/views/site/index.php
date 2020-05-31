@@ -73,17 +73,14 @@ $this->title = Yii::$app->name;
             "height" => "950",
         ]) ?>
         <map name="image-map">
-            <area id="inversion1" alt="1" title="Asiste a un evento inmobiliario" href="#" coords="538,104,619,116,689,141,740,172,781,200,813,230,840,261,789,382,730,392,697,349,657,314,616,291,571,277,602,222" shape="poly">
+            <area id="inversion1" alt="Asiste a un evento inmobiliario" title="Asiste a un evento inmobiliario" href="#" coords="537,104,582,111,625,120,665,133,698,145,732,166,762,187,788,207,812,231,839,260,788,382,730,393,711,366,687,339,660,318,630,300,600,286,571,275,600,222" shape="poly">
+            <area id="inversion2" alt="Recibe una asesoría personalizada" title="Recibe una asesoría personalizada" href="" coords="856,282,880,318,899,358,913,396,922,430,931,467,933,506,933,541,931,574,924,614,794,650,749,610,761,573,765,537,763,500,755,450,742,417,805,405" shape="poly">
+            <area id="inversion3" alt="Revisemos presupuestos" title="Revisemos presupuestos" href="" coords="917,642,900,688,881,725,853,768,825,805,796,832,767,856,737,878,696,899,589,823,591,762,620,750,654,730,679,711,705,684,724,660,739,634,788,675" shape="poly">
+            <area id="inversion4" alt="Opta por un proyecto" title="Opta por un proyecto" href="" coords="673,913,632,927,581,939,525,943,476,940,420,932,378,920,333,903,326,770,376,736,411,755,447,766,488,774,529,775,567,771,563,835" shape="poly">
+            <area id="inversion5" alt="Gestionemos tu crédito hipotecario" title="Gestionemos tu crédito hipotecario" href="" coords="310,892,275,868,233,836,199,802,169,764,142,721,122,678,112,647,105,620,205,531,261,547,265,576,279,620,298,657,326,694,354,721,302,759" shape="poly">
+            <area id="inversion6" alt="Recibe tu propiedad" title="Recibe tu propiedad" href="" coords="98,594,95,552,94,499,99,452,110,410,122,371,140,326,162,295,183,265,316,287,337,340,318,361,301,384,284,414,271,447,262,482,260,520,199,506" shape="poly">
+            <area id="inversion7" alt="Pensemos en tu nueva inversión" title="Pensemos en tu nueva inversión" href="" coords="201,242,229,216,263,186,301,163,339,143,380,126,423,113,466,105,511,106,573,219,547,272,518,270,477,271,437,281,398,295,375,309,357,322,332,268" shape="poly">
         </map>
-        <!-- <map name="image-map">
-            <area id="inversion1" alt="1" title="1" href="#" coords="3722,707,4505,864,5131,1176,5550,1502,5800,1790,5444,2628,5049,2703,4786,2365,4467,2128,4185,1996,3941,1896,4160,1514,3903,1051" shape="poly">
-            <area id="inversion2" alt="2" title="2" href="#" coords="5926,1952,6295,2672,6439,3242,6452,3780,6383,4249,5494,4493,5174,4218,5268,3861,5275,3373,5212,3079,5131,2866,5556,2785" shape="poly">
-            <area id="inversion3" alt="3" title="3" href="#" coords="6351,4418,6226,4781,6032,5144,5757,5507,5538,5745,5237,5983,4830,6220,4073,5688,4098,5269,4411,5106,4724,4887,4943,4656,5118,4387,5462,4668" shape="poly">
-            <area id="inversion4" alt="4" title="4" href="#" coords="4661,6308,4091,6464,3421,6514,2889,6446,2557,6345,2301,6245,2251,5325,2589,5088,2889,5244,3202,5313,3559,5357,3916,5325,3910,5763" shape="poly">
-            <area id="inversion5" alt="5" title="5" href="#" coords="2132,6158,1537,5720,1155,5282,917,4856,711,4280,1406,3667,1806,3780,1863,4149,2013,4474,2201,4737,2451,4975,2094,5238" shape="poly">
-            <area id="inversion6" alt="6" title="6" href="#" coords="686,4111,654,3479,711,2985,867,2491,1061,2109,1274,1827,2182,1990,2326,2347,2113,2584,1969,2879,1856,3129,1787,3592,1368,3479" shape="poly">
-            <area id="inversion7" alt="7" title="7" href="#" coords="1387,1671,1744,1333,2188,1064,2633,864,3115,757,3534,720,3972,1514,3772,1871,3371,1871,3014,1934,2714,2053,2457,2228,2288,1827" shape="poly">
-        </map> -->
     </div>
 </section>
 

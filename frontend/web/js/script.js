@@ -11,12 +11,12 @@ $(document).ready(function(){
       let newCoord;
 
       if (index % 2 === 0) {
-        newCoord = (coord * 100) / image.attr('height');
+        newCoord = (coord * image.height()) / image.attr('height');
       } else {
-        newCoord = (coord * 100) / image.attr('width');
+        newCoord = (coord * image.width()) / image.attr('width');
       }
 
-      newCoords.push(newCoord.toFixed(2).concat('%'));
+      newCoords.push(newCoord.toFixed(2));
     });
 
     console.log(newCoords);
