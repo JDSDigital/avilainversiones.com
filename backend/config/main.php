@@ -6,8 +6,13 @@ $params = array_merge(
     require __DIR__ . '/params-local.php'
 );
 
+use \yii\web\Request;
+$baseUrl = str_replace('/backend/web', '/admin', (new Request)->getBaseUrl());
+
 return [
     'id' => 'app-backend',
+    'name' => 'Ávila Inversiones',
+    'language' => 'es',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
@@ -15,6 +20,7 @@ return [
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-backend',
+            'baseUrl' => $baseUrl,
         ],
         'user' => [
             'identityClass' => 'common\models\User',
@@ -37,14 +43,28 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        /*
         'urlManager' => [
+            'baseUrl' => $baseUrl,
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                '' => 'site/index',
+                'login' => 'site/login',
             ],
         ],
-        */
+        'assetManager' => [
+            'bundles' => [
+                // 'yii\web\JqueryAsset' => [
+                //     'js'=>[]
+                // ],
+                // 'yii\bootstrap\BootstrapPluginAsset' => [
+                //     'js'=>[]
+                // ],
+                // 'yii\bootstrap\BootstrapAsset' => [
+                //     'css' => [],
+                // ],
+            ],
+        ],
     ],
     'params' => $params,
 ];

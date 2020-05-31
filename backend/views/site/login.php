@@ -9,26 +9,69 @@ use yii\bootstrap4\ActiveForm;
 
 $this->title = 'Login';
 ?>
-<div class="site-login">
-    <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>Please fill out the following fields to login:</p>
+<!-- Page content -->
+<div class="page-content">
 
-    <div class="row">
-        <div class="col-lg-5">
-            <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
+<!-- Main content -->
+<div class="content-wrapper">
 
-                <?= $form->field($model, 'email')->textInput(['autofocus' => true]) ?>
+    <!-- Content area -->
+    <div class="content d-flex justify-content-center align-items-center">
 
-                <?= $form->field($model, 'password')->passwordInput() ?>
+        <!-- Login form -->
+        <?php $form = ActiveForm::begin([
+            'id' => 'login-form', 
+            'options' => [
+                'class' => 'login-form'
+            ],
+        ]); ?>
+            <div class="card mb-0">
+                <div class="card-body">
+                    <div class="text-center mb-3">
+                        <i class="icon-reading icon-2x text-slate-300 border-slate-300 border-3 rounded-round p-3 mb-3 mt-1"></i>
+                        <h5 class="mb-0">Inicia sesión</h5>
+                        <span class="d-block text-muted">Ingresa tus credenciales</span>
+                    </div>
 
-                <?= $form->field($model, 'rememberMe')->checkbox() ?>
+                    <?= $form->field($model, 'email', [
+                        'options' => ['class' => 'form-group form-group-feedback form-group-feedback-left'],
+                        'inputOptions' => [
+                            'class' => 'form-control',
+                            'placeholder' => 'Correo',
+                            'autofocus' => true
+                        ],
+                        'template' => '{input}<div class="form-control-feedback"><i class="icon-user text-muted"></i></div>{error}{hint}',
+                    ]); ?>
 
-                <div class="form-group">
-                    <?= Html::submitButton('Login', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
+                    <?= $form->field($model, 'password', [
+                        'options' => ['class' => 'form-group form-group-feedback form-group-feedback-left'],
+                        'inputOptions' => [
+                            'class' => 'form-control',
+                            'placeholder' => 'Password',
+                        ],
+                        'template' => '{input}<div class="form-control-feedback"><i class="icon-lock2 text-muted"></i></div>{error}{hint}',
+                    ])->passwordInput(); ?>
+
+                    <?= $form->field($model, 'rememberMe')->checkbox() ?>
+
+                    <div class="form-group">
+                        <?= Html::submitButton('Login <i class="icon-circle-right2 ml-2"></i>', ['class' => 'btn btn-primary btn-block', 'name' => 'login-button']) ?>
+                    </div>
+
+                    <!-- <div class="text-center">
+                        <a href="login_password_recover.html">Forgot password?</a>
+                    </div> -->
                 </div>
+            </div>
+        <?php ActiveForm::end(); ?>
+        <!-- /login form -->
 
-            <?php ActiveForm::end(); ?>
-        </div>
     </div>
+    <!-- /content area -->
+
 </div>
+<!-- /main content -->
+
+</div>
+<!-- /page content -->
