@@ -63,16 +63,19 @@ $this->title = Yii::$app->name;
     </div>
 </section>
 
-<!-- <section class="slice-lg bg-white">
+<section class="slice-lg bg-white">
     <div class="container">
-        <?php /* Html::img('./images/elements/ciclo.png', [
+        <?=  Html::img('./images/elements/ciclo.png', [
             "id" => "inversion",
             "class" => "img-fluid", 
             "usemap" => "#image-map",
-            "width" => "7087",
-            "height" => "6577",
-        ]) */?>
+            "width" => "1024",
+            "height" => "950",
+        ]) ?>
         <map name="image-map">
+            <area id="inversion1" alt="1" title="Asiste a un evento inmobiliario" href="#" coords="538,104,619,116,689,141,740,172,781,200,813,230,840,261,789,382,730,392,697,349,657,314,616,291,571,277,602,222" shape="poly">
+        </map>
+        <!-- <map name="image-map">
             <area id="inversion1" alt="1" title="1" href="#" coords="3722,707,4505,864,5131,1176,5550,1502,5800,1790,5444,2628,5049,2703,4786,2365,4467,2128,4185,1996,3941,1896,4160,1514,3903,1051" shape="poly">
             <area id="inversion2" alt="2" title="2" href="#" coords="5926,1952,6295,2672,6439,3242,6452,3780,6383,4249,5494,4493,5174,4218,5268,3861,5275,3373,5212,3079,5131,2866,5556,2785" shape="poly">
             <area id="inversion3" alt="3" title="3" href="#" coords="6351,4418,6226,4781,6032,5144,5757,5507,5538,5745,5237,5983,4830,6220,4073,5688,4098,5269,4411,5106,4724,4887,4943,4656,5118,4387,5462,4668" shape="poly">
@@ -80,9 +83,9 @@ $this->title = Yii::$app->name;
             <area id="inversion5" alt="5" title="5" href="#" coords="2132,6158,1537,5720,1155,5282,917,4856,711,4280,1406,3667,1806,3780,1863,4149,2013,4474,2201,4737,2451,4975,2094,5238" shape="poly">
             <area id="inversion6" alt="6" title="6" href="#" coords="686,4111,654,3479,711,2985,867,2491,1061,2109,1274,1827,2182,1990,2326,2347,2113,2584,1969,2879,1856,3129,1787,3592,1368,3479" shape="poly">
             <area id="inversion7" alt="7" title="7" href="#" coords="1387,1671,1744,1333,2188,1064,2633,864,3115,757,3534,720,3972,1514,3772,1871,3371,1871,3014,1934,2714,2053,2457,2228,2288,1827" shape="poly">
-        </map>
+        </map> -->
     </div>
-</section> -->
+</section>
 
 <section class="slice sct-color-1">
     <div class="container">

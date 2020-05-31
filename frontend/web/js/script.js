@@ -19,6 +19,8 @@ $(document).ready(function(){
       newCoords.push(newCoord.toFixed(2).concat('%'));
     });
 
+    console.log(newCoords);
+
     map.attr('coords', newCoords);
   }
 
