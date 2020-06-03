@@ -46,6 +46,23 @@ class ContactForm extends Model
         ];
     }
 
+    public function init()
+    {
+        parent::init();
+
+        if (Yii::$app->request->get()) {
+            // TODO
+            switch (Yii::$app->request->get('id')) {
+                case 1:
+                    $this->subject = '';
+                    $this->body = '';
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+
     /**
      * Sends an email to the specified email address using the information collected by this model.
      *

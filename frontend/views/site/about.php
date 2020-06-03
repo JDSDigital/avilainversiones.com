@@ -6,7 +6,7 @@ use yii\helpers\Html;
 
 $this->title = 'Empresa';
 ?>
-<section class="slice-lg has-bg-cover bg-size-cover" style="background-image: url(./images/backgrounds/BannerEmpresa.jpg);">
+<section class="slice-lg has-bg-cover bg-size-cover" style="background-image: url(./images/banners/empresa.jpg);">
     <span class="mask mask-dark--style-2"></span>
     <div class="container">
         <div class="row">
@@ -17,33 +17,33 @@ $this->title = 'Empresa';
                 <p class="c-white mt-4">
                     <p class="mb-0">Una empresa es el respaldo de un sistema operativo que funciona por medio de equipos.</p>
                     <p class="mb-0">Un equipo apoya una empresa a través del esfuerzo mancomunado de cada individuo.</p>
-                    <p class="mb-0">Un individuo es un eslabon fundamental para que se brinde un buen servicio.</p>
+                    <p class="mb-0">Un individuo es un eslabón fundamental para que se brinde un buen servicio.</p>
                     <p class="mb-0">Un buen servicio solo se logra cuando todo trabaja junto y en armonía.</p>
                 </p>
 
                 <div class="btn-container mt-5">
-                <ul class="social-media social-media--style-1-v2">
-                    <li>
-                        <a href="#" class="facebook btn-circle" target="_blank" data-toggle="tooltip" data-original-title="Facebook">
-                            <i class="fa fa-facebook"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="instagram btn-circle" target="_blank" data-toggle="tooltip" data-original-title="Instagram">
-                            <i class="fa fa-instagram"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="dribbble btn-circle" target="_blank" data-toggle="tooltip" data-original-title="Dribbble">
-                            <i class="fa fa-dribbble"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="dribbble btn-circle" target="_blank" data-toggle="tooltip" data-original-title="Github">
-                            <i class="fa fa-github"></i>
-                        </a>
-                    </li>
-                </ul>
+                    <ul class="social-media social-media--style-1-v2">
+                        <li>
+                            <a href="#" class="facebook btn-circle" target="_blank" data-toggle="tooltip" data-original-title="Facebook">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="instagram btn-circle" target="_blank" data-toggle="tooltip" data-original-title="Instagram">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="dribbble btn-circle" target="_blank" data-toggle="tooltip" data-original-title="Dribbble">
+                                <i class="fa fa-dribbble"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="dribbble btn-circle" target="_blank" data-toggle="tooltip" data-original-title="Github">
+                                <i class="fa fa-github"></i>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

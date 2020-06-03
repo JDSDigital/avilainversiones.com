@@ -15,7 +15,7 @@ $this->title = Yii::$app->name;
                     <div class="swiper-wrapper">
                         <!-- Slide -->
                         <div class="swiper-slide" data-swiper-autoplay="8000">
-                            <div class="slice holder-item holder-item-light has-bg-cover bg-size-cover" style="background-image: url(./images/backgrounds/BannerHome.jpg); background-position: bottom center;">
+                            <div class="slice holder-item holder-item-light has-bg-cover bg-size-cover" style="background-image: url(./images/banners/home.jpg); background-position: bottom center;">
                             <span class="mask mask-dark--style-2"></span>
                                 <div class="container d-flex align-items-center">
                                     <div class="col">
@@ -41,7 +41,7 @@ $this->title = Yii::$app->name;
     </div>
 </section>
 
-<section class="slice-lg has-bg-cover bg-size-cover" style="background-image: url('./images/backgrounds/slider/img-11.jpg');">
+<section class="slice-lg has-bg-cover bg-size-cover" style="background-image: url('./images/banners/inversiones.jpg');">
     <div class="container">
         <div class="row">
             <div class="col-lg-5 col-md-8 ml-lg-auto">
@@ -63,9 +63,9 @@ $this->title = Yii::$app->name;
     </div>
 </section>
 
-<section class="slice-lg bg-white">
+<section class="slice-lg sct-color-1">
     <div class="container">
-        <?=  Html::img('./images/elements/ciclo.png', [
+        <?=  Html::img('./images/elements/ciclo-golden.png', [
             "id" => "inversion",
             "class" => "img-fluid", 
             "usemap" => "#image-map",
@@ -298,14 +298,14 @@ $this->title = Yii::$app->name;
                         <div class="card-img-bg" style="background-image: url('./images/services/arriendo.png');"></div>
                         <span class="mask mask-dark alpha-8 alpha-5--hover"></span>
                         <div class="card-body px-4 py-4">
-                            <div style="min-height: 300px;">
+                            <div style="min-height: 200px;">
                                 <h3 class="heading heading-inverse heading-3 strong-600 mb-3"><?= Html::encode('Arriendo') ?></h3>
-                                <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">¿Buscas una propiedad para arrendar? o ¿deseas colocar tu propiedad en arriendo?</p>
+                                <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">¿Buscas una propiedad para arrendar? o ¿Deseas colocar tu propiedad en arriendo?</p>
                             </div>
                             <span href="#" class="link link--style-4 heading-sm text-uppercase strong-500">
                                 Busco una propiedad
                                 <i class="ion-ios-arrow-right ml-2"></i>
-                            </span>
+                            </span><br />
                             <span href="#" class="link link--style-4 heading-sm text-uppercase strong-500">
                                 Deseo arrendarla
                                 <i class="ion-ios-arrow-right ml-2"></i>
@@ -321,14 +321,14 @@ $this->title = Yii::$app->name;
                         <div class="card-img-bg" style="background-image: url('./images/services/credito.png');"></div>
                         <span class="mask mask-dark alpha-8 alpha-5--hover"></span>
                         <div class="card-body px-4 py-4">
-                            <div style="min-height: 300px;">
+                            <div style="min-height: 200px;">
                                 <h3 class="heading heading-inverse heading-3 strong-600 mb-3"><?= Html::encode('Crédito Hipotecario') ?></h3>
-                                <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">dicha gestion puede ser mas compleja de lo que aparenta, pero si manejas bien el apalancamiento puede llevarte a ser un gran inversionista.</p>
+                                <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">Dicha gestión puede ser más compleja de lo que aparenta, pero si manejas bien el apalancamiento puede llevarte a ser un gran inversionista.</p>
                             </div>
                             <span href="#" class="link link--style-4 heading-sm text-uppercase strong-500">
                                 Entidades Bancarias
                                 <i class="ion-ios-arrow-right ml-2"></i>
-                            </span>
+                            </span><br />
                             <span href="#" class="link link--style-4 heading-sm text-uppercase strong-500">
                                 Otras Entidades financieras
                                 <i class="ion-ios-arrow-right ml-2"></i>
@@ -344,14 +344,14 @@ $this->title = Yii::$app->name;
                         <div class="card-img-bg" style="background-image: url('./images/services/inversion.png');"></div>
                         <span class="mask mask-dark alpha-8 alpha-5--hover"></span>
                         <div class="card-body px-4 py-4">
-                            <div style="min-height: 300px;">
+                            <div style="min-height: 200px;">
                                 <h3 class="heading heading-inverse heading-3 strong-600 mb-3"><?= Html::encode('Oportunidades de Inversión') ?></h3>
-                                <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">propiedades que se ajustan a los nuevos conceptos inmobiliarios del mercado</p>
+                                <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">Propiedades que se ajustan a los nuevos conceptos inmobiliarios del mercado</p>
                             </div>
                             <a href="#" class="link link--style-4 heading-sm text-uppercase strong-500">
                                 Usadas
                                 <i class="ion-ios-arrow-right ml-2"></i>
-                            </a>
+                            </a><br />
                             <a href="#" class="link link--style-4 heading-sm text-uppercase strong-500">
                                 Nuevas
                                 <i class="ion-ios-arrow-right ml-2"></i>
@@ -367,14 +367,14 @@ $this->title = Yii::$app->name;
                         <div class="card-img-bg" style="background-image: url('./images/services/legal.png');"></div>
                         <span class="mask mask-dark alpha-8 alpha-5--hover"></span>
                         <div class="card-body px-4 py-4">
-                            <div style="min-height: 300px;">
+                            <div style="min-height: 200px;">
                                 <h3 class="heading heading-inverse heading-3 strong-600 mb-3"><?= Html::encode('Departamento Legal') ?></h3>
-                                <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">Abogados expertos en el área de bienes raíces, listos para apoyarte en cualquier procedimiento que requieras.</p>
+                                <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">Abogados expertos en el área de Bienes raíces, listos para apoyarte en cualquier procedimiento que requieras.</p>
                             </div>
                             <span href="#" class="link link--style-4 heading-sm text-uppercase strong-500">
                                 Presencial
                                 <i class="ion-ios-arrow-right ml-2"></i>
-                            </span>
+                            </span><br />
                             <span href="#" class="link link--style-4 heading-sm text-uppercase strong-500">
                                 Online
                                 <i class="ion-ios-arrow-right ml-2"></i>
@@ -390,7 +390,7 @@ $this->title = Yii::$app->name;
                         <div class="card-img-bg" style="background-image: url('./images/services/estadisticas.png');"></div>
                         <span class="mask mask-dark alpha-8 alpha-5--hover"></span>
                         <div class="card-body px-4 py-4">
-                            <div style="min-height: 300px;">
+                            <div style="min-height: 200px;">
                                 <h3 class="heading heading-inverse heading-3 strong-600 mb-3"><?= Html::encode('Estadísticas') ?></h3>
                                 <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">Te mostramos los números detrás de cualquiera de nuestras gestiones.</p>
                             </div>
@@ -409,7 +409,7 @@ $this->title = Yii::$app->name;
                         <div class="card-img-bg" style="background-image: url('./images/services/alianzas.png');"></div>
                         <span class="mask mask-dark alpha-8 alpha-5--hover"></span>
                         <div class="card-body px-4 py-4">
-                            <div style="min-height: 300px;">
+                            <div style="min-height: 200px;">
                                 <h3 class="heading heading-inverse heading-3 strong-600 mb-3"><?= Html::encode('Alianzas') ?></h3>
                                 <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">Colocamos a tu alcance las empresas y emprendimientos que nos ayudan a ser mejores.</p>
                             </div>
@@ -428,7 +428,7 @@ $this->title = Yii::$app->name;
                         <div class="card-img-bg" style="background-image: url('./images/services/administracion.png');"></div>
                         <span class="mask mask-dark alpha-8 alpha-5--hover"></span>
                         <div class="card-body px-4 py-4">
-                            <div style="min-height: 300px;">
+                            <div style="min-height: 200px;">
                                 <h3 class="heading heading-inverse heading-3 strong-600 mb-3"><?= Html::encode('Administración de Propiedades') ?></h3>
                                 <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">Conoce nuestro servicio para el manejo adecuado de tu inversión.</p>
                             </div>

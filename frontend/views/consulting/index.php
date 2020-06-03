@@ -17,7 +17,7 @@ $this->title = Html::encode('Asesorías');
                         Asesorías
                     </h2>
                     <p class="lead c-white animated mt-3" data-animation-in="fadeInUpBig" data-animation-delay="200">
-                        ¿Deseas saber que tipo de Asesoria Necesitas?
+                        ¿Deseas saber que tipo de asesoría necesitas?
                     </p>
                 </div>
             </div>
@@ -61,7 +61,7 @@ $this->title = Html::encode('Asesorías');
                         Asesorías para adquirir propiedades usadas
                     </h3>
                     <p class="lead line-height-1_8 mt-4">
-                        Aprende sobre el uso, desgate natural y verdadero valor de cada propiedad en el mercado y asi poder aprovechar grandes oportunidades de inversión.
+                        Aprende sobre el uso, desgaste natural y verdadero valor de cada propiedad en el mercado y asi poder aprovechar grandes oportunidades de inversión.
                     </p>
                     <div class="btn p-0 mt-5">
                         <a href="#" class="btn btn-styled btn-golden btn-circle text-uppercase strong-400">Presencial</a>
