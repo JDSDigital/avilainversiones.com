@@ -48,7 +48,7 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                '' => 'site/index',
+                'dashboard' => 'site/index',
                 'login' => 'site/login',
             ],
         ],

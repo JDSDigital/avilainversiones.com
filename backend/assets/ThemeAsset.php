@@ -31,7 +31,11 @@ class ThemeAsset extends AssetBundle
         'js/plugins/forms/selects/bootstrap_multiselect.js',
         'js/plugins/ui/moment/moment.min.js',
         'js/plugins/pickers/daterangepicker.js',
+        'js/plugins/forms/styling/uniform.min.js',
+        'js/plugins/forms/styling/switchery.min.js',
+        'js/plugins/forms/styling/switch.min.js',
         'js/app.js',
+        'js/demo_pages/form_checkboxes_radios.js',
         'js/demo_pages/dashboard.js',
     ];
 }

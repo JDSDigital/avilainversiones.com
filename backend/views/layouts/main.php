@@ -5,6 +5,7 @@
 
 use backend\assets\AppAsset;
 use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\bootstrap4\Nav;
 use yii\bootstrap4\NavBar;
 use yii\widgets\Breadcrumbs;
@@ -125,12 +126,16 @@ AppAsset::register($this);
                         <!-- Main -->
                         <li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Main</div> <i class="icon-menu" title="Main"></i></li>
                         <li class="nav-item">
-                            <a href="index.html" class="nav-link active">
-                                <i class="icon-home4"></i>
-                                <span>
-                                    Dashboard
-                                </span>
-                            </a>
+                            <?= Html::a('<i class="icon-home4"></i><span>Dashboard</span>', 
+                                ['/site/index'], 
+                                ['class' => (Yii::$app->controller->id == 'site') ? 'nav-link active' : 'nav-link'])    
+                            ?>
+                        </li>
+                        <li class="nav-item">
+                            <?= Html::a('<i class="icon-home4"></i><span>Eventos</span>', 
+                                ['events/index'], 
+                                ['class' => (Yii::$app->controller->id == 'events') ? 'nav-link active' : 'nav-link']) 
+                            ?>
                         </li>
                         <li class="nav-item nav-item-submenu">
                             <a href="#" class="nav-link"><i class="icon-copy"></i> <span>Layouts</span></a>
@@ -157,11 +162,36 @@ AppAsset::register($this);
         <!-- /main sidebar -->
 
         <div class="content-wrapper">
-            <?= Breadcrumbs::widget([
-                'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-            ]) ?>
-            <?= Alert::widget() ?>
-            <?= $content ?>
+            <div class="mb-3 border-top-1 border-top-primary">
+                <div class="page-header page-header-light" style="margin-bottom: 0;">
+                    <div class="page-header-content header-elements-md-inline">
+                        <div class="page-title">
+                            <h4>
+                                <span class="font-weight-semibold"><?= $this->title ?></span>
+                                <!-- <small class="d-block text-muted ml-0">Basic breadcrumb inside page header</small> -->
+                            </h4>
+                        </div>
+
+                        <div class="header-elements py-0">
+                            <?= Breadcrumbs::widget([
+                                'encodeLabels' => false,
+                                'tag' => 'div',
+                                'itemTemplate' => "<span class='breadcrumb-item'>{link}</span>\n",
+                                'activeItemTemplate' => "<span class='breadcrumb-item active'>{link}</span>",
+                                'homeLink' => [
+                                    'label' => '<i class="icon-home2 mr-2"></i> Dashboard',
+                                    'url' => Url::to(Yii::$app->homeUrl.'dashboard')
+                                ],
+                                'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+                            ]) ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <?= Alert::widget() ?>
+                <?= $content ?>
+            </div>
         </div>
     </div>
 </div>
