@@ -3,7 +3,9 @@
 namespace backend\controllers;
 
 use Yii;
+use yii\helpers\Url;
 use common\models\Events;
+use common\models\EventsImages;
 use common\models\EventsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -68,7 +70,10 @@ class EventsController extends Controller
 
         if ($model->load(Yii::$app->request->post())) {
             if ($model->save()) {
+
+                $model->upload();
                 Yii::$app->session->setFlash('success', 'Evento creado');
+
                 return $this->redirect(['view', 'id' => $model->id]);
             } else {
                 foreach ($model->errors as $error) {
@@ -93,12 +98,47 @@ class EventsController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        $uploadedImages = EventsImages::find()->where(['event_id' => $id])->all();
+        // echo '<pre>';
+        // echo print_r($uploadedImages);
+        // echo '</pre>';
+        // exit;
+
+        $previews = [];
+        $previewsConfig = [];
+
+        foreach ($uploadedImages as $image){
+            $previews[] = $image->getThumb();
+
+            $previewsConfig[] = [
+              'caption' => $image->file,
+              'key' => $image->id,
+              'url' => Url::to(["/events/deleteimage?id=" . $image->id]),
+            ];
+        }
+        // echo '<pre>';
+        // echo print_r($previewsConfig);
+        // echo '</pre>';
+        // exit;
+
+        if ($model->load(Yii::$app->request->post())) {
+            if ($model->save()) {
+
+                $model->upload();
+                Yii::$app->session->setFlash('success', 'Evento actualizado');
+
+                return $this->redirect(['view', 'id' => $model->id]);
+            } else {
+                foreach ($model->errors as $error) {
+                    Yii::$app->session->setFlash('error', $error);
+                }
+            }
         }
 
         return $this->render('update', [
             'model' => $model,
+            'previews' => $previews,
+            'previewsConfig' => $previewsConfig,
         ]);
     }
 
@@ -111,9 +151,36 @@ class EventsController extends Controller
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
+        $model = $this->findModel($id);
+        $images = EventsImages::find()->where(['event_id' => $id])->all();
 
+        foreach ($images as $image) {
+            $this->actionDeleteimage($image->id);
+        }
+
+        $model->delete();
         return $this->redirect(['index']);
+    }
+
+    /**
+     * Deletes a single image
+    * @param $id
+    * @return bool
+    */
+    public function actionDeleteimage($id){
+
+        $image = EventsImages::findOne($id);
+
+        $event_id = $image->event_id;
+
+        $url = Url::to('@frontend/web/images/events/') . $image->file;
+        $urlThumb = Url::to('@frontend/web/images/events/thumbs/') . $image->file;
+
+        // Delete image from the database and the folder
+        if (unlink($url) && unlink($urlThumb) && $image->delete())
+            return true;
+        else
+            return false;
     }
 
     /**

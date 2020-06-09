@@ -3,6 +3,7 @@
 namespace common\models;
 
 use Yii;
+use yii\web\UploadedFile;
 use yii\behaviors\TimestampBehavior;
 
 /**
@@ -24,6 +25,8 @@ class Events extends \yii\db\ActiveRecord
 {
     const STATUS_ACTIVE = 10;
     const STATUS_DELETED = 0;
+
+    public $images;
     
     /**
      * {@inheritdoc}
@@ -71,6 +74,46 @@ class Events extends \yii\db\ActiveRecord
             'created_at' => 'Creado En',
             'updated_at' => 'Actualizado En',
         ];
+    }
+
+    /**
+     * Upload supplied images via UploadedFile
+     * @return boolean
+     */
+    public function upload(): bool
+    {
+        if ($this->validate()) {
+
+            $uploadedImages = UploadedFile::getInstances($this, 'images');
+
+            if (count($uploadedImages) > 0) {
+
+                foreach ($uploadedImages as $key => $uploadedImage) {
+                    $image = new EventsImages;
+                    $name = $this->id . '-' . ($key + 1) . '-' . time() . '.' . $uploadedImage->extension;
+
+                    $image->file = $name;
+                    $image->event_id = $this->id;
+
+                    if (!$image->saveImages($uploadedImage, $name)) {
+                        return false;
+                    }
+
+                    // if ($key == 0) {
+                    //     $image->cover = (!$this->cover) ? EventsImages::STATUS_ACTIVE : EventsImages::STATUS_DELETED;
+                    // }
+
+                    $image->save();
+                }
+
+                return true;
+
+            } else {
+                return true;
+            }
+        } else {
+            return false;
+        }
     }
 
     /**

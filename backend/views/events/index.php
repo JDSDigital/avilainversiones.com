@@ -1,7 +1,9 @@
 <?php
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\grid\GridView;
+use yii\grid\ActionColumn;
 use yii\widgets\Pjax;
 use common\models\Events;
 /* @var $this yii\web\View */
@@ -60,12 +62,28 @@ $this->params['breadcrumbs'][] = $this->title;
                     </div>";
                 }
             ],
-            'title',
+            [
+                'attribute' => 'title',
+                'format' => 'raw'
+            ],
             'summary',
             'article:ntext',
             'views',
-
-            ['class' => 'yii\grid\ActionColumn'],
+            [
+                'class' => ActionColumn::className(),
+                'template' => '{view} {update} {delete}',
+                'buttons' => [
+                    'view' => function ($url, $model, $key) {
+                        return Html::a('<span class="icon-eye" aria-hidden="true"></span>', $url);
+                    },
+                    'update' => function ($url, $model, $key) {
+                        return Html::a('<span class="icon-pencil5" aria-hidden="true"></span>', $url);
+                    },
+                    'delete' => function ($url, $model, $key) {
+                        return Html::a('<span class="icon-trash" aria-hidden="true"></span>', $url);
+                    }
+                 ],
+            ],
         ],
     ]); ?>
 

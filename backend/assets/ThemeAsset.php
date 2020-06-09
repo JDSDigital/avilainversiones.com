@@ -14,6 +14,7 @@ class ThemeAsset extends AssetBundle
     public $css = [
         'https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900',
         'css/icons/icomoon/styles.min.css',
+        'css/icons/fontawesome/styles.min.css',
         'css/bootstrap.min.css',
         'css/bootstrap_limitless.min.css',
         'css/layout.min.css',
@@ -21,7 +22,7 @@ class ThemeAsset extends AssetBundle
         'css/colors.min.css',
     ];
     public $js = [
-        'js/main/jquery.min.js',
+        // 'js/main/jquery.min.js',
         'js/main/bootstrap.bundle.min.js',
         'js/plugins/loaders/blockui.min.js',
         'js/plugins/ui/ripple.min.js',
