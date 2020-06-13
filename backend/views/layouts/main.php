@@ -63,7 +63,7 @@ AppAsset::register($this);
 			<ul class="navbar-nav ml-md-auto">
 				<li class="nav-item">
 					<a href="#" class="navbar-nav-link">
-                        <?= 
+                        <?=
                             Html::beginForm(['/site/logout'], 'post')
                             . Html::submitButton(
                                 '<i class="icon-switch2"></i>',
@@ -84,7 +84,7 @@ AppAsset::register($this);
 
     <!-- Page content -->
 	<div class="page-content">
-    
+
         <!-- Main sidebar -->
         <div class="sidebar sidebar-light sidebar-main sidebar-expand-md">
 
@@ -110,7 +110,7 @@ AppAsset::register($this);
                     <div class="sidebar-user-material-body">
                         <div class="card-body text-center">
                             <a href="#">
-                                <img src="admin/images/placeholders/placeholder.jpg" class="img-fluid rounded-circle shadow-1 mb-3" width="80" height="80" alt="">
+                                <img src="../images/placeholders/placeholder.jpg" class="img-fluid rounded-circle shadow-1 mb-3" width="80" height="80" alt="">
                             </a>
                             <h6 class="mb-0 text-white text-shadow-dark">Victoria Baker</h6>
                             <span class="font-size-sm text-white text-shadow-dark">Santa Ana, CA</span>
@@ -127,15 +127,15 @@ AppAsset::register($this);
                         <!-- Main -->
                         <li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Main</div> <i class="icon-menu" title="Main"></i></li>
                         <li class="nav-item">
-                            <?= Html::a('<i class="icon-home4"></i><span>Dashboard</span>', 
-                                ['/site/index'], 
-                                ['class' => (Yii::$app->controller->id == 'site') ? 'nav-link active' : 'nav-link'])    
+                            <?= Html::a('<i class="icon-home4"></i><span>Dashboard</span>',
+                                ['/site/index'],
+                                ['class' => (Yii::$app->controller->id == 'site') ? 'nav-link active' : 'nav-link'])
                             ?>
                         </li>
                         <li class="nav-item">
-                            <?= Html::a('<i class="icon-home4"></i><span>Eventos</span>', 
-                                ['events/index'], 
-                                ['class' => (Yii::$app->controller->id == 'events') ? 'nav-link active' : 'nav-link']) 
+                            <?= Html::a('<i class="icon-home4"></i><span>Eventos</span>',
+                                ['events/index'],
+                                ['class' => (Yii::$app->controller->id == 'events') ? 'nav-link active' : 'nav-link'])
                             ?>
                         </li>
                         <li class="nav-item nav-item-submenu">
@@ -158,7 +158,7 @@ AppAsset::register($this);
 
             </div>
             <!-- /sidebar content -->
-            
+
         </div>
         <!-- /main sidebar -->
 

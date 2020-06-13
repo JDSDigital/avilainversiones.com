@@ -27,7 +27,7 @@ class Events extends \yii\db\ActiveRecord
     const STATUS_DELETED = 0;
 
     public $images;
-    
+
     /**
      * {@inheritdoc}
      */
