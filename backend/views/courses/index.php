@@ -5,19 +5,19 @@ use yii\helpers\Url;
 use yii\grid\GridView;
 use yii\grid\ActionColumn;
 use yii\widgets\Pjax;
-use common\models\Events;
+use common\models\Courses;
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\EventsSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Eventos';
+$this->title = 'Cursos';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="card">
     <div class="card-header header-elements-inline">
         <h5 class="card-title"></h5>
         <div class="header-elements">
-            <?= Html::a('Crear un evento', ['create'], ['class' => 'btn btn-success']) ?>
+            <?= Html::a('Crear un curso', ['create'], ['class' => 'btn btn-success']) ?>
         </div>
     </div>
 
@@ -43,20 +43,10 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
             [
-                'attribute' => 'featured',
-                'format' => 'raw',
-                'value' => function ($model) {
-                    $check = ($model->featured == Events::STATUS_ACTIVE) ? "checked='checked'" : null;
-                    return "<div class='form-check form-check-right'>
-                      <input id='featured-$model->id' type='checkbox' class='form-check-input-switchery switchFeatured' $check>
-                    </div>";
-                }
-            ],
-            [
                 'attribute' => 'status',
                 'format' => 'raw',
                 'value' => function ($model) {
-                    $check = ($model->status == Events::STATUS_ACTIVE) ? "checked='checked'" : null;
+                    $check = ($model->status == Courses::STATUS_ACTIVE) ? "checked='checked'" : null;
                     return "<div class='form-check form-check-right'>
                       <input id='status-$model->id' type='checkbox' class='form-check-input-switchery switchStatus' $check>
                     </div>";
@@ -66,7 +56,6 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'title',
                 'format' => 'raw'
             ],
-            'summary',
             'article:ntext',
             'views',
             [
@@ -82,7 +71,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     'delete' => function ($url, $model, $key) {
                         return Html::a('<span class="icon-trash" aria-hidden="true"></span>', ['delete', 'id' => $model->id], [
                             'data' => [
-                                'confirm' => '¿Seguro desea borrar este evento?',
+                                'confirm' => '¿Seguro desea borrar este curso?',
                                 'method' => 'post',
                             ],
                         ]);

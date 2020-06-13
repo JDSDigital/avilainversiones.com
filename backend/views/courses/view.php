@@ -2,13 +2,13 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
-use common\models\Events;
+use common\models\Courses;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\Events */
 
 $this->title = $model->title;
-$this->params['breadcrumbs'][] = ['label' => 'Eventos', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Cursos', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
@@ -20,7 +20,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <?= Html::a('Borrar', ['delete', 'id' => $model->id], [
                 'class' => 'btn btn-danger ml-2',
                 'data' => [
-                    'confirm' => '¿Seguro desea borrar este evento?',
+                    'confirm' => '¿Seguro desea borrar este curso?',
                     'method' => 'post',
                 ],
             ]) ?>
@@ -31,19 +31,12 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'title',
-            'summary',
             'article:ntext',
             'views',
             [
-                'attribute' => 'featured',
-                'value' => function ($model) {
-                    return ($model->featured == Events::STATUS_ACTIVE) ? 'Activo' : 'Inactivo';
-                },
-            ],
-            [
                 'attribute' => 'status',
                 'value' => function ($model) {
-                    return ($model->status == Events::STATUS_ACTIVE) ? 'Activo' : 'Inactivo';
+                    return ($model->status == Courses::STATUS_ACTIVE) ? 'Activo' : 'Inactivo';
                 },
             ],
             [

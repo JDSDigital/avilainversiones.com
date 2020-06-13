@@ -4,17 +4,16 @@ namespace backend\controllers;
 
 use Yii;
 use yii\helpers\Url;
-use common\models\Events;
-use common\models\EventsImages;
-use common\models\EventsSearch;
+use common\models\Courses;
+use common\models\CoursesSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * EventsController implements the CRUD actions for Events model.
+ * CoursesController implements the CRUD actions for Courses model.
  */
-class EventsController extends Controller
+class CoursesController extends Controller
 {
     /**
      * {@inheritdoc}
@@ -32,12 +31,12 @@ class EventsController extends Controller
     }
 
     /**
-     * Lists all Events models.
+     * Lists all Courses models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new EventsSearch();
+        $searchModel = new CoursesSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -47,7 +46,7 @@ class EventsController extends Controller
     }
 
     /**
-     * Displays a single Events model.
+     * Displays a single Courses model.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -60,19 +59,19 @@ class EventsController extends Controller
     }
 
     /**
-     * Creates a new Events model.
+     * Creates a new Courses model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Events();
+        $model = new Courses();
 
         if ($model->load(Yii::$app->request->post())) {
             if ($model->save()) {
 
                 $model->upload();
-                Yii::$app->session->setFlash('success', 'Evento creado');
+                Yii::$app->session->setFlash('success', 'Curso creado');
 
                 return $this->redirect(['view', 'id' => $model->id]);
             } else {
@@ -88,7 +87,7 @@ class EventsController extends Controller
     }
 
     /**
-     * Updates an existing Events model.
+     * Updates an existing Courses model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -97,27 +96,19 @@ class EventsController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        $previews[] = $model->getThumb();
 
-        $uploadedImages = EventsImages::find()->where(['event_id' => $id])->all();
-
-        $previews = [];
-        $previewsConfig = [];
-
-        foreach ($uploadedImages as $image){
-            $previews[] = $image->getThumb();
-
-            $previewsConfig[] = [
-              'caption' => $image->file,
-              'key' => $image->id,
-              'url' => Url::to(["/events/deleteimage?id=" . $image->id]),
-            ];
-        }
+        $previewsConfig[] = [
+          'caption' => $model->file,
+          'key' => $model->id,
+          'url' => Url::to(["/courses/deleteimage?id=" . $model->id]),
+        ];
 
         if ($model->load(Yii::$app->request->post())) {
             if ($model->save()) {
 
                 $model->upload();
-                Yii::$app->session->setFlash('success', 'Evento actualizado');
+                Yii::$app->session->setFlash('success', 'Curso actualizado');
 
                 return $this->redirect(['view', 'id' => $model->id]);
             } else {
@@ -135,7 +126,7 @@ class EventsController extends Controller
     }
 
     /**
-     * Deletes an existing Events model.
+     * Deletes an existing Courses model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -144,47 +135,31 @@ class EventsController extends Controller
     public function actionDelete($id)
     {
         $model = $this->findModel($id);
-        $images = EventsImages::find()->where(['event_id' => $id])->all();
+        $url = Url::to('@frontend/web/images/courses/'). $model->file;
+        $urlThumb = Url::to('@frontend/web/images/courses/thumbs/'). $model->file;
 
-        foreach ($images as $image) {
-            $this->actionDeleteimage($image->id);
+        // Delete image from the database and the folder
+        if (unlink($url) && unlink($urlThumb)) {
+            $this->findModel($id)->delete();
+        } else {
+            foreach ($model->errors as $error) {
+                Yii::$app->session->setFlash('error', $error);
+            }
         }
 
-        $model->delete();
         return $this->redirect(['index']);
     }
 
     /**
-     * Deletes a single image
-    * @param $id
-    * @return bool
-    */
-    public function actionDeleteimage($id){
-
-        $image = EventsImages::findOne($id);
-
-        $event_id = $image->event_id;
-
-        $url = Url::to('@frontend/web/images/events/') . $image->file;
-        $urlThumb = Url::to('@frontend/web/images/events/thumbs/') . $image->file;
-
-        // Delete image from the database and the folder
-        if (unlink($url) && unlink($urlThumb) && $image->delete())
-            return true;
-        else
-            return false;
-    }
-
-    /**
-     * Finds the Events model based on its primary key value.
+     * Finds the Courses model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Events the loaded model
+     * @return Courses the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Events::findOne($id)) !== null) {
+        if (($model = Courses::findOne($id)) !== null) {
             return $model;
         }
 
