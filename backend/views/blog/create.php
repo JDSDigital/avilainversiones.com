@@ -3,10 +3,10 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\Courses */
+/* @var $model common\models\Blog */
 
-$this->title = 'Crear Curso';
-$this->params['breadcrumbs'][] = ['label' => 'Cursos', 'url' => ['index']];
+$this->title = 'Crear Entrada';
+$this->params['breadcrumbs'][] = ['label' => 'Blog', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="card">

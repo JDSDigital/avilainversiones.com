@@ -144,6 +144,12 @@ AppAsset::register($this);
                                 ['class' => (Yii::$app->controller->id == 'events') ? 'nav-link active' : 'nav-link'])
                             ?>
                         </li>
+                        <li class="nav-item">
+                            <?= Html::a('<i class="icon-home4"></i><span>Blog</span>',
+                                ['blog/index'],
+                                ['class' => (Yii::$app->controller->id == 'blog') ? 'nav-link active' : 'nav-link'])
+                            ?>
+                        </li>
                         <li class="nav-item nav-item-submenu">
                             <a href="#" class="nav-link"><i class="icon-copy"></i> <span>Layouts</span></a>
 
