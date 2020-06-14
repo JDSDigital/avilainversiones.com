@@ -6,6 +6,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use frontend\models\ContactForm;
+use common\models\Blog;
 
 /**
  * Site controller
@@ -66,7 +67,11 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $blogs = Blog::find()->active()->orderBy(['created_at' => SORT_DESC])->limit(4)->all();
+
+        return $this->render('index', [
+            'blogs' => $blogs,
+        ]);
     }
 
     /**
@@ -77,7 +82,7 @@ class SiteController extends Controller
     public function actionContact()
     {
         $model = new ContactForm();
-        
+
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             if ($model->sendEmail(Yii::$app->params['adminEmail'])) {
                 Yii::$app->session->setFlash('success', 'Thank you for contacting us. We will respond to you as soon as possible.');

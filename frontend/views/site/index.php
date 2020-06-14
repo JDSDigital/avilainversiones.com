@@ -67,7 +67,7 @@ $this->title = Yii::$app->name;
     <div class="container">
         <?=  Html::img('./images/elements/ciclo-golden.png', [
             "id" => "inversion",
-            "class" => "img-fluid", 
+            "class" => "img-fluid",
             "usemap" => "#image-map",
             "width" => "1024",
             "height" => "950",
@@ -104,173 +104,53 @@ $this->title = Yii::$app->name;
         <span class="space-xs-lg"></span>
 
         <div class="row cols-md-space cols-sm-space cols-xs-space">
+          <?php  foreach ($blogs as $entry) : ?>
             <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="card z-depth-2-top">
-                    <div class="card-image">
-                        <div class="view view-first">
-                            <a href="#">
-                                <img src="./images/prv/blog/img-tech-1.jpg">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="card-body">
-                        <h3 class="heading heading-5 strong-500 mb-0">
-                            <a href="#">Learn how to build your own website with Boomerang</a>
-                        </h3>
-                    </div>
-
-                    <div class="card-footer">
-                        <div class="row">
-                            <div class="col">
-                                <div class="block-author">
-                                    <div class="author-image author-image-xs">
-                                        <img src="./images/prv/people/person-1.jpg">
-                                    </div>
-                                    <div class="author-info">
-                                        <div class="author-name">
-                                            <a href="#" class="strong-600">Bertram Ozzie</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col text-right">
-                                <ul class="inline-links inline-links--style-2">
-                                    <li>
-                                        5 min read
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+              <div class="card z-depth-2-top">
+                <div class="card-image">
+                  <div class="view view-first">
+                    <?= Html::a(
+                        Html::img('@web/images/blog/thumbs/'.$entry->file),
+                        ['blog/view', 'id' => $entry->id]
+                    ) ?>
+                  </div>
                 </div>
-            </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="card z-depth-2-top">
-                    <div class="card-image">
-                        <div class="view view-first">
-                            <a href="#">
-                                <img src="./images/prv/blog/img-tech-2.jpg">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="card-body">
-                        <h3 class="heading heading-5 strong-500 mb-0">
-                            <a href="#">15 Lessons about design you need to learn to succeed</a>
-                        </h3>
-                    </div>
-
-                    <div class="card-footer">
-                        <div class="row">
-                            <div class="col">
-                                <div class="block-author">
-                                    <div class="author-image author-image-xs">
-                                        <img src="./images/prv/people/person-2.jpg">
-                                    </div>
-                                    <div class="author-info">
-                                        <div class="author-name">
-                                            <a href="#" class="strong-600">Elisabeth Alanna</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col text-right">
-                                <ul class="inline-links inline-links--style-2">
-                                    <li>
-                                        10 min read
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                <div class="card-body">
+                  <h3 class="heading heading-5 strong-500 mb-0">
+                    <?= Html::a(
+                        $entry->title,
+                        ['blog/view', 'id' => $entry->id]
+                    ) ?>
+                  </h3>
                 </div>
-            </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="card z-depth-2-top">
-                    <div class="card-image">
-                        <div class="view view-first">
-                            <a href="#">
-                                <img src="./images/prv/blog/img-tech-3.jpg">
-                            </a>
+                <div class="card-footer">
+                  <div class="row">
+                    <div class="col">
+                      <div class="block-author">
+                        <div class="author-image author-image-xs">
+                          <img src="./images/prv/people/person-1.jpg">
                         </div>
-                    </div>
-
-                    <div class="card-body">
-                        <h3 class="heading heading-5 strong-500 mb-0">
-                            <a href="#">Never changing design will eventually destroy you</a>
-                        </h3>
-                    </div>
-
-                    <div class="card-footer">
-                        <div class="row">
-                            <div class="col">
-                                <div class="block-author">
-                                    <div class="author-image author-image-xs">
-                                        <img src="./images/prv/people/person-3.jpg">
-                                    </div>
-                                    <div class="author-info">
-                                        <div class="author-name">
-                                            <a href="#" class="strong-600">Destiny Erykah</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col text-right">
-                                <ul class="inline-links inline-links--style-2">
-                                    <li>
-                                        15 min read
-                                    </li>
-                                </ul>
-                            </div>
+                        <div class="author-info">
+                          <div class="author-name">
+                            <a href="#" class="strong-600">Bertram Ozzie</a>
+                          </div>
                         </div>
+                      </div>
                     </div>
+                    <div class="col text-right">
+                      <ul class="inline-links inline-links--style-2">
+                        <li>
+                          5 min read
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
-
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="card z-depth-2-top">
-                    <div class="card-image">
-                        <div class="view view-first">
-                            <a href="#">
-                                <img src="./images/prv/blog/img-tech-1.jpg">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="card-body">
-                        <h3 class="heading heading-5 strong-500 mb-0">
-                            <a href="#">Learn how to build your own website with Boomerang</a>
-                        </h3>
-                    </div>
-
-                    <div class="card-footer">
-                        <div class="row">
-                            <div class="col">
-                                <div class="block-author">
-                                    <div class="author-image author-image-xs">
-                                        <img src="./images/prv/people/person-1.jpg">
-                                    </div>
-                                    <div class="author-info">
-                                        <div class="author-name">
-                                            <a href="#" class="strong-600">Bertram Ozzie</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col text-right">
-                                <ul class="inline-links inline-links--style-2">
-                                    <li>
-                                        5 min read
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          <?php endforeach; ?>
         </div>
     </div>
 </section>
@@ -288,7 +168,7 @@ $this->title = Yii::$app->name;
                 </div>
             </div>
         </div>
-        
+
         <span class="space-xs-lg"></span>
 
         <div class="row cols-xs-space cols-sm-space cols-md-space justify-content-center">
