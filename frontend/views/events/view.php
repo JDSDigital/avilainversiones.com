@@ -29,89 +29,20 @@ $this->title = Html::encode('Eventos');
     <!-- Gallery -->
     <div class="gallery-bottom">
         <div class="row">
-            <div class="col-sm-2">
-                <div class="gallery-thumb view view-first mx-2 my-3">
-                    <a class="item" href="../images/prv/blog/img-1.jpg" data-fancybox="group">
-                        <img src="../images/prv/blog/img-1.jpg">
-                    </a>
+            <?php foreach ($model->eventsImages as $image) : ?>
+                <div class="col-sm-2">
+                  <div class="gallery-thumb crop view view-first mx-2 my-3">
+                    <?= Html::a(
+                      Html::img($image->getThumb()),
+                      $image->getImage(),
+                      [
+                        'class' => 'item',
+                        'data-fancybox' => 'group'
+                      ]
+                    ) ?>
+                  </div>
                 </div>
-            </div>
-            <div class="col-sm-2">
-                <div class="gallery-thumb view view-first mx-2 my-3">
-                    <a class="item" href="../images/prv/blog/img-2.jpg" data-fancybox="group">
-                        <img src="../images/prv/blog/img-2.jpg">
-                    </a>
-                </div>
-            </div>
-            <div class="col-sm-2">
-                <div class="gallery-thumb view view-first mx-2 my-3">
-                    <a class="item" href="../images/prv/blog/img-3.jpg" data-fancybox="group">
-                        <img src="../images/prv/blog/img-3.jpg">
-                    </a>
-                </div>
-            </div>
-            <div class="col-sm-2">
-                <div class="gallery-thumb view view-first mx-2 my-3">
-                    <a class="item" href="../images/prv/blog/img-4.jpg" data-fancybox="group">
-                        <img src="../images/prv/blog/img-4.jpg">
-                    </a>
-                </div>
-            </div>
-            <div class="col-sm-2">
-                <div class="gallery-thumb view view-first mx-2 my-3">
-                    <a class="item" href="../images/prv/blog/img-5.jpg" data-fancybox="group">
-                        <img src="../images/prv/blog/img-5.jpg">
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-sm-2">
-                <div class="gallery-thumb view view-first mx-2 my-3">
-                    <a class="item" href="../images/prv/blog/img-6.jpg" data-fancybox="group">
-                        <img src="../images/prv/blog/img-6.jpg">
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-sm-2">
-                <div class="gallery-thumb view view-first mx-2 my-3">
-                    <a class="item" href="../images/prv/blog/img-7.jpg" data-fancybox="group">
-                        <img src="../images/prv/blog/img-7.jpg">
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-sm-2">
-                <div class="gallery-thumb view view-first mx-2 my-3">
-                    <a class="item" href="../images/prv/blog/img-8.jpg" data-fancybox="group">
-                        <img src="../images/prv/blog/img-8.jpg">
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-sm-2">
-                <div class="gallery-thumb view view-first mx-2 my-3">
-                    <a class="item" href="../images/prv/blog/img-9.jpg" data-fancybox="group">
-                        <img src="../images/prv/blog/img-9.jpg">
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-sm-2">
-                <div class="gallery-thumb view view-first mx-2 my-3">
-                    <a class="item" href="../images/prv/blog/img-10.jpg" data-fancybox="group">
-                        <img src="../images/prv/blog/img-10.jpg">
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-sm-2">
-                <div class="gallery-thumb view view-first mx-2 my-3">
-                    <a class="item" href="../images/prv/blog/img-11.jpg" data-fancybox="group">
-                        <img src="../images/prv/blog/img-11.jpg">
-                    </a>
-                </div>
-            </div>
+            <?php endforeach; ?>
         </div>
     </div>
 </div>

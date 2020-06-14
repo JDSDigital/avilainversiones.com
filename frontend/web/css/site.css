@@ -116,3 +116,14 @@ a.desc:after {
 .nav > li > form > button.logout:focus {
     outline: none;
 }
+
+.crop {
+    width: 100%; /* width of container */
+    height: 150px; /* height of container */
+    border: 1px solid black;
+}
+
+.crop img {
+    height: 100%;
+    object-fit: cover;
+}

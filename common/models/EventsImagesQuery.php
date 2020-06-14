@@ -9,10 +9,15 @@ namespace common\models;
  */
 class EventsImagesQuery extends \yii\db\ActiveQuery
 {
-    /*public function active()
+    public function active()
     {
         return $this->andWhere('[[status]]=1');
-    }*/
+    }
+
+    public function cover()
+    {
+        return $this->andWhere('[[cover]]=1')->one();
+    }
 
     /**
      * {@inheritdoc}

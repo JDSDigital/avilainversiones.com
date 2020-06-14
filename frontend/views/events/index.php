@@ -30,206 +30,56 @@ $this->title = Html::encode('Eventos');
         <div class="row cols-md-space cols-sm-space cols-xs-space justify-content-md-center">
             <div class="col-lg-9">
                 <div class="card-wrapper">
-                    <div class="card z-depth-2-top">
+                    <?php foreach ($models as $event) : ?>
+                      <div class="card z-depth-2-top">
                         <div class="row ">
-                            <div class="col-md-4">
-                                <div class="card-image">
-                                    <div class="view view-first">
-                                        <a href="./events/view">
-                                            <img src="./images/prv/blog/img-tech-sq-1.jpg">
-                                        </a>
+                          <div class="col-md-4">
+                            <div class="card-image">
+                              <div class="view view-first">
+                                <?= Html::a(
+                                  Html::img($event->cover()->getImage()),
+                                  ['events/view', 'id' => $event->id]
+                                ) ?>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-body">
+                              <h4 class="heading heading-5 strong-600 line-height-1_8">
+                                <?= Html::a($event->title, ['events/view', 'id' => $event->id]) ?>
+                              </h4>
+                              <p class="card-text mt-3">
+                                <?= Html::encode($event->summary) ?>
+                              </p>
+                              <div class="row align-items-center mt-4">
+                                <div class="col-6">
+                                  <div class="block-author">
+                                    <div class="author-image author-image-xs">
+                                      <img src="./images/prv/people/person-1.jpg">
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h4 class="heading heading-5 strong-600 line-height-1_8">
-                                        <a href="./events/view">
-                                            Learn how to build your own website with Boomerang
-                                        </a>
-                                    </h4>
-                                    <p class="card-text mt-3">
-                                        Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. 
-                                    </p>      
-                                    <div class="row align-items-center mt-4">
-                                        <div class="col-6">
-                                            <div class="block-author">
-                                                <div class="author-image author-image-xs">
-                                                    <img src="./images/prv/people/person-1.jpg">
-                                                </div>
-                                                <div class="author-info">
-                                                    <div class="author-name">
-                                                        <a href="#" class="strong-600">Elisabeth Alanna</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-6">
-                                            <div class="text-right">
-                                                <ul class="inline-links inline-links--style-2">
-                                                    <li>
-                                                        15 enero 2020
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>                                              
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card z-depth-2-top">
-                        <div class="row ">
-                            <div class="col-md-4">
-                                <div class="card-image">
-                                    <div class="view view-first">
-                                        <a href="./events/view">
-                                            <img src="./images/prv/blog/img-tech-sq-2.jpg">
-                                        </a>
+                                    <div class="author-info">
+                                      <div class="author-name">
+                                        <a href="#" class="strong-600">Elisabeth Alanna</a>
+                                      </div>
                                     </div>
+                                  </div>
                                 </div>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h4 class="heading heading-5 strong-600 line-height-1_8">
-                                        <a href="./events/view">
-                                            15 Lessons about design you need to learn to succeed
-                                        </a>
-                                    </h4>
-                                    <p class="card-text mt-3">
-                                        Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. 
-                                    </p>      
-                                    <div class="row align-items-center mt-4">
-                                        <div class="col-6">
-                                            <div class="block-author">
-                                                <div class="author-image author-image-xs">
-                                                    <img src="./images/prv/people/person-1.jpg">
-                                                </div>
-                                                <div class="author-info">
-                                                    <div class="author-name">
-                                                        <a href="#" class="strong-600">Elisabeth Alanna</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
 
-                                        <div class="col-6">
-                                            <div class="text-right">
-                                                <ul class="inline-links inline-links--style-2">
-                                                    <li>
-                                                        15 enero 2020
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>                                              
+                                <div class="col-6">
+                                  <div class="text-right">
+                                    <ul class="inline-links inline-links--style-2">
+                                      <li>
+                                        <?= Html::encode($event->created_at) ?>
+                                      </li>
+                                    </ul>
+                                  </div>
                                 </div>
+                              </div>
                             </div>
+                          </div>
                         </div>
-                    </div>
-
-
-                    <div class="card z-depth-2-top">
-                        <div class="row ">
-                            <div class="col-md-4">
-                                <div class="card-image">
-                                    <div class="view view-first">
-                                        <a href="./events/view">
-                                            <img src="./images/prv/blog/img-tech-sq-3.jpg">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h4 class="heading heading-5 strong-600 line-height-1_8">
-                                        <a href="./events/view">
-                                            Never changing design will eventually destroy you
-                                        </a>
-                                    </h4>
-                                    <p class="card-text mt-3">
-                                        Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. 
-                                    </p>      
-                                    <div class="row align-items-center mt-4">
-                                        <div class="col-6">
-                                            <div class="block-author">
-                                                <div class="author-image author-image-xs">
-                                                    <img src="./images/prv/people/person-1.jpg">
-                                                </div>
-                                                <div class="author-info">
-                                                    <div class="author-name">
-                                                        <a href="#" class="strong-600">Elisabeth Alanna</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-6">
-                                            <div class="text-right">
-                                                <ul class="inline-links inline-links--style-2">
-                                                    <li>
-                                                        15 enero 2020
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>                                              
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card z-depth-2-top">
-                        <div class="row ">
-                            <div class="col-md-4">
-                                <div class="card-image">
-                                    <div class="view view-first">
-                                        <a href="./events/view">
-                                            <img src="./images/prv/blog/img-tech-sq-4.jpg">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h4 class="heading heading-5 strong-600 line-height-1_8">
-                                        <a href="./events/view">
-                                            Get better design results by following 3 simple steps
-                                        </a>
-                                    </h4>
-                                    <p class="card-text mt-3">
-                                        Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. 
-                                    </p>      
-                                    <div class="row align-items-center mt-4">
-                                        <div class="col-6">
-                                            <div class="block-author">
-                                                <div class="author-image author-image-xs">
-                                                    <img src="./images/prv/people/person-1.jpg">
-                                                </div>
-                                                <div class="author-info">
-                                                    <div class="author-name">
-                                                        <a href="#" class="strong-600">Elisabeth Alanna</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-6">
-                                            <div class="text-right">
-                                                <ul class="inline-links inline-links--style-2">
-                                                    <li>
-                                                        15 enero 2020
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>                                              
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                      </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
             <div class="col-lg-3 blog-sidebar">

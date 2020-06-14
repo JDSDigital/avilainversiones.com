@@ -116,6 +116,11 @@ class Events extends \yii\db\ActiveRecord
         }
     }
 
+    public function cover()
+    {
+        return $this->getEventsImages()->where(['cover' => 1])->one();
+    }
+
     /**
      * Gets query for [[EventsImages]].
      *
