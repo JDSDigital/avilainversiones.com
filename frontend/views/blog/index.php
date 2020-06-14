@@ -27,396 +27,56 @@ $this->title = Html::encode('Blog');
 
 <section class="slice sct-color-1">
     <div class="container">
-        <div class="row cols-md-space cols-sm-space cols-xs-space">
+        <?php  foreach ($models as $entry) : ?>
+          <div class="row cols-md-space cols-sm-space cols-xs-space">
             <div class="col-lg-4">
-                <div class="card z-depth-2-top">
-                    <div class="card-image">
-                        <div class="view view-first">
-                            <a href="./blog/view">
-                                <img src="./images/prv/blog/img-tech-1.jpg">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="card-body">
-                        <h3 class="heading heading-5 strong-600 mb-0">
-                            <a href="./blog/view">Learn how to build your own website with Boomerang</a>
-                        </h3>
-                    </div>
-
-                    <div class="card-footer">
-                        <div class="row">
-                            <div class="col">
-                                <div class="block-author">
-                                    <div class="author-image author-image-xs">
-                                        <img src="./images/prv/people/person-1.jpg">
-                                    </div>
-                                    <div class="author-info">
-                                        <div class="author-name">
-                                            <a href="#" class="strong-600">Bertram Ozzie</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col text-right">
-                                <ul class="inline-links inline-links--style-2">
-                                    <li>
-                                        5 min read
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+              <div class="card z-depth-2-top">
+                <div class="card-image">
+                  <div class="view view-first crop-blog">
+                    <?= Html::a(
+                        Html::img('@web/images/blog/thumbs/'.$entry->file),
+                        ['blog/view', 'id' => $entry->id],
+                    ) ?>
+                  </div>
                 </div>
-            </div>
 
-            <div class="col-lg-4">
-                <div class="card z-depth-2-top">
-                    <div class="card-image">
-                        <div class="view view-first">
-                            <a href="./blog/view">
-                                <img src="./images/prv/blog/img-tech-2.jpg">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="card-body">
-                        <h3 class="heading heading-5 strong-600 mb-0">
-                            <a href="./blog/view">15 Lessons about design you need to learn to succeed</a>
-                        </h3>
-                    </div>
-
-                    <div class="card-footer">
-                        <div class="row">
-                            <div class="col">
-                                <div class="block-author">
-                                    <div class="author-image author-image-xs">
-                                        <img src="./images/prv/people/person-2.jpg">
-                                    </div>
-                                    <div class="author-info">
-                                        <div class="author-name">
-                                            <a href="#" class="strong-600">Elisabeth Alanna</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col text-right">
-                                <ul class="inline-links inline-links--style-2">
-                                    <li>
-                                        10 min read
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                <div class="card-body">
+                  <h3 class="heading heading-5 strong-600 mb-0">
+                    <?= Html::a($entry->title, ['blog/view', 'id' => $entry->id]) ?>
+                  </h3>
                 </div>
-            </div>
 
-            <div class="col-lg-4">
-                <div class="card z-depth-2-top">
-                    <div class="card-image">
-                        <div class="view view-first">
-                            <a href="./blog/view">
-                                <img src="./images/prv/blog/img-tech-3.jpg">
-                            </a>
+                <div class="card-footer">
+                  <div class="row">
+                    <div class="col">
+                      <div class="block-author">
+                        <div class="author-image author-image-xs">
+                          <img src="./images/prv/people/person-1.jpg">
                         </div>
-                    </div>
-
-                    <div class="card-body">
-                        <h3 class="heading heading-5 strong-600 mb-0">
-                            <a href="./blog/view">Never changing design will eventually destroy you</a>
-                        </h3>
-                    </div>
-
-                    <div class="card-footer">
-                        <div class="row">
-                            <div class="col">
-                                <div class="block-author">
-                                    <div class="author-image author-image-xs">
-                                        <img src="./images/prv/people/person-3.jpg">
-                                    </div>
-                                    <div class="author-info">
-                                        <div class="author-name">
-                                            <a href="#" class="strong-600">Destiny Erykah</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col text-right">
-                                <ul class="inline-links inline-links--style-2">
-                                    <li>
-                                        15 min read
-                                    </li>
-                                </ul>
-                            </div>
+                        <div class="author-info">
+                          <div class="author-name">
+                            <a href="#" class="strong-600">Bertram Ozzie</a>
+                          </div>
                         </div>
+                      </div>
                     </div>
+                    <div class="col text-right">
+                      <ul class="inline-links inline-links--style-2">
+                        <li>
+                          5 min read
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
-        </div>
+          </div>
+
+        <?php endforeach; ?>
 
         <span class="space-xs-lg"></span>
 
-        <div class="row cols-md-space cols-sm-space cols-xs-space">
-            <div class="col-lg-4">
-                <div class="card z-depth-2-top">
-                    <div class="card-image">
-                        <div class="view view-first">
-                            <a href="./blog/view">
-                                <img src="./images/prv/blog/img-tech-4.jpg">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="card-body">
-                        <h3 class="heading heading-5 strong-600 mb-0">
-                            <a href="./blog/view">Get better design results by following 3 simple steps</a>
-                        </h3>
-                    </div>
-
-                    <div class="card-footer">
-                        <div class="row">
-                            <div class="col">
-                                <div class="block-author">
-                                    <div class="author-image author-image-xs">
-                                        <img src="./images/prv/people/person-1.jpg">
-                                    </div>
-                                    <div class="author-info">
-                                        <div class="author-name">
-                                            <a href="#" class="strong-600">Bertram Ozzie</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col text-right">
-                                <ul class="inline-links inline-links--style-2">
-                                    <li>
-                                        5 min read
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4">
-                <div class="card z-depth-2-top">
-                    <div class="card-image">
-                        <div class="view view-first">
-                            <a href="./blog/view">
-                                <img src="./images/prv/blog/img-tech-5.jpg">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="card-body">
-                        <h3 class="heading heading-5 strong-600 mb-0">
-                            <a href="./blog/view">3 ways you can reinvent design like a pro</a>
-                        </h3>
-                    </div>
-
-                    <div class="card-footer">
-                        <div class="row">
-                            <div class="col">
-                                <div class="block-author">
-                                    <div class="author-image author-image-xs">
-                                        <img src="./images/prv/people/person-2.jpg">
-                                    </div>
-                                    <div class="author-info">
-                                        <div class="author-name">
-                                            <a href="#" class="strong-600">Elisabeth Alanna</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col text-right">
-                                <ul class="inline-links inline-links--style-2">
-                                    <li>
-                                        10 min read
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4">
-                <div class="card z-depth-2-top">
-                    <div class="card-image">
-                        <div class="view view-first">
-                            <a href="./blog/view">
-                                <img src="./images/prv/blog/img-tech-6.jpg">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="card-body">
-                        <h3 class="heading heading-5 strong-600 mb-0">
-                            <a href="./blog/view">15 Lessons about design you need to learn to succeed</a>
-                        </h3>
-                    </div>
-
-                    <div class="card-footer">
-                        <div class="row">
-                            <div class="col">
-                                <div class="block-author">
-                                    <div class="author-image author-image-xs">
-                                        <img src="./images/prv/people/person-3.jpg">
-                                    </div>
-                                    <div class="author-info">
-                                        <div class="author-name">
-                                            <a href="#" class="strong-600">Destiny Erykah</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col text-right">
-                                <ul class="inline-links inline-links--style-2">
-                                    <li>
-                                        15 min read
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <span class="space-xs-lg"></span>
-
-        <div class="row cols-md-space cols-sm-space cols-xs-space">
-            <div class="col-lg-4">
-                <div class="card z-depth-2-top">
-                    <div class="card-image">
-                        <div class="view view-first">
-                            <a href="./blog/view">
-                                <img src="./images/prv/blog/img-tech-7.jpg">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="card-body">
-                        <h3 class="heading heading-5 strong-600 mb-0">
-                            <a href="./blog/view">This study will perfect your design: Read or miss out</a>
-                        </h3>
-                    </div>
-
-                    <div class="card-footer">
-                        <div class="row">
-                            <div class="col">
-                                <div class="block-author">
-                                    <div class="author-image author-image-xs">
-                                        <img src="./images/prv/people/person-1.jpg">
-                                    </div>
-                                    <div class="author-info">
-                                        <div class="author-name">
-                                            <a href="#" class="strong-600">Bertram Ozzie</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col text-right">
-                                <ul class="inline-links inline-links--style-2">
-                                    <li>
-                                        5 min read
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4">
-                <div class="card z-depth-2-top">
-                    <div class="card-image">
-                        <div class="view view-first">
-                            <a href="./blog/view">
-                                <img src="./images/prv/blog/img-tech-8.jpg">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="card-body">
-                        <h3 class="heading heading-5 strong-600 mb-0">
-                            <a href="./blog/view">Fascinating design tactics that can help your business grow</a>
-                        </h3>
-                    </div>
-
-                    <div class="card-footer">
-                        <div class="row">
-                            <div class="col">
-                                <div class="block-author">
-                                    <div class="author-image author-image-xs">
-                                        <img src="./images/prv/people/person-2.jpg">
-                                    </div>
-                                    <div class="author-info">
-                                        <div class="author-name">
-                                            <a href="#" class="strong-600">Elisabeth Alanna</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col text-right">
-                                <ul class="inline-links inline-links--style-2">
-                                    <li>
-                                        10 min read
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4">
-                <div class="card z-depth-2-top">
-                    <div class="card-image">
-                        <div class="view view-first">
-                            <a href="./blog/view">
-                                <img src="./images/prv/blog/img-tech-9.jpg">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="card-body">
-                        <h3 class="heading heading-5 strong-600 mb-0">
-                            <a href="./blog/view">The truth is you are not the only person concerned about design</a>
-                        </h3>
-                    </div>
-
-                    <div class="card-footer">
-                        <div class="row">
-                            <div class="col">
-                                <div class="block-author">
-                                    <div class="author-image author-image-xs">
-                                        <img src="./images/prv/people/person-3.jpg">
-                                    </div>
-                                    <div class="author-info">
-                                        <div class="author-name">
-                                            <a href="#" class="strong-600">Destiny Erykah</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col text-right">
-                                <ul class="inline-links inline-links--style-2">
-                                    <li>
-                                        15 min read
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <span class="space-xs-xl"></span>
-        
         <div class="pagination-wrapper">
             <nav aria-label="Pagination - Style 2">
                 <ul class="pagination pagination--style-2 pagination-circle justify-content-center">
@@ -440,4 +100,3 @@ $this->title = Html::encode('Blog');
         </div>
     </div>
 </section>
-

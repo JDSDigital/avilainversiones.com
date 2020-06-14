@@ -8,7 +8,7 @@ class CoursesController extends \yii\web\Controller
 {
     public function actionIndex()
     {
-        $models = Courses::find()->all();
+        $models = Courses::find()->active()->all();
 
         return $this->render('index', [
           'models' => $models,

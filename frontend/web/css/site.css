@@ -137,3 +137,14 @@ a.desc:after {
     height: 100%;
     object-fit: cover;
 }
+
+.crop-blog {
+    width: 100%; /* width of container */
+    height: 230px; /* height of container */
+}
+
+.crop-blog img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
