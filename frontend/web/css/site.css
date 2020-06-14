@@ -127,3 +127,13 @@ a.desc:after {
     height: 100%;
     object-fit: cover;
 }
+
+.crop-course {
+    width: 100%; /* width of container */
+    height: 250px; /* height of container */
+}
+
+.crop-course img {
+    height: 100%;
+    object-fit: cover;
+}

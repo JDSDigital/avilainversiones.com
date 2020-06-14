@@ -2,11 +2,17 @@
 
 namespace frontend\controllers;
 
+use common\models\Courses;
+
 class CoursesController extends \yii\web\Controller
 {
     public function actionIndex()
     {
-        return $this->render('index');
+        $models = Courses::find()->all();
+
+        return $this->render('index', [
+          'models' => $models,
+        ]);
     }
 
     public function actionView()
