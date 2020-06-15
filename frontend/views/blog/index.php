@@ -35,7 +35,7 @@ $this->title = Html::encode('Blog');
                   <div class="view view-first crop-blog">
                     <?= Html::a(
                         Html::img('@web/images/blog/thumbs/'.$entry->file),
-                        ['blog/view', 'id' => $entry->id],
+                        ['blog/view', 'id' => $entry->id]
                     ) ?>
                   </div>
                 </div>

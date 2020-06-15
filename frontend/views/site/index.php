@@ -41,6 +41,31 @@ $this->title = Yii::$app->name;
     </div>
 </section>
 
+<section class="slice-lg sct-color-1">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+            <?=  Html::img('./images/elements/ciclo-golden.png', [
+              "id" => "inversion",
+              "class" => "img-fluid",
+              "usemap" => "#image-map",
+              "width" => "1024",
+              "height" => "950",
+            ]) ?>
+            <map name="image-map">
+              <area id="inversion1" alt="Asiste a un evento inmobiliario" title="Asiste a un evento inmobiliario" href="#" coords="537,104,582,111,625,120,665,133,698,145,732,166,762,187,788,207,812,231,839,260,788,382,730,393,711,366,687,339,660,318,630,300,600,286,571,275,600,222" shape="poly">
+              <area id="inversion2" alt="Recibe una asesoría personalizada" title="Recibe una asesoría personalizada" href="" coords="856,282,880,318,899,358,913,396,922,430,931,467,933,506,933,541,931,574,924,614,794,650,749,610,761,573,765,537,763,500,755,450,742,417,805,405" shape="poly">
+              <area id="inversion3" alt="Revisemos presupuestos" title="Revisemos presupuestos" href="" coords="917,642,900,688,881,725,853,768,825,805,796,832,767,856,737,878,696,899,589,823,591,762,620,750,654,730,679,711,705,684,724,660,739,634,788,675" shape="poly">
+              <area id="inversion4" alt="Opta por un proyecto" title="Opta por un proyecto" href="" coords="673,913,632,927,581,939,525,943,476,940,420,932,378,920,333,903,326,770,376,736,411,755,447,766,488,774,529,775,567,771,563,835" shape="poly">
+              <area id="inversion5" alt="Gestionemos tu crédito hipotecario" title="Gestionemos tu crédito hipotecario" href="" coords="310,892,275,868,233,836,199,802,169,764,142,721,122,678,112,647,105,620,205,531,261,547,265,576,279,620,298,657,326,694,354,721,302,759" shape="poly">
+              <area id="inversion6" alt="Recibe tu propiedad" title="Recibe tu propiedad" href="" coords="98,594,95,552,94,499,99,452,110,410,122,371,140,326,162,295,183,265,316,287,337,340,318,361,301,384,284,414,271,447,262,482,260,520,199,506" shape="poly">
+              <area id="inversion7" alt="Pensemos en tu nueva inversión" title="Pensemos en tu nueva inversión" href="" coords="201,242,229,216,263,186,301,163,339,143,380,126,423,113,466,105,511,106,573,219,547,272,518,270,477,271,437,281,398,295,375,309,357,322,332,268" shape="poly">
+            </map>
+        </div>
+      </div>
+    </div>
+</section>
+
 <section class="slice-lg has-bg-cover bg-size-cover" style="background-image: url('./images/banners/inversiones.jpg');">
     <div class="container">
         <div class="row">
@@ -60,27 +85,6 @@ $this->title = Yii::$app->name;
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
-<section class="slice-lg sct-color-1">
-    <div class="container">
-        <?=  Html::img('./images/elements/ciclo-golden.png', [
-            "id" => "inversion",
-            "class" => "img-fluid",
-            "usemap" => "#image-map",
-            "width" => "1024",
-            "height" => "950",
-        ]) ?>
-        <map name="image-map">
-            <area id="inversion1" alt="Asiste a un evento inmobiliario" title="Asiste a un evento inmobiliario" href="#" coords="537,104,582,111,625,120,665,133,698,145,732,166,762,187,788,207,812,231,839,260,788,382,730,393,711,366,687,339,660,318,630,300,600,286,571,275,600,222" shape="poly">
-            <area id="inversion2" alt="Recibe una asesoría personalizada" title="Recibe una asesoría personalizada" href="" coords="856,282,880,318,899,358,913,396,922,430,931,467,933,506,933,541,931,574,924,614,794,650,749,610,761,573,765,537,763,500,755,450,742,417,805,405" shape="poly">
-            <area id="inversion3" alt="Revisemos presupuestos" title="Revisemos presupuestos" href="" coords="917,642,900,688,881,725,853,768,825,805,796,832,767,856,737,878,696,899,589,823,591,762,620,750,654,730,679,711,705,684,724,660,739,634,788,675" shape="poly">
-            <area id="inversion4" alt="Opta por un proyecto" title="Opta por un proyecto" href="" coords="673,913,632,927,581,939,525,943,476,940,420,932,378,920,333,903,326,770,376,736,411,755,447,766,488,774,529,775,567,771,563,835" shape="poly">
-            <area id="inversion5" alt="Gestionemos tu crédito hipotecario" title="Gestionemos tu crédito hipotecario" href="" coords="310,892,275,868,233,836,199,802,169,764,142,721,122,678,112,647,105,620,205,531,261,547,265,576,279,620,298,657,326,694,354,721,302,759" shape="poly">
-            <area id="inversion6" alt="Recibe tu propiedad" title="Recibe tu propiedad" href="" coords="98,594,95,552,94,499,99,452,110,410,122,371,140,326,162,295,183,265,316,287,337,340,318,361,301,384,284,414,271,447,262,482,260,520,199,506" shape="poly">
-            <area id="inversion7" alt="Pensemos en tu nueva inversión" title="Pensemos en tu nueva inversión" href="" coords="201,242,229,216,263,186,301,163,339,143,380,126,423,113,466,105,511,106,573,219,547,272,518,270,477,271,437,281,398,295,375,309,357,322,332,268" shape="poly">
-        </map>
     </div>
 </section>
 
