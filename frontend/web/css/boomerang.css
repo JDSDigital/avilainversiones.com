@@ -22799,3 +22799,19 @@ pre {
 .footer .footer-menu > li > a {
   padding: 0.25rem 0.4rem 0.25rem 0;
 }
+
+.text-golden-gradient {
+  background: linear-gradient(to right, #be9418, gold, #be9418);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.text-golden-gradient:hover {
+  background: linear-gradient(to right, gold, #be9418, gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}

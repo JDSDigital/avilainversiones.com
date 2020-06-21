@@ -27,10 +27,10 @@ gulp.task('backend', () => {
 });
 
 // Listen for changes in all SCSS files and automatically re-compile
-gulp.task('default', function() {
-    gulp.watch('./backend/scss/**/*.scss', gulp.parallel('backend'));
-});
-
-// gulp.task('default', function () {
-//   gulp.watch('./frontend/scss/**/*.scss', gulp.parallel('frontend'));
+// gulp.task('default', function() {
+//     gulp.watch('./backend/scss/**/*.scss', gulp.parallel('backend'));
 // });
+
+gulp.task('default', function () {
+  gulp.watch('./frontend/scss/**/*.scss', gulp.parallel('frontend'));
+});

@@ -112,7 +112,7 @@ $this->title = Yii::$app->name;
             <div class="col-lg-3 col-md-6 col-sm-6">
               <div class="card z-depth-2-top">
                 <div class="card-image">
-                  <div class="view view-first">
+                  <div class="view view-first crop-blog">
                     <?= Html::a(
                         Html::img('@web/images/blog/thumbs/'.$entry->file),
                         ['blog/view', 'id' => $entry->id]
@@ -186,14 +186,12 @@ $this->title = Yii::$app->name;
                                 <h3 class="heading heading-inverse heading-3 strong-600 mb-3"><?= Html::encode('Arriendo') ?></h3>
                                 <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">¿Buscas una propiedad para arrendar? o ¿Deseas colocar tu propiedad en arriendo?</p>
                             </div>
-                            <span href="#" class="link link--style-4 heading-sm text-uppercase strong-500">
+                            <a href="#" class="link link--style-4 heading-sm text-uppercase strong-500 text-golden-gradient">
                                 Busco una propiedad
-                                <i class="ion-ios-arrow-right ml-2"></i>
-                            </span><br />
-                            <span href="#" class="link link--style-4 heading-sm text-uppercase strong-500">
+                            </a><br />
+                            <a href="#" class="link link--style-4 heading-sm text-uppercase strong-500 text-golden-gradient">
                                 Deseo arrendarla
-                                <i class="ion-ios-arrow-right ml-2"></i>
-                            </span>
+                            </a>
                         </div>
                     </a>
                 </div>
@@ -209,14 +207,12 @@ $this->title = Yii::$app->name;
                                 <h3 class="heading heading-inverse heading-3 strong-600 mb-3"><?= Html::encode('Crédito Hipotecario') ?></h3>
                                 <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">Dicha gestión puede ser más compleja de lo que aparenta, pero si manejas bien el apalancamiento puede llevarte a ser un gran inversionista.</p>
                             </div>
-                            <span href="#" class="link link--style-4 heading-sm text-uppercase strong-500">
+                            <a href="#" class="link link--style-4 heading-sm text-uppercase strong-500 text-golden-gradient">
                                 Entidades Bancarias
-                                <i class="ion-ios-arrow-right ml-2"></i>
-                            </span><br />
-                            <span href="#" class="link link--style-4 heading-sm text-uppercase strong-500">
+                            </a><br />
+                            <a href="#" class="link link--style-4 heading-sm text-uppercase strong-500 text-golden-gradient">
                                 Otras Entidades financieras
-                                <i class="ion-ios-arrow-right ml-2"></i>
-                            </span>
+                            </a>
                         </div>
                     </a>
                 </div>
@@ -232,13 +228,11 @@ $this->title = Yii::$app->name;
                                 <h3 class="heading heading-inverse heading-3 strong-600 mb-3"><?= Html::encode('Oportunidades de Inversión') ?></h3>
                                 <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">Propiedades que se ajustan a los nuevos conceptos inmobiliarios del mercado</p>
                             </div>
-                            <a href="#" class="link link--style-4 heading-sm text-uppercase strong-500">
+                            <a href="#" class="link link--style-4 heading-sm text-uppercase strong-500 text-golden-gradient">
                                 Usadas
-                                <i class="ion-ios-arrow-right ml-2"></i>
                             </a><br />
-                            <a href="#" class="link link--style-4 heading-sm text-uppercase strong-500">
+                            <a href="#" class="link link--style-4 heading-sm text-uppercase strong-500 text-golden-gradient">
                                 Nuevas
-                                <i class="ion-ios-arrow-right ml-2"></i>
                             </a>
                         </div>
                     </a>
@@ -255,14 +249,12 @@ $this->title = Yii::$app->name;
                                 <h3 class="heading heading-inverse heading-3 strong-600 mb-3"><?= Html::encode('Departamento Legal') ?></h3>
                                 <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">Abogados expertos en el área de Bienes raíces, listos para apoyarte en cualquier procedimiento que requieras.</p>
                             </div>
-                            <span href="#" class="link link--style-4 heading-sm text-uppercase strong-500">
+                            <a href="#" class="link link--style-4 heading-sm text-uppercase strong-500 text-golden-gradient">
                                 Presencial
-                                <i class="ion-ios-arrow-right ml-2"></i>
-                            </span><br />
-                            <span href="#" class="link link--style-4 heading-sm text-uppercase strong-500">
+                            </a><br />
+                            <a href="#" class="link link--style-4 heading-sm text-uppercase strong-500 text-golden-gradient">
                                 Online
-                                <i class="ion-ios-arrow-right ml-2"></i>
-                            </span>
+                            </a>
                         </div>
                     </a>
                 </div>
@@ -278,10 +270,9 @@ $this->title = Yii::$app->name;
                                 <h3 class="heading heading-inverse heading-3 strong-600 mb-3"><?= Html::encode('Estadísticas') ?></h3>
                                 <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">Te mostramos los números detrás de cualquiera de nuestras gestiones.</p>
                             </div>
-                            <span href="#" class="link link--style-4 heading-sm text-uppercase strong-500">
+                            <a href="#" class="link link--style-4 heading-sm text-uppercase strong-500 text-golden-gradient">
                                 Ver más
-                                <i class="ion-ios-arrow-right ml-2"></i>
-                            </span>
+                            </a>
                         </div>
                     </a>
                 </div>
@@ -297,9 +288,8 @@ $this->title = Yii::$app->name;
                                 <h3 class="heading heading-inverse heading-3 strong-600 mb-3"><?= Html::encode('Alianzas') ?></h3>
                                 <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">Colocamos a tu alcance las empresas y emprendimientos que nos ayudan a ser mejores.</p>
                             </div>
-                            <a href="#" class="link link--style-4 heading-sm text-uppercase strong-500">
+                            <a href="#" class="link link--style-4 heading-sm text-uppercase strong-500 text-golden-gradient">
                                 Ver más
-                                <i class="ion-ios-arrow-right ml-2"></i>
                             </a>
                         </div>
                     </a>
@@ -316,10 +306,9 @@ $this->title = Yii::$app->name;
                                 <h3 class="heading heading-inverse heading-3 strong-600 mb-3"><?= Html::encode('Administración de Propiedades') ?></h3>
                                 <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">Conoce nuestro servicio para el manejo adecuado de tu inversión.</p>
                             </div>
-                            <span href="#" class="link link--style-4 heading-sm text-uppercase strong-500">
+                            <a href="#" class="link link--style-4 heading-sm text-uppercase strong-500 text-golden-gradient">
                                 Ver más
-                                <i class="ion-ios-arrow-right ml-2"></i>
-                            </span>
+                            </a>
                         </div>
                     </a>
                 </div>
