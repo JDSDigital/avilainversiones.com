@@ -14,18 +14,18 @@ class ContactCest
 
     public function checkContact(FunctionalTester $I)
     {
-        $I->see('Contact', 'h1');
+        $I->see('Contacto', 'h2');
     }
 
     public function checkContactSubmitNoData(FunctionalTester $I)
     {
         $I->submitForm('#contact-form', []);
-        $I->see('Contact', 'h1');
-        $I->seeValidationError('Name cannot be blank');
-        $I->seeValidationError('Email cannot be blank');
-        $I->seeValidationError('Subject cannot be blank');
-        $I->seeValidationError('Body cannot be blank');
-        $I->seeValidationError('The verification code is incorrect');
+        $I->see('Contacto', 'h2');
+        $I->see('Nombre no puede estar vacío.', '.invalid-feedback');
+        $I->see('Correo no puede estar vacío.', '.invalid-feedback');
+        $I->see('Asunto no puede estar vacío.', '.invalid-feedback');
+        $I->see('Mensaje no puede estar vacío.', '.invalid-feedback');
+        // $I->seeValidationError('The verification code is incorrect');
     }
 
     public function checkContactSubmitNotCorrectEmail(FunctionalTester $I)
@@ -37,11 +37,11 @@ class ContactCest
             'ContactForm[body]' => 'test content',
             'ContactForm[verifyCode]' => 'testme',
         ]);
-        $I->seeValidationError('Email is not a valid email address.');
-        $I->dontSeeValidationError('Name cannot be blank');
-        $I->dontSeeValidationError('Subject cannot be blank');
-        $I->dontSeeValidationError('Body cannot be blank');
-        $I->dontSeeValidationError('The verification code is incorrect');
+        $I->see('Correo no es una dirección de correo válida.', '.invalid-feedback');
+        $I->dontSee('Nombre no puede estar vacío.', '.invalid-feedback');
+        $I->dontSee('Asunto no puede estar vacío.', '.invalid-feedback');
+        $I->dontSee('Mensaje no puede estar vacío.', '.invalid-feedback');
+        // $I->dontSeeValidationError('The verification code is incorrect');
     }
 
     public function checkContactSubmitCorrectData(FunctionalTester $I)

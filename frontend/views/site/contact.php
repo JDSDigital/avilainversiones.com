@@ -42,7 +42,7 @@ $this->title = 'Contacto';
             <div class="col-lg-6">
                 <!-- Contact form -->
                 <?php $form = ActiveForm::begin([
-                    'id' => 'contact-form', 
+                    'id' => 'contact-form',
                     'options' => [
                         'class' => 'form-default form-material'
                     ],
@@ -54,6 +54,7 @@ $this->title = 'Contacto';
                                     {label}
                                     {input}
                                     <span class="bar"></span>
+                                    {error}
                                 </div>',
                                 'labelOptions' => [
                                     'class' => 'control-label'
@@ -71,6 +72,7 @@ $this->title = 'Contacto';
                                     {label}
                                     {input}
                                     <span class="bar"></span>
+                                    {error}
                                 </div>',
                                 'labelOptions' => [
                                     'class' => 'control-label'
@@ -87,6 +89,7 @@ $this->title = 'Contacto';
                                     {label}
                                     {input}
                                     <span class="bar"></span>
+                                    {error}
                                 </div>',
                                 'labelOptions' => [
                                     'class' => 'control-label'
@@ -103,6 +106,7 @@ $this->title = 'Contacto';
                                     {label}
                                     {input}
                                     <span class="bar"></span>
+                                    {error}
                                 </div>',
                                 'labelOptions' => [
                                     'class' => 'control-label'
@@ -120,6 +124,7 @@ $this->title = 'Contacto';
                                     {label}
                                     {input}
                                     <span class="bar"></span>
+                                    {error}
                                 </div>',
                                 'labelOptions' => [
                                     'class' => 'control-label'
@@ -139,7 +144,7 @@ $this->title = 'Contacto';
                         <div class="col-12">
                             <div class="form-group">
                                 <?= Html::submitButton('Enviar mensaje', [
-                                    'class' => 'btn btn-styled btn-golden btn-circle mt-3 text-uppercase strong-400', 
+                                    'class' => 'btn btn-styled btn-golden btn-circle mt-3 text-uppercase strong-400',
                                     'name' => 'contact-button'
                                 ]) ?>
                             </div>
