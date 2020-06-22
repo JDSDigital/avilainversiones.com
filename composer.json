@@ -38,6 +38,10 @@
             "enabled": false
         }
     },
+    "scripts": {
+        "build": "php vendor/bin/codecept build",
+        "run": "php vendor/bin/codecept run",
+    },
     "repositories": [
         {
             "type": "composer",

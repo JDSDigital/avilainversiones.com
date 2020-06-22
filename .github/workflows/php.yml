@@ -24,10 +24,10 @@ jobs:
       run: php init --env=Development
 
     - name: Build Codecept
-      run: php codecept build
+      run: composer run-script build
 
     - name: Run Codecept
-      run: php codecept run
+      run: composer run-script run
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
