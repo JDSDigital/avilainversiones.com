@@ -28,6 +28,8 @@ class User extends ActiveRecord implements IdentityInterface
     const STATUS_INACTIVE = 9;
     const STATUS_ACTIVE = 10;
 
+    public $password;
+    public $repassword;
 
     /**
      * {@inheritdoc}
@@ -36,6 +38,22 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return '{{%xsystem_users}}';
     }
+
+    public function beforeSave($insert)
+    {
+    		if ($this->password != '') {
+      			$this->password_hash = Yii::$app->security->generatePasswordHash($this->password);
+      			$this->auth_key = Yii::$app->security->generateRandomString();
+    		}
+
+    		if ($this->created_at == null) {
+            $this->created_at = date('U');
+        }
+
+        $this->updated_at = date('U');
+
+        return true;
+  	}
 
     /**
      * {@inheritdoc}
@@ -53,9 +71,61 @@ class User extends ActiveRecord implements IdentityInterface
     public function rules()
     {
         return [
-            ['status', 'default', 'value' => self::STATUS_INACTIVE],
+            ['email', 'trim'],
+            ['email', 'required'],
+            ['email', 'email'],
+            ['email', 'string', 'max' => 255],
+            ['email', 'unique', 'targetClass' => '\common\models\User', 'message' => 'This email address has already been taken.'],
+
+            [['password', 'repassword'], 'required', 'on' => ['create']],
+            ['password', 'string', 'min' => 6],
+
+            [
+              'repassword',
+              'compare',
+              'compareAttribute' => 'password',
+              'message' => Yii::t('app', 'Las contraseñas deben coincidir.'),
+            ],
+
+            ['status', 'default', 'value' => self::STATUS_ACTIVE],
             ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_INACTIVE, self::STATUS_DELETED]],
         ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function attributeLabels()
+    {
+        return [
+          'id' => 'ID',
+          'email' => 'Correo',
+          'auth_key' => 'Auth Key',
+          'password_hash' => 'Password Hash',
+          'password_reset_token' => 'Password Reset Token',
+          'status' => 'Estado',
+          'created_at' => 'Creado En',
+          'updated_at' => 'Actualizado En',
+        ];
+    }
+
+    /**
+     * Signs user up.
+     *
+     * @return bool whether the creating new account was successful and email was sent
+     */
+    public function signup()
+    {
+        if (!$this->validate()) {
+            return null;
+        }
+
+        $user = new User();
+        $user->email = $this->email;
+        $user->setPassword($this->password);
+        $user->generateAuthKey();
+        return $user->save();
+
     }
 
     /**

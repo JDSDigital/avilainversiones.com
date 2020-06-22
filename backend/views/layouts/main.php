@@ -133,6 +133,12 @@ AppAsset::register($this);
                             ?>
                         </li>
                         <li class="nav-item">
+                            <?= Html::a('<i class="icon-home4"></i><span>Usuarios</span>',
+                                ['user/index'],
+                                ['class' => (Yii::$app->controller->id == 'user') ? 'nav-link active' : 'nav-link'])
+                            ?>
+                        </li>
+                        <li class="nav-item">
                             <?= Html::a('<i class="icon-home4"></i><span>Cursos</span>',
                                 ['courses/index'],
                                 ['class' => (Yii::$app->controller->id == 'courses') ? 'nav-link active' : 'nav-link'])
@@ -150,7 +156,7 @@ AppAsset::register($this);
                                 ['class' => (Yii::$app->controller->id == 'blog') ? 'nav-link active' : 'nav-link'])
                             ?>
                         </li>
-                        <li class="nav-item nav-item-submenu">
+                        <!-- <li class="nav-item nav-item-submenu">
                             <a href="#" class="nav-link"><i class="icon-copy"></i> <span>Layouts</span></a>
 
                             <ul class="nav nav-group-sub" data-submenu-title="Layouts">
@@ -161,7 +167,7 @@ AppAsset::register($this);
                                 <li class="nav-item"><a href="../../../../layout_5/LTR/material/full/index.html" class="nav-link">Layout 5</a></li>
                                 <li class="nav-item"><a href="../../../../layout_6/LTR/material/full/index.html" class="nav-link disabled">Layout 6 <span class="badge bg-transparent align-self-center ml-auto">Coming soon</span></a></li>
                             </ul>
-                        </li>
+                        </li> -->
                         <!-- /main -->
 
                     </ul>
