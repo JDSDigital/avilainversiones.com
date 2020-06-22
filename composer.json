@@ -39,8 +39,8 @@
         }
     },
     "scripts": {
-        "build": "php vendor/bin/codecept build",
-        "run": "php vendor/bin/codecept run",
+        "build-codecept": "php vendor/bin/codecept build",
+        "run-codecept": "php vendor/bin/codecept run"
     },
     "repositories": [
         {
