@@ -2,16 +2,20 @@
 
 namespace frontend\controllers;
 
+use yii;
 use common\models\Events;
+use common\models\EventsSearch;
 
 class EventsController extends \yii\web\Controller
 {
     public function actionIndex()
     {
-        $models = Events::find()->all();
+        $eventsSearch = new EventsSearch;
+        $dataProvider = $eventsSearch->search(Yii::$app->request->post());
 
         return $this->render('index', [
-            'models' => $models,
+          'eventsSearch' => $eventsSearch,
+          'dataProvider' => $dataProvider,
         ]);
     }
 

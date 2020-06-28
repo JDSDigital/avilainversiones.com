@@ -3,6 +3,7 @@
 /* @var $this yii\web\View */
 
 use yii\helpers\Html;
+use yii\bootstrap4\LinkPager;
 
 $this->title = Html::encode('Eventos');
 ?>
@@ -30,7 +31,7 @@ $this->title = Html::encode('Eventos');
         <div class="row cols-md-space cols-sm-space cols-xs-space justify-content-md-center">
             <div class="col-lg-9">
                 <div class="card-wrapper">
-                    <?php foreach ($models as $event) : ?>
+                    <?php foreach ($dataProvider->getModels() as $event) : ?>
                       <div class="card z-depth-2-top">
                         <div class="row ">
                           <div class="col-md-4">
@@ -80,6 +81,16 @@ $this->title = Html::encode('Eventos');
                         </div>
                       </div>
                     <?php endforeach; ?>
+                </div>
+                <div class="pagination-wrapper">
+                    <nav aria-label="Pagination">
+                        <?= LinkPager::widget([
+                          'pagination' => $dataProvider->getPagination(),
+                          'options' => [
+                            'class' => 'pagination pagination--style-2 pagination-circle justify-content-center'
+                          ]
+                        ]) ?>
+                    </nav>
                 </div>
             </div>
             <div class="col-lg-3 blog-sidebar">

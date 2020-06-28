@@ -46,6 +46,9 @@ class BlogSearch extends Blog
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            // 'pagination' => [
+            //     'defaultPageSize' => 1,
+            // ],
         ]);
 
         $this->load($params);

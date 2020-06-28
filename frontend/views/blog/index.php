@@ -3,6 +3,7 @@
 /* @var $this yii\web\View */
 
 use yii\helpers\Html;
+use yii\bootstrap4\LinkPager;
 
 $this->title = Html::encode('Blog');
 ?>
@@ -27,8 +28,8 @@ $this->title = Html::encode('Blog');
 
 <section class="slice sct-color-1">
     <div class="container">
-        <?php  foreach ($models as $entry) : ?>
-          <div class="row cols-md-space cols-sm-space cols-xs-space">
+      <div class="row cols-md-space cols-sm-space cols-xs-space">
+        <?php  foreach ($dataProvider->getModels() as $entry) : ?>
             <div class="col-lg-4">
               <div class="card z-depth-2-top">
                 <div class="card-image">
@@ -71,32 +72,22 @@ $this->title = Html::encode('Blog');
                 </div>
               </div>
             </div>
-          </div>
 
-        <?php endforeach; ?>
+          <?php endforeach; ?>
+        </div>
 
         <span class="space-xs-lg"></span>
 
         <div class="pagination-wrapper">
-            <nav aria-label="Pagination - Style 2">
-                <ul class="pagination pagination--style-2 pagination-circle justify-content-center">
-                    <li class="page-item disabled">
-                        <a class="page-link" href="#">
-                            <i class="ion-ios-arrow-back"></i>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                    </li>
-                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">
-                            <i class="ion-ios-arrow-forward"></i>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </li>
-                </ul>
+            <nav aria-label="Pagination">
+                <?= LinkPager::widget([
+                  'pagination' => $dataProvider->getPagination(),
+                  'options' => [
+                    'class' => 'pagination pagination--style-2 pagination-circle justify-content-center'
+                  ]
+                ]) ?>
             </nav>
         </div>
+
     </div>
 </section>

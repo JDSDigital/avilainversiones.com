@@ -2,16 +2,20 @@
 
 namespace frontend\controllers;
 
+use yii;
 use common\models\Blog;
+use common\models\BlogSearch;
 
 class BlogController extends \yii\web\Controller
 {
     public function actionIndex()
     {
-        $models = Blog::find()->active()->all();
+        $blogSearch = new BlogSearch;
+        $dataProvider = $blogSearch->search(Yii::$app->request->post());
 
         return $this->render('index', [
-            'models' => $models,
+          'blogSearch' => $blogSearch,
+          'dataProvider' => $dataProvider,
         ]);
     }
 
