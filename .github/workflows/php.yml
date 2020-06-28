@@ -18,7 +18,7 @@ jobs:
       run: composer validate
 
     - name: Install Packages
-      run: composer install --no-dev
+      run: composer install
 
     - name: Run Init
       run: php init --env=Development
