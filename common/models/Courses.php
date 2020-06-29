@@ -7,6 +7,7 @@ use yii\helpers\Url;
 use yii\imagine\Image;
 use yii\behaviors\TimestampBehavior;
 use yii\web\UploadedFile;
+use yii\helpers\FileHelper;
 
 /**
  * This is the model class for table "xcourses".
@@ -144,6 +145,11 @@ class Courses extends \yii\db\ActiveRecord
 
     public function saveImages(UploadedFile $uploadedImage, string $name): bool
     {
+        if (!file_exists(self::getImagethumbfolder()))
+        {
+            FileHelper::createDirectory(self::getImagethumbfolder(), $mode = 0777, $recursive = true);
+        }
+
         $uploadedImage->saveAs(self::getImagefolder() . 'tmp-' . $name);
 
         Image::resize(self::getImagefolder() . 'tmp-' . $name, 1024, null)

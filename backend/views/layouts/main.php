@@ -63,18 +63,18 @@ AppAsset::register($this);
 			<ul class="navbar-nav ml-md-auto">
 				<li class="nav-item">
 					<a href="#" class="navbar-nav-link">
-                        <?=
-                            Html::beginForm(['/site/logout'], 'post')
-                            . Html::submitButton(
-                                '<i class="icon-switch2"></i>',
-                                [
-                                    'class' => 'btn btn-link logout',
-                                    'data-popup' => 'tooltip',
-                                    'title' => 'Logout'
-                                ]
-                            )
-                            . Html::endForm();
-                        ?>
+              <?=
+                  Html::beginForm(['/site/logout'], 'post')
+                  . Html::submitButton(
+                      '<i class="icon-switch2"></i>',
+                      [
+                          'class' => 'btn btn-link logout',
+                          'data-popup' => 'tooltip',
+                          'title' => 'Logout'
+                      ]
+                  )
+                  . Html::endForm();
+              ?>
 					</a>
 				</li>
 			</ul>
@@ -148,6 +148,12 @@ AppAsset::register($this);
                             <?= Html::a('<i class="icon-home4"></i><span>Eventos</span>',
                                 ['events/index'],
                                 ['class' => (Yii::$app->controller->id == 'events') ? 'nav-link active' : 'nav-link'])
+                            ?>
+                        </li>
+                        <li class="nav-item">
+                            <?= Html::a('<i class="icon-home4"></i><span>Propiedades</span>',
+                                ['properties/index'],
+                                ['class' => (Yii::$app->controller->id == 'properties') ? 'nav-link active' : 'nav-link'])
                             ?>
                         </li>
                         <li class="nav-item">

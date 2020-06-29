@@ -8,27 +8,25 @@ use yii\web\UploadedFile;
 use yii\helpers\FileHelper;
 
 /**
- * This is the model class for table "xevents_images".
+ * This is the model class for table "xproperties_images".
  *
  * @property int $id
- * @property int|null $event_id
- * @property string|null $file
+ * @property int $property_id
+ * @property string $file
  * @property int $cover
- * @property int $uploaded_at
+ * @property int $created_at
+ * @property int $updated_at
  *
- * @property Events $event
+ * @property Properties $property
  */
-class EventsImages extends \yii\db\ActiveRecord
+class PropertiesImages extends \yii\db\ActiveRecord
 {
-    const STATUS_ACTIVE = 10;
-    const STATUS_DELETED = 0;
-
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'xevents_images';
+        return 'xproperties_images';
     }
 
     /**
@@ -37,9 +35,10 @@ class EventsImages extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['event_id', 'cover', 'uploaded_at'], 'integer'],
-            [['file'], 'string', 'max' => 255],
-            [['event_id'], 'exist', 'skipOnError' => true, 'targetClass' => Events::className(), 'targetAttribute' => ['event_id' => 'id']],
+            [['property_id', 'cover'], 'integer'],
+            [['file'], 'required'],
+            [['file'], 'image', 'extensions' => 'png, jpg'],
+            [['property_id'], 'exist', 'skipOnError' => true, 'targetClass' => Properties::className(), 'targetAttribute' => ['property_id' => 'id']],
         ];
     }
 
@@ -50,26 +49,27 @@ class EventsImages extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'event_id' => 'Event ID',
+            'property_id' => 'Propiedad',
             'file' => 'Archivo',
             'cover' => 'Portada',
-            'uploaded_at' => 'Subido En',
+            'created_at' => 'Creado En',
+            'updated_at' => 'Actualizado En',
         ];
     }
 
     public static function getImagefolder() : string
     {
-        return Yii::getAlias('@frontend/web/images/events/');
+        return Yii::getAlias('@frontend/web/images/properties/');
     }
 
     public static function getImagethumbfolder() : string
     {
-        return Yii::getAlias('@frontend/web/images/events/thumbs/');
+        return Yii::getAlias('@frontend/web/images/properties/thumbs/');
     }
 
     public static function getFolder() : string
     {
-        $directory = Yii::getAlias('@web/images/events/');
+        $directory = Yii::getAlias('@web/images/properties/');
 
         return str_replace('admin/', '', $directory);
     }
@@ -106,7 +106,7 @@ class EventsImages extends \yii\db\ActiveRecord
 
     public function setCover()
     {
-        self::updateAll(['cover' => 0], 'article_id = ' . $this->article_id);
+        self::updateAll(['cover' => 0], 'property_id = ' . $this->property_id);
 
         $this->cover = self::STATUS_ACTIVE;
 
@@ -118,21 +118,21 @@ class EventsImages extends \yii\db\ActiveRecord
     }
 
     /**
-     * Gets query for [[Event]].
+     * Gets query for [[Property]].
      *
-     * @return \yii\db\ActiveQuery|EventsQuery
+     * @return \yii\db\ActiveQuery|PropertiesQuery
      */
-    public function getEvent()
+    public function getProperty()
     {
-        return $this->hasOne(Events::className(), ['id' => 'event_id']);
+        return $this->hasOne(Properties::className(), ['id' => 'property_id']);
     }
 
     /**
      * {@inheritdoc}
-     * @return EventsImagesQuery the active query used by this AR class.
+     * @return PropertiesImagesQuery the active query used by this AR class.
      */
     public static function find()
     {
-        return new EventsImagesQuery(get_called_class());
+        return new PropertiesImagesQuery(get_called_class());
     }
 }
