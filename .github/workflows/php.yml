@@ -25,6 +25,7 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y mysql-client
+        sudo service mysql start
         sudo mysql --host localhost -uroot -ppassword -e "SHOW DATABASES"
 
     - name: Validate composer.json and composer.lock
