@@ -12,20 +12,20 @@ jobs:
     runs-on: ubuntu-latest
 
     services:
-      mysql:
+      mydb:
         image: mysql:5.7
         env:
           MYSQL_ROOT_PASSWORD: password
-        ports:
-        - 32574:3306
-        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=5
 
     steps:
     - uses: actions/checkout@v2
 
-    - name: Verify MySQL connection from host
+    - name: Verify MySQL connection from container
       run: |
-        sudo apt-get install -y mysql-client
+        apt-get update
+        apt-get install -y mysql-client
+        mysql --host mydb -uroot -ppassword -e "SHOW DATABASES"
 
     - name: Validate composer.json and composer.lock
       run: composer validate
