@@ -60,6 +60,7 @@ $this->title = 'Contacto';
                                     'class' => 'control-label'
                                 ]
                             ])->textInput([
+                                'autofocus' => true,
                                 'class' => 'form-control form-control-lg',
                             ]) ?>
                         </div>

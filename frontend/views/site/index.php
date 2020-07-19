@@ -53,13 +53,13 @@ $this->title = Yii::$app->name;
               "height" => "950",
             ]) ?>
             <map name="image-map">
-              <area id="inversion1" alt="Asiste a un evento inmobiliario" title="Asiste a un evento inmobiliario" href="#" coords="537,104,582,111,625,120,665,133,698,145,732,166,762,187,788,207,812,231,839,260,788,382,730,393,711,366,687,339,660,318,630,300,600,286,571,275,600,222" shape="poly">
-              <area id="inversion2" alt="Recibe una asesoría personalizada" title="Recibe una asesoría personalizada" href="" coords="856,282,880,318,899,358,913,396,922,430,931,467,933,506,933,541,931,574,924,614,794,650,749,610,761,573,765,537,763,500,755,450,742,417,805,405" shape="poly">
-              <area id="inversion3" alt="Revisemos presupuestos" title="Revisemos presupuestos" href="" coords="917,642,900,688,881,725,853,768,825,805,796,832,767,856,737,878,696,899,589,823,591,762,620,750,654,730,679,711,705,684,724,660,739,634,788,675" shape="poly">
-              <area id="inversion4" alt="Opta por un proyecto" title="Opta por un proyecto" href="" coords="673,913,632,927,581,939,525,943,476,940,420,932,378,920,333,903,326,770,376,736,411,755,447,766,488,774,529,775,567,771,563,835" shape="poly">
-              <area id="inversion5" alt="Gestionemos tu crédito hipotecario" title="Gestionemos tu crédito hipotecario" href="" coords="310,892,275,868,233,836,199,802,169,764,142,721,122,678,112,647,105,620,205,531,261,547,265,576,279,620,298,657,326,694,354,721,302,759" shape="poly">
-              <area id="inversion6" alt="Recibe tu propiedad" title="Recibe tu propiedad" href="" coords="98,594,95,552,94,499,99,452,110,410,122,371,140,326,162,295,183,265,316,287,337,340,318,361,301,384,284,414,271,447,262,482,260,520,199,506" shape="poly">
-              <area id="inversion7" alt="Pensemos en tu nueva inversión" title="Pensemos en tu nueva inversión" href="" coords="201,242,229,216,263,186,301,163,339,143,380,126,423,113,466,105,511,106,573,219,547,272,518,270,477,271,437,281,398,295,375,309,357,322,332,268" shape="poly">
+              <area id="inversion1" alt="Revisa en la sección de eventos nuestras próximas actividades." title="Revisa en la sección de eventos nuestras próximas actividades." href="#" coords="537,104,582,111,625,120,665,133,698,145,732,166,762,187,788,207,812,231,839,260,788,382,730,393,711,366,687,339,660,318,630,300,600,286,571,275,600,222" shape="poly">
+              <area id="inversion2" alt="Agenda una reunión y aclara tus dudas." title="Agenda una reunión y aclara tus dudas." href="" coords="856,282,880,318,899,358,913,396,922,430,931,467,933,506,933,541,931,574,924,614,794,650,749,610,761,573,765,537,763,500,755,450,742,417,805,405" shape="poly">
+              <area id="inversion3" alt="Nuestros Asesores buscaran el presupuesto que mas se ajuste a ti." title="Nuestros Asesores buscaran el presupuesto que mas se ajuste a ti." href="" coords="917,642,900,688,881,725,853,768,825,805,796,832,767,856,737,878,696,899,589,823,591,762,620,750,654,730,679,711,705,684,724,660,739,634,788,675" shape="poly">
+              <area id="inversion4" alt="Llego el momento de la acción y dar juntos el primer paso." title="Llego el momento de la acción y dar juntos el primer paso." href="" coords="673,913,632,927,581,939,525,943,476,940,420,932,378,920,333,903,326,770,376,736,411,755,447,766,488,774,529,775,567,771,563,835" shape="poly">
+              <area id="inversion5" alt="Asesorias para enseñarte a como hacerlo pero tambien te ayudamos en tu gestión." title="Asesorias para enseñarte a como hacerlo pero tambien te ayudamos en tu gestión." href="" coords="310,892,275,868,233,836,199,802,169,764,142,721,122,678,112,647,105,620,205,531,261,547,265,576,279,620,298,657,326,694,354,721,302,759" shape="poly">
+              <area id="inversion6" alt="Vamos a recibir tu propiedad y con ello ver tu meta hacerse realidad." title="Vamos a recibir tu propiedad y con ello ver tu meta hacerse realidad." href="" coords="98,594,95,552,94,499,99,452,110,410,122,371,140,326,162,295,183,265,316,287,337,340,318,361,301,384,284,414,271,447,262,482,260,520,199,506" shape="poly">
+              <area id="inversion7" alt="Analicemos el mejor panorama para seguir invirtiendo." title="Analicemos el mejor panorama para seguir invirtiendo." href="" coords="201,242,229,216,263,186,301,163,339,143,380,126,423,113,466,105,511,106,573,219,547,272,518,270,477,271,437,281,398,295,375,309,357,322,332,268" shape="poly">
             </map>
         </div>
       </div>
@@ -186,12 +186,24 @@ $this->title = Yii::$app->name;
                                 <h3 class="heading heading-inverse heading-3 strong-600 mb-3"><?= Html::encode('Arriendo') ?></h3>
                                 <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">¿Buscas una propiedad para arrendar? o ¿Deseas colocar tu propiedad en arriendo?</p>
                             </div>
-                            <a href="#" class="link link--style-4 heading-sm text-uppercase strong-500 text-golden-gradient">
-                                Busco una propiedad
-                            </a><br />
-                            <a href="#" class="link link--style-4 heading-sm text-uppercase strong-500 text-golden-gradient">
-                                Deseo arrendarla
-                            </a>
+                            <div class="btn-container">
+                              <?= Html::a(
+                                'Busco una propiedad',
+                                ['properties/index'],
+                                ['class' => [
+                                  'btn btn-sm btn-styled btn-golden btn-circle text-uppercase strong-400 w-100'
+                                ]]
+                              ) ?>
+                            </div>
+                            <div class="btn-container">
+                                <?= Html::a(
+                                  'Deseo arrendarla',
+                                  ['site/contact', 'id' => 1],
+                                  ['class' => [
+                                    'btn btn-sm btn-styled btn-golden btn-circle text-uppercase strong-400 w-100'
+                                  ]]
+                                ) ?>
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -207,12 +219,24 @@ $this->title = Yii::$app->name;
                                 <h3 class="heading heading-inverse heading-3 strong-600 mb-3"><?= Html::encode('Crédito Hipotecario') ?></h3>
                                 <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">Dicha gestión puede ser más compleja de lo que aparenta, pero si manejas bien el apalancamiento puede llevarte a ser un gran inversionista.</p>
                             </div>
-                            <a href="#" class="link link--style-4 heading-sm text-uppercase strong-500 text-golden-gradient">
-                                Entidades Bancarias
-                            </a><br />
-                            <a href="#" class="link link--style-4 heading-sm text-uppercase strong-500 text-golden-gradient">
-                                Otras Entidades financieras
-                            </a>
+                            <div class="btn-container">
+                                <?= Html::a(
+                                  'Asesoría para crédito hipotecario',
+                                  ['consulting/index'],
+                                  ['class' => [
+                                    'btn btn-sm btn-styled btn-golden btn-circle text-uppercase strong-400 w-100'
+                                  ]]
+                                ) ?>
+                            </div>
+                            <div class="btn-container">
+                              <?= Html::a(
+                                'Gestionamos tu crédito hipotecario',
+                                ['site/contact', 'id' => 2],
+                                ['class' => [
+                                  'btn btn-sm btn-styled btn-golden btn-circle text-uppercase strong-400 w-100'
+                                ]]
+                              ) ?>
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -228,12 +252,24 @@ $this->title = Yii::$app->name;
                                 <h3 class="heading heading-inverse heading-3 strong-600 mb-3"><?= Html::encode('Oportunidades de Inversión') ?></h3>
                                 <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">Propiedades que se ajustan a los nuevos conceptos inmobiliarios del mercado</p>
                             </div>
-                            <a href="#" class="link link--style-4 heading-sm text-uppercase strong-500 text-golden-gradient">
-                                Usadas
-                            </a><br />
-                            <a href="#" class="link link--style-4 heading-sm text-uppercase strong-500 text-golden-gradient">
-                                Nuevas
-                            </a>
+                            <div class="btn-container">
+                              <?= Html::a(
+                                'Usadas',
+                                ['properties/index'],
+                                ['class' => [
+                                  'btn btn-sm btn-styled btn-golden btn-circle text-uppercase strong-400 w-100'
+                                ]]
+                              ) ?>
+                            </div>
+                            <div class="btn-container">
+                              <?= Html::a(
+                                'Nuevas',
+                                ['consulting/index'],
+                                ['class' => [
+                                  'btn btn-sm btn-styled btn-golden btn-circle text-uppercase strong-400 w-100'
+                                ]]
+                              ) ?>
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -249,12 +285,23 @@ $this->title = Yii::$app->name;
                                 <h3 class="heading heading-inverse heading-3 strong-600 mb-3"><?= Html::encode('Departamento Legal') ?></h3>
                                 <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">Abogados expertos en el área de Bienes raíces, listos para apoyarte en cualquier procedimiento que requieras.</p>
                             </div>
-                            <a href="#" class="link link--style-4 heading-sm text-uppercase strong-500 text-golden-gradient">
-                                Presencial
-                            </a><br />
-                            <a href="#" class="link link--style-4 heading-sm text-uppercase strong-500 text-golden-gradient">
-                                Online
-                            </a>
+                            <div class="btn-container">
+                                <?= Html::button(
+                                  'Presencial',
+                                  ['class' => [
+                                    'btn btn-sm btn-styled btn-secondary btn-circle text-uppercase strong-400 w-100'
+                                  ]]
+                                ) ?>
+                            </div>
+                            <div class="btn-container">
+                              <?= Html::a(
+                                'Online',
+                                ['site/contact', 'id' => 3],
+                                ['class' => [
+                                  'btn btn-sm btn-styled btn-golden btn-circle text-uppercase strong-400 w-100'
+                                ]]
+                              ) ?>
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -270,9 +317,15 @@ $this->title = Yii::$app->name;
                                 <h3 class="heading heading-inverse heading-3 strong-600 mb-3"><?= Html::encode('Estadísticas') ?></h3>
                                 <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">Te mostramos los números detrás de cualquiera de nuestras gestiones.</p>
                             </div>
-                            <a href="#" class="link link--style-4 heading-sm text-uppercase strong-500 text-golden-gradient">
-                                Ver más
-                            </a>
+                            <div class="btn-container">
+                              <?= Html::a(
+                                'Ver más',
+                                ['site/about'],
+                                ['class' => [
+                                  'btn btn-sm btn-styled btn-golden btn-circle text-uppercase strong-400 w-100'
+                                ]]
+                              ) ?>
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -288,9 +341,9 @@ $this->title = Yii::$app->name;
                                 <h3 class="heading heading-inverse heading-3 strong-600 mb-3"><?= Html::encode('Alianzas') ?></h3>
                                 <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">Colocamos a tu alcance las empresas y emprendimientos que nos ayudan a ser mejores.</p>
                             </div>
-                            <a href="#" class="link link--style-4 heading-sm text-uppercase strong-500 text-golden-gradient">
-                                Ver más
-                            </a>
+                            <div class="btn-container">
+                                <a href="#" class="btn btn-sm btn-styled btn-golden btn-circle text-uppercase strong-400 w-100">Ver más</a>
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -306,9 +359,13 @@ $this->title = Yii::$app->name;
                                 <h3 class="heading heading-inverse heading-3 strong-600 mb-3"><?= Html::encode('Administración de Propiedades') ?></h3>
                                 <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">Conoce nuestro servicio para el manejo adecuado de tu inversión.</p>
                             </div>
-                            <a href="#" class="link link--style-4 heading-sm text-uppercase strong-500 text-golden-gradient">
-                                Ver más
-                            </a>
+                            <?= Html::a(
+                              'Ver más',
+                              ['site/contact', 'id' => 4],
+                              ['class' => [
+                                'btn btn-sm btn-styled btn-golden btn-circle text-uppercase strong-400 w-100'
+                              ]]
+                            ) ?>
                         </div>
                     </a>
                 </div>

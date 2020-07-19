@@ -54,8 +54,16 @@ class ContactForm extends Model
             // TODO
             switch (Yii::$app->request->get('id')) {
                 case 1:
-                    $this->subject = '';
-                    $this->body = '';
+                    $this->subject = 'Deseo arrendar mi propiedad';
+                    break;
+                case 2:
+                    $this->subject = 'Gestionamos tu crédito hipotecario';
+                    break;
+                case 3:
+                    $this->subject = 'Departamento legal online';
+                    break;
+                case 4:
+                    $this->subject = 'Administración de propiedades';
                     break;
                 default:
                     break;
