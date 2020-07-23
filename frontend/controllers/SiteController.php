@@ -7,6 +7,7 @@ use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use frontend\models\ContactForm;
 use common\models\Blog;
+use common\models\Statistics;
 
 /**
  * Site controller
@@ -105,6 +106,10 @@ class SiteController extends Controller
      */
     public function actionAbout()
     {
-        return $this->render('about');
+        $statistics = Statistics::findOne(1);
+
+        return $this->render('about', [
+            'statistics' => $statistics
+        ]);
     }
 }

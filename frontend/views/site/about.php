@@ -81,6 +81,25 @@ $this->title = 'Empresa';
     </div>
 </section>
 
+<section class="slice-md sct-color-1 text-center">
+    <div class="row align-items-center">
+        <div class="col-12">
+            <div class="row align-items-center">
+                <div class="col-12">
+                    <div class="section-title section-title--style-1 text-center mb-4">
+                        <h3 class="section-title-inner heading-2 text-uppercase strong-400">
+                            <span><?= Html::encode('Estadísticas') ?></span>
+                        </h3>
+                        <span class="section-title-delimiter clearfix"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <?= Html::img($statistics->getImage(), ['class' => 'img-fluid']) ?>
+</section>
+
 <section class="slice-xl sct-color-1">
     <div class="container">
         <div class="row">
