@@ -26,8 +26,8 @@ jobs:
     - name: Build Codecept
       run: composer run-script build-codecept
 
-    - name: Run Codecept
-      run: composer run-script run-codecept
+    # - name: Run Codecept
+    #   run: composer run-script run-codecept
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md

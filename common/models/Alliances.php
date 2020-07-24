@@ -10,15 +10,18 @@ use yii\web\UploadedFile;
 use yii\helpers\FileHelper;
 
 /**
- * This is the model class for table "xstatistics".
+ * This is the model class for table "xalliances".
  *
  * @property int $id
- * @property string|null $file
+ * @property string $name
+ * @property string $description
+ * @property string $url
+ * @property string $file
  * @property int $status
  * @property int $created_at
  * @property int $updated_at
  */
-class Statistics extends \yii\db\ActiveRecord
+class Alliances extends \yii\db\ActiveRecord
 {
     const STATUS_ACTIVE = 10;
     const STATUS_DELETED = 0;
@@ -30,7 +33,7 @@ class Statistics extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'xstatistics';
+        return 'xalliances';
     }
 
     public function behaviors()
@@ -48,8 +51,11 @@ class Statistics extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+            [['name', 'description', 'url'], 'required'],
             [['status'], 'integer'],
-            [['file'], 'string', 'max' => 255],
+            [['name', 'description'], 'string', 'max' => 255],
+            ['file', 'file', 'extensions' => ['png', 'jpg', 'jpeg', 'gif']],
+            ['url', 'url', 'defaultScheme' => 'https'],
         ];
     }
 
@@ -60,7 +66,10 @@ class Statistics extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'file' => 'Archivo',
+            'name' => 'Nombre',
+            'description' => 'Descripción',
+            'url' => 'Url',
+            'file' => 'Imágen',
             'status' => 'Estado',
             'created_at' => 'Creado En',
             'updated_at' => 'Actualizado En',
@@ -82,8 +91,8 @@ class Statistics extends \yii\db\ActiveRecord
                 foreach ($uploadedImages as $key => $uploadedImage) {
                     $name = $this->id . '-' . ($key + 1) . '-' . time() . '.' . $uploadedImage->extension;
                     if ($this->file) {
-                        $url = Url::to('@frontend/web/images/statistics/') . $this->file;
-                        $urlThumb = Url::to('@frontend/web/images/statistics/thumbs/') . $this->file;
+                        $url = Url::to('@frontend/web/images/alliances/') . $this->file;
+                        $urlThumb = Url::to('@frontend/web/images/alliances/thumbs/') . $this->file;
 
                         unlink($url);
                         unlink($urlThumb);
@@ -110,17 +119,17 @@ class Statistics extends \yii\db\ActiveRecord
 
     public static function getImagefolder() : string
     {
-        return Yii::getAlias('@frontend/web/images/statistics/');
+        return Yii::getAlias('@frontend/web/images/alliances/');
     }
 
     public static function getImagethumbfolder() : string
     {
-        return Yii::getAlias('@frontend/web/images/statistics/thumbs/');
+        return Yii::getAlias('@frontend/web/images/alliances/thumbs/');
     }
 
     public static function getFolder() : string
     {
-        $directory = Yii::getAlias('@web/images/statistics/');
+        $directory = Yii::getAlias('@web/images/alliances/');
 
         return str_replace('admin/', '', $directory);
     }
@@ -144,7 +153,7 @@ class Statistics extends \yii\db\ActiveRecord
 
         $uploadedImage->saveAs(self::getImagefolder() . 'tmp-' . $name);
 
-        Image::resize(self::getImagefolder() . 'tmp-' . $name, 1366, null)
+        Image::resize(self::getImagefolder() . 'tmp-' . $name, 1024, null)
         ->save(self::getImagefolder() . $name, ['jpeg_quality' => 80]);
 
         Image::resize(self::getImagefolder() . 'tmp-' . $name, null, 300)
@@ -157,10 +166,10 @@ class Statistics extends \yii\db\ActiveRecord
 
     /**
      * {@inheritdoc}
-     * @return StatisticsQuery the active query used by this AR class.
+     * @return AlliancesQuery the active query used by this AR class.
      */
     public static function find()
     {
-        return new StatisticsQuery(get_called_class());
+        return new AlliancesQuery(get_called_class());
     }
 }

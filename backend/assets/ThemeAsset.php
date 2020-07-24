@@ -36,6 +36,7 @@ class ThemeAsset extends AssetBundle
         'js/plugins/forms/styling/switchery.min.js',
         'js/plugins/forms/styling/switch.min.js',
         'js/app.js',
+        'js/custom.js',
         'js/demo_pages/form_checkboxes_radios.js',
         'js/demo_pages/dashboard.js',
     ];
