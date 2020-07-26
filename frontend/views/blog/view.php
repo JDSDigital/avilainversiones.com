@@ -6,7 +6,7 @@ use yii\helpers\Html;
 
 $this->title = Html::encode('Blog');
 ?>
-<section class="slice-lg slice--offset-top has-bg-cover bg-size-cover" style="background-image: url(<?= '../images/blog/'.$model->file ?>); background-position: bottom center;">
+<section class="slice-lg slice--offset-top has-bg-cover bg-size-cover" style="background-image: url(<?= '../images/blog/'.$model->file ?>); background-position: center center;">
     <span class="mask mask-dark--style-2"></span>
     <div class="container">
         <div class="row">

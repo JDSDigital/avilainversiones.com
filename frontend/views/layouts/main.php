@@ -147,7 +147,7 @@ AppAsset::register($this);
                     </div>
                 </div>
 
-                <div class="col-md-2">
+                <!-- <div class="col-md-2">
                     <div class="text-xs-center text-sm-right">
                         <ul class="social-media social-media--style-1-v4">
                             <li>
@@ -172,7 +172,7 @@ AppAsset::register($this);
                             </li>
                         </ul>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

@@ -60,7 +60,7 @@ $this->title = Html::encode('Propiedades');
             </div>
 
             <div class="col-lg-8">
-                <section class="slice-lg slice--offset sct-color-3 has-bg-cover bg-size-cover flex flex-items-xs-middle" style="background-image: url(./images/prv/real-estate/page-title-1.jpg); background-position: center top; height: 100%;">
+                <section class="slice-lg slice--offset sct-color-3 has-bg-cover bg-size-cover flex flex-items-xs-middle" style="background-image: url(./images/banners/banner-propiedades.jpg); background-position: center top; height: 100%;">
 
                     <span class="mask mask-dark--style-2"></span>
 

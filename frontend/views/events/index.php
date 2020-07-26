@@ -8,7 +8,7 @@ use yii\bootstrap4\LinkPager;
 $this->title = Html::encode('Eventos');
 ?>
 
-<section class="slice-lg slice--offset-top has-bg-cover bg-size-cover" style="background-image: url('./images/banners/eventos.jpg'); background-position: bottom center;">
+<section class="slice-lg slice--offset-top has-bg-cover bg-size-cover" style="background-image: url('./images/banners/banner-eventos.jpg'); background-position: center center;">
     <span class="mask mask-dark--style-2"></span>
     <div class="container">
         <div class="row">

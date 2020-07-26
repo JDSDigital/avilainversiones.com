@@ -21,7 +21,7 @@ $this->title = 'Empresa';
                     <p class="mb-0">Un buen servicio solo se logra cuando todo trabaja junto y en armonía.</p>
                 </p>
 
-                <div class="btn-container mt-5">
+                <!-- <div class="btn-container mt-5">
                     <ul class="social-media social-media--style-1-v2">
                         <li>
                             <a href="#" class="facebook btn-circle" target="_blank" data-toggle="tooltip" data-original-title="Facebook">
@@ -44,7 +44,7 @@ $this->title = 'Empresa';
                             </a>
                         </li>
                     </ul>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -103,67 +103,83 @@ $this->title = 'Empresa';
 <section class="slice-xl sct-color-1">
     <div class="container">
         <div class="row">
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-4 col-md-6">
                 <div class="block block--style-3 block--style-3-v2">
                     <div class="block-image">
-                        <img src="./images/prv/team/business/img-b-3.jpg">
+                        <img src="./images/prv/team/ruben.jpg">
+                    </div>
+                    <div class="block-body text-center py-3">
+                        <h3 class="heading heading-6 strong-600 mb-0">Rubén Ávila</h3>
+                        <h4 class="heading heading-sm strong-300 mb-0">Agente Inmobiliario</h4>
+                    </div>
+                    <div class="block-body border-top border-color-golden py-3">
+                        <!-- <p class="mb-0">
+                            Quisque ut nulla at nunc vehicula lacinia proin adipiscing porta tellus feugiat.
+                        </p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="block block--style-3 block--style-3-v2">
+                    <div class="block-image">
+                        <img src="./images/prv/team/rita.jpg">
                     </div>
                     <div class="block-body text-center py-3">
                         <h3 class="heading heading-6 strong-600 mb-0">Rita Rivera</h3>
                         <h4 class="heading heading-sm strong-300 mb-0">Agente Inmobiliario</h4>
                     </div>
                     <div class="block-body border-top border-color-golden py-3">
-                        <p class="mb-0">
+                        <!-- <p class="mb-0">
                             Quisque ut nulla at nunc vehicula lacinia proin adipiscing porta tellus feugiat.
-                        </p>
+                        </p> -->
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-4 col-md-6">
                 <div class="block block--style-3 block--style-3-v2">
                     <div class="block-image">
-                        <img src="./images/prv/team/business/img-b-4.jpg">
+                        <img src="./images/prv/team/betzabe.jpg">
                     </div>
                     <div class="block-body text-center py-3">
                         <h3 class="heading heading-6 strong-600 mb-0">Betzabe Avila</h3>
                         <h4 class="heading heading-sm strong-300 mb-0">Agente Inmobiliario</h4>
                     </div>
                     <div class="block-body border-top border-color-golden py-3">
-                        <p class="mb-0">
+                        <!-- <p class="mb-0">
                             Quisque ut nulla at nunc vehicula lacinia proin adipiscing porta tellus feugiat.
-                        </p>
+                        </p> -->
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-4 col-md-6">
                 <div class="block block--style-3 block--style-3-v2">
                     <div class="block-image">
-                        <img src="./images/prv/team/business/img-b-6.jpg">
+                        <img src="./images/prv/team/laura.jpg">
                     </div>
                     <div class="block-body text-center py-3">
                         <h3 class="heading heading-6 strong-600 mb-0">Laura Sanchez</h3>
                         <h4 class="heading heading-sm strong-300 mb-0">Agente Inmobiliario</h4>
                     </div>
                     <div class="block-body border-top border-color-golden py-3">
-                        <p class="mb-0">
+                        <!-- <p class="mb-0">
                             Quisque ut nulla at nunc vehicula lacinia proin adipiscing porta tellus feugiat.
-                        </p>
+                        </p> -->
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-4 col-md-6">
                 <div class="block block--style-3 block--style-3-v2">
                     <div class="block-image">
-                        <img src="./images/prv/team/business/img-b-10.jpg">
+                        <img src="./images/prv/team/anabel.jpg">
                     </div>
                     <div class="block-body text-center py-3">
                         <h3 class="heading heading-6 strong-600 mb-0">Anabel Barbieri</h3>
                         <h4 class="heading heading-sm strong-300 mb-0">Agente Inmobiliario</h4>
                     </div>
                     <div class="block-body border-top border-color-golden py-3">
-                        <p class="mb-0">
+                        <!-- <p class="mb-0">
                             Quisque ut nulla at nunc vehicula lacinia proin adipiscing porta tellus feugiat.
-                        </p>
+                        </p> -->
                     </div>
                 </div>
             </div>
