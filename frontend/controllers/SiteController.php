@@ -6,6 +6,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use frontend\models\ContactForm;
+use common\models\Alliances;
 use common\models\Blog;
 use common\models\Statistics;
 
@@ -110,6 +111,20 @@ class SiteController extends Controller
 
         return $this->render('about', [
             'statistics' => $statistics
+        ]);
+    }
+
+    /**
+     * Displays alliances page.
+     *
+     * @return mixed
+     */
+    public function actionAlliances()
+    {
+        $alliances = Alliances::find()->all();
+
+        return $this->render('alliances', [
+            'alliances' => $alliances
         ]);
     }
 }

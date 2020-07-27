@@ -102,7 +102,7 @@ $this->title = 'Empresa';
 
 <section class="slice-xl sct-color-1">
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-lg-4 col-md-6">
                 <div class="block block--style-3 block--style-3-v2">
                     <div class="block-image">

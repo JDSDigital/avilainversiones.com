@@ -342,7 +342,13 @@ $this->title = Yii::$app->name;
                                 <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">Colocamos a tu alcance las empresas y emprendimientos que nos ayudan a ser mejores.</p>
                             </div>
                             <div class="btn-container">
-                                <a href="#" class="btn btn-sm btn-styled btn-golden btn-circle text-uppercase strong-400 w-100">Ver más</a>
+                              <?= Html::a(
+                                'Ver más',
+                                ['site/alliances'],
+                                ['class' => [
+                                  'btn btn-sm btn-styled btn-golden btn-circle text-uppercase strong-400 w-100'
+                                ]]
+                              ) ?>
                             </div>
                         </div>
                     </a>

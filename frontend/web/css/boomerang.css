@@ -22815,3 +22815,45 @@ pre {
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
+
+.alliances {
+  padding: 50px;
+}
+
+.alliances a {
+  margin: 20px;
+}
+
+.alliances .logo-box {
+  border: 1px solid #bbb;
+  text-align: center !important;
+  margin: 5px 0;
+  border-radius: 5px;
+  padding: 5px 20px;
+  background-color: #fff;
+}
+
+.alliances .logo-box .logo-inner-box {
+  margin: auto;
+}
+
+.alliances .logo-box a img {
+  opacity: 1;
+  -webkit-transition: all 0.2s ease !important;
+  -moz-transition: all 0.2s ease !important;
+  -o-transition: all 0.2s ease !important;
+  -ms-transition: all 0.2s ease !important;
+  transition: all 0.2s ease !important;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.alliances .logo-box:hover a img {
+  opacity: 0.5;
+  -webkit-transition: all 0.2s ease !important;
+  -moz-transition: all 0.2s ease !important;
+  -o-transition: all 0.2s ease !important;
+  -ms-transition: all 0.2s ease !important;
+  transition: all 0.2s ease !important;
+}
