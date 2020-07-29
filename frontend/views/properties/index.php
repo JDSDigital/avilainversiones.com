@@ -1,6 +1,7 @@
 <?php
 /* @var $this yii\web\View */
 use yii\helpers\Html;
+use yii\bootstrap4\LinkPager;
 
 $this->title = Html::encode('Propiedades');
 ?>
@@ -101,28 +102,30 @@ $this->title = Html::encode('Propiedades');
 
         <div class="row-wrapper">
             <div class="row">
+                <?php  foreach ($dataProvider->getModels() as $property) : ?>
+
                 <div class="col-lg-3 col-md-6 col-sm-12 col-12">
                     <div class="block block--style-3">
                         <div class="block-image relative">
-                            <div class="view view-first">
+                            <div class="view view-first crop-blog">
                                 <?= Html::a(
-                                    Html::img('./images/prv/real-estate/img-1.jpg', ['class' => 'img-fluid']),
-                                    ['properties/view']
+                                    Html::img($property->getCover()->getThumb(), ['class' => 'img-fluid']),
+                                    ['properties/view', 'id' => $property->id]
                                 ) ?>
                             </div>
-                            <span class="block-ribbon block-ribbon-fixed block-ribbon-right bg-yellow">For sale</span>
+                            <span class="block-ribbon block-ribbon-fixed block-ribbon-right bg-yellow"><?= $property->getContract() ?></span>
                         </div>
 
                         <div class="aux-info-wrapper border-bottom">
                             <ul class="aux-info">
                                 <li class="heading strong-400 text-center">
-                                    <i class="icon-real-estate-017"></i> 150 sqft</span>
+                                    <i class="icon-real-estate-017"></i> <?= $property->getArea() ?></span>
                                 </li>
                                 <li class="heading strong-400 text-center">
-                                    <i class="icon-hotel-restaurant-022"></i> 5
+                                    <i class="icon-hotel-restaurant-022"></i> <?= $property->rooms ?>
                                 </li>
                                 <li class="heading strong-400 text-center">
-                                    <i class="icon-hotel-restaurant-158"></i> Baths
+                                    <i class="icon-hotel-restaurant-158"></i> <?= $property->toilets ?>
                                 </li>
                             </ul>
                         </div>
@@ -130,413 +133,28 @@ $this->title = Html::encode('Propiedades');
                         <div class="block-body">
                             <h3 class="heading heading-sm">
                                 <?= Html::a(
-                                    Html::encode('3015 Grand Avenue, CocoWalk'),
-                                    ['properties/view']
+                                    Html::encode($property->title),
+                                    ['properties/view', 'id' => $property->id]
                                 ) ?>
                             </h3>
                             <p class="description">
-                                Lorem ipsum dolor sit amet consectetur adipisg elitm.
+                                <?= Html::encode($property->summary) ?>
                             </p>
                         </div>
                         <div class="block-footer border-top py-3">
                             <div class="row align-items-center">
-                                <div class="col-7">
-                                    <span class="block-price">$250.800</span>
+                                <div class="col-12">
+                                    <span class="block-price"><?= Yii::$app->formatter->asCurrency($property->price) ?></span>
                                     <span class="block-price-text"></span>
                                 </div>
-                                <div class="col-5 text-right">
-                                        <span class="capacity" data-toggle="tooltip" data-placement="left" data-original-title="Capacity:<br><strong>2 members</strong>">
-                                        <i class="icon ion-person"></i>
-                                        <i class="icon ion-person"></i>
-                                    </span>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-6 col-sm-12 col-12">
-                    <div class="block block--style-3">
-                        <div class="block-image relative">
-                            <div class="view view-first">
-                                <?= Html::a(
-                                    Html::img('./images/prv/real-estate/img-2.jpg', ['class' => 'img-fluid']),
-                                    ['properties/view']
-                                ) ?>
-                            </div>
-                            <span class="block-ribbon block-ribbon-fixed block-ribbon-right bg-red">For rent</span>
-                        </div>
-
-                        <div class="aux-info-wrapper border-bottom">
-                            <ul class="aux-info">
-                                <li class="heading strong-400 text-center">
-                                    <i class="icon-real-estate-017"></i> 150 sqft</span>
-                                </li>
-                                <li class="heading strong-400 text-center">
-                                    <i class="icon-hotel-restaurant-022"></i> 5
-                                </li>
-                                <li class="heading strong-400 text-center">
-                                    <i class="icon-hotel-restaurant-158"></i> Baths
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="block-body">
-                            <h3 class="heading heading-sm">
-                                <?= Html::a(
-                                    Html::encode('9975 Emerald, New York'),
-                                    ['properties/view']
-                                ) ?>
-                            </h3>
-                            <p class="description">
-                                Lorem ipsum dolor sit amet consectetur adipisg elitm.
-                            </p>
-                        </div>
-                        <div class="block-footer border-top py-3">
-                            <div class="row align-items-center">
-                                <div class="col col-6">
-                                    <span class="block-price">$1300</span>
-                                </div>
-                                <div class="col col-6 text-right">
-                                        <span class="capacity" data-toggle="tooltip" data-placement="left" data-original-title="Capacity:<br><strong>3 members</strong>">
-                                        <i class="icon ion-person"></i>
-                                        <i class="icon ion-person"></i>
-                                        <i class="icon ion-person"></i>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-sm-12 col-12">
-                    <div class="block block--style-3">
-                        <div class="block-image relative">
-                            <div class="view view-first">
-                                <?= Html::a(
-                                    Html::img('./images/prv/real-estate/img-3.jpg', ['class' => 'img-fluid']),
-                                    ['properties/view']
-                                ) ?>
-                            </div>
-                            <span class="block-ribbon block-ribbon-fixed block-ribbon-right bg-red">For rent</span>
-                        </div>
-
-                        <div class="aux-info-wrapper border-bottom">
-                            <ul class="aux-info">
-                                <li class="heading strong-400 text-center">
-                                    <i class="icon-real-estate-017"></i> 150 sqft</span>
-                                </li>
-                                <li class="heading strong-400 text-center">
-                                    <i class="icon-hotel-restaurant-022"></i> 5
-                                </li>
-                                <li class="heading strong-400 text-center">
-                                    <i class="icon-hotel-restaurant-158"></i> Baths
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="block-body">
-                            <h3 class="heading heading-sm">
-                                <?= Html::a(
-                                    Html::encode('2030 Misty Wagon, Canyon'),
-                                    ['properties/view']
-                                ) ?>
-                            </h3>
-                            <p class="description">
-                                Lorem ipsum dolor sit amet consectetur adipisg elitm.
-                            </p>
-                        </div>
-                        <div class="block-footer border-top py-3">
-                            <div class="row align-items-center">
-                                <div class="col col-6">
-                                    <span class="block-price">$4000</span>
-                                </div>
-                                <div class="col col-6 text-right">
-                                        <span class="capacity" data-toggle="tooltip" data-placement="left" data-original-title="Capacity:<br><strong>4 members</strong>">
-                                        <i class="icon ion-person"></i>
-                                        <i class="icon ion-person"></i>
-                                        <i class="icon ion-person"></i>
-                                        <i class="icon ion-person"></i>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-sm-12 col-12">
-                    <div class="block block--style-3">
-                        <div class="block-image relative">
-                            <div class="view view-first">
-                                <?= Html::a(
-                                    Html::img('./images/prv/real-estate/img-4.jpg', ['class' => 'img-fluid']),
-                                    ['properties/view']
-                                ) ?>
-                            </div>
-                        </div>
-
-                        <div class="aux-info-wrapper border-bottom">
-                            <ul class="aux-info">
-                                <li class="heading strong-400 text-center">
-                                    <i class="icon-real-estate-017"></i> 150 sqft</span>
-                                </li>
-                                <li class="heading strong-400 text-center">
-                                    <i class="icon-hotel-restaurant-022"></i> 5
-                                </li>
-                                <li class="heading strong-400 text-center">
-                                    <i class="icon-hotel-restaurant-158"></i> Baths
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="block-body">
-                            <h3 class="heading heading-sm">
-                                <?= Html::a(
-                                    Html::encode('2030 Misty Wagon, Canyon'),
-                                    ['properties/view']
-                                ) ?>
-                            </h3>
-                            <p class="description">
-                                Lorem ipsum dolor sit amet consectetur adipisg elitm.
-                            </p>
-                        </div>
-                        <div class="block-footer border-top py-3">
-                            <div class="row align-items-center">
-                                <div class="col col-6">
-                                    <span class="block-price">$4000</span>
-                                </div>
-                                <div class="col col-6 text-right">
-                                        <span class="capacity" data-toggle="tooltip" data-placement="left" data-original-title="Capacity:<br><strong>4 members</strong>">
-                                        <i class="icon ion-person"></i>
-                                        <i class="icon ion-person"></i>
-                                        <i class="icon ion-person"></i>
-                                        <i class="icon ion-person"></i>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
 
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-12 col-12">
-                    <div class="block block--style-3">
-                        <div class="block-image relative">
-                            <div class="view view-first">
-                                <?= Html::a(
-                                    Html::img('./images/prv/real-estate/img-5.jpg', ['class' => 'img-fluid']),
-                                    ['properties/view']
-                                ) ?>
-                            </div>
-                            <span class="block-ribbon block-ribbon-fixed block-ribbon-right bg-yellow">For sale</span>
-                        </div>
-
-                        <div class="aux-info-wrapper border-bottom">
-                            <ul class="aux-info">
-                                <li class="heading strong-400 text-center">
-                                    <i class="icon-real-estate-017"></i> 150 sqft</span>
-                                </li>
-                                <li class="heading strong-400 text-center">
-                                    <i class="icon-hotel-restaurant-022"></i> 5
-                                </li>
-                                <li class="heading strong-400 text-center">
-                                    <i class="icon-hotel-restaurant-158"></i> Baths
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="block-body">
-                            <h3 class="heading heading-sm">
-                                <?= Html::a(
-                                    Html::encode('3015 Grand Avenue, CocoWalk'),
-                                    ['properties/view']
-                                ) ?>
-                            </h3>
-                            <p class="description">
-                                Lorem ipsum dolor sit amet consectetur adipisg elitm.
-                            </p>
-                        </div>
-                        <div class="block-footer border-top py-3">
-                            <div class="row align-items-center">
-                                <div class="col-7">
-                                    <span class="block-price">$250.800</span>
-                                    <span class="block-price-text"></span>
-                                </div>
-                                <div class="col-5 text-right">
-                                        <span class="capacity" data-toggle="tooltip" data-placement="left" data-original-title="Capacity:<br><strong>2 members</strong>">
-                                        <i class="icon ion-person"></i>
-                                        <i class="icon ion-person"></i>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-sm-12 col-12">
-                    <div class="block block--style-3">
-                        <div class="block-image relative">
-                            <div class="view view-first">
-                                <?= Html::a(
-                                    Html::img('./images/prv/real-estate/img-6.jpg', ['class' => 'img-fluid']),
-                                    ['properties/view']
-                                ) ?>
-                            </div>
-                            <span class="block-ribbon block-ribbon-fixed block-ribbon-right bg-red">For rent</span>
-                        </div>
-
-                        <div class="aux-info-wrapper border-bottom">
-                            <ul class="aux-info">
-                                <li class="heading strong-400 text-center">
-                                    <i class="icon-real-estate-017"></i> 150 sqft</span>
-                                </li>
-                                <li class="heading strong-400 text-center">
-                                    <i class="icon-hotel-restaurant-022"></i> 5
-                                </li>
-                                <li class="heading strong-400 text-center">
-                                    <i class="icon-hotel-restaurant-158"></i> Baths
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="block-body">
-                            <h3 class="heading heading-sm">
-                                <?= Html::a(
-                                    Html::encode('9975 Emerald, New York'),
-                                    ['properties/view']
-                                ) ?>
-                            </h3>
-                            <p class="description">
-                                Lorem ipsum dolor sit amet consectetur adipisg elitm.
-                            </p>
-                        </div>
-                        <div class="block-footer border-top py-3">
-                            <div class="row align-items-center">
-                                <div class="col col-6">
-                                    <span class="block-price">$1300</span>
-                                </div>
-                                <div class="col col-6 text-right">
-                                        <span class="capacity" data-toggle="tooltip" data-placement="left" data-original-title="Capacity:<br><strong>3 members</strong>">
-                                        <i class="icon ion-person"></i>
-                                        <i class="icon ion-person"></i>
-                                        <i class="icon ion-person"></i>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-sm-12 col-12">
-                    <div class="block block--style-3">
-                        <div class="block-image relative">
-                            <div class="view view-first">
-                                <?= Html::a(
-                                    Html::img('./images/prv/real-estate/img-7.jpg', ['class' => 'img-fluid']),
-                                    ['properties/view']
-                                ) ?>
-                            </div>
-                            <span class="block-ribbon block-ribbon-fixed block-ribbon-right bg-red">For rent</span>
-                        </div>
-
-                        <div class="aux-info-wrapper border-bottom">
-                            <ul class="aux-info">
-                                <li class="heading strong-400 text-center">
-                                    <i class="icon-real-estate-017"></i> 150 sqft</span>
-                                </li>
-                                <li class="heading strong-400 text-center">
-                                    <i class="icon-hotel-restaurant-022"></i> 5
-                                </li>
-                                <li class="heading strong-400 text-center">
-                                    <i class="icon-hotel-restaurant-158"></i> Baths
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="block-body">
-                            <h3 class="heading heading-sm">
-                                <?= Html::a(
-                                    Html::encode('2030 Misty Wagon, Canyon'),
-                                    ['properties/view']
-                                ) ?>
-                            </h3>
-                            <p class="description">
-                                Lorem ipsum dolor sit amet consectetur adipisg elitm.
-                            </p>
-                        </div>
-                        <div class="block-footer border-top py-3">
-                            <div class="row align-items-center">
-                                <div class="col col-6">
-                                    <span class="block-price">$4000</span>
-                                </div>
-                                <div class="col col-6 text-right">
-                                        <span class="capacity" data-toggle="tooltip" data-placement="left" data-original-title="Capacity:<br><strong>4 members</strong>">
-                                        <i class="icon ion-person"></i>
-                                        <i class="icon ion-person"></i>
-                                        <i class="icon ion-person"></i>
-                                        <i class="icon ion-person"></i>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-sm-12 col-12">
-                    <div class="block block--style-3">
-                        <div class="block-image relative">
-                            <div class="view view-first">
-                                <?= Html::a(
-                                    Html::img('./images/prv/real-estate/img-8.jpg', ['class' => 'img-fluid']),
-                                    ['properties/view']
-                                ) ?>
-                            </div>
-                        </div>
-
-                        <div class="aux-info-wrapper border-bottom">
-                            <ul class="aux-info">
-                                <li class="heading strong-400 text-center">
-                                    <i class="icon-real-estate-017"></i> 150 sqft</span>
-                                </li>
-                                <li class="heading strong-400 text-center">
-                                    <i class="icon-hotel-restaurant-022"></i> 5
-                                </li>
-                                <li class="heading strong-400 text-center">
-                                    <i class="icon-hotel-restaurant-158"></i> Baths
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="block-body">
-                            <h3 class="heading heading-sm">
-                                <?= Html::a(
-                                    Html::encode('2030 Misty Wagon, Canyon'),
-                                    ['properties/view']
-                                ) ?>
-                            </h3>
-                            <p class="description">
-                                Lorem ipsum dolor sit amet consectetur adipisg elitm.
-                            </p>
-                        </div>
-                        <div class="block-footer border-top py-3">
-                            <div class="row align-items-center">
-                                <div class="col col-6">
-                                    <span class="block-price">$4000</span>
-                                </div>
-                                <div class="col col-6 text-right">
-                                        <span class="capacity" data-toggle="tooltip" data-placement="left" data-original-title="Capacity:<br><strong>4 members</strong>">
-                                        <i class="icon ion-person"></i>
-                                        <i class="icon ion-person"></i>
-                                        <i class="icon ion-person"></i>
-                                        <i class="icon ion-person"></i>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </section>

@@ -178,202 +178,188 @@ $this->title = Yii::$app->name;
         <div class="row cols-xs-space cols-sm-space cols-md-space justify-content-center">
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="card bg-dark alpha-wrapper text-white overflow--hidden border-0 mb-5">
-                    <a href="#">
-                        <div class="card-img-bg" style="background-image: url('./images/services/arriendo.png');"></div>
-                        <span class="mask mask-dark alpha-8 alpha-5--hover"></span>
-                        <div class="card-body px-4 py-4">
-                            <div style="min-height: 200px;">
-                                <h3 class="heading heading-inverse heading-3 strong-600 mb-3"><?= Html::encode('Arriendo') ?></h3>
-                                <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">¿Buscas una propiedad para arrendar? o ¿Deseas colocar tu propiedad en arriendo?</p>
-                            </div>
-                            <div class="btn-container">
-                              <?= Html::a(
-                                'Busco una propiedad',
-                                ['properties/index'],
-                                ['class' => [
-                                  'btn btn-sm btn-styled btn-golden btn-circle text-uppercase strong-400 w-100'
-                                ]]
-                              ) ?>
-                            </div>
-                            <div class="btn-container">
-                                <?= Html::a(
-                                  'Deseo arrendarla',
-                                  ['site/contact', 'id' => 1],
-                                  ['class' => [
-                                    'btn btn-sm btn-styled btn-golden btn-circle text-uppercase strong-400 w-100'
-                                  ]]
-                                ) ?>
-                            </div>
+                    <div class="card-img-bg" style="background-image: url('./images/services/arriendo.png');"></div>
+                    <span class="mask mask-dark alpha-8 alpha-5--hover"></span>
+                    <div class="card-body px-4 py-4">
+                        <div style="min-height: 200px;">
+                            <h3 class="heading heading-inverse heading-3 strong-600 mb-3"><?= Html::encode('Arriendo') ?></h3>
+                            <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">¿Buscas una propiedad para arrendar? o ¿Deseas colocar tu propiedad en arriendo?</p>
                         </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="card bg-dark alpha-wrapper text-white overflow--hidden border-0 mb-5">
-                    <a href="#">
-                        <div class="card-img-bg" style="background-image: url('./images/services/credito.png');"></div>
-                        <span class="mask mask-dark alpha-8 alpha-5--hover"></span>
-                        <div class="card-body px-4 py-4">
-                            <div style="min-height: 200px;">
-                                <h3 class="heading heading-inverse heading-3 strong-600 mb-3"><?= Html::encode('Crédito Hipotecario') ?></h3>
-                                <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">Dicha gestión puede ser más compleja de lo que aparenta, pero si manejas bien el apalancamiento puede llevarte a ser un gran inversionista.</p>
-                            </div>
-                            <div class="btn-container">
-                                <?= Html::a(
-                                  'Asesoría para crédito hipotecario',
-                                  ['consulting/index'],
-                                  ['class' => [
-                                    'btn btn-sm btn-styled btn-golden btn-circle text-uppercase strong-400 w-100'
-                                  ]]
-                                ) ?>
-                            </div>
-                            <div class="btn-container">
-                              <?= Html::a(
-                                'Gestionamos tu crédito hipotecario',
-                                ['site/contact', 'id' => 2],
-                                ['class' => [
-                                  'btn btn-sm btn-styled btn-golden btn-circle text-uppercase strong-400 w-100'
-                                ]]
-                              ) ?>
-                            </div>
+                        <div class="btn-container">
+                          <?= Html::a(
+                            'Busco una propiedad',
+                            ['properties/index'],
+                            ['class' => [
+                              'btn btn-sm btn-styled btn-golden btn-circle text-uppercase strong-400 w-100'
+                            ]]
+                          ) ?>
                         </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="card bg-dark alpha-wrapper text-white overflow--hidden border-0 mb-5">
-                    <a href="#">
-                        <div class="card-img-bg" style="background-image: url('./images/services/inversion.png');"></div>
-                        <span class="mask mask-dark alpha-8 alpha-5--hover"></span>
-                        <div class="card-body px-4 py-4">
-                            <div style="min-height: 200px;">
-                                <h3 class="heading heading-inverse heading-3 strong-600 mb-3"><?= Html::encode('Oportunidades de Inversión') ?></h3>
-                                <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">Propiedades que se ajustan a los nuevos conceptos inmobiliarios del mercado</p>
-                            </div>
-                            <div class="btn-container">
-                              <?= Html::a(
-                                'Usadas',
-                                ['properties/index'],
-                                ['class' => [
-                                  'btn btn-sm btn-styled btn-golden btn-circle text-uppercase strong-400 w-100'
-                                ]]
-                              ) ?>
-                            </div>
-                            <div class="btn-container">
-                              <?= Html::a(
-                                'Nuevas',
-                                ['consulting/index'],
-                                ['class' => [
-                                  'btn btn-sm btn-styled btn-golden btn-circle text-uppercase strong-400 w-100'
-                                ]]
-                              ) ?>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="card bg-dark alpha-wrapper text-white overflow--hidden border-0 mb-5">
-                    <a href="#">
-                        <div class="card-img-bg" style="background-image: url('./images/services/legal.png');"></div>
-                        <span class="mask mask-dark alpha-8 alpha-5--hover"></span>
-                        <div class="card-body px-4 py-4">
-                            <div style="min-height: 200px;">
-                                <h3 class="heading heading-inverse heading-3 strong-600 mb-3"><?= Html::encode('Departamento Legal') ?></h3>
-                                <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">Abogados expertos en el área de Bienes raíces, listos para apoyarte en cualquier procedimiento que requieras.</p>
-                            </div>
-                            <div class="btn-container">
-                                <?= Html::button(
-                                  'Presencial',
-                                  ['class' => [
-                                    'btn btn-sm btn-styled btn-secondary btn-circle text-uppercase strong-400 w-100'
-                                  ]]
-                                ) ?>
-                            </div>
-                            <div class="btn-container">
-                              <?= Html::a(
-                                'Online',
-                                ['site/contact', 'id' => 3],
-                                ['class' => [
-                                  'btn btn-sm btn-styled btn-golden btn-circle text-uppercase strong-400 w-100'
-                                ]]
-                              ) ?>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="card bg-dark alpha-wrapper text-white overflow--hidden border-0 mb-5">
-                    <a href="#">
-                        <div class="card-img-bg" style="background-image: url('./images/services/estadisticas.png');"></div>
-                        <span class="mask mask-dark alpha-8 alpha-5--hover"></span>
-                        <div class="card-body px-4 py-4">
-                            <div style="min-height: 200px;">
-                                <h3 class="heading heading-inverse heading-3 strong-600 mb-3"><?= Html::encode('Estadísticas') ?></h3>
-                                <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">Te mostramos los números detrás de cualquiera de nuestras gestiones.</p>
-                            </div>
-                            <div class="btn-container">
-                              <?= Html::a(
-                                'Ver más',
-                                ['site/about'],
-                                ['class' => [
-                                  'btn btn-sm btn-styled btn-golden btn-circle text-uppercase strong-400 w-100'
-                                ]]
-                              ) ?>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="card bg-dark alpha-wrapper text-white overflow--hidden border-0 mb-5">
-                    <a href="#">
-                        <div class="card-img-bg" style="background-image: url('./images/services/alianzas.png');"></div>
-                        <span class="mask mask-dark alpha-8 alpha-5--hover"></span>
-                        <div class="card-body px-4 py-4">
-                            <div style="min-height: 200px;">
-                                <h3 class="heading heading-inverse heading-3 strong-600 mb-3"><?= Html::encode('Alianzas') ?></h3>
-                                <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">Colocamos a tu alcance las empresas y emprendimientos que nos ayudan a ser mejores.</p>
-                            </div>
-                            <div class="btn-container">
-                              <?= Html::a(
-                                'Ver más',
-                                ['site/alliances'],
-                                ['class' => [
-                                  'btn btn-sm btn-styled btn-golden btn-circle text-uppercase strong-400 w-100'
-                                ]]
-                              ) ?>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="card bg-dark alpha-wrapper text-white overflow--hidden border-0 mb-5">
-                    <a href="#">
-                        <div class="card-img-bg" style="background-image: url('./images/services/administracion.png');"></div>
-                        <span class="mask mask-dark alpha-8 alpha-5--hover"></span>
-                        <div class="card-body px-4 py-4">
-                            <div style="min-height: 200px;">
-                                <h3 class="heading heading-inverse heading-3 strong-600 mb-3"><?= Html::encode('Administración de Propiedades') ?></h3>
-                                <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">Conoce nuestro servicio para el manejo adecuado de tu inversión.</p>
-                            </div>
+                        <div class="btn-container">
                             <?= Html::a(
-                              'Ver más',
-                              ['site/contact', 'id' => 4],
+                              'Deseo arrendarla',
+                              ['site/contact', 'id' => 1],
                               ['class' => [
                                 'btn btn-sm btn-styled btn-golden btn-circle text-uppercase strong-400 w-100'
                               ]]
                             ) ?>
                         </div>
-                    </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card bg-dark alpha-wrapper text-white overflow--hidden border-0 mb-5">
+                    <div class="card-img-bg" style="background-image: url('./images/services/credito.png');"></div>
+                    <span class="mask mask-dark alpha-8 alpha-5--hover"></span>
+                    <div class="card-body px-4 py-4">
+                        <div style="min-height: 200px;">
+                            <h3 class="heading heading-inverse heading-3 strong-600 mb-3"><?= Html::encode('Crédito Hipotecario') ?></h3>
+                            <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">Dicha gestión puede ser más compleja de lo que aparenta, pero si manejas bien el apalancamiento puede llevarte a ser un gran inversionista.</p>
+                        </div>
+                        <div class="btn-container">
+                            <?= Html::a(
+                              'Asesoría para crédito hipotecario',
+                              ['consulting/index'],
+                              ['class' => [
+                                'btn btn-sm btn-styled btn-golden btn-circle text-uppercase strong-400 w-100'
+                              ]]
+                            ) ?>
+                        </div>
+                        <div class="btn-container">
+                          <?= Html::a(
+                            'Gestionamos tu crédito hipotecario',
+                            ['site/contact', 'id' => 2],
+                            ['class' => [
+                              'btn btn-sm btn-styled btn-golden btn-circle text-uppercase strong-400 w-100'
+                            ]]
+                          ) ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card bg-dark alpha-wrapper text-white overflow--hidden border-0 mb-5">
+                    <div class="card-img-bg" style="background-image: url('./images/services/inversion.png');"></div>
+                    <span class="mask mask-dark alpha-8 alpha-5--hover"></span>
+                    <div class="card-body px-4 py-4">
+                        <div style="min-height: 200px;">
+                            <h3 class="heading heading-inverse heading-3 strong-600 mb-3"><?= Html::encode('Oportunidades de Inversión') ?></h3>
+                            <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">Propiedades que se ajustan a los nuevos conceptos inmobiliarios del mercado</p>
+                        </div>
+                        <div class="btn-container">
+                          <?= Html::a(
+                            'Usadas',
+                            ['properties/index'],
+                            ['class' => [
+                              'btn btn-sm btn-styled btn-golden btn-circle text-uppercase strong-400 w-100'
+                            ]]
+                          ) ?>
+                        </div>
+                        <div class="btn-container">
+                          <?= Html::a(
+                            'Nuevas',
+                            ['consulting/index'],
+                            ['class' => [
+                              'btn btn-sm btn-styled btn-golden btn-circle text-uppercase strong-400 w-100'
+                            ]]
+                          ) ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card bg-dark alpha-wrapper text-white overflow--hidden border-0 mb-5">
+                    <div class="card-img-bg" style="background-image: url('./images/services/legal.png');"></div>
+                    <span class="mask mask-dark alpha-8 alpha-5--hover"></span>
+                    <div class="card-body px-4 py-4">
+                        <div style="min-height: 200px;">
+                            <h3 class="heading heading-inverse heading-3 strong-600 mb-3"><?= Html::encode('Departamento Legal') ?></h3>
+                            <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">Abogados expertos en el área de Bienes raíces, listos para apoyarte en cualquier procedimiento que requieras.</p>
+                        </div>
+                        <div class="btn-container">
+                            <?= Html::button(
+                              'Presencial',
+                              ['class' => [
+                                'btn btn-sm btn-styled btn-secondary btn-circle text-uppercase strong-400 w-100'
+                              ]]
+                            ) ?>
+                        </div>
+                        <div class="btn-container">
+                          <?= Html::a(
+                            'Online',
+                            ['site/contact', 'id' => 3],
+                            ['class' => [
+                              'btn btn-sm btn-styled btn-golden btn-circle text-uppercase strong-400 w-100'
+                            ]]
+                          ) ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card bg-dark alpha-wrapper text-white overflow--hidden border-0 mb-5">
+                    <div class="card-img-bg" style="background-image: url('./images/services/estadisticas.png');"></div>
+                    <span class="mask mask-dark alpha-8 alpha-5--hover"></span>
+                    <div class="card-body px-4 py-4">
+                        <div style="min-height: 200px;">
+                            <h3 class="heading heading-inverse heading-3 strong-600 mb-3"><?= Html::encode('Estadísticas') ?></h3>
+                            <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">Te mostramos los números detrás de cualquiera de nuestras gestiones.</p>
+                        </div>
+                        <div class="btn-container">
+                          <?= Html::a(
+                            'Ver más',
+                            ['site/about'],
+                            ['class' => [
+                              'btn btn-sm btn-styled btn-golden btn-circle text-uppercase strong-400 w-100'
+                            ]]
+                          ) ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card bg-dark alpha-wrapper text-white overflow--hidden border-0 mb-5">
+                    <div class="card-img-bg" style="background-image: url('./images/services/alianzas.png');"></div>
+                    <span class="mask mask-dark alpha-8 alpha-5--hover"></span>
+                    <div class="card-body px-4 py-4">
+                        <div style="min-height: 200px;">
+                            <h3 class="heading heading-inverse heading-3 strong-600 mb-3"><?= Html::encode('Alianzas') ?></h3>
+                            <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">Colocamos a tu alcance las empresas y emprendimientos que nos ayudan a ser mejores.</p>
+                        </div>
+                        <div class="btn-container">
+                          <?= Html::a(
+                            'Ver más',
+                            ['site/alliances'],
+                            ['class' => [
+                              'btn btn-sm btn-styled btn-golden btn-circle text-uppercase strong-400 w-100'
+                            ]]
+                          ) ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card bg-dark alpha-wrapper text-white overflow--hidden border-0 mb-5">
+                    <div class="card-img-bg" style="background-image: url('./images/services/administracion.png');"></div>
+                    <span class="mask mask-dark alpha-8 alpha-5--hover"></span>
+                    <div class="card-body px-4 py-4">
+                        <div style="min-height: 200px;">
+                            <h3 class="heading heading-inverse heading-3 strong-600 mb-3"><?= Html::encode('Administración de Propiedades') ?></h3>
+                            <p class="card-text heading-6 strong-400 line-height-1_8 c-gray-lighter">Conoce nuestro servicio para el manejo adecuado de tu inversión.</p>
+                        </div>
+                        <?= Html::a(
+                          'Ver más',
+                          ['site/contact', 'id' => 4],
+                          ['class' => [
+                            'btn btn-sm btn-styled btn-golden btn-circle text-uppercase strong-400 w-100'
+                          ]]
+                        ) ?>
+                    </div>
                 </div>
             </div>
         </div>

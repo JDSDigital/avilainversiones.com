@@ -36,6 +36,7 @@ class Properties extends \yii\db\ActiveRecord
 {
     const STATUS_ACTIVE = 10;
     const STATUS_DELETED = 0;
+
     const TYPES = [
       1 => "Departamento",
       2 => "Casa"
@@ -130,9 +131,9 @@ class Properties extends \yii\db\ActiveRecord
                         return false;
                     }
 
-                    // if ($key == 0) {
-                    //     $image->cover = (!$this->cover) ? PropertiesImages::STATUS_ACTIVE : PropertiesImages::STATUS_DELETED;
-                    // }
+                    if ($key == 0) {
+                        $image->cover = (!$this->cover) ? PropertiesImages::STATUS_ACTIVE : PropertiesImages::STATUS_DELETED;
+                    }
 
                     $image->save();
                 }
@@ -147,9 +148,9 @@ class Properties extends \yii\db\ActiveRecord
         }
     }
 
-    public function cover()
+    public function getCover()
     {
-        return $this->getPropertiesImages()->where(['cover' => 1])->one();
+        return $this->getPropertiesImages()->where(['cover' => PropertiesImages::STATUS_ACTIVE])->one();
     }
 
     public function getTypes()
@@ -170,6 +171,11 @@ class Properties extends \yii\db\ActiveRecord
     public function getContract()
     {
         return self::CONTRACTS[$this->contract_id];
+    }
+
+    public function getArea()
+    {
+        return $this->area . " m2";
     }
 
     /**

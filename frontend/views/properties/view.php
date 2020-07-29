@@ -70,10 +70,10 @@ $this->title = 'Propiedad';
                                 <div class="row">
                                     <div class="col-md-6 px-5">
                                         <h3 class="heading heading-1 strong-400 c-white">
-                                            9975 Emerald Escape, New York
+                                            <?= Html::encode($property->title) ?>
                                         </h3>
                                         <h4 class="heading heading-5 text-normal strong-300 c-white my-4">
-                                            Lorem ipsum dolor sit amet, consectetur adipisg elitm ut tincidunt purus iaculis consectetur.
+                                            <?= Html::encode($property->summary) ?>
                                         </h4>
                                     </div>
                                 </div>
@@ -94,56 +94,32 @@ $this->title = 'Propiedad';
                 <div class="light-gallery">
                     <!-- Gallery -->
                     <div class="gallery-top">
-                        <a href="../images/prv/real-estate/img-lg-1.jpg" class="item" data-fancybox>
-                            <img src="../images/prv/real-estate/img-lg-1.jpg">
-                        </a>
+                        <?= Html::a(
+                            Html::img($property->getCover()->getImage()),
+                            $property->getCover()->getImage(),
+                            [
+                                'class' => 'item',
+                                'data-fancybox' => true
+                            ]
+                        ) ?>
                     </div>
 
                     <div class="gallery-bottom">
                         <div class="row">
-                            <div class="col-sm-2">
-                                <div class="gallery-thumb">
-                                    <a class="item" href="../images/prv/real-estate/img-1.jpg" data-fancybox="group">
-                                        <img src="../images/prv/real-estate/img-1.jpg">
-                                    </a>
+                            <?php foreach ($property->propertiesImages as $key => $image) : ?>
+                                <div class="col-sm-2">
+                                    <div class="gallery-thumb">
+                                        <?= Html::a(
+                                            Html::img($image->getThumb()),
+                                            $image->getImage(),
+                                            [
+                                                'class' => 'item',
+                                                'data-fancybox' => 'group'
+                                            ]
+                                        ) ?>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-2">
-                                <div class="gallery-thumb">
-                                    <a class="item" href="../images/prv/real-estate/img-2.jpg" data-fancybox="group">
-                                        <img src="../images/prv/real-estate/img-2.jpg">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-2">
-                                <div class="gallery-thumb">
-                                    <a class="item" href="../images/prv/real-estate/img-3.jpg" data-fancybox="group">
-                                        <img src="../images/prv/real-estate/img-3.jpg">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-2">
-                                <div class="gallery-thumb">
-                                    <a class="item" href="../images/prv/real-estate/img-4.jpg" data-fancybox="group">
-                                        <img src="../images/prv/real-estate/img-4.jpg">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-sm-2">
-                                <div class="gallery-thumb">
-                                    <a class="item" href="../images/prv/real-estate/img-5.jpg" data-fancybox="group">
-                                        <img src="../images/prv/real-estate/img-5.jpg">
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-2">
-                                <div class="gallery-thumb">
-                                    <a class="item" href="../images/prv/real-estate/img-6.jpg" data-fancybox="group">
-                                        <img src="../images/prv/real-estate/img-6.jpg">
-                                    </a>
-                                </div>
-                            </div>
+                            <?php endforeach; ?>
                         </div>
                     </div>
                 </div>
@@ -156,14 +132,7 @@ $this->title = 'Propiedad';
                         <h3 class="heading heading-sm text-uppercase"><?= Html::encode('Descripción') ?></h3>
                     </div>
                     <div class="card-body">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-                        </p>
-
-                        <p>
-                            Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
-                        </p>
-
+                        <?= Html::encode($property->description) ?>
                     </div>
                 </div>
 
@@ -179,15 +148,15 @@ $this->title = 'Propiedad';
                             <div class="row">
                                 <div class="col-sm-4">
                                     <dt>Dirección:</dt>
-                                    <dd>Av. Ancla N° 6</dd>
+                                    <dd><?= Html::encode($property->address) ?></dd>
                                 </div>
                                 <div class="col-sm-4">
                                     <dt>Ciudad:</dt>
-                                    <dd>Santiago</dd>
+                                    <dd><?= Html::encode($property->city) ?></dd>
                                 </div>
                                 <div class="col-sm-4">
                                     <dt>Comuna:</dt>
-                                    <dd>Santiago</dd>
+                                    <dd><?= Html::encode($property->commune) ?></dd>
                                 </div>
                             </div>
                         </dl>
@@ -206,23 +175,23 @@ $this->title = 'Propiedad';
                             <div class="col-sm-4">
                                 <dl>
                                     <dt>Tamaño:</dt>
-                                    <dd>80 m</dd>
+                                    <dd><?= Html::encode($property->getArea()) ?></dd>
                                     <dt>Precio:</dt>
-                                    <dd>200.000</dd>
+                                    <dd><?= Yii::$app->formatter->asCurrency($property->price) ?></dd>
                                 </dl>
                             </div>
                             <div class="col-sm-4">
                                 <dl>
                                     <dt>Habitaciones:</dt>
-                                    <dd>2</dd>
+                                    <dd><?= Html::encode($property->rooms) ?></dd>
                                     <dt>Baños:</dt>
-                                    <dd>1</dd>
+                                    <dd><?= Html::encode($property->toilets) ?></dd>
                                 </dl>
                             </div>
                             <div class="col-sm-4">
                                 <dl>
                                     <dt>Estacionamiento:</dt>
-                                    <dd>1</dd>
+                                    <dd><?= Html::encode($property->garage) ?></dd>
                                 </dl>
                             </div>
                         </div>
@@ -232,17 +201,16 @@ $this->title = 'Propiedad';
                 <span class="space-md-md"></span>
 
                 <!-- Video -->
-                <div class="card">
+                <!-- <div class="card">
                     <div class="card-title b-xs-bottom">
                         <h3 class="heading heading-sm text-uppercase"><?= Html::encode('Adicionales') ?></h3>
                     </div>
                     <div class="card-body">
-                        <!-- 16:9 aspect ratio -->
                         <div class="embed-responsive embed-responsive-16by9">
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/yC7jiT9KHxA?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

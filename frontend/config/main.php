@@ -59,6 +59,7 @@ return [
                 'cursos' => 'courses/index',
                 'cursos/<id:\d+>' => 'courses/view',
                 'asesorias' => 'consulting/index',
+                'alianzas' => 'site/alliances',
             ],
         ],
     ],

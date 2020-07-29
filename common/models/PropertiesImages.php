@@ -21,6 +21,9 @@ use yii\helpers\FileHelper;
  */
 class PropertiesImages extends \yii\db\ActiveRecord
 {
+    const STATUS_ACTIVE = 10;
+    const STATUS_DELETED = 0;
+    
     /**
      * {@inheritdoc}
      */
