@@ -173,6 +173,46 @@ class PropertiesController extends Controller
              return false;
      }
 
+     /**
+      * Changes Status.
+      *
+      * @return string
+      */
+     public function actionStatus()
+     {
+         if (Yii::$app->request->isAjax) {
+             $data = Yii::$app->request->post();
+
+             $model = $this->findModel($data['id']);
+
+             $model->status = ($model->status) ? Properties::STATUS_DELETED : Properties::STATUS_ACTIVE;
+
+             $model->save();
+         }
+
+         return null;
+     }
+
+     /**
+      * Changes Featured.
+      *
+      * @return string
+      */
+     public function actionFeatured()
+     {
+         if (Yii::$app->request->isAjax) {
+             $data = Yii::$app->request->post();
+
+             $model = $this->findModel($data['id']);
+
+             $model->featured = ($model->featured) ? Properties::STATUS_DELETED : Properties::STATUS_ACTIVE;
+
+             $model->save();
+         }
+
+         return null;
+     }
+
     /**
      * Finds the Properties model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.

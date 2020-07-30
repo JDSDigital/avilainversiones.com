@@ -99,9 +99,9 @@ class Events extends \yii\db\ActiveRecord
                         return false;
                     }
 
-                    // if ($key == 0) {
-                    //     $image->cover = (!$this->cover) ? EventsImages::STATUS_ACTIVE : EventsImages::STATUS_DELETED;
-                    // }
+                    if ($key == 0) {
+                        $image->cover = (!$this->cover) ? EventsImages::STATUS_ACTIVE : EventsImages::STATUS_DELETED;
+                    }
 
                     $image->save();
                 }

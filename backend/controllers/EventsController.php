@@ -176,6 +176,46 @@ class EventsController extends Controller
     }
 
     /**
+     * Changes Status.
+     *
+     * @return string
+     */
+    public function actionStatus()
+    {
+        if (Yii::$app->request->isAjax) {
+            $data = Yii::$app->request->post();
+
+            $model = $this->findModel($data['id']);
+
+            $model->status = ($model->status) ? Events::STATUS_DELETED : Events::STATUS_ACTIVE;
+
+            $model->save();
+        }
+
+        return null;
+    }
+
+    /**
+     * Changes Featured.
+     *
+     * @return string
+     */
+    public function actionFeatured()
+    {
+        if (Yii::$app->request->isAjax) {
+            $data = Yii::$app->request->post();
+
+            $model = $this->findModel($data['id']);
+
+            $model->featured = ($model->featured) ? Events::STATUS_DELETED : Events::STATUS_ACTIVE;
+
+            $model->save();
+        }
+
+        return null;
+    }
+
+    /**
      * Finds the Events model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id

@@ -99,3 +99,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php Pjax::end(); ?>
 
 </div>
+
+<?php
+    $this->registerJs('listenerChangeStatus("'.Url::to(["properties/status"]).'");');
+    $this->registerJs('listenerChangeFeatured("'.Url::to(["properties/featured"]).'");');
+?>
