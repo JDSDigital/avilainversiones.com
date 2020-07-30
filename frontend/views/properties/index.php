@@ -113,7 +113,7 @@ $this->title = Html::encode('Propiedades');
                                     ['properties/view', 'id' => $property->id]
                                 ) ?>
                             </div>
-                            <span class="block-ribbon block-ribbon-fixed block-ribbon-right bg-yellow"><?= $property->getContract() ?></span>
+                            <span class="block-ribbon block-ribbon-fixed block-ribbon-right btn-golden"><?= $property->getContract() ?></span>
                         </div>
 
                         <div class="aux-info-wrapper border-bottom">

@@ -87,3 +87,5 @@ $template = '<div class="form-group row">
     <?php ActiveForm::end(); ?>
 
 </div>
+
+<?php $this->registerJs('listenerCover();') ?>

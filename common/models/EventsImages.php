@@ -106,15 +106,11 @@ class EventsImages extends \yii\db\ActiveRecord
 
     public function setCover()
     {
-        self::updateAll(['cover' => 0], 'article_id = ' . $this->article_id);
+        self::updateAll(['cover' => 0], 'event_id = ' . $this->event_id);
 
         $this->cover = self::STATUS_ACTIVE;
 
-        if (self::update())
-          return true;
-        else
-          return false;
-
+        return (self::update()) ? true : false;
     }
 
     /**

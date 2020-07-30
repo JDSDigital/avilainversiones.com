@@ -22857,3 +22857,9 @@ pre {
   -ms-transition: all 0.2s ease !important;
   transition: all 0.2s ease !important;
 }
+
+.card-buttons {
+  position: relative;
+  bottom: 10px;
+  width: 100%;
+}

@@ -35,7 +35,7 @@ class m200628_182034_create_properties_tables extends Migration
             'garage' => $this->integer()->null(),
             'address' => $this->string()->null(),
             'views' => $this->integer()->notNull()->defaultValue(0),
-    		    'taken' => $this->smallInteger()->notNull()->defaultValue(0),
+		    'taken' => $this->smallInteger()->notNull()->defaultValue(0),
 
             'status' => $this->smallInteger()->notNull()->defaultValue(10),
             'created_at' => $this->integer()->notNull()->defaultValue(0),

@@ -23,7 +23,7 @@ class PropertiesImages extends \yii\db\ActiveRecord
 {
     const STATUS_ACTIVE = 10;
     const STATUS_DELETED = 0;
-    
+
     /**
      * {@inheritdoc}
      */
@@ -113,11 +113,7 @@ class PropertiesImages extends \yii\db\ActiveRecord
 
         $this->cover = self::STATUS_ACTIVE;
 
-        if (self::update())
-          return true;
-        else
-          return false;
-
+        return (self::update()) ? true : false;
     }
 
     /**
