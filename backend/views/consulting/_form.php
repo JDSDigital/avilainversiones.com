@@ -6,21 +6,37 @@ use yii\widgets\ActiveForm;
 use kartik\file\FileInput;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\Statistics */
+/* @var $model common\models\Consulting */
 /* @var $form yii\widgets\ActiveForm */
 
+$template = '<div class="form-group row">
+    <label class="col-form-label col-lg-2">{label}</label>
+    <div class="col-lg-10">
+        <div class="input-group">
+            {input}
+        </div>
+        {error}
+    </div>
+</div>';
 ?>
 
 <div class="card-body">
 
     <?php $form = ActiveForm::begin(); ?>
-
     <fieldset class="mb-3">
-        <legend class="text-uppercase font-size-sm font-weight-bold">Imágen</legend>
+        <legend class="text-uppercase font-size-sm font-weight-bold">Datos</legend>
+
+        <?= $form->field($model, 'name', [
+            'template' => $template,
+        ])->textInput(['maxlength' => true, 'class' => 'form-control']) ?>
+
+        <?= $form->field($model, 'description', [
+            'template' => $template,
+        ])->textarea(['maxlength' => true, 'class' => 'form-control']) ?>
 
         <div class="row">
-            <div class="col-md-12">
-                <?= $form->field($model, 'image')->widget(FileInput::classname(), [
+          <div class="col-md-12">
+            <?= $form->field($model, 'image')->widget(FileInput::classname(), [
                 'language' => 'es',
                 'options' => [
                   'multiple' => false,
@@ -29,7 +45,7 @@ use kartik\file\FileInput;
                   'previewFileType' => 'image',
                   'showCancel' => false,
                   'showUpload' => false,
-                  'showDelete' => false,
+                  'showDelete' => true,
                   'allowedFileTypes' => ['image'],
                   'allowedFileExtensions' => ['jpg', 'png'],
                   'maxFileSize' => 2800,
@@ -40,8 +56,8 @@ use kartik\file\FileInput;
                   'initialPreviewShowDelete' => true,
                   'initialPreviewConfig' => isset($previewsConfig) ? $previewsConfig : false,
                 ]
-                ]); ?>
-            </div>
+            ]); ?>
+          </div>
         </div>
 
     </fieldset>

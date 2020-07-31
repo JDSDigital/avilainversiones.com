@@ -51,7 +51,7 @@ $template = '<div class="form-group row">
               'allowedFileExtensions' => ['jpg', 'png', 'jpeg', 'gif'],
               'maxFileSize' => 2800,
               'maxFileCount' => 1,
-              'overwriteInitial' => false,
+              'overwriteInitial' => true,
               'initialPreview' => isset($previews) ? $previews : false,
               'initialPreviewAsData' => true,
               'initialPreviewShowDelete' => true,
