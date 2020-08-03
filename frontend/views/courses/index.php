@@ -43,7 +43,7 @@ $this->title = Html::encode('Cursos');
                                             <?= Html::encode($course->title) ?>
                                         </h4>
                                         <p class="card-text mt-3">
-                                            <?= Html::encode($course->article) ?>
+                                            <?= $course->article ?>
                                         </p>
                                         <div class="row align-items-right">
                                             <div class="col-12">

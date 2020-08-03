@@ -46,10 +46,10 @@ $template = '<div class="form-group row">
             'template' => $template,
         ])->textInput(['maxlength' => true, 'class' => 'form-control']) ?>
 
-        <!-- TODO TEXTAREA -->
-        <?= $form->field($model, 'description', [
-            'template' => $template,
-        ])->textInput(['maxlength' => true, 'class' => 'form-control']) ?>
+        <?= $form->field($model, 'description')->textarea([
+            'class' => 'form-control',
+            'rows' => 4
+        ]) ?>
 
         <?= $form->field($model, 'city', [
             'template' => $template,

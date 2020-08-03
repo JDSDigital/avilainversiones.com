@@ -47,7 +47,7 @@ $this->title = Html::encode('Blog');
                   </h3>
                 </div>
 
-                <div class="card-footer">
+                <!-- <div class="card-footer">
                   <div class="row">
                     <div class="col">
                       <div class="block-author">
@@ -69,7 +69,7 @@ $this->title = Html::encode('Blog');
                       </ul>
                     </div>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
 

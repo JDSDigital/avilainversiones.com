@@ -12,7 +12,7 @@ $baseUrl = str_replace('/frontend/web', '', (new Request)->getBaseUrl());
 return [
     'id' => 'app-frontend',
     'name' => 'Ávila Inversiones',
-    'language' => 'es',
+    'language' => 'es-ES',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',

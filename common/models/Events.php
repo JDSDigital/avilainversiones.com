@@ -100,7 +100,7 @@ class Events extends \yii\db\ActiveRecord
                     }
 
                     if ($key == 0) {
-                        $image->cover = (!$this->cover) ? EventsImages::STATUS_ACTIVE : EventsImages::STATUS_DELETED;
+                        $image->cover = (!$image->cover) ? EventsImages::STATUS_ACTIVE : EventsImages::STATUS_DELETED;
                     }
 
                     $image->save();
@@ -116,9 +116,9 @@ class Events extends \yii\db\ActiveRecord
         }
     }
 
-    public function cover()
+    public function getCover()
     {
-        return $this->getEventsImages()->where(['cover' => 1])->one();
+        return $this->getEventsImages()->where(['cover' => EventsImages::STATUS_ACTIVE])->one();
     }
 
     /**

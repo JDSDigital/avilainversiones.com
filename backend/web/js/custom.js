@@ -66,3 +66,43 @@
 			});
 	});
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+
+    // Setup
+    if (document.querySelector('#courses-article') !== null) {
+      CKEDITOR.replace('courses-article', {
+        height: 400,
+        extraPlugins: 'forms'
+      });
+    }
+
+    if (document.querySelector('#blog-article') !== null) {
+      CKEDITOR.replace('blog-article', {
+        height: 400,
+        extraPlugins: 'forms'
+      });
+    }
+
+    if (document.querySelector('#consulting-description') !== null) {
+      CKEDITOR.replace('consulting-description', {
+        height: 400,
+        extraPlugins: 'forms'
+      });
+    }
+
+    if (document.querySelector('#events-article') !== null) {
+      CKEDITOR.replace('events-article', {
+        height: 400,
+        extraPlugins: 'forms'
+      });
+    }
+
+    if (document.querySelector('#properties-description') !== null) {
+      CKEDITOR.replace('properties-description', {
+        height: 400,
+        extraPlugins: 'forms'
+      });
+    }
+
+});

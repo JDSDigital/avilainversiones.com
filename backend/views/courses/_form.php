@@ -33,9 +33,10 @@ $template = '<div class="form-group row">
             'template' => $template,
         ])->textInput(['maxlength' => true, 'class' => 'form-control']) ?>
 
-        <?= $form->field($model, 'article', [
-            'template' => $template,
-        ])->textarea(['maxlength' => true, 'class' => 'form-control']) ?>
+        <?= $form->field($model, 'article')->textarea([
+            'class' => 'form-control',
+            'rows' => 4
+        ]) ?>
 
     <div class="row">
       <div class="col-md-12">

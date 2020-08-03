@@ -32,7 +32,7 @@ $this->title = Html::encode('Blog');
     <div class="container container-xs">
         <div class="block block-post">
             <div class="block-body block-post-body">
-                <?= Html::encode($model->article) ?>
+                <?= $model->article ?>
             </div>
         </div>
     </div>

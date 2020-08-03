@@ -132,7 +132,7 @@ $this->title = 'Propiedad';
                         <h3 class="heading heading-sm text-uppercase"><?= Html::encode('Descripción') ?></h3>
                     </div>
                     <div class="card-body">
-                        <?= Html::encode($property->description) ?>
+                        <?= $property->description ?>
                     </div>
                 </div>
 

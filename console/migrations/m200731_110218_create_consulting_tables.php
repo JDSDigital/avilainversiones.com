@@ -21,7 +21,7 @@ class m200731_110218_create_consulting_tables extends Migration
         $this->createTable('xconsulting', [
             'id' => $this->primaryKey(),
             'name' => $this->string()->notNull(),
-            'description' => $this->string()->notNull(),
+            'description' => $this->text()->notNull(),
             'file' => $this->string()->null(),
 
             'status' => $this->smallInteger()->notNull()->defaultValue(10),

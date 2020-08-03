@@ -52,7 +52,7 @@ class Consulting extends \yii\db\ActiveRecord
         return [
             [['name', 'description'], 'required'],
             [['status'], 'integer'],
-            [['name', 'description'], 'string', 'max' => 255],
+            [['name'], 'string', 'max' => 255],
             ['file', 'file', 'extensions' => ['png', 'jpg', 'jpeg', 'gif']],
         ];
     }
