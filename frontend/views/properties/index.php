@@ -1,9 +1,13 @@
 <?php
 /* @var $this yii\web\View */
 use yii\helpers\Html;
+use yii\widgets\ActiveForm;
 use yii\bootstrap4\LinkPager;
+use common\models\Properties;
 
 $this->title = Html::encode('Propiedades');
+
+// $template = '<div class="col-sm-6">{label}{input}{error}</div>';
 ?>
 
 <section class="sct-color-1">
@@ -12,50 +16,50 @@ $this->title = Html::encode('Propiedades');
             <div class="col-lg-4" id="div_properties_search">
                 <div class="card card-inverse no-border no-radius">
                     <div class="card-body py-5 px-4">
-                        <h3 class="heading heading-5 strong-500 text-capitalize"><?= Html::encode('Buscar propiedades') ?></h3>
-                        <h4 class="heading heading-sm strong-400 text-normal c-gray-light"><?= Html::encode('Tu sueño está a punto de cumplirse.') ?></h4>
+                        <h3 class="heading heading-5 strong-500 text-capitalize mb-4"><?= Html::encode('Buscar propiedades') ?></h3>
 
-                        <form class="form-inverse mt-4" data-toggle="validator" role="form">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="form-group has-feedback">
-                                        <label class="text-uppercase"><?= Html::encode('Ubicación') ?></label>
-                                        <input class="form-control form-control-lg" type="text" placeholder="City, Country">
-                                        <span class="help-block with-errors"></span>
-                                    </div>
-                                </div>
-                            </div>
+                        <!-- Search -->
+                          <?php
+                              $form = ActiveForm::begin([
+                                'id' => 'properties-search',
+                                'action' => ['properties/index'],
+                                'class' => 'form-inverse mt-4'
+                              ]);
+                          ?>
 
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="form-group has-feedback">
-                                        <label for="" class="text-uppercase"><?= Html::encode('Tipo') ?></label>
-                                        <select class="form-control form-control-lg">
-                                            <option>All types</option>
-                                            <option>Houses</option>
-                                            <option>Flats/Apartments</option>
-                                            <option>Bungalows</option>
-                                            <option>Lands</option>
-                                            <option>Other</option>
-                                        </select>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group has-feedback">
-                                        <label for="" class="text-uppercase">I want</label>
-                                        <select class="form-control form-control-lg">
-                                            <option>All</option>
-                                            <option>To rent</option>
-                                            <option>To buy</option>
-                                        </select>
-                                    </div>
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                            </div>
+                              <div class="row">
+                                  <div class="col-sm-12">
+                                      <?= $form->field($propertiesSearch, 'commune', [
+                                          'labelOptions' => [ 'class' => 'text-uppercase' ]
+                                      ])->textInput([
+                                          'maxlength' => true,
+                                          'class' => 'form-control form-control-lg',
+                                          'placeholder' => 'Comuna'
+                                      ]) ?>
+                                  </div>
+                              </div>
 
-                            <button type="submit" class="btn btn-styled btn-lg btn-block btn-golden text-sm mt-4">Search properties</button>
-                        </form>
+                              <div class="row">
+                                  <div class="col-sm-6">
+                                      <?= $form->field($propertiesSearch, 'type_id', [
+                                          'labelOptions' => [ 'class' => 'text-uppercase' ]
+                                      ])->dropDownList($propertiesSearch->getTypes(), ['class' => 'form-control form-control-lg']) ?>
+                                  </div>
+
+                                  <div class="col-sm-6">
+                                      <?= $form->field($propertiesSearch, 'contract_id', [
+                                          'labelOptions' => [ 'class' => 'text-uppercase' ]
+                                      ])->dropDownList($propertiesSearch->getContracts(), ['class' => 'form-control form-control-lg']) ?>
+                                  </div>
+                              </div>
+
+                              <?= Html::submitButton('Buscar propiedades', [
+                                  'class' => 'btn btn-styled btn-lg btn-block btn-golden text-sm mt-4',
+                              ]) ?>
+
+                          <?php ActiveForm::end(); ?>
+                          <!-- End Search -->
+
                     </div>
                 </div>
             </div>
@@ -71,10 +75,10 @@ $this->title = Html::encode('Propiedades');
                                 <div class="row">
                                     <div class="col-md-8 px-5">
                                         <h2 class="heading heading-2 strong-500 c-white">
-                                            Time to find a new place?
+                                            <?= Html::encode("¿Búscas un nuevo lugar?") ?>
                                         </h2>
                                         <p class="mt-3 c-white">
-                                            Browse through more than 200.000 properties to rent or sell with Boomerang Real Estate. Contact our agents now!
+                                            <?= Html::encode("Revisa nuestras ofertas y contacta a nuestros agentes ahora.") ?>
                                         </p>
                                     </div>
                                 </div>
@@ -91,7 +95,7 @@ $this->title = Html::encode('Propiedades');
     <div class="container">
         <div class="section-title section-title--style-1 text-center mb-2">
             <h3 class="section-title-inner heading-sm strong-600 text-uppercase">
-                <span>Latest properties</span>
+                <span><?= Html::encode((Yii::$app->request->post()) ? "Resultados" : "Últimas propiedades") ?></span>
             </h3>
             <span class="section-title-delimiter clearfix d-none"></span>
         </div>

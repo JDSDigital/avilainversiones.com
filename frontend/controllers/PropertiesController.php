@@ -10,11 +10,11 @@ class PropertiesController extends \yii\web\Controller
 {
     public function actionIndex()
     {
-        $blogSearch = new PropertiesSearch;
-        $dataProvider = $blogSearch->search(Yii::$app->request->post());
+        $propertiesSearch = new PropertiesSearch;
+        $dataProvider = $propertiesSearch->search(Yii::$app->request->post());
 
         return $this->render('index', [
-          'blogSearch' => $blogSearch,
+          'propertiesSearch' => $propertiesSearch,
           'dataProvider' => $dataProvider,
         ]);
     }

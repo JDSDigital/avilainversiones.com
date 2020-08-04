@@ -22,6 +22,7 @@ class BlogController extends \yii\web\Controller
     public function actionView($id)
     {
         $model = $this->findModel($id);
+        $model->updateCounters(['views' => 1]);
 
         return $this->render('view', [
             'model' => $model,

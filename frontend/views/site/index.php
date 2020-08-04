@@ -132,30 +132,6 @@ $this->title = Yii::$app->name;
                     ) ?>
                   </h3>
                 </div>
-
-                <div class="card-footer">
-                  <div class="row">
-                    <div class="col">
-                      <div class="block-author">
-                        <div class="author-image author-image-xs">
-                          <img src="./images/prv/people/person-1.jpg">
-                        </div>
-                        <div class="author-info">
-                          <div class="author-name">
-                            <a href="#" class="strong-600">Bertram Ozzie</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col text-right">
-                      <ul class="inline-links inline-links--style-2">
-                        <li>
-                          5 min read
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           <?php endforeach; ?>
