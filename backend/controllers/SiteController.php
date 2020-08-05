@@ -6,6 +6,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
+use common\models\Blog;
 
 /**
  * Site controller
@@ -60,7 +61,11 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $posts = Blog::find()->viewsChart();
+        
+        return $this->render('index', [
+            "posts" => json_encode($posts)
+        ]);
     }
 
     /**

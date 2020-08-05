@@ -106,3 +106,81 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 });
+
+// Setup module
+// ------------------------------
+
+const GooglePieBasic = function() {
+
+    //
+    // Setup module components
+    //
+
+    // Pie chart
+    const _googlePieBasic = (array) => {
+        if (typeof google == 'undefined') {
+            console.warn('Warning - Google Charts library is not loaded.');
+            return;
+        }
+
+        // Initialize chart
+        google.charts.load('current', {
+            callback: () => {
+
+                // Draw chart
+                drawPie();
+
+                // Resize on sidebar width change
+                $(document).on('click', '.sidebar-control', drawPie());
+
+                // Resize on window resize
+                let resizePieBasic;
+                $(window).on('resize', function() {
+                    clearTimeout(resizePieBasic);
+                    resizePieBasic = setTimeout(function () {
+                        drawPie();
+                    }, 200);
+                });
+            },
+            packages: ['corechart']
+        });
+
+        // Chart settings
+        const drawPie = () => {
+
+            // Define charts element
+            const pie_chart_element = document.getElementById('google-pie');
+
+            // Data
+            const data = google.visualization.arrayToDataTable([
+                ['Post', 'Vistas'],
+                ...array
+            ]);
+
+            // Options
+            const options_pie = {
+                fontName: 'Roboto',
+                height: 300,
+                width: 500,
+                chartArea: {
+                    left: 50,
+                    width: '90%',
+                    height: '90%'
+                }
+            };
+
+            // Instantiate and draw our chart, passing in some options.
+            const pie = new google.visualization.PieChart(pie_chart_element);
+            pie.draw(data, options_pie);
+        }
+    };
+
+    //
+    // Return objects assigned to module
+    //
+    return {
+        init: (array) => {
+            _googlePieBasic(array);
+        }
+    }
+}();
