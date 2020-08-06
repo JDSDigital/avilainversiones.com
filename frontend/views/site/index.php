@@ -31,7 +31,15 @@ $this->title = Yii::$app->name;
                                         </div>
                                         <div class="row text-center">
                                             <div class="col-lg-7">
-                                                <a href="#" class="btn btn-styled btn-golden btn-circle mt-3 text-uppercase strong-400 animated" data-animation-in="fadeInUpBig" data-animation-delay="1000">Action button</a>
+                                                <div class="btn-container">
+                                                    <?= Html::a(
+                                                        'Conócenos',
+                                                        ['site/about'],
+                                                        ['class' => [
+                                                            'btn btn-styled btn-golden btn-circle mt-3 text-uppercase strong-400 animated'
+                                                        ]]
+                                                    ) ?>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -83,7 +91,13 @@ $this->title = Yii::$app->name;
                             <?= Html::encode('La capacidad de conocer las mejores estrategias es lo que te va a permitir tener éxito en tus inversiones inmobiliarias.') ?>
                         </p>
                         <div class="btn-container mt-5">
-                            <a href="#" class="btn btn-styled btn-golden btn-circle text-uppercase strong-400">Action button</a>
+                            <?= Html::a(
+                                'Ver más',
+                                ['consulting/index'],
+                                ['class' => [
+                                    'btn btn-styled btn-golden btn-circle text-uppercase strong-400'
+                                ]]
+                            ) ?>
                         </div>
                     </div>
                 </div>

@@ -6,45 +6,20 @@ use yii\helpers\Html;
 
 $this->title = 'Empresa';
 ?>
-<section class="slice-lg has-bg-cover bg-size-cover" style="background-image: url(./images/banners/empresa.jpg);">
+<section class="slice-lg has-bg-cover bg-empresa" style="background-image: url(./images/banners/empresa.jpg);">
     <span class="mask mask-dark--style-2"></span>
     <div class="container">
         <div class="row">
-            <div class="col-10 col-lg-6 ml-lg-auto">
-                <h2 class="heading heading-1 strong-400 c-white mt-4">
+            <div class="col-12 col-lg-7 ml-lg-auto">
+                <h2 class="heading heading-xl strong-600 text-capitalize">
                     Empresa
                 </h2>
-                <p class="c-white mt-4">
-                    <p class="mb-0">Una empresa es el respaldo de un sistema operativo que funciona por medio de equipos.</p>
-                    <p class="mb-0">Un equipo apoya una empresa a través del esfuerzo mancomunado de cada individuo.</p>
-                    <p class="mb-0">Un individuo es un eslabón fundamental para que se brinde un buen servicio.</p>
-                    <p class="mb-0">Un buen servicio solo se logra cuando todo trabaja junto y en armonía.</p>
-                </p>
-
-                <!-- <div class="btn-container mt-5">
-                    <ul class="social-media social-media--style-1-v2">
-                        <li>
-                            <a href="#" class="facebook btn-circle" target="_blank" data-toggle="tooltip" data-original-title="Facebook">
-                                <i class="fa fa-facebook"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="instagram btn-circle" target="_blank" data-toggle="tooltip" data-original-title="Instagram">
-                                <i class="fa fa-instagram"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="dribbble btn-circle" target="_blank" data-toggle="tooltip" data-original-title="Dribbble">
-                                <i class="fa fa-dribbble"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="dribbble btn-circle" target="_blank" data-toggle="tooltip" data-original-title="Github">
-                                <i class="fa fa-github"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div> -->
+                <div class="c-white mt-3 text-justify">
+                    <p class="heading heading-5 mb-2">Una empresa es el respaldo de un sistema operativo que funciona por medio de equipos.</p>
+                    <p class="heading heading-5 mb-2">Un equipo apoya una empresa a través del esfuerzo mancomunado de cada individuo.</p>
+                    <p class="heading heading-5 mb-2">Un individuo es un eslabón fundamental para que se brinde un buen servicio.</p>
+                    <p class="heading heading-5">Un buen servicio solo se logra cuando todo trabaja junto y en armonía.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -52,7 +27,7 @@ $this->title = 'Empresa';
 
 <section class="slice-xl sct-color-1" id="scrollToSection">
     <div class="container no-padding">
-        <div class="row mt-5">
+        <div class="row">
             <div class="col-lg-3 col-md-6">
                 <div class="milestone-counter text-center">
                     <div class="milestone-count color-golden strong-600" data-from="0" data-to="3" data-speed="3000" data-refresh-interval="100"></div>
@@ -141,7 +116,7 @@ $this->title = 'Empresa';
                         <img src="./images/prv/team/betzabe.jpg">
                     </div>
                     <div class="block-body text-center py-3">
-                        <h3 class="heading heading-6 strong-600 mb-0">Betzabe Avila</h3>
+                        <h3 class="heading heading-6 strong-600 mb-0">Betzabe Ávila</h3>
                         <h4 class="heading heading-sm strong-300 mb-0">Agente Inmobiliario</h4>
                     </div>
                     <div class="block-body border-top border-color-golden py-3">
