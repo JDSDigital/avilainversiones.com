@@ -5,10 +5,10 @@
 use yii\helpers\Url;
 use yii\helpers\Html;
 
-$this->title = Html::encode('Cursos');
+$this->title = Html::encode('Alianzas');
 ?>
 
-<section class="slice-lg slice--offset-top has-bg-cover bg-size-cover" style="background-image: url('./images/banners/banner-asesorias.jpg'); background-position: center center;">
+<section class="slice-lg slice--offset-top has-bg-cover bg-size-cover" style="background-image: url('./images/banners/banner-alianzas.jpg'); background-position: center center;">
     <span class="mask mask-dark--style-2"></span>
     <div class="container">
         <div class="row">
@@ -35,8 +35,12 @@ $this->title = Html::encode('Cursos');
                     <div class="logo-box vertical-align">
                         <div class="logo-inner-box">
                             <a href="<?= $alliance->url ?>" target="_blank">
-                              <span class="thumb" data-toggle="tooltip" data-html="true" data-title="<h3><?= $alliance->name ?></h3><h6><?= $alliance->description ?></h6>"><?= Html::img($alliance->getImage(), ['class' => 'img-responsive', 'alt' => $alliance->name]) ?></span>
+                              <span class="thumb"><?= Html::img($alliance->getImage(), ['class' => 'img-responsive', 'alt' => $alliance->name]) ?></span>
                             </a>
+                            <div class="logo-hover">
+                                <h4 class="text-golden-gradient"><?= $alliance->name ?></h4 class="text-golden-gradient">
+                                <h6 class="c-gray-lighter"><?= $alliance->description ?></h6>
+                            </div>
                         </div>
                     </div>
                 </div>

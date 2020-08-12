@@ -35,9 +35,13 @@ $this->title = Yii::$app->name;
                                                     <?= Html::a(
                                                         'Conócenos',
                                                         ['site/about'],
-                                                        ['class' => [
-                                                            'btn btn-styled btn-golden btn-circle mt-3 text-uppercase strong-400 animated'
-                                                        ]]
+                                                        [
+                                                            'class' => [
+                                                                'btn btn-styled btn-golden btn-circle mt-3 text-uppercase strong-400 animated'
+                                                            ],
+                                                            'data-animation-in' => "fadeInUpBig",
+                                                            'data-animation-delay' => "1000"
+                                                        ]
                                                     ) ?>
                                                 </div>
                                             </div>
@@ -65,13 +69,34 @@ $this->title = Yii::$app->name;
               "height" => "950",
             ]) ?>
             <map name="image-map">
-              <area id="inversion1" alt="Revisa en la sección de eventos nuestras próximas actividades." title="Revisa en la sección de eventos nuestras próximas actividades." href="#" coords="537,104,582,111,625,120,665,133,698,145,732,166,762,187,788,207,812,231,839,260,788,382,730,393,711,366,687,339,660,318,630,300,600,286,571,275,600,222" shape="poly">
-              <area id="inversion2" alt="Agenda una reunión y aclara tus dudas." title="Agenda una reunión y aclara tus dudas." href="" coords="856,282,880,318,899,358,913,396,922,430,931,467,933,506,933,541,931,574,924,614,794,650,749,610,761,573,765,537,763,500,755,450,742,417,805,405" shape="poly">
-              <area id="inversion3" alt="Nuestros Asesores buscaran el presupuesto que mas se ajuste a ti." title="Nuestros Asesores buscaran el presupuesto que mas se ajuste a ti." href="" coords="917,642,900,688,881,725,853,768,825,805,796,832,767,856,737,878,696,899,589,823,591,762,620,750,654,730,679,711,705,684,724,660,739,634,788,675" shape="poly">
-              <area id="inversion4" alt="Llego el momento de la acción y dar juntos el primer paso." title="Llego el momento de la acción y dar juntos el primer paso." href="" coords="673,913,632,927,581,939,525,943,476,940,420,932,378,920,333,903,326,770,376,736,411,755,447,766,488,774,529,775,567,771,563,835" shape="poly">
-              <area id="inversion5" alt="Asesorias para enseñarte a como hacerlo pero tambien te ayudamos en tu gestión." title="Asesorias para enseñarte a como hacerlo pero tambien te ayudamos en tu gestión." href="" coords="310,892,275,868,233,836,199,802,169,764,142,721,122,678,112,647,105,620,205,531,261,547,265,576,279,620,298,657,326,694,354,721,302,759" shape="poly">
-              <area id="inversion6" alt="Vamos a recibir tu propiedad y con ello ver tu meta hacerse realidad." title="Vamos a recibir tu propiedad y con ello ver tu meta hacerse realidad." href="" coords="98,594,95,552,94,499,99,452,110,410,122,371,140,326,162,295,183,265,316,287,337,340,318,361,301,384,284,414,271,447,262,482,260,520,199,506" shape="poly">
-              <area id="inversion7" alt="Analicemos el mejor panorama para seguir invirtiendo." title="Analicemos el mejor panorama para seguir invirtiendo." href="" coords="201,242,229,216,263,186,301,163,339,143,380,126,423,113,466,105,511,106,573,219,547,272,518,270,477,271,437,281,398,295,375,309,357,322,332,268" shape="poly">
+              <area id="inversion1" alt="Revisa en la sección de eventos nuestras próximas actividades." href="#" coords="537,104,582,111,625,120,665,133,698,145,732,166,762,187,788,207,812,231,839,260,788,382,730,393,711,366,687,339,660,318,630,300,600,286,571,275,600,222" shape="poly">
+              <div class="inversion1 image-hover">
+                  <h6 class="c-gray-lighter">Revisa en la sección de eventos nuestras próximas actividades.</h6>
+              </div>
+              <area id="inversion2" alt="Agenda una reunión y aclara tus dudas." href="" coords="856,282,880,318,899,358,913,396,922,430,931,467,933,506,933,541,931,574,924,614,794,650,749,610,761,573,765,537,763,500,755,450,742,417,805,405" shape="poly">
+              <div class="inversion2 image-hover">
+                  <h6 class="c-gray-lighter">Agenda una reunión y aclara tus dudas.</h6>
+              </div>
+              <area id="inversion3" alt="Nuestros Asesores buscaran el presupuesto que mas se ajuste a ti." href="" coords="917,642,900,688,881,725,853,768,825,805,796,832,767,856,737,878,696,899,589,823,591,762,620,750,654,730,679,711,705,684,724,660,739,634,788,675" shape="poly">
+              <div class="inversion3 image-hover">
+                  <h6 class="c-gray-lighter">Nuestros Asesores buscaran el presupuesto que mas se ajuste a ti.</h6>
+              </div>
+              <area id="inversion4" alt="Llego el momento de la acción y dar juntos el primer paso." href="" coords="673,913,632,927,581,939,525,943,476,940,420,932,378,920,333,903,326,770,376,736,411,755,447,766,488,774,529,775,567,771,563,835" shape="poly">
+              <div class="inversion4 image-hover">
+                  <h6 class="c-gray-lighter">Llego el momento de la acción y dar juntos el primer paso.</h6>
+              </div>
+              <area id="inversion5" alt="Asesorias para enseñarte a como hacerlo pero tambien te ayudamos en tu gestión." href="" coords="310,892,275,868,233,836,199,802,169,764,142,721,122,678,112,647,105,620,205,531,261,547,265,576,279,620,298,657,326,694,354,721,302,759" shape="poly">
+              <div class="inversion5 image-hover">
+                  <h6 class="c-gray-lighter">Asesorias para enseñarte a como hacerlo pero tambien te ayudamos en tu gestión.</h6>
+              </div>
+              <area id="inversion6" alt="Vamos a recibir tu propiedad y con ello ver tu meta hacerse realidad." href="" coords="98,594,95,552,94,499,99,452,110,410,122,371,140,326,162,295,183,265,316,287,337,340,318,361,301,384,284,414,271,447,262,482,260,520,199,506" shape="poly">
+              <div class="inversion6 image-hover">
+                  <h6 class="c-gray-lighter">Vamos a recibir tu propiedad y con ello ver tu meta hacerse realidad.</h6>
+              </div>
+              <area id="inversion7" alt="Analicemos el mejor panorama para seguir invirtiendo." href="" coords="201,242,229,216,263,186,301,163,339,143,380,126,423,113,466,105,511,106,573,219,547,272,518,270,477,271,437,281,398,295,375,309,357,322,332,268" shape="poly">
+              <div class="inversion7 image-hover">
+                  <h6 class="c-gray-lighter">Analicemos el mejor panorama para seguir invirtiendo.</h6>
+              </div>
             </map>
         </div>
       </div>

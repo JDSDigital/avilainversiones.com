@@ -44,8 +44,6 @@ class ThemeAsset extends AssetBundle
       'vendor/bootstrap/js/bootstrap.min.js',
       'js/slidebar/slidebar.js',
       'js/classie.js',
-      'js/jquery.maphilight.js',
-      'js/script.js',
 
       // Bootstrap Extensions
       'vendor/bootstrap-notify/bootstrap-growl.min.js',
@@ -54,27 +52,27 @@ class ThemeAsset extends AssetBundle
       // Plugins: Sorted A-Z
       'vendor/adaptive-backgrounds/adaptive-backgrounds.js',
       'vendor/countdown/js/jquery.countdown.min.js',
-      'vendor/dropzone/dropzone.min.js',
-      'vendor/easy-pie-chart/jquery.easypiechart.min.js',
+      // 'vendor/dropzone/dropzone.min.js',
+      // 'vendor/easy-pie-chart/jquery.easypiechart.min.js',
       'vendor/fancybox/js/jquery.fancybox.min.js',
-      'vendor/flatpickr/flatpickr.min.js',
-      'vendor/flip/flip.min.js',
-      'vendor/footer-reveal/footer-reveal.min.js',
-      'vendor/gradientify/jquery.gradientify.min.js',
-      'vendor/headroom/headroom.min.js',
-      'vendor/headroom/jquery.headroom.min.js',
-      'vendor/input-mask/input-mask.min.js',
-      'vendor/instafeed/instafeed.js',
+      // 'vendor/flatpickr/flatpickr.min.js',
+      // 'vendor/flip/flip.min.js',
+      // 'vendor/footer-reveal/footer-reveal.min.js',
+      // 'vendor/gradientify/jquery.gradientify.min.js',
+      // 'vendor/headroom/headroom.min.js',
+      // 'vendor/headroom/jquery.headroom.min.js',
+      // 'vendor/input-mask/input-mask.min.js',
+      // 'vendor/instafeed/instafeed.js',
       'vendor/milestone-counter/jquery.countTo.js',
-      'vendor/nouislider/js/nouislider.min.js',
-      'vendor/paraxify/paraxify.min.js',
-      'vendor/select2/js/select2.min.js',
+      // 'vendor/nouislider/js/nouislider.min.js',
+      // 'vendor/paraxify/paraxify.min.js',
+      // 'vendor/select2/js/select2.min.js',
       'vendor/sticky-kit/sticky-kit.min.js',
       'vendor/swiper/js/swiper.min.js',
-      'vendor/textarea-autosize/autosize.min.js',
-      'vendor/typeahead/typeahead.bundle.min.js',
-      'vendor/typed/typed.min.js',
-      'vendor/vide/vide.min.js',
+      // 'vendor/textarea-autosize/autosize.min.js',
+      // 'vendor/typeahead/typeahead.bundle.min.js',
+      // 'vendor/typed/typed.min.js',
+      // 'vendor/vide/vide.min.js',
       'vendor/viewport-checker/viewportchecker.min.js',
       'vendor/wow/wow.min.js',
 
@@ -83,6 +81,9 @@ class ThemeAsset extends AssetBundle
       'vendor/imagesloaded/imagesloaded.pkgd.min.js',
 
       // App JS
-      YII_ENV_DEV ? 'js/boomerang.js' : 'css/boomerang.min.js'
+      YII_ENV_DEV ? 'js/boomerang.js' : 'js/boomerang.min.js'
+    ];
+    public $jsOptions = [
+        'position' => \yii\web\View::POS_END
     ];
 }

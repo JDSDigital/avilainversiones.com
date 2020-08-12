@@ -1,29 +1,39 @@
 $(document).ready(function(){
-  const id = '#inversion';
-  const image = $(id);
+    if (document.querySelector('#inversion') !== null) {
+        const id = '#inversion';
+        const image = $(id);
 
-  for (let index = 1; index <= 7; index++) {
-    let map = $(id.concat(index));
-    let coords = map.attr('coords').split(',');
-    let newCoords = [];
+        for (let index = 1; index <= 7; index++) {
+            let map = $(id.concat(index));
+            let coords = map.attr('coords').split(',');
+            let newCoords = [];
 
-    coords.forEach(coord => {
-      let newCoord;
+            map.mouseover(function() {
+                $('.inversion'+index).addClass('d-block').css({
+                    left: (coords[4] * image.height()) / image.attr('height')+"px",
+                    top: (coords[5] * image.height()) / image.attr('width')+"px"
+                });
+            }).mouseout(function(){
+                $('.inversion'+index).removeClass('d-block');
+            });
 
-      if (index % 2 === 0) {
-        newCoord = (coord * image.height()) / image.attr('height');
-      } else {
-        newCoord = (coord * image.width()) / image.attr('width');
-      }
+            coords.forEach(coord => {
+                let newCoord;
 
-      newCoords.push(newCoord.toFixed(2));
-    });
+                if (index % 2 === 0) {
+                    newCoord = (coord * image.height()) / image.attr('height');
+                } else {
+                    newCoord = (coord * image.width()) / image.attr('width');
+                }
 
-    map.attr('coords', newCoords);
-  }
+                newCoords.push(newCoord.toFixed(2));
+            });
 
-  image.maphilight();
+            map.attr('coords', newCoords);
+        }
 
+        image.maphilight();
+    }
 });
 
 (function ($) {

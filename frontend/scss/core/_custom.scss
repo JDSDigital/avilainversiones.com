@@ -112,7 +112,6 @@
 
     .logo-box {
         border: 1px solid #bbb;
-        // height: 170px;
         text-align: center !important;
         margin: 5px 0;
         border-radius: 5px;
@@ -121,6 +120,24 @@
 
         .logo-inner-box {
           margin: auto;
+
+          .logo-hover {
+              display: none
+          }
+
+          &:hover .logo-hover {
+              border: 1px solid $golden-dark-1;
+              padding: 5px 20px 5px 5px;
+              display: block;
+              z-index: 100;
+              left: 0px;
+              margin: 10px;
+              width: 250px;
+              position: absolute;
+              top: 10px;
+              text-decoration: none;
+              background-color: black;
+          }
         }
 
         a img {
@@ -153,4 +170,21 @@
 }
 .card-body.px-4.py-4 {
     // position: absolute;
+}
+
+.image-hover {
+    display: none;
+    border: 1px solid $golden-dark-1;
+    padding: 5px 20px 5px 5px;
+    z-index: 100;
+    left: 0px;
+    margin: 10px;
+    width: 250px;
+    position: absolute;
+    top: 10px;
+    text-decoration: none;
+    background-color: black;
+}
+.d-block {
+    display: block;
 }

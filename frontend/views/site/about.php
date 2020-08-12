@@ -85,7 +85,7 @@ $this->title = 'Empresa';
                     </div>
                     <div class="block-body text-center py-3">
                         <h3 class="heading heading-6 strong-600 mb-0">Rubén Ávila</h3>
-                        <h4 class="heading heading-sm strong-300 mb-0">Agente Inmobiliario</h4>
+                        <h4 class="heading heading-sm strong-300 mb-0">CEO - Presidente Ávila Inversiones</h4>
                     </div>
                     <div class="block-body border-top border-color-golden py-3">
                         <!-- <p class="mb-0">
@@ -101,7 +101,7 @@ $this->title = 'Empresa';
                     </div>
                     <div class="block-body text-center py-3">
                         <h3 class="heading heading-6 strong-600 mb-0">Rita Rivera</h3>
-                        <h4 class="heading heading-sm strong-300 mb-0">Agente Inmobiliario</h4>
+                        <h4 class="heading heading-sm strong-300 mb-0">Asistente Administrativo</h4>
                     </div>
                     <div class="block-body border-top border-color-golden py-3">
                         <!-- <p class="mb-0">
@@ -117,7 +117,7 @@ $this->title = 'Empresa';
                     </div>
                     <div class="block-body text-center py-3">
                         <h3 class="heading heading-6 strong-600 mb-0">Betzabe Ávila</h3>
-                        <h4 class="heading heading-sm strong-300 mb-0">Agente Inmobiliario</h4>
+                        <h4 class="heading heading-sm strong-300 mb-0">Asesor Inmobiliario</h4>
                     </div>
                     <div class="block-body border-top border-color-golden py-3">
                         <!-- <p class="mb-0">
@@ -133,7 +133,7 @@ $this->title = 'Empresa';
                     </div>
                     <div class="block-body text-center py-3">
                         <h3 class="heading heading-6 strong-600 mb-0">Laura Sanchez</h3>
-                        <h4 class="heading heading-sm strong-300 mb-0">Agente Inmobiliario</h4>
+                        <h4 class="heading heading-sm strong-300 mb-0">Productora Audiovisual</h4>
                     </div>
                     <div class="block-body border-top border-color-golden py-3">
                         <!-- <p class="mb-0">
@@ -149,7 +149,7 @@ $this->title = 'Empresa';
                     </div>
                     <div class="block-body text-center py-3">
                         <h3 class="heading heading-6 strong-600 mb-0">Anabel Barbieri</h3>
-                        <h4 class="heading heading-sm strong-300 mb-0">Agente Inmobiliario</h4>
+                        <h4 class="heading heading-sm strong-300 mb-0">Diseñadora Gráfico</h4>
                     </div>
                     <div class="block-body border-top border-color-golden py-3">
                         <!-- <p class="mb-0">
@@ -165,7 +165,7 @@ $this->title = 'Empresa';
                     </div>
                     <div class="block-body text-center py-3">
                         <h3 class="heading heading-6 strong-600 mb-0">José Velásquez</h3>
-                        <h4 class="heading heading-sm strong-300 mb-0">Agente Inmobiliario</h4>
+                        <h4 class="heading heading-sm strong-300 mb-0">Encargado de Finanzas</h4>
                     </div>
                     <div class="block-body border-top border-color-golden py-3">
                         <!-- <p class="mb-0">

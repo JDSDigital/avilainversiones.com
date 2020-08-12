@@ -22837,6 +22837,24 @@ pre {
   margin: auto;
 }
 
+.alliances .logo-box .logo-inner-box .logo-hover {
+  display: none;
+}
+
+.alliances .logo-box .logo-inner-box:hover .logo-hover {
+  border: 1px solid #be9418;
+  padding: 5px 20px 5px 5px;
+  display: block;
+  z-index: 100;
+  left: 0px;
+  margin: 10px;
+  width: 250px;
+  position: absolute;
+  top: 10px;
+  text-decoration: none;
+  background-color: black;
+}
+
 .alliances .logo-box a img {
   opacity: 1;
   -webkit-transition: all 0.2s ease !important;
@@ -22862,4 +22880,22 @@ pre {
   position: relative;
   bottom: 10px;
   width: 100%;
+}
+
+.image-hover {
+  display: none;
+  border: 1px solid #be9418;
+  padding: 5px 20px 5px 5px;
+  z-index: 100;
+  left: 0px;
+  margin: 10px;
+  width: 250px;
+  position: absolute;
+  top: 10px;
+  text-decoration: none;
+  background-color: black;
+}
+
+.d-block {
+  display: block;
 }

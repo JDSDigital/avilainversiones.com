@@ -21,7 +21,7 @@ $this->title = 'Contacto';
                         Contacto
                     </h2>
                     <p class="lead c-white animated mt-3" data-animation-in="fadeInUpBig" data-animation-delay="200">
-                        There is not time to go slow.
+                        ¡No dudes en escribirnos!
                     </p>
                 </div>
             </div>
