@@ -30,28 +30,38 @@ $imageEven = "col-md-6 order-first order-md-first";
     </div>
 </section>
 
-<?php  foreach ($dataProvider->getModels() as $consulting) : ?>
-    <section class="slice-lg sct-color-1">
-        <div class="container">
-            <div class="row align-items-md-center cols-xs-space cols-md-space cols-lg-space">
-                <div class="<?= ($i%2 === 0) ? $textEven : $textOdd ?>">
-                    <div class="px-3 py-3 text-center text-lg-left">
-                        <h3 class="heading heading-2 strong-500">
-                            <?= Html::encode($consulting->name) ?>
-                        </h3>
-                        <p class="lead line-height-1_8 mt-4">
-                            <?= $consulting->description ?>
-                        </p>
-                        <div class="btn p-0 ml-3 mt-5">
-                            <a href="#" class="btn btn-styled btn-golden btn-circle text-uppercase strong-400">Online</a>
+<?php if (count($dataProvider->getModels()) > 0) : ?>
+    <?php foreach ($dataProvider->getModels() as $consulting) : ?>
+        <section class="slice-lg sct-color-1">
+            <div class="container">
+                <div class="row align-items-md-center cols-xs-space cols-md-space cols-lg-space">
+                    <div class="<?= ($i%2 === 0) ? $textEven : $textOdd ?>">
+                        <div class="px-3 py-3 text-center text-lg-left">
+                            <h3 class="heading heading-2 strong-500">
+                                <?= Html::encode($consulting->name) ?>
+                            </h3>
+                            <p class="lead line-height-1_8 mt-4">
+                                <?= $consulting->description ?>
+                            </p>
+                            <div class="btn p-0 ml-3 mt-5">
+                                <a href="#" class="btn btn-styled btn-golden btn-circle text-uppercase strong-400">Online</a>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="<?= ($i%2 === 0) ? $imageEven : $imageOdd ?>">
-                    <?= Html::img($consulting->getImage(), ['class' => 'img-fluid img-center rounded z-depth-3-top']) ?>
+                    <div class="<?= ($i%2 === 0) ? $imageEven : $imageOdd ?>">
+                        <?= Html::img($consulting->getImage(), ['class' => 'img-fluid img-center rounded z-depth-3-top']) ?>
+                    </div>
                 </div>
             </div>
+        </section>
+    <?php $i++; endforeach; ?>
+<?php else : ?>
+    <div class="slice">
+        <div class="row mt-3">
+            <div class="col-12 text-center">
+                <p class="heading heading-4">No hay elementos que mostrar.</p>
+            </div>
         </div>
-    </section>
-<?php $i++; endforeach; ?>
+    </div>
+<?php endif; ?>

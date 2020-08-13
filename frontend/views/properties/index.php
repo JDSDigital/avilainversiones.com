@@ -77,7 +77,7 @@ $this->title = Html::encode('Propiedades');
                                         <h2 class="heading heading-2 strong-500 c-white">
                                             <?= Html::encode("¿Búscas un nuevo lugar?") ?>
                                         </h2>
-                                        <p class="mt-3 c-white">
+                                        <p class="heading-6 mt-3 c-white">
                                             <?= Html::encode("Revisa nuestras ofertas y contacta a nuestros agentes ahora.") ?>
                                         </p>
                                     </div>
@@ -93,72 +93,77 @@ $this->title = Html::encode('Propiedades');
 
 <section class="slice sct-color-1" id="scrollToSection">
     <div class="container">
-        <div class="section-title section-title--style-1 text-center mb-2">
-            <h3 class="section-title-inner heading-sm strong-600 text-uppercase">
-                <span><?= Html::encode((Yii::$app->request->post()) ? "Resultados" : "Últimas propiedades") ?></span>
-            </h3>
-            <span class="section-title-delimiter clearfix d-none"></span>
-        </div>
+        <?php if (count($dataProvider->getModels()) > 0) : ?>
+            <div class="section-title section-title--style-1 text-center mb-2">
+                <h3 class="section-title-inner heading-sm strong-600 text-uppercase">
+                    <span><?= Html::encode((Yii::$app->request->post()) ? "Resultados" : "Últimas propiedades") ?></span>
+                </h3>
+                <span class="section-title-delimiter clearfix d-none"></span>
+            </div>
 
-        <span class="clearfix"></span>
+            <span class="clearfix"></span>
 
-        <span class="space-xs-md"></span>
+            <span class="space-xs-md"></span>
 
-        <div class="row-wrapper">
-            <div class="row">
-                <?php  foreach ($dataProvider->getModels() as $property) : ?>
+            <div class="row-wrapper">
+                <div class="row">
+                    <?php  foreach ($dataProvider->getModels() as $property) : ?>
 
-                <div class="col-lg-3 col-md-6 col-sm-12 col-12">
-                    <div class="block block--style-3">
-                        <div class="block-image relative">
-                            <div class="view view-first crop-blog">
-                                <?= Html::a(
-                                    Html::img($property->getCover()->getThumb(), ['class' => 'img-fluid']),
-                                    ['properties/view', 'id' => $property->id]
-                                ) ?>
+                    <div class="col-lg-3 col-md-6 col-sm-12 col-12">
+                        <div class="block block--style-3">
+                            <div class="block-image relative">
+                                <div class="view view-first crop-blog">
+                                    <?= Html::a(
+                                        Html::img($property->getCover()->getThumb(), ['class' => 'img-fluid']),
+                                        ['properties/view', 'id' => $property->id]
+                                    ) ?>
+                                </div>
+                                <span class="block-ribbon block-ribbon-fixed block-ribbon-right btn-golden"><?= $property->getContract() ?></span>
                             </div>
-                            <span class="block-ribbon block-ribbon-fixed block-ribbon-right btn-golden"><?= $property->getContract() ?></span>
-                        </div>
 
-                        <div class="aux-info-wrapper border-bottom">
-                            <ul class="aux-info">
-                                <li class="heading strong-400 text-center">
-                                    <i class="icon-real-estate-017"></i> <?= $property->getArea() ?></span>
-                                </li>
-                                <li class="heading strong-400 text-center">
-                                    <i class="icon-hotel-restaurant-022"></i> <?= $property->rooms ?>
-                                </li>
-                                <li class="heading strong-400 text-center">
-                                    <i class="icon-hotel-restaurant-158"></i> <?= $property->toilets ?>
-                                </li>
-                            </ul>
-                        </div>
+                            <div class="aux-info-wrapper border-bottom">
+                                <ul class="aux-info">
+                                    <li class="heading strong-400 text-center">
+                                        <i class="icon-real-estate-017"></i> <?= $property->getArea() ?></span>
+                                    </li>
+                                    <li class="heading strong-400 text-center">
+                                        <i class="icon-hotel-restaurant-022"></i> <?= $property->rooms ?>
+                                    </li>
+                                    <li class="heading strong-400 text-center">
+                                        <i class="icon-hotel-restaurant-158"></i> <?= $property->toilets ?>
+                                    </li>
+                                </ul>
+                            </div>
 
-                        <div class="block-body">
-                            <h3 class="heading heading-sm">
-                                <?= Html::a(
-                                    Html::encode($property->title),
-                                    ['properties/view', 'id' => $property->id]
-                                ) ?>
-                            </h3>
-                            <p class="description">
-                                <?= Html::encode($property->summary) ?>
-                            </p>
-                        </div>
-                        <div class="block-footer border-top py-3">
-                            <div class="row align-items-center">
-                                <div class="col-12">
-                                    <span class="block-price"><?= Yii::$app->formatter->asCurrency($property->price) ?></span>
-                                    <span class="block-price-text"></span>
+                            <div class="block-body">
+                                <h3 class="heading heading-sm">
+                                    <?= Html::a(
+                                        Html::encode($property->title),
+                                        ['properties/view', 'id' => $property->id]
+                                    ) ?>
+                                </h3>
+                                <p class="description">
+                                    <?= Html::encode($property->summary) ?>
+                                </p>
+                            </div>
+                            <div class="block-footer border-top py-3">
+                                <div class="row align-items-center">
+                                    <div class="col-12">
+                                        <span class="block-price"><?= Yii::$app->formatter->asCurrency($property->price) ?></span>
+                                        <span class="block-price-text"></span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <?php endforeach; ?>
                 </div>
-
-                <?php endforeach; ?>
             </div>
-
-        </div>
+        <?php else : ?>
+            <div class="col-12 text-center mt-3">
+                <p class="heading heading-4">No hay elementos que mostrar.</p>
+            </div>
+        <?php endif; ?>
     </div>
 </section>

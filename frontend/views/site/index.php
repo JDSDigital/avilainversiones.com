@@ -104,6 +104,7 @@ $this->title = Yii::$app->name;
 </section>
 
 <section class="slice-lg has-bg-cover bg-size-cover" style="background-image: url('./images/banners/inversiones.jpg');">
+    <span class="mask mask-dark--style-2"></span>
     <div class="container">
         <div class="row">
             <div class="col-lg-5 col-md-8 ml-lg-auto">
@@ -112,7 +113,7 @@ $this->title = Yii::$app->name;
                         <?= Html::encode('Inversiones a tu alcance') ?>
                     </h2>
                     <div class="">
-                        <p class="c-light-gray mt-4">
+                        <p class="heading-6 c-light-gray mt-4">
                             <?= Html::encode('La capacidad de conocer las mejores estrategias es lo que te va a permitir tener éxito en tus inversiones inmobiliarias.') ?>
                         </p>
                         <div class="btn-container mt-5">
@@ -131,52 +132,54 @@ $this->title = Yii::$app->name;
     </div>
 </section>
 
-<section class="slice sct-color-1">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-12">
-                <div class="row align-items-center">
-                    <div class="col-12">
-                        <div class="section-title section-title--style-1 text-center mb-4">
-                            <h3 class="section-title-inner heading-2 text-uppercase strong-400">
-                                <span><?= Html::encode('Blog') ?></span>
-                            </h3>
-                            <span class="section-title-delimiter clearfix"></span>
+<?php if (count($blogs) > 0) : ?>
+    <section class="slice sct-color-1">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12">
+                    <div class="row align-items-center">
+                        <div class="col-12">
+                            <div class="section-title section-title--style-1 text-center mb-4">
+                                <h3 class="section-title-inner heading-2 text-uppercase strong-400">
+                                    <span><?= Html::encode('Blog') ?></span>
+                                </h3>
+                                <span class="section-title-delimiter clearfix"></span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <span class="space-xs-lg"></span>
+            <span class="space-xs-lg"></span>
 
-        <div class="row cols-md-space cols-sm-space cols-xs-space">
-          <?php  foreach ($blogs as $entry) : ?>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-              <div class="card z-depth-2-top">
-                <div class="card-image">
-                  <div class="view view-first crop-blog">
-                    <?= Html::a(
-                        Html::img('@web/images/blog/thumbs/'.$entry->file),
-                        ['blog/view', 'id' => $entry->id]
-                    ) ?>
+            <div class="row cols-md-space cols-sm-space cols-xs-space">
+              <?php  foreach ($blogs as $entry) : ?>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                  <div class="card z-depth-2-top">
+                    <div class="card-image">
+                      <div class="view view-first crop-blog">
+                        <?= Html::a(
+                            Html::img('@web/images/blog/thumbs/'.$entry->file),
+                            ['blog/view', 'id' => $entry->id]
+                        ) ?>
+                      </div>
+                    </div>
+
+                    <div class="card-body">
+                      <h3 class="heading heading-5 strong-500 mb-0">
+                        <?= Html::a(
+                            $entry->title,
+                            ['blog/view', 'id' => $entry->id]
+                        ) ?>
+                      </h3>
+                    </div>
                   </div>
                 </div>
-
-                <div class="card-body">
-                  <h3 class="heading heading-5 strong-500 mb-0">
-                    <?= Html::a(
-                        $entry->title,
-                        ['blog/view', 'id' => $entry->id]
-                    ) ?>
-                  </h3>
-                </div>
-              </div>
+              <?php endforeach; ?>
             </div>
-          <?php endforeach; ?>
         </div>
-    </div>
-</section>
+    </section>
+<?php endif; ?>
 
 <section class="slice-lg sct-color-1">
     <div class="container container-lg">

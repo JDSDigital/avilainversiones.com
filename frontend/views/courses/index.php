@@ -25,41 +25,46 @@ $this->title = Html::encode('Cursos');
     </div>
 </section>
 
-<section class="slice-lg sct-color-1">
+<section class="slice sct-color-1">
     <div class="container">
-
-        <div class="row cols-xs-space cols-sm-space cols-md-space justify-content-center">
-            <div class="col-lg-9">
-                <div class="card-wrapper">
-                    <?php foreach ($models as $course) : ?>
-                        <div class="card z-depth-2-top">
-                            <div class="row ">
-                                <div class="col-md-5 crop-course">
-                                    <?= Html::img('@web/images/courses/'.$course->file, ['class' => 'img-fluid']) ?>
-                                </div>
-                                <div class="col-md-7">
-                                    <div class="card-body">
-                                        <h4 class="heading heading-5 strong-600 line-height-1_8">
-                                            <?= Html::encode($course->title) ?>
-                                        </h4>
-                                        <p class="card-text mt-3">
-                                            <?= $course->article ?>
-                                        </p>
-                                        <div class="row align-items-right">
-                                            <div class="col-12">
-                                                <div class="text-right">
-                                                    <a href="#" class="btn btn-styled btn-golden btn-circle text-uppercase strong-400">Comprar</a>
+        <?php if (count($models) > 0) : ?>
+            <div class="row cols-xs-space cols-sm-space cols-md-space justify-content-center">
+                <div class="col-lg-9">
+                    <div class="card-wrapper">
+                        <?php foreach ($models as $course) : ?>
+                            <div class="card z-depth-2-top">
+                                <div class="row ">
+                                    <div class="col-md-5 crop-course">
+                                        <?= Html::img('@web/images/courses/'.$course->file, ['class' => 'img-fluid']) ?>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <div class="card-body">
+                                            <h4 class="heading heading-5 strong-600 line-height-1_8">
+                                                <?= Html::encode($course->title) ?>
+                                            </h4>
+                                            <p class="card-text mt-3">
+                                                <?= $course->article ?>
+                                            </p>
+                                            <div class="row align-items-right">
+                                                <div class="col-12">
+                                                    <div class="text-right">
+                                                        <a href="#" class="btn btn-styled btn-golden btn-circle text-uppercase strong-400">Comprar</a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    <?php endforeach; ?>
+                        <?php endforeach; ?>
+                    </div>
                 </div>
             </div>
-        </div>
+        <?php else : ?>
+            <div class="col-12 text-center mt-3">
+                <p class="heading heading-4">No hay elementos que mostrar.</p>
+            </div>
+        <?php endif; ?>
 
     </div>
 </section>

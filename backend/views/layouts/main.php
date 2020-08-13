@@ -127,55 +127,55 @@ AppAsset::register($this);
                         <!-- Main -->
                         <li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Main</div> <i class="icon-menu" title="Main"></i></li>
                         <li class="nav-item">
-                            <?= Html::a('<i class="icon-home4"></i><span>Dashboard</span>',
+                            <?= Html::a('<i class="icon-pie-chart7"></i><span>Dashboard</span>',
                                 ['/site/index'],
                                 ['class' => (Yii::$app->controller->id == 'site') ? 'nav-link active' : 'nav-link'])
                             ?>
                         </li>
                         <li class="nav-item">
-                            <?= Html::a('<i class="icon-home4"></i><span>Usuarios</span>',
+                            <?= Html::a('<i class="icon-users2"></i><span>Usuarios</span>',
                                 ['user/index'],
                                 ['class' => (Yii::$app->controller->id == 'user') ? 'nav-link active' : 'nav-link'])
                             ?>
                         </li>
                         <li class="nav-item">
-                            <?= Html::a('<i class="icon-home4"></i><span>Cursos</span>',
+                            <?= Html::a('<i class="icon-graduation2"></i><span>Cursos</span>',
                                 ['courses/index'],
                                 ['class' => (Yii::$app->controller->id == 'courses') ? 'nav-link active' : 'nav-link'])
                             ?>
                         </li>
                         <li class="nav-item">
-                            <?= Html::a('<i class="icon-home4"></i><span>Eventos</span>',
+                            <?= Html::a('<i class="icon-images3"></i><span>Eventos</span>',
                                 ['events/index'],
                                 ['class' => (Yii::$app->controller->id == 'events') ? 'nav-link active' : 'nav-link'])
                             ?>
                         </li>
                         <li class="nav-item">
-                            <?= Html::a('<i class="icon-home4"></i><span>Propiedades</span>',
+                            <?= Html::a('<i class="icon-home5"></i><span>Propiedades</span>',
                                 ['properties/index'],
                                 ['class' => (Yii::$app->controller->id == 'properties') ? 'nav-link active' : 'nav-link'])
                             ?>
                         </li>
                         <li class="nav-item">
-                            <?= Html::a('<i class="icon-home4"></i><span>Blog</span>',
+                            <?= Html::a('<i class="icon-reading"></i><span>Blog</span>',
                                 ['blog/index'],
                                 ['class' => (Yii::$app->controller->id == 'blog') ? 'nav-link active' : 'nav-link'])
                             ?>
                         </li>
                         <li class="nav-item">
-                            <?= Html::a('<i class="icon-home4"></i><span>Estadísticas</span>',
+                            <?= Html::a('<i class="icon-stats-growth"></i><span>Estadísticas</span>',
                                 ['statistics/index'],
                                 ['class' => (Yii::$app->controller->id == 'statistics') ? 'nav-link active' : 'nav-link'])
                             ?>
                         </li>
                         <li class="nav-item">
-                            <?= Html::a('<i class="icon-home4"></i><span>Alianzas</span>',
+                            <?= Html::a('<i class="icon-address-book2"></i><span>Alianzas</span>',
                                 ['alliances/index'],
                                 ['class' => (Yii::$app->controller->id == 'alliances') ? 'nav-link active' : 'nav-link'])
                             ?>
                         </li>
                         <li class="nav-item">
-                            <?= Html::a('<i class="icon-home4"></i><span>Asesorías</span>',
+                            <?= Html::a('<i class="icon-briefcase"></i><span>Asesorías</span>',
                                 ['consulting/index'],
                                 ['class' => (Yii::$app->controller->id == 'consulting') ? 'nav-link active' : 'nav-link'])
                             ?>

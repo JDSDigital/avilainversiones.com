@@ -19,7 +19,7 @@ $this->title = Html::encode('Eventos');
                         Eventos
                     </h2>
                     <p class="lead c-white animated mt-3" data-animation-in="fadeInUpBig" data-animation-delay="200">
-                        There is not time to go slow.
+                        Nuestras últimas tendencias.
                     </p>
                 </div>
             </div>
@@ -30,70 +30,77 @@ $this->title = Html::encode('Eventos');
 <section class="slice sct-color-1">
     <div class="container">
         <div class="row cols-md-space cols-sm-space cols-xs-space justify-content-md-center">
-            <div class="col-lg-9">
-                <div class="card-wrapper">
-                    <?php foreach ($dataProvider->getModels() as $event) : ?>
-                      <div class="card z-depth-2-top">
-                        <div class="row ">
-                          <div class="col-md-4">
-                            <div class="card-image">
-                              <div class="view view-first">
-                                <?= Html::a(
-                                  Html::img($event->getCover()->getImage()),
-                                  ['events/view', 'id' => $event->id]
-                                ) ?>
+            <?php if (count($dataProvider->getModels()) > 0) : ?>
+                <div class="col-lg-9">
+                    <div class="card-wrapper">
+                        <?php foreach ($dataProvider->getModels() as $event) : ?>
+                          <div class="card z-depth-2-top">
+                            <div class="row ">
+                              <div class="col-md-4">
+                                <div class="card-image">
+                                  <div class="view view-first">
+                                    <?= Html::a(
+                                      Html::img($event->getCover()->getImage()),
+                                      ['events/view', 'id' => $event->id]
+                                    ) ?>
+                                  </div>
+                                </div>
                               </div>
-                            </div>
-                          </div>
-                          <div class="col-md-8">
-                            <div class="card-body">
-                              <h4 class="heading heading-5 strong-600 line-height-1_8">
-                                <?= Html::a($event->title, ['events/view', 'id' => $event->id]) ?>
-                              </h4>
-                              <p class="card-text mt-3">
-                                <?= Html::encode($event->summary) ?>
-                              </p>
-                              <div class="row align-items-center mt-4">
-                                <div class="col-6">
-                                  <!-- <div class="block-author">
-                                    <div class="author-image author-image-xs">
-                                      <img src="./images/prv/people/person-1.jpg">
+                              <div class="col-md-8">
+                                <div class="card-body">
+                                  <h4 class="heading heading-5 strong-600 line-height-1_8">
+                                    <?= Html::a($event->title, ['events/view', 'id' => $event->id]) ?>
+                                  </h4>
+                                  <p class="card-text mt-3">
+                                    <?= Html::encode($event->summary) ?>
+                                  </p>
+                                  <div class="row align-items-center mt-4">
+                                    <div class="col-6">
+                                      <!-- <div class="block-author">
+                                        <div class="author-image author-image-xs">
+                                          <img src="./images/prv/people/person-1.jpg">
+                                        </div>
+                                        <div class="author-info">
+                                          <div class="author-name">
+                                            <a href="#" class="strong-600">Elisabeth Alanna</a>
+                                          </div>
+                                        </div>
+                                      </div> -->
                                     </div>
-                                    <div class="author-info">
-                                      <div class="author-name">
-                                        <a href="#" class="strong-600">Elisabeth Alanna</a>
+
+                                    <div class="col-6">
+                                      <div class="text-right">
+                                        <ul class="inline-links inline-links--style-2">
+                                          <li>
+                                            <?= Html::encode(Yii::$app->formatter->asDate($event->created_at, 'long')) ?>
+                                          </li>
+                                        </ul>
                                       </div>
                                     </div>
-                                  </div> -->
-                                </div>
-
-                                <div class="col-6">
-                                  <div class="text-right">
-                                    <ul class="inline-links inline-links--style-2">
-                                      <li>
-                                        <?= Html::encode(Yii::$app->formatter->asDate($event->created_at, 'long')) ?>
-                                      </li>
-                                    </ul>
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                      </div>
-                    <?php endforeach; ?>
+                        <?php endforeach; ?>
+                    </div>
+                    <div class="pagination-wrapper">
+                        <nav aria-label="Pagination">
+                            <?= LinkPager::widget([
+                              'pagination' => $dataProvider->getPagination(),
+                              'options' => [
+                                'class' => 'pagination pagination--style-2 pagination-circle justify-content-center'
+                              ]
+                            ]) ?>
+                        </nav>
+                    </div>
                 </div>
-                <div class="pagination-wrapper">
-                    <nav aria-label="Pagination">
-                        <?= LinkPager::widget([
-                          'pagination' => $dataProvider->getPagination(),
-                          'options' => [
-                            'class' => 'pagination pagination--style-2 pagination-circle justify-content-center'
-                          ]
-                        ]) ?>
-                    </nav>
+            <?php else : ?>
+                <div class="col-lg-9 text-center mt-3">
+                    <p class="heading heading-4">No hay elementos que mostrar.</p>
                 </div>
-            </div>
+            <?php endif; ?>
+
             <div class="col-lg-3 blog-sidebar">
                 <h4 class="heading heading-5 strong-600 line-height-1_8">
                     Clientes
