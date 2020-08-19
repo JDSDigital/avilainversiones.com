@@ -50,6 +50,7 @@ return [
                 '' => 'site/index',
                 'empresa' => 'site/about',
                 'contacto' => 'site/contact',
+                'contacto' => 'site/consulting',
                 'blog' => 'blog/index',
                 'blog/<id:\d+>' => 'blog/view',
                 'propiedades' => 'properties/index',

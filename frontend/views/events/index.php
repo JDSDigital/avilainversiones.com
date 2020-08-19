@@ -54,9 +54,9 @@ $this->title = Html::encode('Eventos');
                                   <p class="card-text mt-3">
                                     <?= Html::encode($event->summary) ?>
                                   </p>
-                                  <div class="row align-items-center mt-4">
+                                  <!-- <div class="row align-items-center mt-4">
                                     <div class="col-6">
-                                      <!-- <div class="block-author">
+                                      <div class="block-author">
                                         <div class="author-image author-image-xs">
                                           <img src="./images/prv/people/person-1.jpg">
                                         </div>
@@ -65,19 +65,19 @@ $this->title = Html::encode('Eventos');
                                             <a href="#" class="strong-600">Elisabeth Alanna</a>
                                           </div>
                                         </div>
-                                      </div> -->
+                                      </div>
                                     </div>
 
                                     <div class="col-6">
                                       <div class="text-right">
                                         <ul class="inline-links inline-links--style-2">
                                           <li>
-                                            <?= Html::encode(Yii::$app->formatter->asDate($event->created_at, 'long')) ?>
+                                            <?php /*Html::encode(Yii::$app->formatter->asDate($event->created_at, 'long'))*/ ?>
                                           </li>
                                         </ul>
                                       </div>
                                     </div>
-                                  </div>
+                                  </div> -->
                                 </div>
                               </div>
                             </div>

@@ -14,14 +14,24 @@ $this->title = Html::encode('Eventos');
             <div class="col-lg-6">
                 <div class="py-5">
                     <h2 class="heading heading-inverse heading-xl strong-600 text-capitalize line-height-1_2 animated" data-animation-in="fadeInDownBig" data-animation-delay="200">
-                        Eventos
+                        <?= Html::encode($model->title) ?>
                     </h2>
                     <p class="lead c-white animated mt-3" data-animation-in="fadeInUpBig" data-animation-delay="200">
-                        Nuestras últimas tendencias.
+                        <?= Html::encode($model->summary) ?>
                     </p>
                 </div>
             </div>
         </div>
+    </div>
+</section>
+
+<section class="slice-sm sct-color-1">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12">
+            <?= $model->article ?>
+        </div>
+      </div>
     </div>
 </section>
 

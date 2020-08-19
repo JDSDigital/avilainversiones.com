@@ -43,6 +43,7 @@ $this->title = 'Contacto';
                 <!-- Contact form -->
                 <?php $form = ActiveForm::begin([
                     'id' => 'contact-form',
+                    'action' => ['site/contact'],
                     'options' => [
                         'class' => 'form-default form-material'
                     ],

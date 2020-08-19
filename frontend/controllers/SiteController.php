@@ -8,6 +8,7 @@ use yii\filters\AccessControl;
 use frontend\models\ContactForm;
 use common\models\Alliances;
 use common\models\Blog;
+use common\models\Consulting;
 use common\models\Statistics;
 
 /**
@@ -73,6 +74,17 @@ class SiteController extends Controller
 
         return $this->render('index', [
             'blogs' => $blogs,
+        ]);
+    }
+
+    public function actionConsulting($id)
+    {
+        $consulting = Consulting::findOne($id);
+        $model = new ContactForm();
+        $model->subject = 'Estoy interesado en '.$consulting->name;
+
+        return $this->render('contact', [
+            'model' => $model,
         ]);
     }
 

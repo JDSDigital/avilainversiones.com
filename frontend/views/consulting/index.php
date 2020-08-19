@@ -44,7 +44,9 @@ $imageEven = "col-md-6 order-first order-md-first";
                                 <?= $consulting->description ?>
                             </p>
                             <div class="btn p-0 ml-3 mt-5">
-                                <a href="#" class="btn btn-styled btn-golden btn-circle text-uppercase strong-400">Online</a>
+                                <?= Html::a("Online", ['site/consulting', 'id' => $consulting->id], [
+                                    'class' => 'btn btn-styled btn-golden btn-circle text-uppercase strong-400'
+                                ]) ?>
                             </div>
                         </div>
                     </div>
