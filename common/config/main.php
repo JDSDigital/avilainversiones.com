@@ -13,7 +13,7 @@ return [
             'dateFormat' => 'dd.MM.yyyy',
             'decimalSeparator' => ',',
             'thousandSeparator' => '.',
-            'currencyCode' => '$',
+            'currencyCode' => 'CLP',
        ],
     ],
 ];

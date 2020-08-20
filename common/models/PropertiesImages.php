@@ -113,7 +113,7 @@ class PropertiesImages extends \yii\db\ActiveRecord
 
         $this->cover = self::STATUS_ACTIVE;
 
-        return (self::update()) ? true : false;
+        return (self::save()) ? true : false;
     }
 
     /**

@@ -110,7 +110,7 @@ $this->title = Html::encode('Propiedades');
                     <?php  foreach ($dataProvider->getModels() as $property) : ?>
 
                     <div class="col-lg-3 col-md-6 col-sm-12 col-12">
-                        <div class="block block--style-3">
+                        <div class="property-box block block--style-3">
                             <div class="block-image relative">
                                 <div class="view view-first crop-blog">
                                     <?= Html::a(
@@ -167,3 +167,10 @@ $this->title = Html::encode('Propiedades');
         <?php endif; ?>
     </div>
 </section>
+
+<?php
+$js = <<<JS
+  $('.property-box').SameHeight();
+JS;
+$this->registerJs($js);
+?>
