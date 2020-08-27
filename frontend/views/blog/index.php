@@ -48,6 +48,24 @@ $this->title = Html::encode('Blog');
                           </h3>
                         </div>
 
+                        <div class="card-footer">
+                          <div class="row">
+                            <div class="col">
+                              <div class="block-author">
+                                <!-- <div class="author-image author-image-xs">
+                                  <img src="./images/prv/people/person-1.jpg">
+                                </div> -->
+                                <div class="author-info">
+                                  <div class="author-name">
+                                      <i class="fa fa-user mr-1"></i>
+                                      <?= Html::a($entry->user->name, ['blog/view', 'id' => $entry->id], ['class' => 'strong-600']) ?>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
                       </div>
                     </div>
 

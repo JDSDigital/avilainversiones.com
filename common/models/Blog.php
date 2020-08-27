@@ -53,9 +53,9 @@ class Blog extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['title', 'summary', 'article'], 'required'],
+            [['user_id', 'title', 'summary', 'article'], 'required'],
             [['article'], 'string'],
-            [['views', 'status'], 'integer'],
+            [['user_id', 'views', 'status'], 'integer'],
             [['title', 'summary', 'file'], 'string', 'max' => 255],
             ['source', 'url', 'defaultScheme' => 'https'],
         ];
@@ -68,6 +68,7 @@ class Blog extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
+            'user_id' => 'Usuario',
             'title' => 'Título',
             'summary' => 'Resumen',
             'article' => 'Artículo',
@@ -154,7 +155,7 @@ class Blog extends \yii\db\ActiveRecord
         {
             FileHelper::createDirectory(self::getImagethumbfolder(), $mode = 0777, $recursive = true);
         }
-        
+
         $uploadedImage->saveAs(self::getImagefolder() . 'tmp-' . $name);
 
         Image::resize(self::getImagefolder() . 'tmp-' . $name, 1024, null)
@@ -166,6 +167,11 @@ class Blog extends \yii\db\ActiveRecord
         unlink(self::getImagefolder() . 'tmp-' . $name);
 
         return true;
+    }
+
+    public function getUser()
+    {
+        return $this->hasOne(User::className(), ['id' => 'user_id']);
     }
 
     /**

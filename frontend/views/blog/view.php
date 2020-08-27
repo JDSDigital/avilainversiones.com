@@ -38,11 +38,13 @@ $this->title = Html::encode('Blog');
             <div class="block-body block-post-body">
                 <?= Html::img('../images/blog/'.$model->file, ['class' => 'img-fluid']) ?>
                 <?= $model->article ?>
-                <?php if ($model->source) : ?>
-                    <div class="mt-3">
+                <div class="mt-3">
+                    <?= '<i class="fa fa-user mr-2"></i>'.$model->user->name ?>
+                    <br />
+                    <?php if ($model->source) : ?>
                         <?= 'Fuente: ' . Html::a($model->source, $model->source, ['target' => 'blank']) ?>
-                    </div>
-                <?php endif; ?>
+                    <?php endif; ?>
+                </div>
             </div>
         </div>
     </div>

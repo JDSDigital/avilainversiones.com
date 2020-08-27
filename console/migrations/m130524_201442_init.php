@@ -17,6 +17,7 @@ class m130524_201442_init extends Migration
             'email' => $this->string()->notNull()->unique(),
             'auth_key' => $this->string(32)->notNull(),
             'password_hash' => $this->string()->notNull(),
+            'name' => $this->string()->notNull(),
             'password_reset_token' => $this->string()->unique(),
 
             'status' => $this->smallInteger()->notNull()->defaultValue(10),
@@ -26,6 +27,7 @@ class m130524_201442_init extends Migration
 
         $this->insert('{{%xsystem_users}}', [
             'email' => 'jdsosa@gmail.com',
+            'name' => 'Daniel Sosa',
             'auth_key' => Yii::$app->security->generateRandomString(),
             'password_hash' => Yii::$app->security->generatePasswordHash(''),
 

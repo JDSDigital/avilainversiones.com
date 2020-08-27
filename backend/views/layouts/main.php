@@ -112,8 +112,8 @@ AppAsset::register($this);
                             <a href="#">
                                 <img src="../images/placeholders/placeholder.jpg" class="img-fluid rounded-circle shadow-1 mb-3" width="80" height="80" alt="">
                             </a>
-                            <h6 class="mb-0 text-white text-shadow-dark">Victoria Baker</h6>
-                            <span class="font-size-sm text-white text-shadow-dark">Santa Ana, CA</span>
+                            <h6 class="mb-0 text-white text-shadow-dark"><?= Yii::$app->user->identity->name ?></h6>
+                            <span class="font-size-sm text-white text-shadow-dark"><?= Yii::$app->user->identity->email ?></span>
                         </div>
                     </div>
                 </div>

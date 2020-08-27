@@ -20,6 +20,7 @@ class m200613_144658_create_blog_tables extends Migration
 
         $this->createTable('{{%xblog}}', [
             'id' => $this->primaryKey(),
+            'user_id' => $this->integer()->notNull(),
             'title' => $this->string()->notNull(),
             'summary' => $this->string()->notNull(),
             'article' => $this->text()->notNull(),
@@ -31,6 +32,9 @@ class m200613_144658_create_blog_tables extends Migration
             'created_at' => $this->integer()->notNull()->defaultValue(0),
             'updated_at' => $this->integer()->notNull()->defaultValue(0),
         ], $tableOptions);
+
+        $this->createIndex('idx-xblog-user_id', 'xblog', 'user_id');
+        $this->addForeignKey('fk-xblog-xsystem_users', 'xblog', 'user_id', 'xsystem_users', 'id', 'CASCADE', 'CASCADE');
     }
 
     /**
@@ -38,6 +42,9 @@ class m200613_144658_create_blog_tables extends Migration
      */
     public function safeDown()
     {
+        $this->dropForeignKey('fk-xblog-xsystem_users', 'xblog');
+        $this->dropIndex('idx-xblog-user_id', 'xblog');
+
         $this->dropTable('xblog');
     }
 

@@ -28,6 +28,10 @@ $template = '<div class="form-group row">
           'template' => $template,
       ])->textInput(['maxlength' => true, 'class' => 'form-control']) ?>
 
+      <?= $form->field($model, 'name', [
+          'template' => $template,
+      ])->textInput(['maxlength' => true, 'class' => 'form-control']) ?>
+
       <?= $form->field($model, 'password', [
           'template' => $template,
       ])->passwordInput(['maxlength' => true, 'class' => 'form-control']) ?>

@@ -68,6 +68,9 @@ class BlogController extends Controller
         $model = new Blog();
 
         if ($model->load(Yii::$app->request->post())) {
+            
+            $model->user_id = Yii::$app->user->identity->id;
+
             if ($model->save()) {
 
                 $model->upload();

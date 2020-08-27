@@ -77,6 +77,10 @@ class User extends ActiveRecord implements IdentityInterface
             ['email', 'string', 'max' => 255],
             ['email', 'unique', 'targetClass' => '\common\models\User', 'message' => 'This email address has already been taken.'],
 
+            ['name', 'trim'],
+            ['name', 'required'],
+            ['name', 'string', 'max' => 255],
+
             [['password', 'repassword'], 'required', 'on' => ['create']],
             ['password', 'string', 'min' => 6],
 
@@ -100,6 +104,7 @@ class User extends ActiveRecord implements IdentityInterface
         return [
           'id' => 'ID',
           'email' => 'Correo',
+          'name' => 'Nombre',
           'auth_key' => 'Auth Key',
           'password_hash' => 'Password Hash',
           'password_reset_token' => 'Password Reset Token',
@@ -122,6 +127,7 @@ class User extends ActiveRecord implements IdentityInterface
 
         $user = new User();
         $user->email = $this->email;
+        $user->name = $this->name;
         $user->setPassword($this->password);
         $user->generateAuthKey();
         return $user->save();

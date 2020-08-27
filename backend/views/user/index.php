@@ -52,6 +52,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     </div>";
                 }
             ],
+            'name',
             'email:email',
             [
                 'class' => ActionColumn::className(),

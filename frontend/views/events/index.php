@@ -31,7 +31,7 @@ $this->title = Html::encode('Eventos');
     <div class="container">
         <div class="row cols-md-space cols-sm-space cols-xs-space justify-content-md-center">
             <?php if (count($dataProvider->getModels()) > 0) : ?>
-                <div class="col-lg-9">
+                <div class="col-lg-12">
                     <div class="card-wrapper">
                         <?php foreach ($dataProvider->getModels() as $event) : ?>
                           <div class="card z-depth-2-top">
@@ -96,12 +96,14 @@ $this->title = Html::encode('Eventos');
                     </div>
                 </div>
             <?php else : ?>
-                <div class="col-lg-9 text-center mt-3">
+                <div class="col-lg-12 text-center mt-3">
                     <p class="heading heading-4">No hay elementos que mostrar.</p>
                 </div>
             <?php endif; ?>
 
-            <div class="col-lg-3 blog-sidebar">
+            <!-- Client pictures sidebar -->
+
+            <!-- <div class="col-lg-3 blog-sidebar">
                 <h4 class="heading heading-5 strong-600 line-height-1_8">
                     Clientes
                 </h4>
@@ -153,7 +155,7 @@ $this->title = Html::encode('Eventos');
                         <img src="./images/prv/magazine/person-2.jpg" alt="">
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </section>
