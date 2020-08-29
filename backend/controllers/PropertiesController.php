@@ -74,7 +74,7 @@ class PropertiesController extends Controller
                 $model->upload();
                 Yii::$app->session->setFlash('success', 'Propiedad creada');
 
-                return $this->redirect(['view', 'id' => $model->id]);
+                return $this->redirect(['index']);
             } else {
                 foreach ($model->errors as $error) {
                     Yii::$app->session->setFlash('error', $error);
@@ -119,7 +119,7 @@ class PropertiesController extends Controller
                 $model->upload();
                 Yii::$app->session->setFlash('success', 'Propiedad actualizada');
 
-                return $this->redirect(['view', 'id' => $model->id]);
+                return $this->redirect(['index']);
             } else {
                 foreach ($model->errors as $error) {
                     Yii::$app->session->setFlash('error', $error);

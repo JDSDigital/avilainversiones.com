@@ -104,7 +104,7 @@ AppAsset::register($this);
     </div>
 </div>
 
-<footer id="footer" class="footer">
+<!-- <footer id="footer" class="footer">
     <div class="footer-bottom bg-black py-3">
         <div class="container">
             <div class="row cols-xs-space col-sm-space align-items-center">
@@ -138,41 +138,136 @@ AppAsset::register($this);
                         </ul>
 
                         <div class="copyright mt-1">
-                            <ul class="copy-links">
-                                <li>
-                                    &copy; <?= date('Y') . ' ' . Html::encode(Yii::$app->name) ?>
-                                </li>
-                            </ul>
+                            <div class="text-xs-center text-sm-left">
+                                +56 9 5614 2921
+                            </div>
+                            <div class="text-xs-center text-sm-left">
+                                Avenida Presidente Kennedy 5600, Santiago, Chile.
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- <div class="col-md-2">
+                <div class="col-md-2">
                     <div class="text-xs-center text-sm-right">
                         <ul class="social-media social-media--style-1-v4">
                             <li>
-                                <a href="#" class="facebook" target="_blank" data-toggle="tooltip" data-original-title="Facebook">
-                                    <i class="fa fa-facebook"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="instagram" target="_blank" data-toggle="tooltip" data-original-title="Instagram">
+                                <a href="https://www.instagram.com/4vilainversiones/" class="instagram" target="_blank" data-toggle="tooltip" data-original-title="Instagram">
                                     <i class="fa fa-instagram"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="dribbble" target="_blank" data-toggle="tooltip" data-original-title="Dribbble">
-                                    <i class="fa fa-dribbble"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="dribbble" target="_blank" data-toggle="tooltip" data-original-title="Github">
-                                    <i class="fa fa-github"></i>
+                                <a href="https://www.youtube.com/channel/UCz0mzViL-LiDJMZ1IJp4m-g/featured" class="youtube" target="_blank" data-toggle="tooltip" data-original-title="Youtube">
+                                    <i class="fa fa-youtube-play"></i>
                                 </a>
                             </li>
                         </ul>
                     </div>
-                </div> -->
+                    <div class="copyright text-xs-center text-sm-right mt-1">
+                        <ul class="copy-links">
+                            <li>
+                                &copy; <?= date('Y') . ' ' . Html::encode(Yii::$app->name) ?>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer> -->
+
+<footer id="footer" class="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row cols-xs-space cols-sm-space cols-md-space">
+                <div class="col-lg-5">
+                    <div class="col">
+                        <?=
+                            Html::a(
+                                Html::img('@web/images/logo/logo-navbar-golden.png', ['class' => 'img-responsive', 'alt' => Yii::$app->name]),
+                                ['site/index'],
+                                ['class' => 'navbar-brand']
+                            )
+                        ?>
+                        <span class="clearfix"></span>
+                        <p class="mt-3">Aprende uno de los negocios mas lucrativos del mundo de la mano de expertos.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-2">
+                    <div class="col">
+
+                       <ul class="footer-menu">
+                           <li>
+                               <?= Html::a(Html::encode('Inicio'), ['site/index'], ['class' => 'pl-0']) ?>
+                           </li>
+                           <li>
+                               <?= Html::a(Html::encode('Asesorías'), ['consulting/index']) ?>
+                           </li>
+                           <li>
+                               <?= Html::a(Html::encode('Cursos'), ['courses/index']) ?>
+                           </li>
+                           <li>
+                               <?= Html::a(Html::encode('Eventos'), ['events/index']) ?>
+                           </li>
+                           <li>
+                               <?= Html::a(Html::encode('Propiedades'), ['properties/index']) ?>
+                           </li>
+                        </ul>
+                     </div>
+                </div>
+
+                <div class="col-lg-2">
+                    <div class="col">
+
+                        <ul class="footer-menu">
+                            <li>
+                                <?= Html::a(Html::encode('Empresa'), ['site/about']) ?>
+                            </li>
+                            <li>
+                                <?= Html::a(Html::encode('Contacto'), ['site/contact']) ?>
+                            </li>
+                            <li>
+                                <?= Html::a(Html::encode('Blog'), ['blog/index']) ?>
+                            </li>
+                         </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="col">
+                        <h4 class="heading heading-sm strong-600 text-uppercase mb-1">
+                            Contáctanos
+                        </h4>
+                        <p class="mt-3 mb-1">+56 9 5614 2921</p>
+                        <p class="my-1">Avenida Presidente Kennedy 5600, Santiago, Chile.</p>
+
+                        <ul class="social-media social-media--style-1-v4">
+                            <li>
+                                <a href="https://www.instagram.com/4vilainversiones/" class="instagram" target="_blank" data-toggle="tooltip" data-original-title="Instagram">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/channel/UCz0mzViL-LiDJMZ1IJp4m-g/featured" class="youtube" target="_blank" data-toggle="tooltip" data-original-title="Youtube">
+                                    <i class="fa fa-youtube-play"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container container-sm">
+             <div class="row">
+                <div class="col">
+                    <div class="copyright text-center">
+                        &copy; <?= date('Y') . ' ' . Html::encode(Yii::$app->name) ?>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -32,9 +32,6 @@ AppAsset::register($this);
     <!-- Main navbar -->
 	<div class="navbar navbar-expand-md navbar-dark bg-indigo navbar-static">
 		<div class="navbar-brand">
-			<a href="index.html" class="d-inline-block">
-				<img src="admin/images/logo_light.png" alt="">
-			</a>
 		</div>
 
 		<div class="d-md-none">
@@ -109,9 +106,6 @@ AppAsset::register($this);
                 <div class="sidebar-user-material">
                     <div class="sidebar-user-material-body">
                         <div class="card-body text-center">
-                            <a href="#">
-                                <img src="../images/placeholders/placeholder.jpg" class="img-fluid rounded-circle shadow-1 mb-3" width="80" height="80" alt="">
-                            </a>
                             <h6 class="mb-0 text-white text-shadow-dark"><?= Yii::$app->user->identity->name ?></h6>
                             <span class="font-size-sm text-white text-shadow-dark"><?= Yii::$app->user->identity->email ?></span>
                         </div>

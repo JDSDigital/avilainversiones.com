@@ -68,7 +68,7 @@ class BlogController extends Controller
         $model = new Blog();
 
         if ($model->load(Yii::$app->request->post())) {
-            
+
             $model->user_id = Yii::$app->user->identity->id;
 
             if ($model->save()) {
@@ -76,7 +76,7 @@ class BlogController extends Controller
                 $model->upload();
                 Yii::$app->session->setFlash('success', 'Entrada creada');
 
-                return $this->redirect(['view', 'id' => $model->id]);
+                return $this->redirect(['index']);
             } else {
                 foreach ($model->errors as $error) {
                     Yii::$app->session->setFlash('error', $error);
@@ -113,7 +113,7 @@ class BlogController extends Controller
               $model->upload();
               Yii::$app->session->setFlash('success', 'Entrada actualizada');
 
-              return $this->redirect(['view', 'id' => $model->id]);
+              return $this->redirect(['index']);
           } else {
               foreach ($model->errors as $error) {
                   Yii::$app->session->setFlash('error', $error);

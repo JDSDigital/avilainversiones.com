@@ -49,7 +49,7 @@ $template = '<div class="form-group row">
               'showDelete' => true,
               'allowedFileTypes' => ['image'],
               'allowedFileExtensions' => ['jpg', 'png', 'jpeg', 'gif'],
-              'maxFileSize' => 2800,
+              'maxFileSize' => 8000,
               'maxFileCount' => 1,
               'overwriteInitial' => true,
               'initialPreview' => isset($previews) ? $previews : false,

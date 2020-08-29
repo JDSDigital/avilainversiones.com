@@ -118,26 +118,26 @@
         padding: 5px 20px;
         background-color: #fff;
 
+        .logo-hover {
+            display: none
+        }
+
+        &:hover .logo-hover {
+            border: 1px solid $golden-dark-1;
+            padding: 5px 20px 5px 5px;
+            display: block;
+            z-index: 100;
+            left: 0px;
+            margin: 10px;
+            width: 250px;
+            position: absolute;
+            top: -50px;
+            text-decoration: none;
+            background-color: black;
+        }
+
         .logo-inner-box {
           margin: auto;
-
-          .logo-hover {
-              display: none
-          }
-
-          &:hover .logo-hover {
-              border: 1px solid $golden-dark-1;
-              padding: 5px 20px 5px 5px;
-              display: block;
-              z-index: 100;
-              left: 0px;
-              margin: 10px;
-              width: 250px;
-              position: absolute;
-              top: 10px;
-              text-decoration: none;
-              background-color: black;
-          }
         }
 
         a img {

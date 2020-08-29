@@ -31,7 +31,7 @@ $this->title = Html::encode('Alianzas');
 
         <div class="row cols-xs-space cols-sm-space cols-md-space justify-content-center alliances">
             <?php foreach ($alliances as $alliance) : ?>
-                <div class="col-lg-2 col-md-3 col-sm-4">
+                <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="logo-box vertical-align">
                         <div class="logo-inner-box">
                             <a href="<?= $alliance->url ?>" target="_blank">

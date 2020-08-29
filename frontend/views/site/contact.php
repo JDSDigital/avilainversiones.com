@@ -154,6 +154,22 @@ $this->title = 'Contacto';
                     </div>
                 <?php ActiveForm::end(); ?>
             </div>
+
+            <div class="col-lg-5 ml-lg-auto mt-5">
+                <h3 class="heading heading-3 strong-300">
+                    Avenida Presidente Kennedy 5600.
+                    <br>
+                    Santiago, Chile.
+                </h3>
+
+                <p class="lead mt-4 mb-4">
+                    +56 9 5614 2921
+                </p>
+
+                <p class="">
+                    Aprende uno de los negocios mas lucrativos del mundo de la mano de expertos.
+                </p>
+            </div>
         </div>
     </div>
 </section>

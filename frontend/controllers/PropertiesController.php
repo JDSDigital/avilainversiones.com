@@ -22,9 +22,13 @@ class PropertiesController extends \yii\web\Controller
     public function actionView($id)
     {
         $property = $this->findModel($id);
+        $propertiesSearch = new PropertiesSearch;
+        $dataProvider = $propertiesSearch->search(Yii::$app->request->post());
 
         return $this->render('view', [
-            'property' => $property,
+          'propertiesSearch' => $propertiesSearch,
+          'dataProvider' => $dataProvider,
+          'property' => $property,
         ]);
     }
 

@@ -9,6 +9,7 @@ use frontend\models\ContactForm;
 use common\models\Alliances;
 use common\models\Blog;
 use common\models\Consulting;
+use common\models\Courses;
 use common\models\Statistics;
 
 /**
@@ -82,6 +83,17 @@ class SiteController extends Controller
         $consulting = Consulting::findOne($id);
         $model = new ContactForm();
         $model->subject = 'Estoy interesado en '.$consulting->name;
+
+        return $this->render('contact', [
+            'model' => $model,
+        ]);
+    }
+
+    public function actionCourses($id)
+    {
+        $courses = Courses::findOne($id);
+        $model = new ContactForm();
+        $model->subject = 'Estoy interesado en '.$courses->title;
 
         return $this->render('contact', [
             'model' => $model,

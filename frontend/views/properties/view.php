@@ -1,6 +1,7 @@
 <?php
 /* @var $this yii\web\View */
 use yii\helpers\Html;
+use yii\widgets\ActiveForm;
 
 $this->title = 'Propiedad';
 ?>
@@ -11,50 +12,50 @@ $this->title = 'Propiedad';
             <div class="col-lg-4" id="div_properties_search">
                 <div class="card card-inverse no-border no-radius">
                     <div class="card-body py-5 px-4">
-                        <h3 class="heading heading-5 strong-500 text-capitalize">Search properties</h3>
-                        <h4 class="heading heading-sm strong-400 text-normal c-gray-light">You dream is about to get real.</h4>
+                        <h3 class="heading heading-5 strong-500 text-capitalize mb-4"><?= Html::encode('Buscar propiedades') ?></h3>
 
-                        <form class="form-inverse mt-4" data-toggle="validator" role="form">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="form-group has-feedback">
-                                        <label class="text-uppercase">Location</label>
-                                        <input class="form-control form-control-lg" type="text" placeholder="City, Country">
-                                        <span class="help-block with-errors"></span>
-                                    </div>
-                                </div>
-                            </div>
+                        <!-- Search -->
+                          <?php
+                              $form = ActiveForm::begin([
+                                'id' => 'properties-search',
+                                'action' => ['properties/index'],
+                                'class' => 'form-inverse mt-4'
+                              ]);
+                          ?>
 
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="form-group has-feedback">
-                                        <label for="" class="text-uppercase">Property type</label>
-                                        <select class="form-control form-control-lg">
-                                            <option>All types</option>
-                                            <option>Houses</option>
-                                            <option>Flats/Apartments</option>
-                                            <option>Bungalows</option>
-                                            <option>Lands</option>
-                                            <option>Other</option>
-                                        </select>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group has-feedback">
-                                        <label for="" class="text-uppercase">I want</label>
-                                        <select class="form-control form-control-lg">
-                                            <option>All</option>
-                                            <option>To rent</option>
-                                            <option>To buy</option>
-                                        </select>
-                                    </div>
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                            </div>
+                              <div class="row">
+                                  <div class="col-sm-12">
+                                      <?= $form->field($propertiesSearch, 'commune', [
+                                          'labelOptions' => [ 'class' => 'text-uppercase' ]
+                                      ])->textInput([
+                                          'maxlength' => true,
+                                          'class' => 'form-control form-control-lg',
+                                          'placeholder' => 'Comuna'
+                                      ]) ?>
+                                  </div>
+                              </div>
 
-                            <button type="submit" class="btn btn-styled btn-lg btn-block btn-golden text-sm mt-4">Search properties</button>
-                        </form>
+                              <div class="row">
+                                  <div class="col-sm-6">
+                                      <?= $form->field($propertiesSearch, 'type_id', [
+                                          'labelOptions' => [ 'class' => 'text-uppercase' ]
+                                      ])->dropDownList($propertiesSearch->getTypes(), ['class' => 'form-control form-control-lg']) ?>
+                                  </div>
+
+                                  <div class="col-sm-6">
+                                      <?= $form->field($propertiesSearch, 'contract_id', [
+                                          'labelOptions' => [ 'class' => 'text-uppercase' ]
+                                      ])->dropDownList($propertiesSearch->getContracts(), ['class' => 'form-control form-control-lg']) ?>
+                                  </div>
+                              </div>
+
+                              <?= Html::submitButton('Buscar propiedades', [
+                                  'class' => 'btn btn-styled btn-lg btn-block btn-golden text-sm mt-4',
+                              ]) ?>
+
+                          <?php ActiveForm::end(); ?>
+                          <!-- End Search -->
+
                     </div>
                 </div>
             </div>
@@ -68,13 +69,13 @@ $this->title = 'Propiedad';
                         <div class="container sct-inner">
                             <div class="">
                                 <div class="row">
-                                    <div class="col-md-6 px-5">
-                                        <h3 class="heading heading-1 strong-400 c-white">
-                                            <?= Html::encode($property->title) ?>
-                                        </h3>
-                                        <h4 class="heading heading-5 text-normal strong-300 c-white my-4">
-                                            <?= Html::encode($property->summary) ?>
-                                        </h4>
+                                    <div class="col-md-8 px-5">
+                                        <h2 class="heading heading-2 strong-500 c-white">
+                                            <?= Html::encode("¿Búscas un nuevo lugar?") ?>
+                                        </h2>
+                                        <p class="heading-6 mt-3 c-white">
+                                            <?= Html::encode("Revisa nuestras ofertas y contacta a nuestros agentes ahora.") ?>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -86,7 +87,7 @@ $this->title = 'Propiedad';
     </div>
 </section>
 
-                    <!-- Properties listing -->
+<!-- Properties listing -->
 <section class="slice sct-color-2">
     <div class="container">
         <div class="row d-flex justify-content-center">

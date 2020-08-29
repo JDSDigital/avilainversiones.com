@@ -22833,15 +22833,11 @@ pre {
   background-color: #fff;
 }
 
-.alliances .logo-box .logo-inner-box {
-  margin: auto;
-}
-
-.alliances .logo-box .logo-inner-box .logo-hover {
+.alliances .logo-box .logo-hover {
   display: none;
 }
 
-.alliances .logo-box .logo-inner-box:hover .logo-hover {
+.alliances .logo-box:hover .logo-hover {
   border: 1px solid #be9418;
   padding: 5px 20px 5px 5px;
   display: block;
@@ -22850,9 +22846,13 @@ pre {
   margin: 10px;
   width: 250px;
   position: absolute;
-  top: 10px;
+  top: -50px;
   text-decoration: none;
   background-color: black;
+}
+
+.alliances .logo-box .logo-inner-box {
+  margin: auto;
 }
 
 .alliances .logo-box a img {

@@ -48,7 +48,9 @@ $this->title = Html::encode('Cursos');
                                             <div class="row align-items-right">
                                                 <div class="col-12">
                                                     <div class="text-right">
-                                                        <a href="#" class="btn btn-styled btn-golden btn-circle text-uppercase strong-400">Comprar</a>
+                                                        <?= Html::a("Comprar", ['site/courses', 'id' => $course->id], [
+                                                            'class' => 'btn btn-styled btn-golden btn-circle text-uppercase strong-400'
+                                                        ]) ?>
                                                     </div>
                                                 </div>
                                             </div>

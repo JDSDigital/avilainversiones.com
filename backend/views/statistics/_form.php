@@ -32,7 +32,7 @@ use kartik\file\FileInput;
                   'showDelete' => false,
                   'allowedFileTypes' => ['image'],
                   'allowedFileExtensions' => ['jpg', 'png'],
-                  'maxFileSize' => 2800,
+                  'maxFileSize' => 8000,
                   'maxFileCount' => 1,
                   'overwriteInitial' => true,
                   'initialPreview' => isset($previews) ? $previews : false,
