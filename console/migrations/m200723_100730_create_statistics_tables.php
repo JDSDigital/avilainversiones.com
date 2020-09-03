@@ -21,14 +21,11 @@ class m200723_100730_create_statistics_tables extends Migration
         $this->createTable('xstatistics', [
             'id' => $this->primaryKey(),
             'file' => $this->string()->null(),
+            'title' => $this->string()->notNull(),
 
             'status' => $this->smallInteger()->notNull()->defaultValue(10),
             'created_at' => $this->integer()->notNull()->defaultValue(0),
             'updated_at' => $this->integer()->notNull()->defaultValue(0),
-        ], $tableOptions);
-
-        $this->insert('xstatistics', [
-            'file' => null,
         ], $tableOptions);
     }
 

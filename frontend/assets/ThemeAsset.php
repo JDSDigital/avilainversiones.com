@@ -39,7 +39,7 @@ class ThemeAsset extends AssetBundle
     ];
     public $js = [
       // Core
-      'vendor/jquery/jquery.min.js',
+      // 'vendor/jquery/jquery.min.js',
       'vendor/popper/popper.min.js',
       'vendor/bootstrap/js/bootstrap.min.js',
       'js/slidebar/slidebar.js',

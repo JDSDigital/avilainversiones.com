@@ -109,7 +109,7 @@ $this->title = 'Propiedad';
                         <div class="row">
                             <?php foreach ($property->propertiesImages as $key => $image) : ?>
                                 <div class="col-sm-2">
-                                    <div class="gallery-thumb">
+                                    <div class="gallery-thumb crop-property">
                                         <?= Html::a(
                                             Html::img($image->getThumb()),
                                             $image->getImage(),

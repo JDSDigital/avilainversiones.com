@@ -71,15 +71,18 @@ $this->params['breadcrumbs'][] = $this->title;
             'contract_id',
             'city',
             'commune',
-            'price',
+            [
+                'attribute' => 'price',
+                'format' => ['decimal', 2]
+            ],
             'taken',
             [
                 'class' => ActionColumn::className(),
                 'template' => '{view} {update} {delete}',
                 'buttons' => [
-                    'view' => function ($url, $model, $key) {
-                        return Html::a('<span class="icon-eye" aria-hidden="true"></span>', $url);
-                    },
+                    // 'view' => function ($url, $model, $key) {
+                    //     return Html::a('<span class="icon-eye" aria-hidden="true"></span>', $url);
+                    // },
                     'update' => function ($url, $model, $key) {
                         return Html::a('<span class="icon-pencil5" aria-hidden="true"></span>', $url);
                     },

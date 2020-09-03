@@ -63,7 +63,7 @@
             'slideShow',
             'fullScreen',
             'thumbs',
-            'share',
+            // 'share',
             //'download',
             //'zoom',
             'close'

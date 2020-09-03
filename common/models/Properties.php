@@ -95,7 +95,7 @@ class Properties extends \yii\db\ActiveRecord
             'commune' => 'Comuna',
             'price' => 'Precio',
             'featured' => 'Destacado',
-            'area' => 'Area',
+            'area' => 'Area (m2)',
             'rooms' => 'Habitaciones',
             'toilets' => 'Baños',
             'garage' => 'Estacionamiento',

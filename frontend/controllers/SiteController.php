@@ -81,6 +81,7 @@ class SiteController extends Controller
     public function actionConsulting($id)
     {
         $consulting = Consulting::findOne($id);
+        $consulting->updateCounters(['views' => 1]);
         $model = new ContactForm();
         $model->subject = 'Estoy interesado en '.$consulting->name;
 
@@ -131,7 +132,7 @@ class SiteController extends Controller
      */
     public function actionAbout()
     {
-        $statistics = Statistics::findOne(1);
+        $statistics = Statistics::find()->active()->all();
 
         return $this->render('about', [
             'statistics' => $statistics

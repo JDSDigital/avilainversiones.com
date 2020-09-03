@@ -17,9 +17,6 @@ $this->title = Html::encode('Alianzas');
                     <h2 class="heading heading-inverse heading-xl strong-600 text-capitalize line-height-1_2 animated" data-animation-in="fadeInDownBig" data-animation-delay="200">
                         Alianzas
                     </h2>
-                    <p class="lead c-white animated mt-3" data-animation-in="fadeInUpBig" data-animation-delay="200">
-                        Hace falta texto aquí.
-                    </p>
                 </div>
             </div>
         </div>

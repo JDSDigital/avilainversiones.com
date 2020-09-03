@@ -13,7 +13,8 @@ use yii\helpers\FileHelper;
  * This is the model class for table "xstatistics".
  *
  * @property int $id
- * @property string|null $file
+ * @property string $file
+ * @property string $title
  * @property int $status
  * @property int $created_at
  * @property int $updated_at
@@ -49,7 +50,8 @@ class Statistics extends \yii\db\ActiveRecord
     {
         return [
             [['status'], 'integer'],
-            [['file'], 'string', 'max' => 255],
+            [['title'], 'required'],
+            [['file', 'title'], 'string', 'max' => 255],
         ];
     }
 
@@ -61,6 +63,7 @@ class Statistics extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'file' => 'Archivo',
+            'title' => 'Título',
             'status' => 'Estado',
             'created_at' => 'Creado En',
             'updated_at' => 'Actualizado En',

@@ -244,12 +244,12 @@ AppAsset::register($this);
 
                         <ul class="social-media social-media--style-1-v4">
                             <li>
-                                <a href="https://www.instagram.com/4vilainversiones/" class="instagram" target="_blank" data-toggle="tooltip" data-original-title="Instagram">
+                                <a href="https://www.instagram.com/4vilainversiones/" class="instagram" target="_blank">
                                     <i class="fa fa-instagram"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.youtube.com/channel/UCz0mzViL-LiDJMZ1IJp4m-g/featured" class="youtube" target="_blank" data-toggle="tooltip" data-original-title="Youtube">
+                                <a href="https://www.youtube.com/channel/UCz0mzViL-LiDJMZ1IJp4m-g/featured" class="youtube" target="_blank">
                                     <i class="fa fa-youtube-play"></i>
                                 </a>
                             </li>

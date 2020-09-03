@@ -123,6 +123,17 @@ a.desc:after {
     object-fit: cover;
 }
 
+.crop-property {
+    width: 100%; /* width of container */
+    height: 120px; /* height of container */
+    border: 1px solid black;
+}
+
+.crop-property img {
+    height: 100%;
+    object-fit: cover;
+}
+
 .crop-course {
     width: 100%; /* width of container */
     height: 250px; /* height of container */

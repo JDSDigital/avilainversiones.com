@@ -48,6 +48,11 @@ $imageEven = "col-md-6 order-first order-md-first";
                                     'class' => 'btn btn-styled btn-golden btn-circle text-uppercase strong-400'
                                 ]) ?>
                             </div>
+                            <div class="btn p-0 ml-3 mt-5">
+                                <?= Html::button("Presencial", [
+                                    'class' => 'btn btn-styled btn-secondary btn-circle text-uppercase strong-400'
+                                ]) ?>
+                            </div>
                         </div>
                     </div>
 

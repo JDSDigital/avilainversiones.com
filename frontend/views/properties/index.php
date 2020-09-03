@@ -124,13 +124,28 @@ $this->title = Html::encode('Propiedades');
                             <div class="aux-info-wrapper border-bottom">
                                 <ul class="aux-info">
                                     <li class="heading strong-400 text-center">
-                                        <i class="icon-real-estate-017"></i> <?= $property->getArea() ?></span>
+                                        <div class="custom-tooltip">
+                                            <i class="icon-real-estate-017"></i> <?= $property->getArea() ?></span>
+                                            <div class="custom-tooltip-hover">
+                                                <h6 class="c-gray-lighter">Área</h6>
+                                            </div>
+                                        </div>
                                     </li>
                                     <li class="heading strong-400 text-center">
-                                        <i class="icon-hotel-restaurant-022"></i> <?= $property->rooms ?>
+                                        <div class="custom-tooltip">
+                                            <i class="icon-hotel-restaurant-022"></i> <?= $property->rooms ?>
+                                            <div class="custom-tooltip-hover">
+                                                <h6 class="c-gray-lighter">Habitaciones</h6>
+                                            </div>
+                                        </div>
                                     </li>
                                     <li class="heading strong-400 text-center">
-                                        <i class="icon-hotel-restaurant-158"></i> <?= $property->toilets ?>
+                                        <div class="custom-tooltip">
+                                            <i class="icon-hotel-restaurant-158"></i> <?= $property->toilets ?>
+                                            <div class="custom-tooltip-hover">
+                                                <h6 class="c-gray-lighter">Baños</h6>
+                                            </div>
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
@@ -170,7 +185,7 @@ $this->title = Html::encode('Propiedades');
 
 <?php
 $js = <<<JS
-  $('.property-box').SameHeight();
+  $('.block-body').SameHeight();
 JS;
 $this->registerJs($js);
 ?>

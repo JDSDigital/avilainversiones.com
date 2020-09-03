@@ -36,8 +36,40 @@ class StatisticsController extends Controller
      */
     public function actionIndex()
     {
+        $searchModel = new StatisticsSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
         return $this->render('index', [
-            'model' => $this->findModel(1),
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+
+    /**
+     * Creates a new Statistics model.
+     * If creation is successful, the browser will be redirected to the 'index' page.
+     * @return mixed
+     */
+    public function actionCreate()
+    {
+        $model = new Statistics();
+
+        if ($model->load(Yii::$app->request->post())) {
+            if ($model->validate() && $model->save()) {
+
+                $model->upload();
+                Yii::$app->session->setFlash('success', 'Estadística creada');
+
+                return $this->redirect(['index']);
+            } else {
+                foreach ($model->errors as $error) {
+                    Yii::$app->session->setFlash('error', $error);
+                }
+            }
+        }
+
+        return $this->render('create', [
+            'model' => $model,
         ]);
     }
 
@@ -63,7 +95,7 @@ class StatisticsController extends Controller
             if ($model->save()) {
 
                 $model->upload();
-                Yii::$app->session->setFlash('success', 'Estadisticas actualizadas');
+                Yii::$app->session->setFlash('success', 'Estadísticas actualizadas');
 
                 return $this->redirect(['index']);
             } else {
@@ -93,16 +125,57 @@ class StatisticsController extends Controller
         $url = Url::to('@frontend/web/images/statistics/'). $model->file;
         $urlThumb = Url::to('@frontend/web/images/statistics/thumbs/'). $model->file;
 
-        // Delete image from the database and the folder
-        if (unlink($url) && unlink($urlThumb)) {
-            $this->findModel($id)->delete();
-        } else {
+        if ($model->file) {
+            unlink($url);
+            unlink($urlThumb);
+        }
+
+        if (!$this->findModel($id)->delete()) {
             foreach ($model->errors as $error) {
                 Yii::$app->session->setFlash('error', $error);
             }
         }
 
         return $this->redirect(['index']);
+    }
+
+    /**
+     * Deletes a single image
+    * @param $id
+    * @return bool
+    */
+    public function actionDeleteimage($id)
+    {
+        $model = $this->findModel($id);
+
+        $url = Url::to('@frontend/web/images/statistics/') . $model->file;
+        $urlThumb = Url::to('@frontend/web/images/statistics/thumbs/') . $model->file;
+
+        // Delete image from the folder
+        if (unlink($url) && unlink($urlThumb))
+            return true;
+        else
+            return false;
+    }
+
+    /**
+     * Changes Status.
+     *
+     * @return string
+     */
+    public function actionStatus()
+    {
+        if (Yii::$app->request->isAjax) {
+            $data = Yii::$app->request->post();
+
+            $model = $this->findModel($data['id']);
+
+            $model->status = ($model->status) ? Statistics::STATUS_DELETED : Statistics::STATUS_ACTIVE;
+
+            $model->save();
+        }
+
+        return null;
     }
 
     /**

@@ -21,6 +21,16 @@ $template = '<div class="form-group row">
         {error}
     </div>
 </div>';
+
+$templateSmall = '<div class="form-group row">
+    <label class="col-form-label col-lg-4">{label}</label>
+    <div class="col-lg-8">
+        <div class="input-group">
+            {input}
+        </div>
+        {error}
+    </div>
+</div>';
 ?>
 
 <div class="card-body">
@@ -51,6 +61,8 @@ $template = '<div class="form-group row">
             'rows' => 4
         ]) ?>
 
+        <legend class="text-uppercase font-size-sm font-weight-bold">Dirección</legend>
+
         <?= $form->field($model, 'city', [
             'template' => $template,
         ])->textInput(['maxlength' => true, 'class' => 'form-control']) ?>
@@ -59,34 +71,44 @@ $template = '<div class="form-group row">
             'template' => $template,
         ])->textInput(['maxlength' => true, 'class' => 'form-control']) ?>
 
-        <!-- TODO NUMBER -->
-        <?= $form->field($model, 'price', [
-            'template' => $template,
-        ])->textInput(['maxlength' => true, 'class' => 'form-control']) ?>
-
-        <!-- TODO NUMBER -->
-        <?= $form->field($model, 'area', [
-            'template' => $template,
-        ])->textInput(['maxlength' => true, 'class' => 'form-control']) ?>
-
-        <!-- TODO NUMBER -->
-        <?= $form->field($model, 'rooms', [
-            'template' => $template,
-        ])->textInput(['type' => 'number', 'class' => 'form-control']) ?>
-
-        <!-- TODO NUMBER -->
-        <?= $form->field($model, 'toilets', [
-            'template' => $template,
-        ])->textInput(['type' => 'number', 'class' => 'form-control']) ?>
-
-        <!-- TODO NUMBER -->
-        <?= $form->field($model, 'garage', [
-            'template' => $template,
-        ])->textInput(['type' => 'number', 'class' => 'form-control']) ?>
-
         <?= $form->field($model, 'address', [
             'template' => $template,
         ])->textInput(['maxlength' => true, 'class' => 'form-control']) ?>
+
+        <legend class="text-uppercase font-size-sm font-weight-bold">Características</legend>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <!-- TODO NUMBER -->
+                <?= $form->field($model, 'price', [
+                    'template' => $templateSmall,
+                    ])->textInput(['type' => 'number', 'maxlength' => true, 'class' => 'form-control']) ?>
+            </div>
+            <div class="col-lg-4">
+                <!-- TODO NUMBER -->
+                <?= $form->field($model, 'area', [
+                    'template' => $templateSmall,
+                    ])->textInput(['type' => 'number', 'maxlength' => true, 'class' => 'form-control']) ?>
+            </div>
+            <div class="col-lg-4">
+                <!-- TODO NUMBER -->
+                <?= $form->field($model, 'rooms', [
+                    'template' => $templateSmall,
+                    ])->textInput(['type' => 'number', 'class' => 'form-control']) ?>
+            </div>
+            <div class="col-lg-4">
+                <!-- TODO NUMBER -->
+                <?= $form->field($model, 'toilets', [
+                    'template' => $templateSmall,
+                    ])->textInput(['type' => 'number', 'class' => 'form-control']) ?>
+            </div>
+            <div class="col-lg-4">
+                <!-- TODO NUMBER -->
+                <?= $form->field($model, 'garage', [
+                    'template' => $templateSmall,
+                    ])->textInput(['type' => 'number', 'class' => 'form-control']) ?>
+            </div>
+        </div>
 
         <?php $form->field($model, 'featured', [
             'template' => '<div class="form-group row">

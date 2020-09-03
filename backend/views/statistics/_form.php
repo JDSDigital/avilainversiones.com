@@ -9,6 +9,15 @@ use kartik\file\FileInput;
 /* @var $model common\models\Statistics */
 /* @var $form yii\widgets\ActiveForm */
 
+$template = '<div class="form-group row">
+    <label class="col-form-label col-lg-2">{label}</label>
+    <div class="col-lg-10">
+        <div class="input-group">
+            {input}
+        </div>
+        {error}
+    </div>
+</div>';
 ?>
 
 <div class="card-body">
@@ -16,6 +25,12 @@ use kartik\file\FileInput;
     <?php $form = ActiveForm::begin(); ?>
 
     <fieldset class="mb-3">
+        <legend class="text-uppercase font-size-sm font-weight-bold">Datos</legend>
+
+        <?= $form->field($model, 'title', [
+            'template' => $template,
+        ])->textInput(['maxlength' => true, 'class' => 'form-control']) ?>
+
         <legend class="text-uppercase font-size-sm font-weight-bold">Imágen</legend>
 
         <div class="row">

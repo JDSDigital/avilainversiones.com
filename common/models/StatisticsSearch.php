@@ -18,7 +18,7 @@ class StatisticsSearch extends Statistics
     {
         return [
             [['id', 'status', 'created_at', 'updated_at'], 'integer'],
-            [['file'], 'safe'],
+            [['file', 'title'], 'safe'],
         ];
     }
 
@@ -64,7 +64,8 @@ class StatisticsSearch extends Statistics
             'updated_at' => $this->updated_at,
         ]);
 
-        $query->andFilterWhere(['like', 'file', $this->file]);
+        $query->andFilterWhere(['like', 'file', $this->file])
+            ->andFilterWhere(['like', 'title', $this->title]);
 
         return $dataProvider;
     }

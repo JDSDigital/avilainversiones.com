@@ -116,24 +116,15 @@
         margin: 5px 0;
         border-radius: 5px;
         padding: 5px 20px;
-        background-color: #fff;
+        background-color: rgba(255, 255, 255, 0.1);
+        -webkit-transition: all 0.2s ease !important;
+        -moz-transition: all 0.2s ease !important;
+        -o-transition: all 0.2s ease !important;
+        -ms-transition: all 0.2s ease !important;
+        transition: all 0.2s ease !important;
 
         .logo-hover {
             display: none
-        }
-
-        &:hover .logo-hover {
-            border: 1px solid $golden-dark-1;
-            padding: 5px 20px 5px 5px;
-            display: block;
-            z-index: 100;
-            left: 0px;
-            margin: 10px;
-            width: 250px;
-            position: absolute;
-            top: -50px;
-            text-decoration: none;
-            background-color: black;
         }
 
         .logo-inner-box {
@@ -141,24 +132,27 @@
         }
 
         a img {
-            opacity: 1;
-            -webkit-transition: all 0.2s ease !important;
-            -moz-transition: all 0.2s ease !important;
-            -o-transition: all 0.2s ease !important;
-            -ms-transition: all 0.2s ease !important;
-            transition: all 0.2s ease !important;
             display: block;
             max-width: 100%;
             height: auto;
         }
 
-        &:hover a img {
-            opacity: 0.5;
-            -webkit-transition: all 0.2s ease !important;
-            -moz-transition: all 0.2s ease !important;
-            -o-transition: all 0.2s ease !important;
-            -ms-transition: all 0.2s ease !important;
-            transition: all 0.2s ease !important;
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+
+            .logo-hover {
+                border: 1px solid $golden-dark-1;
+                padding: 5px 20px 5px 5px;
+                display: block;
+                z-index: 100;
+                left: 0px;
+                margin: 10px;
+                width: 250px;
+                position: absolute;
+                top: -50px;
+                text-decoration: none;
+                background-color: black;
+            }
         }
     }
 
@@ -187,4 +181,26 @@
 }
 .d-block {
     display: block;
+}
+.custom-tooltip {
+    .custom-tooltip-hover {
+        display: none
+    }
+
+    &:hover .custom-tooltip-hover {
+        border: 1px solid $golden-dark-1;
+        padding: 10px;
+        display: block;
+        z-index: 100;
+        left: 0px;
+        margin: 10px;
+        position: absolute;
+        top: -50px;
+        text-decoration: none;
+        background-color: black;
+
+        h6 {
+            margin: 0;
+        }
+    }
 }
