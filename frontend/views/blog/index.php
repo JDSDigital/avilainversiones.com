@@ -36,7 +36,7 @@ $this->title = Html::encode('Blog');
                         <div class="card-image">
                           <div class="view view-first crop-blog">
                             <?= Html::a(
-                                Html::img('@web/images/blog/thumbs/'.$entry->file),
+                                Html::img('@web/images/blog/thumbs/'.$entry->thumb),
                                 ['blog/view', 'id' => $entry->id]
                             ) ?>
                           </div>
@@ -46,6 +46,9 @@ $this->title = Html::encode('Blog');
                           <h3 class="heading heading-5 strong-600 mb-0">
                             <?= Html::a($entry->title, ['blog/view', 'id' => $entry->id]) ?>
                           </h3>
+                          <p>
+                              <?= Html::encode($entry->summary) ?>
+                          </p>
                         </div>
 
                         <div class="card-footer">

@@ -153,7 +153,7 @@ $this->title = Yii::$app->name;
                     <div class="card-image">
                       <div class="view view-first crop-blog">
                         <?= Html::a(
-                            Html::img('@web/images/blog/thumbs/'.$entry->file),
+                            Html::img('@web/images/blog/thumbs/'.$entry->thumb),
                             ['blog/view', 'id' => $entry->id]
                         ) ?>
                       </div>
@@ -165,6 +165,9 @@ $this->title = Yii::$app->name;
                             $entry->title,
                             ['blog/view', 'id' => $entry->id]
                         ) ?>
+                        <p>
+                            <?= Html::encode($entry->summary) ?>
+                        </p>
                       </h3>
                     </div>
 

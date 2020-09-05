@@ -29,6 +29,7 @@ class Blog extends \yii\db\ActiveRecord
     const STATUS_DELETED = 0;
 
     public $image;
+    public $thumbImage;
 
     /**
      * {@inheritdoc}
@@ -56,7 +57,7 @@ class Blog extends \yii\db\ActiveRecord
             [['user_id', 'title', 'summary', 'article'], 'required'],
             [['article'], 'string'],
             [['user_id', 'views', 'status'], 'integer'],
-            [['title', 'summary', 'file'], 'string', 'max' => 255],
+            [['title', 'summary', 'file', 'thumb'], 'string', 'max' => 255],
             ['source', 'url', 'defaultScheme' => 'https'],
         ];
     }
@@ -72,6 +73,7 @@ class Blog extends \yii\db\ActiveRecord
             'title' => 'Título',
             'summary' => 'Resumen',
             'article' => 'Artículo',
+            'thumb' => 'Miniatura',
             'file' => 'Archivo',
             'source' => 'Fuente',
             'views' => 'Vistas',
@@ -89,34 +91,42 @@ class Blog extends \yii\db\ActiveRecord
     {
         if ($this->validate()) {
 
-            $uploadedImages = UploadedFile::getInstances($this, 'image');
+            $uploadedImage = UploadedFile::getInstance($this, 'image');
+            $uploadedThumb = UploadedFile::getInstance($this, 'thumbImage');
 
-            if (count($uploadedImages) > 0) {
+            if ($uploadedImage) {
+                $name = $this->id . time() . '.' . $uploadedImage->extension;
 
-                foreach ($uploadedImages as $key => $uploadedImage) {
-                    $name = $this->id . '-' . ($key + 1) . '-' . time() . '.' . $uploadedImage->extension;
-                    if ($this->file) {
-                        $url = Url::to('@frontend/web/images/blog/') . $this->file;
-                        $urlThumb = Url::to('@frontend/web/images/blog/thumbs/') . $this->file;
-
-                        unlink($url);
-                        unlink($urlThumb);
-                    }
-
-                    $this->file = $name;
-
-                    if (!$this->saveImages($uploadedImage, $name)) {
-                        return false;
-                    }
-
-                    $this->save();
+                if ($this->file) {
+                    $url = Url::to('@frontend/web/images/blog/') . $this->file;
+                    unlink($url);
                 }
 
-                return true;
+                $this->file = $name;
 
-            } else {
-                return true;
+                $this->saveImage($uploadedImage, $name);
+                if (!$this->save()) {
+                    return false;
+                }
             }
+
+            if ($uploadedThumb) {
+                $nameThumb = $this->id . '-thumb-' . time() . '.' . $uploadedThumb->extension;
+
+                if ($this->thumb) {
+                    $urlThumb = Url::to('@frontend/web/images/blog/thumbs/') . $this->thumb;
+                    unlink($urlThumb);
+                }
+
+                $this->thumb = $nameThumb;
+
+                $this->saveThumb($uploadedThumb, $nameThumb);
+                if (!$this->save()) {
+                    return false;
+                }
+            }
+
+            return true;
         } else {
             return false;
         }
@@ -134,7 +144,7 @@ class Blog extends \yii\db\ActiveRecord
 
     public static function getFolder() : string
     {
-        $directory = Yii::getAlias('@web/images/courses/');
+        $directory = Yii::getAlias('@web/images/blog/');
 
         return str_replace('admin/', '', $directory);
     }
@@ -146,10 +156,10 @@ class Blog extends \yii\db\ActiveRecord
 
     public function getThumb() : string
     {
-        return self::getFolder() . 'thumbs/' . $this->file;
+        return self::getFolder() . 'thumbs/' . $this->thumb;
     }
 
-    public function saveImages(UploadedFile $uploadedImage, string $name): bool
+    public function saveImage(UploadedFile $uploadedImage, string $name): bool
     {
         if (!file_exists(self::getImagethumbfolder()))
         {
@@ -160,6 +170,20 @@ class Blog extends \yii\db\ActiveRecord
 
         Image::resize(self::getImagefolder() . 'tmp-' . $name, 1024, null)
         ->save(self::getImagefolder() . $name, ['jpeg_quality' => 80]);
+
+        unlink(self::getImagefolder() . 'tmp-' . $name);
+
+        return true;
+    }
+
+    public function saveThumb(UploadedFile $uploadedImage, string $name): bool
+    {
+        if (!file_exists(self::getImagethumbfolder()))
+        {
+            FileHelper::createDirectory(self::getImagethumbfolder(), $mode = 0777, $recursive = true);
+        }
+
+        $uploadedImage->saveAs(self::getImagefolder() . 'tmp-' . $name);
 
         Image::resize(self::getImagefolder() . 'tmp-' . $name, null, 300)
         ->save(self::getImagethumbfolder() . $name, ['jpeg_quality' => 80]);

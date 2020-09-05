@@ -14,8 +14,10 @@ $this->params['breadcrumbs'][] = 'Actualizar';
 
     <?= $this->render('_form', [
         'model' => $model,
-        'previews' => $previews,
-        'previewsConfig' => $previewsConfig,
+        'preview' => $preview,
+        'previewConfig' => $previewConfig,
+        'previewThumb' => $previewThumb,
+        'previewThumbConfig' => $previewThumbConfig,
     ]) ?>
 
 </div>

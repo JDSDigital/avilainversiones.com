@@ -99,12 +99,19 @@ class BlogController extends Controller
     public function actionUpdate($id)
     {
       $model = $this->findModel($id);
-      $previews[] = $model->getThumb();
+      $preview[] = $model->getImage();
+      $previewThumb[] = $model->getThumb();
 
-      $previewsConfig[] = [
+      $previewConfig[] = [
         'caption' => $model->file,
         'key' => $model->id,
         'url' => Url::to(["/blog/deleteimage?id=" . $model->id]),
+      ];
+
+      $previewThumbConfig[] = [
+        'caption' => $model->thumb,
+        'key' => $model->id,
+        'url' => Url::to(["/blog/deletethumb?id=" . $model->id]),
       ];
 
       if ($model->load(Yii::$app->request->post())) {
@@ -123,8 +130,10 @@ class BlogController extends Controller
 
       return $this->render('update', [
           'model' => $model,
-          'previews' => $previews,
-          'previewsConfig' => $previewsConfig,
+          'preview' => $preview,
+          'previewConfig' => $previewConfig,
+          'previewThumb' => $previewThumb,
+          'previewThumbConfig' => $previewThumbConfig,
       ]);
     }
 
@@ -139,7 +148,7 @@ class BlogController extends Controller
     {
         $model = $this->findModel($id);
         $url = Url::to('@frontend/web/images/blog/'). $model->file;
-        $urlThumb = Url::to('@frontend/web/images/blog/thumbs/'). $model->file;
+        $urlThumb = Url::to('@frontend/web/images/blog/thumbs/'). $model->thumb;
 
         // Delete image from the database and the folder
         if (unlink($url) && unlink($urlThumb)) {

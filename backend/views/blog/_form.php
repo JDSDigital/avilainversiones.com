@@ -8,6 +8,7 @@ use kartik\file\FileInput;
 /* @var $this yii\web\View */
 /* @var $model common\models\Events */
 /* @var $form yii\widgets\ActiveForm */
+print_r($previewThumb);
 
 $template = '<div class="form-group row">
     <label class="col-form-label col-lg-2">{label}</label>
@@ -43,6 +44,32 @@ $template = '<div class="form-group row">
             'template' => $template,
         ])->textInput(['maxlength' => true, 'class' => 'form-control']) ?>
 
+        <div class="row">
+          <div class="col-md-12">
+            <?= $form->field($model, 'thumbImage')->widget(FileInput::classname(), [
+                'language' => 'es',
+                'options' => [
+                  'multiple' => false,
+                ],
+                'pluginOptions' => [
+                  'previewFileType' => 'image',
+                  'showCancel' => false,
+                  'showUpload' => false,
+                  'showDelete' => true,
+                  'allowedFileTypes' => ['image'],
+                  'allowedFileExtensions' => ['jpg', 'png'],
+                  'maxFileSize' => 8000,
+                  'maxFileCount' => 1,
+                  'overwriteInitial' => true,
+                  'initialPreview' => isset($previewThumb) ? $previewThumb : false,
+                  'initialPreviewAsData' => true,
+                  'initialPreviewShowDelete' => true,
+                  'initialPreviewConfig' => isset($previewThumbConfig) ? $previewThumbConfig : false,
+                ]
+            ]); ?>
+          </div>
+        </div>
+
     <div class="row">
       <div class="col-md-12">
         <?= $form->field($model, 'image')->widget(FileInput::classname(), [
@@ -60,10 +87,10 @@ $template = '<div class="form-group row">
               'maxFileSize' => 8000,
               'maxFileCount' => 1,
               'overwriteInitial' => true,
-              'initialPreview' => isset($previews) ? $previews : false,
+              'initialPreview' => isset($preview) ? $preview : false,
               'initialPreviewAsData' => true,
               'initialPreviewShowDelete' => true,
-              'initialPreviewConfig' => isset($previewsConfig) ? $previewsConfig : false,
+              'initialPreviewConfig' => isset($previewConfig) ? $previewConfig : false,
             ]
         ]); ?>
       </div>
