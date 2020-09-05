@@ -40,7 +40,7 @@ class ConsultingSearch extends Consulting
      */
     public function search($params)
     {
-        $query = Consulting::find();
+        $query = Consulting::find()->active();
 
         // add conditions that should always apply here
 

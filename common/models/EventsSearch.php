@@ -40,7 +40,7 @@ class EventsSearch extends Events
      */
     public function search($params)
     {
-        $query = Events::find();
+        $query = Events::find()->active();
 
         // add conditions that should always apply here
 

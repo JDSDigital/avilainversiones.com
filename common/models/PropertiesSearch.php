@@ -41,7 +41,10 @@ class PropertiesSearch extends Properties
      */
     public function search($params)
     {
-        $query = Properties::find();
+        $query = Properties::find()->active()->orderBy([
+          'featured' => SORT_DESC,
+          'created_at' => SORT_DESC
+        ]);;
 
         // add conditions that should always apply here
 

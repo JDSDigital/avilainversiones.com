@@ -101,6 +101,20 @@ $this->title = 'Empresa';
 
 <section class="slice-xl sct-color-1">
     <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12">
+                <div class="row align-items-center">
+                    <div class="col-12">
+                        <div class="section-title section-title--style-1 text-center mb-4">
+                            <h3 class="section-title-inner heading-2 text-uppercase strong-400">
+                                <span><?= Html::encode('Nuestro Equipo') ?></span>
+                            </h3>
+                            <span class="section-title-delimiter clearfix"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="row justify-content-center">
             <div class="col-lg-4 col-md-6">
                 <div class="block block--style-3 block--style-3-v2">
