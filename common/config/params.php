@@ -1,8 +1,8 @@
 <?php
 return [
-    'adminEmail' => 'admin@example.com',
-    'supportEmail' => 'support@example.com',
-    'senderEmail' => 'noreply@example.com',
-    'senderName' => 'Example.com mailer',
+    'adminEmail' => 'jdsosa@gmail.com',
+    'supportEmail' => 'paginaweb@avilainversiones.com',
+    'senderEmail' => 'paginaweb@avilainversiones.com',
+    'senderName' => 'Página Web',
     'user.passwordResetTokenExpire' => 3600,
 ];

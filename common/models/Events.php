@@ -89,6 +89,11 @@ class Events extends \yii\db\ActiveRecord
             if (count($uploadedImages) > 0) {
 
                 foreach ($uploadedImages as $key => $uploadedImage) {
+                    
+                    if ($uploadedImage->size > 8000000) {
+                        continue;
+                    }
+
                     $image = new EventsImages;
                     $name = $this->id . '-' . ($key + 1) . '-' . time() . '.' . $uploadedImage->extension;
 

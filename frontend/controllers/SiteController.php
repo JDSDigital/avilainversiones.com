@@ -81,7 +81,6 @@ class SiteController extends Controller
     public function actionConsulting($id)
     {
         $consulting = Consulting::findOne($id);
-        $consulting->updateCounters(['views' => 1]);
         $model = new ContactForm();
         $model->subject = 'Estoy interesado en '.$consulting->name;
 
@@ -112,9 +111,9 @@ class SiteController extends Controller
 
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             if ($model->sendEmail(Yii::$app->params['adminEmail'])) {
-                Yii::$app->session->setFlash('success', 'Thank you for contacting us. We will respond to you as soon as possible.');
+                Yii::$app->session->setFlash('success', 'Gracias por contactarnos. Te responderemos lo antes posible.');
             } else {
-                Yii::$app->session->setFlash('error', 'There was an error sending your message.');
+                Yii::$app->session->setFlash('error', 'Ocurrió un error. Por favor intenta más tarde.');
             }
 
             return $this->refresh();
