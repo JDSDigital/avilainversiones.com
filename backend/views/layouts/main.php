@@ -11,6 +11,12 @@ use yii\bootstrap4\NavBar;
 use yii\widgets\Breadcrumbs;
 use common\widgets\Alert;
 
+// Meta tags
+$this->registerMetaTag(['name' => 'author', 'content' => 'avilainversiones.com']);
+$this->registerMetaTag(['name' => 'description', 'content' => 'Aprende uno de los negocios mas lucrativos del mundo de la mano de expertos.']);
+$this->registerMetaTag(['name' => 'keywords', 'content' => 'inmobiliaria, curso, asesoria']);
+$this->registerMetaTag(['rel' => 'canonical', 'href' => 'https://www.avilainversiones.com']);
+
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
