@@ -2,6 +2,7 @@
 
 namespace common\models;
 
+use yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use common\models\Properties;
@@ -41,12 +42,16 @@ class PropertiesSearch extends Properties
      */
     public function search($params)
     {
-        $query = Properties::find()->active()->orderBy([
+        $query = Properties::find()->orderBy([
           'featured' => SORT_DESC,
           'created_at' => SORT_DESC
-        ]);;
+        ]);
 
         // add conditions that should always apply here
+
+        if (Yii::$app->id === "app-frontend") {
+            $query->active();
+        }
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,

@@ -2,6 +2,7 @@
 
 namespace common\models;
 
+use yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use common\models\Consulting;
@@ -40,9 +41,13 @@ class ConsultingSearch extends Consulting
      */
     public function search($params)
     {
-        $query = Consulting::find()->active();
+        $query = Consulting::find();
 
         // add conditions that should always apply here
+
+        if (Yii::$app->id === "app-frontend") {
+            $query->active();
+        }
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,

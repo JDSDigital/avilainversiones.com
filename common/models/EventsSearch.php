@@ -2,6 +2,7 @@
 
 namespace common\models;
 
+use yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use common\models\Events;
@@ -40,9 +41,13 @@ class EventsSearch extends Events
      */
     public function search($params)
     {
-        $query = Events::find()->active();
+        $query = Events::find();
 
         // add conditions that should always apply here
+
+        if (Yii::$app->id === "app-frontend") {
+            $query->active();
+        }
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,

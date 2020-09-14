@@ -2,6 +2,7 @@
 
 namespace common\models;
 
+use yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use common\models\Alliances;
@@ -43,6 +44,10 @@ class AlliancesSearch extends Alliances
         $query = Alliances::find();
 
         // add conditions that should always apply here
+
+        if (Yii::$app->id === "app-frontend") {
+            $query->active();
+        }
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
