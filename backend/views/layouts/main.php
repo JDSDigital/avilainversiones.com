@@ -62,25 +62,6 @@ AppAsset::register($this);
 				<span class="badge badge-mark border-orange-300 mr-2"></span>
 				<?= Yii::$app->user->identity->email ?>
 			</span>
-
-			<ul class="navbar-nav ml-md-auto">
-				<li class="nav-item">
-					<a href="#" class="navbar-nav-link">
-              <?=
-                  Html::beginForm(['/site/logout'], 'post')
-                  . Html::submitButton(
-                      '<i class="icon-switch2"></i>',
-                      [
-                          'class' => 'btn btn-link logout',
-                          'data-popup' => 'tooltip',
-                          'title' => 'Logout'
-                      ]
-                  )
-                  . Html::endForm();
-              ?>
-					</a>
-				</li>
-			</ul>
 		</div>
 	</div>
     <!-- /main navbar -->
@@ -179,6 +160,22 @@ AppAsset::register($this);
                                 ['consulting/index'],
                                 ['class' => (Yii::$app->controller->id == 'consulting') ? 'nav-link active' : 'nav-link'])
                             ?>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <?=
+                                    Html::beginForm(['/site/logout'], 'post')
+                                    . Html::submitButton(
+                                        '<i class="icon-switch2"></i><span>Cerrar sesión</span>',
+                                        [
+                                            'class' => 'btn  p-0',
+                                            'data-popup' => 'tooltip',
+                                            'title' => 'Cerrar sesión'
+                                        ]
+                                    )
+                                    . Html::endForm();
+                                ?>
+                            </a>
                         </li>
                         <!-- <li class="nav-item nav-item-submenu">
                             <a href="#" class="nav-link"><i class="icon-copy"></i> <span>Layouts</span></a>

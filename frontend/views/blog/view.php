@@ -11,7 +11,6 @@ $this->title = Html::encode('Blog');
     <div class="container container-xs">
         <div class="block block-post">
             <div class="block-body block-post-body">
-                <?= Html::img('../images/blog/'.$model->file, ['class' => 'img-fluid']) ?>
                 <h2 class="heading heading-inverse heading-1 strong-600 text-capitalize line-height-1_2">
                     <?= Html::encode($model->title) ?>
                 </h2>
@@ -22,6 +21,7 @@ $this->title = Html::encode('Blog');
                         </p>
                     </li>
                 </ul>
+                <?= Html::img('../images/blog/'.$model->file, ['class' => 'img-fluid mt-4 mb-4']) ?>
                 <?= $model->article ?>
                 <div class="mt-3">
                     <?= '<i class="fa fa-user mr-2"></i>'.$model->user->name ?>

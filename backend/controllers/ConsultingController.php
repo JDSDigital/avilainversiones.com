@@ -151,6 +151,26 @@ class ConsultingController extends Controller
     }
 
     /**
+     * Changes Status.
+     *
+     * @return string
+     */
+    public function actionStatus()
+    {
+        if (Yii::$app->request->isAjax) {
+            $data = Yii::$app->request->post();
+
+            $model = $this->findModel($data['id']);
+
+            $model->status = ($model->status) ? Consulting::STATUS_DELETED : Consulting::STATUS_ACTIVE;
+
+            $model->save();
+        }
+
+        return null;
+    }
+
+    /**
      * Finds the Consulting model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id

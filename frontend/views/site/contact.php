@@ -9,9 +9,10 @@ use yii\bootstrap4\ActiveForm;
 use yii\captcha\Captcha;
 
 $this->title = 'Contacto';
+$url = Yii::getAlias('@web') . '/images/banners/banner-contacto.jpg';
 ?>
 
-<section class="slice-lg slice--offset-top has-bg-cover bg-size-cover" style="background-image: url('../images/banners/banner-contacto.jpg'); background-position: top center;">
+<section class="slice-lg slice--offset-top has-bg-cover bg-size-cover" style="background-image: url('<?= $url ?>'); background-position: top center;">
     <span class="mask mask-dark--style-2"></span>
     <div class="container">
         <div class="row">

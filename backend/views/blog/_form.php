@@ -8,7 +8,6 @@ use kartik\file\FileInput;
 /* @var $this yii\web\View */
 /* @var $model common\models\Events */
 /* @var $form yii\widgets\ActiveForm */
-print_r($previewThumb);
 
 $template = '<div class="form-group row">
     <label class="col-form-label col-lg-2">{label}</label>
