@@ -65,6 +65,10 @@ class ContactForm extends Model
                 case 4:
                     $this->subject = 'Administración de propiedades';
                     break;
+                case 5:
+                    $this->subject = 'Estoy interesado en una consulta gratuita';
+                    $this->body = 'Escribe tus datos de contacto aquí';
+                    break;
                 default:
                     break;
             }

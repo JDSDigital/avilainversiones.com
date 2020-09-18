@@ -24,6 +24,11 @@ $imageEven = "col-md-6 order-first order-md-first";
                     <p class="lead c-white animated mt-3" data-animation-in="fadeInUpBig" data-animation-delay="200">
                         ¿Deseas saber que tipo de asesoría necesitas?
                     </p>
+                    <div class="mt-4">
+                        <?= Html::a("Consulta gratis", ['site/contact', 'id' => 5], [
+                            'class' => 'btn btn-styled btn-golden btn-circle text-uppercase strong-400'
+                        ]) ?>
+                    </div>
                 </div>
             </div>
         </div>

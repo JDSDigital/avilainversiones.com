@@ -22,7 +22,7 @@ $url = Yii::getAlias('@web') . '/images/banners/banner-contacto.jpg';
                         Contacto
                     </h2>
                     <p class="lead c-white animated mt-3" data-animation-in="fadeInUpBig" data-animation-delay="200">
-                        ¡No dudes en escribirnos!
+                        Deja tu contacto aquí y nos comunicaremos contigo.
                     </p>
                 </div>
             </div>

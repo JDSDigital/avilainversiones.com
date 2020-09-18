@@ -18,7 +18,7 @@ $this->title = 'Empresa';
                     <p class="heading heading-5 mb-2">Una empresa es el respaldo de un sistema operativo que funciona por medio de equipos.</p>
                     <p class="heading heading-5 mb-2">Un equipo apoya una empresa a través del esfuerzo mancomunado de cada individuo.</p>
                     <p class="heading heading-5 mb-2">Un individuo es un eslabón fundamental para que se brinde un buen servicio.</p>
-                    <p class="heading heading-5">Un buen servicio solo se logra cuando todo trabaja junto y en armonía.</p>
+                    <p class="heading heading-5">Un buen servicio solo se logra cuando todos trabajan juntos en armonía.</p>
                 </div>
             </div>
         </div>

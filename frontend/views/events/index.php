@@ -19,7 +19,7 @@ $this->title = Html::encode('Eventos');
                         Eventos
                     </h2>
                     <p class="lead c-white animated mt-3" data-animation-in="fadeInUpBig" data-animation-delay="200">
-                        Nuestras últimas tendencias.
+                        Cambia tu forma de ver el mercado inmobiliario.
                     </p>
                 </div>
             </div>
