@@ -22,7 +22,9 @@ $this->title = Html::encode('Blog');
                     </li>
                 </ul>
                 <?= Html::img('../images/blog/'.$model->file, ['class' => 'img-fluid mt-4 mb-4']) ?>
-                <?= $model->article ?>
+                <div class="article">
+                    <?= $model->article ?>
+                </div>
                 <div class="mt-3">
                     <?= '<i class="fa fa-user mr-2"></i>'.$model->user->name ?>
                     <br />

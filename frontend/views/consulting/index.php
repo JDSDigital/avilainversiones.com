@@ -45,9 +45,9 @@ $imageEven = "col-md-6 order-first order-md-first";
                             <h3 class="heading heading-2 strong-500">
                                 <?= Html::encode($consulting->name) ?>
                             </h3>
-                            <p class="lead line-height-1_8 mt-4">
+                            <div class="article mt-4">
                                 <?= $consulting->description ?>
-                            </p>
+                            </div>
                             <div class="btn p-0 ml-3 mt-5">
                                 <?= Html::a("Online", ['site/consulting', 'id' => $consulting->id], [
                                     'class' => 'btn btn-styled btn-golden btn-circle text-uppercase strong-400'

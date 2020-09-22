@@ -71,7 +71,11 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $blogs = Blog::find()->active()->orderBy(['created_at' => SORT_DESC])->limit(4)->all();
+        $blogs = Blog::find()
+        ->active()
+        ->orderBy(['created_at' => SORT_DESC])
+        ->limit(3)
+        ->all();
 
         return $this->render('index', [
             'blogs' => $blogs,

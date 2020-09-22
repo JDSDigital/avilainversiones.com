@@ -48,36 +48,12 @@ $this->title = Html::encode('Eventos');
                               </div>
                               <div class="col-md-8">
                                 <div class="card-body">
-                                  <h4 class="heading heading-5 strong-600 line-height-1_8">
+                                  <h4 class="heading heading-3 strong-600 line-height-1_8">
                                     <?= Html::a($event->title, ['events/view', 'id' => $event->id]) ?>
                                   </h4>
-                                  <p class="card-text mt-3">
+                                  <p class="heading-6 card-text mt-3">
                                     <?= Html::encode($event->summary) ?>
                                   </p>
-                                  <!-- <div class="row align-items-center mt-4">
-                                    <div class="col-6">
-                                      <div class="block-author">
-                                        <div class="author-image author-image-xs">
-                                          <img src="./images/prv/people/person-1.jpg">
-                                        </div>
-                                        <div class="author-info">
-                                          <div class="author-name">
-                                            <a href="#" class="strong-600">Elisabeth Alanna</a>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-
-                                    <div class="col-6">
-                                      <div class="text-right">
-                                        <ul class="inline-links inline-links--style-2">
-                                          <li>
-                                            <?php /*Html::encode(Yii::$app->formatter->asDate($event->created_at, 'long'))*/ ?>
-                                          </li>
-                                        </ul>
-                                      </div>
-                                    </div>
-                                  </div> -->
                                 </div>
                               </div>
                             </div>

@@ -151,7 +151,7 @@ $this->title = Html::encode('Propiedades');
                             </div>
 
                             <div class="block-body">
-                                <h3 class="heading heading-sm">
+                                <h3 class="heading heading-6">
                                     <?= Html::a(
                                         Html::encode($property->title),
                                         ['properties/view', 'id' => $property->id]

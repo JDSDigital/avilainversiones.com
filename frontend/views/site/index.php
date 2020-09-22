@@ -146,9 +146,9 @@ $this->title = Yii::$app->name;
 
             <span class="space-xs-lg"></span>
 
-            <div class="row cols-md-space cols-sm-space cols-xs-space">
+            <div class="row justify-content-center cols-md-space cols-sm-space cols-xs-space">
               <?php  foreach ($blogs as $entry) : ?>
-                <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="col-lg-4 col-md-6 col-sm-6">
                   <div class="card z-depth-2-top">
                     <div class="card-image">
                       <div class="view view-first crop-blog">
@@ -160,12 +160,12 @@ $this->title = Yii::$app->name;
                     </div>
 
                     <div class="card-body">
-                      <h3 class="heading heading-5 strong-500 mb-0">
+                      <h3 class="heading heading-3 strong-500 mb-0">
                         <?= Html::a(
                             $entry->title,
                             ['blog/view', 'id' => $entry->id]
                         ) ?>
-                        <p>
+                        <p class="heading-6">
                             <?= Html::encode($entry->summary) ?>
                         </p>
                       </h3>

@@ -43,10 +43,10 @@ $this->title = Html::encode('Blog');
                         </div>
 
                         <div class="card-body">
-                          <h3 class="heading heading-5 strong-600 mb-0">
+                          <h3 class="heading heading-3 strong-600 mb-0">
                             <?= Html::a($entry->title, ['blog/view', 'id' => $entry->id]) ?>
                           </h3>
-                          <p>
+                          <p class="heading-6">
                               <?= Html::encode($entry->summary) ?>
                           </p>
                         </div>
@@ -55,9 +55,6 @@ $this->title = Html::encode('Blog');
                           <div class="row">
                             <div class="col">
                               <div class="block-author">
-                                <!-- <div class="author-image author-image-xs">
-                                  <img src="./images/prv/people/person-1.jpg">
-                                </div> -->
                                 <div class="author-info">
                                   <div class="author-name">
                                       <i class="fa fa-user mr-1"></i>

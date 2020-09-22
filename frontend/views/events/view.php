@@ -28,31 +28,33 @@ $this->title = Html::encode('Eventos');
 <section class="slice-sm sct-color-1">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-12">
+        <div class="col-12 article">
             <?= $model->article ?>
         </div>
       </div>
     </div>
 </section>
 
-<div class="light-gallery">
-    <!-- Gallery -->
-    <div class="gallery-bottom">
-        <div class="row">
-            <?php foreach ($model->eventsImages as $image) : ?>
-                <div class="col-sm-2">
-                  <div class="gallery-thumb crop view view-first mx-2 my-3">
-                    <?= Html::a(
-                      Html::img($image->getThumb()),
-                      $image->getImage(),
-                      [
-                        'class' => 'item',
-                        'data-fancybox' => 'group'
-                      ]
-                    ) ?>
-                  </div>
-                </div>
-            <?php endforeach; ?>
+<section class="slice-sm container">
+    <div class="light-gallery">
+        <!-- Gallery -->
+        <div class="gallery-bottom">
+            <div class="row justify-content-center">
+                <?php foreach ($model->eventsImages as $image) : ?>
+                    <div class="col-sm-3 justify-content-center">
+                        <div class="gallery-thumb crop view view-first mx-2 my-3">
+                            <?= Html::a(
+                            Html::img($image->getThumb(), ['class' => 'mx-auto']),
+                            $image->getImage(),
+                            [
+                                'class' => 'item',
+                                'data-fancybox' => 'group'
+                            ]
+                            ) ?>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
         </div>
     </div>
-</div>
+</section>

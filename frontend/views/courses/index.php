@@ -39,12 +39,12 @@ $this->title = Html::encode('Cursos');
                                     </div>
                                     <div class="col-md-7">
                                         <div class="card-body">
-                                            <h4 class="heading heading-5 strong-600 line-height-1_8">
+                                            <h4 class="heading heading-3 strong-600 line-height-1_8">
                                                 <?= Html::encode($course->title) ?>
                                             </h4>
-                                            <p class="card-text mt-3">
+                                            <div class="card-text mt-3">
                                                 <?= $course->article ?>
-                                            </p>
+                                            </div>
                                             <div class="row align-items-right">
                                                 <div class="col-12">
                                                     <div class="text-right">
