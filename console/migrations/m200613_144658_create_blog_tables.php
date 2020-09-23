@@ -22,7 +22,7 @@ class m200613_144658_create_blog_tables extends Migration
             'id' => $this->primaryKey(),
             'user_id' => $this->integer()->notNull(),
             'title' => $this->string()->notNull(),
-            'summary' => $this->string()->notNull(),
+            'summary' => $this->string()->null(),
             'article' => $this->text()->notNull(),
             'thumb' => $this->string()->null(),
             'file' => $this->string()->null(),

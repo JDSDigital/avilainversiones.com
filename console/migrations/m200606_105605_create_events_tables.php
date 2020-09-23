@@ -21,7 +21,7 @@ class m200606_105605_create_events_tables extends Migration
         $this->createTable('{{%xevents}}', [
             'id' => $this->primaryKey(),
             'title' => $this->string()->notNull(),
-            'summary' => $this->string()->notNull(),
+            'summary' => $this->string()->null(),
             'article' => $this->text()->null(),
 
             'views' => $this->integer()->notNull()->defaultValue(0),

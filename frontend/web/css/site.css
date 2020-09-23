@@ -200,3 +200,10 @@ a.desc:after {
   font-size: 1.3em !important;
   margin: 0;
 }
+
+.copyright a {
+  color: rgba(255, 255, 255, 0.7);
+}
+.copyright a:hover {
+  color: rgba(255, 255, 255, 0.5);
+}

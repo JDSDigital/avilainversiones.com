@@ -175,9 +175,6 @@ $this->title = Yii::$app->name;
                       <div class="row">
                         <div class="col">
                           <div class="block-author">
-                            <!-- <div class="author-image author-image-xs">
-                              <img src="./images/prv/people/person-1.jpg">
-                            </div> -->
                             <div class="author-info">
                               <div class="author-name">
                                   <i class="fa fa-user mr-1"></i>
@@ -423,6 +420,7 @@ $this->title = Yii::$app->name;
 <?php
 $js = <<<JS
   $('.services-box').SameHeight();
+  $('.card').SameHeight();
 JS;
 $this->registerJs($js);
 ?>

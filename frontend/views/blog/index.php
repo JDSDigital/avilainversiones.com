@@ -91,3 +91,10 @@ $this->title = Html::encode('Blog');
         <?php endif; ?>
     </div>
 </section>
+
+<?php
+$js = <<<JS
+  $('.card').SameHeight();
+JS;
+$this->registerJs($js);
+?>

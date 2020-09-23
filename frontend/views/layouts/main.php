@@ -3,6 +3,7 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
+use yii\helpers\Url;
 use yii\helpers\Html;
 use yii\bootstrap4\Nav;
 use yii\bootstrap4\NavBar;
@@ -273,7 +274,7 @@ AppAsset::register($this);
              <div class="row">
                 <div class="col">
                     <div class="copyright text-center">
-                        &copy; <?= date('Y') . ' ' . Html::encode(Yii::$app->name) ?>
+                        &copy; <?= date('Y') . ' ' . Html::encode(Yii::$app->name) ?> / Diseño y desarrollo por <?= Html::a('Geknology', Url::to('http://www.geknology.com/'), ['target' => '_blank']) ?>
                     </div>
                 </div>
             </div>

@@ -51,7 +51,7 @@ class Events extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['title', 'summary'], 'required'],
+            [['title'], 'required'],
             [['article'], 'string'],
             [['views', 'featured', 'status'], 'integer'],
             [['title', 'summary'], 'string', 'max' => 255],

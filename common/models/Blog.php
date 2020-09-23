@@ -54,7 +54,7 @@ class Blog extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['user_id', 'title', 'summary', 'article'], 'required'],
+            [['user_id', 'title', 'article'], 'required'],
             [['article'], 'string'],
             [['user_id', 'views', 'status'], 'integer'],
             [['title', 'summary', 'file', 'thumb'], 'string', 'max' => 255],
