@@ -101,13 +101,13 @@ $this->title = Yii::$app->name;
     <span class="mask mask-dark--style-2"></span>
     <div class="container">
         <div class="row">
-            <div class="col-lg-5 col-md-8 ml-lg-auto">
-                <div class="px-5 py-5 z-depth-1-bottom">
+            <div class="col-lg-5 col-md-8">
+                <div class="z-depth-1-bottom">
                     <h2 class="heading heading-2 strong-400 c-gray-dark">
                         <?= Html::encode('Inversiones a tu alcance') ?>
                     </h2>
                     <div class="">
-                        <p class="heading-6 c-light-gray mt-4">
+                        <p class="heading-5 c-light-gray mt-4">
                             <?= Html::encode('La capacidad de conocer las mejores estrategias es lo que te va a permitir tener éxito en tus inversiones inmobiliarias.') ?>
                         </p>
                         <div class="btn-container mt-5">

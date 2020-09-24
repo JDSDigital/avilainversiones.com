@@ -22722,7 +22722,10 @@ pre {
   color: gold;
 }
 
-.navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .nav-link.active {
+.navbar-dark .navbar-nav .show > .nav-link,
+.navbar-dark .navbar-nav .active > .nav-link,
+.navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .nav-link.active {
   color: gold;
 }
 
@@ -22745,7 +22748,8 @@ pre {
   border: 2px solid #be9418;
 }
 
-.btn-golden:active, .btn-golden:hover {
+.btn-golden:active,
+.btn-golden:hover {
   border-color: gold;
 }
 
@@ -22780,7 +22784,8 @@ pre {
   padding: 10px;
 }
 
-.form-material .bar::after, .form-material .bar::before {
+.form-material .bar::after,
+.form-material .bar::before {
   background: linear-gradient(to right, #be9418, gold, #be9418);
 }
 
@@ -22802,6 +22807,7 @@ pre {
 
 .text-golden-gradient {
   background: linear-gradient(to right, #be9418, gold, #be9418);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-transition: all 1s ease;
@@ -22810,6 +22816,7 @@ pre {
 
 .text-golden-gradient:hover {
   background: linear-gradient(to right, gold, #be9418, gold);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-transition: all 1s ease;
@@ -22878,7 +22885,9 @@ pre {
 
 .image-hover {
   display: none;
-  border: 1px solid #be9418;
+  border-width: 2px;
+  border-style: solid;
+  border-image: linear-gradient(130deg, rgba(190, 148, 24, 0.9), gold, rgba(190, 148, 24, 0.9)) 1;
   padding: 5px 20px 5px 5px;
   z-index: 100;
   left: 0px;
@@ -22913,4 +22922,43 @@ pre {
 
 .custom-tooltip:hover .custom-tooltip-hover h6 {
   margin: 0;
+}
+
+.article h3 {
+  font-size: 2em !important;
+}
+
+.article p {
+  font-size: 1.1em !important;
+  line-height: 1.6em !important;
+}
+
+.article blockquote {
+  font-weight: bold;
+  font-style: italic;
+  margin: 25px 0;
+  padding: 30px 50px;
+  border-width: 5px;
+  border-style: solid;
+  border-image: linear-gradient(to bottom, gold, rgba(190, 148, 24, 0.7)) 0 0 0 1;
+}
+
+.article blockquote p {
+  font-size: 1.3em !important;
+  margin: 0;
+}
+
+.copyright a {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.copyright a:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.milestone-info {
+  padding: 10px !important;
+  border-width: 2px;
+  border-style: solid;
+  border-image: linear-gradient(130deg, rgba(190, 148, 24, 0.9), gold, rgba(190, 148, 24, 0.9)) 1;
 }

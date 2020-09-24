@@ -178,32 +178,3 @@ a.desc:after {
     background-position: top center;
   }
 }
-
-.article h3 {
-  font-size: 2em !important;
-}
-
-.article P {
-  font-size: 1.1em !important;
-  line-height: 1.6em !important;
-}
-
-.article blockquote {
-  font-weight: bold;
-  font-style: italic;
-  margin: 25px 0;
-  padding: 30px 50px;
-  border-left: 5px solid white;
-}
-
-.article blockquote p {
-  font-size: 1.3em !important;
-  margin: 0;
-}
-
-.copyright a {
-  color: rgba(255, 255, 255, 0.7);
-}
-.copyright a:hover {
-  color: rgba(255, 255, 255, 0.5);
-}

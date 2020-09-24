@@ -17,9 +17,26 @@ $golden-dark-2: rgba(190, 148, 24, 0.9);
 $golden-dark-3: rgba(190, 148, 24, 0.7);
 
 $golden-gradient: linear-gradient(to right, $golden-dark-1, $golden-light-1, $golden-dark-1);
-$golden-gradient-inverse: linear-gradient(to right, $golden-light-1, $golden-dark-1, $golden-light-1);
-$golden-gradient-background: linear-gradient(110deg, $golden-dark-1, $golden-light-1, $golden-dark-1);
-$golden-gradient-background-inverse: linear-gradient(110deg, $golden-light-1, $golden-dark-1, $golden-light-1);
+$golden-gradient-inverse: linear-gradient(
+  to right,
+  $golden-light-1,
+  $golden-dark-1,
+  $golden-light-1
+);
+$golden-gradient-background: linear-gradient(
+  110deg,
+  $golden-dark-1,
+  $golden-light-1,
+  $golden-dark-1
+);
+$golden-gradient-background-inverse: linear-gradient(
+  110deg,
+  $golden-light-1,
+  $golden-dark-1,
+  $golden-light-1
+);
+$golden-gradient-quote: linear-gradient(to bottom, $golden-light-1, $golden-dark-3) 0 0 0 1;
+$golden-gradient-box: linear-gradient(130deg, $golden-dark-2, $golden-light-1, $golden-dark-2) 1;
 
 $navbar-dark-nav-link-color: $golden-light-3;
 $navbar-dark-nav-link-color-hover: $golden-light-2;

@@ -20,7 +20,10 @@
   }
 }
 
-.navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .nav-link.active {
+.navbar-dark .navbar-nav .show > .nav-link,
+.navbar-dark .navbar-nav .active > .nav-link,
+.navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .nav-link.active {
   color: $golden-light-1;
 }
 
@@ -41,7 +44,8 @@
   background: $golden-gradient-background;
   border: 2px solid $golden-dark-1;
 }
-.btn-golden:active, .btn-golden:hover {
+.btn-golden:active,
+.btn-golden:hover {
   border-color: $golden-light-1;
 }
 .btn-golden:focus {
@@ -63,7 +67,7 @@
   color: $golden-light-2;
 }
 .blog-sidebar {
-  .post-thumb{
+  .post-thumb {
     width: 50%;
 
     img {
@@ -72,7 +76,8 @@
     }
   }
 }
-.form-material .bar::after, .form-material .bar::before {
+.form-material .bar::after,
+.form-material .bar::before {
   background: $golden-gradient;
 }
 .heading:hover > a {
@@ -89,6 +94,7 @@
 }
 .text-golden-gradient {
   background: $golden-gradient;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-transition: all 1s ease;
@@ -96,6 +102,7 @@
 
   &:hover {
     background: $golden-gradient-inverse;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-transition: all 1s ease;
@@ -104,103 +111,143 @@
 }
 
 .alliances {
-    padding: 50px;
+  padding: 50px;
 
-    a {
-        margin: 20px;
+  a {
+    margin: 20px;
+  }
+
+  .logo-box {
+    border: 1px solid #bbb;
+    text-align: center !important;
+    margin: 5px 0;
+    border-radius: 5px;
+    padding: 5px 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    -webkit-transition: all 0.2s ease !important;
+    -moz-transition: all 0.2s ease !important;
+    -o-transition: all 0.2s ease !important;
+    -ms-transition: all 0.2s ease !important;
+    transition: all 0.2s ease !important;
+
+    .logo-hover {
+      display: none;
     }
 
-    .logo-box {
-        border: 1px solid #bbb;
-        text-align: center !important;
-        margin: 5px 0;
-        border-radius: 5px;
-        padding: 5px 20px;
-        background-color: rgba(255, 255, 255, 0.1);
-        -webkit-transition: all 0.2s ease !important;
-        -moz-transition: all 0.2s ease !important;
-        -o-transition: all 0.2s ease !important;
-        -ms-transition: all 0.2s ease !important;
-        transition: all 0.2s ease !important;
-
-        .logo-hover {
-            display: none
-        }
-
-        .logo-inner-box {
-          margin: auto;
-        }
-
-        a img {
-            display: block;
-            max-width: 100%;
-            height: auto;
-        }
-
-        &:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-
-            .logo-hover {
-                border: 1px solid $golden-dark-1;
-                padding: 5px 20px 5px 5px;
-                display: block;
-                z-index: 100;
-                left: 0px;
-                margin: 10px;
-                width: 250px;
-                position: absolute;
-                top: -50px;
-                text-decoration: none;
-                background-color: black;
-            }
-        }
+    .logo-inner-box {
+      margin: auto;
     }
 
-}
-.card-buttons{
-    position: relative;
-    bottom: 10px;
-    width: 100%;
-}
-.card-body.px-4.py-4 {
-    // position: absolute;
-}
-
-.image-hover {
-    display: none;
-    border: 1px solid $golden-dark-1;
-    padding: 5px 20px 5px 5px;
-    z-index: 100;
-    left: 0px;
-    margin: 10px;
-    width: 250px;
-    position: absolute;
-    top: 10px;
-    text-decoration: none;
-    background-color: black;
-}
-.d-block {
-    display: block;
-}
-.custom-tooltip {
-    .custom-tooltip-hover {
-        display: none
+    a img {
+      display: block;
+      max-width: 100%;
+      height: auto;
     }
 
-    &:hover .custom-tooltip-hover {
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+
+      .logo-hover {
         border: 1px solid $golden-dark-1;
-        padding: 10px;
+        padding: 5px 20px 5px 5px;
         display: block;
         z-index: 100;
         left: 0px;
         margin: 10px;
+        width: 250px;
         position: absolute;
         top: -50px;
         text-decoration: none;
         background-color: black;
-
-        h6 {
-            margin: 0;
-        }
+      }
     }
+  }
+}
+.card-buttons {
+  position: relative;
+  bottom: 10px;
+  width: 100%;
+}
+
+.image-hover {
+  display: none;
+  border-width: 2px;
+  border-style: solid;
+  border-image: $golden-gradient-box;
+  padding: 5px 20px 5px 5px;
+  z-index: 100;
+  left: 0px;
+  margin: 10px;
+  width: 250px;
+  position: absolute;
+  top: 10px;
+  text-decoration: none;
+  background-color: black;
+}
+.d-block {
+  display: block;
+}
+.custom-tooltip {
+  .custom-tooltip-hover {
+    display: none;
+  }
+
+  &:hover .custom-tooltip-hover {
+    border: 1px solid $golden-dark-1;
+    padding: 10px;
+    display: block;
+    z-index: 100;
+    left: 0px;
+    margin: 10px;
+    position: absolute;
+    top: -50px;
+    text-decoration: none;
+    background-color: black;
+
+    h6 {
+      margin: 0;
+    }
+  }
+}
+
+.article {
+  h3 {
+    font-size: 2em !important;
+  }
+
+  p {
+    font-size: 1.1em !important;
+    line-height: 1.6em !important;
+  }
+
+  blockquote {
+    font-weight: bold;
+    font-style: italic;
+    margin: 25px 0;
+    padding: 30px 50px;
+    border-width: 5px;
+    border-style: solid;
+    border-image: $golden-gradient-quote;
+
+    p {
+      font-size: 1.3em !important;
+      margin: 0;
+    }
+  }
+}
+
+.copyright {
+  a {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  a:hover {
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.milestone-info {
+  padding: 10px !important;
+  border-width: 2px;
+  border-style: solid;
+  border-image: $golden-gradient-box;
 }
