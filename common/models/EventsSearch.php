@@ -41,7 +41,10 @@ class EventsSearch extends Events
      */
     public function search($params)
     {
-        $query = Events::find();
+        $query = Events::find()->orderBy([
+            'featured' => SORT_DESC,
+            'created_at' => SORT_DESC
+        ]);
 
         // add conditions that should always apply here
 

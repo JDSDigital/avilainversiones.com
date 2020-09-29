@@ -33,6 +33,7 @@ class m200628_182034_create_properties_tables extends Migration
             'rooms' => $this->integer()->null(),
             'toilets' => $this->integer()->null(),
             'garage' => $this->integer()->null(),
+            'pantry' => $this->integer()->null(),
             'address' => $this->string()->null(),
             'views' => $this->integer()->notNull()->defaultValue(0),
 		    'taken' => $this->smallInteger()->notNull()->defaultValue(0),

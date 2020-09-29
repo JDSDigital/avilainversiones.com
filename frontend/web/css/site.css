@@ -178,3 +178,8 @@ a.desc:after {
     background-position: top center;
   }
 }
+
+.align-bottom {
+  position: absolute;
+  bottom: 0;
+}

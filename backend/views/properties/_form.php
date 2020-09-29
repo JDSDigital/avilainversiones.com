@@ -108,6 +108,12 @@ $templateSmall = '<div class="form-group row">
                     'template' => $templateSmall,
                     ])->textInput(['type' => 'number', 'class' => 'form-control']) ?>
             </div>
+            <div class="col-lg-4">
+                <!-- TODO NUMBER -->
+                <?= $form->field($model, 'pantry', [
+                    'template' => $templateSmall,
+                    ])->textInput(['type' => 'number', 'class' => 'form-control']) ?>
+            </div>
         </div>
 
         <?php $form->field($model, 'featured', [

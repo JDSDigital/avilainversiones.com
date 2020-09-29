@@ -71,7 +71,7 @@ class Properties extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['type_id', 'contract_id', 'featured', 'rooms', 'toilets', 'garage', 'views', 'taken', 'status'], 'integer', 'min' => 0],
+            [['type_id', 'contract_id', 'featured', 'rooms', 'toilets', 'garage', 'pantry', 'views', 'taken', 'status'], 'integer', 'min' => 0],
             [['title'], 'required'],
             [['description'], 'string'],
             [['price', 'area'], 'number', 'min' => 0],
@@ -99,6 +99,7 @@ class Properties extends \yii\db\ActiveRecord
             'rooms' => 'Habitaciones',
             'toilets' => 'Baños',
             'garage' => 'Estacionamiento',
+            'pantry' => 'Bodega',
             'address' => 'Dirección',
             'views' => 'Vistas',
             'taken' => 'Ocupada',

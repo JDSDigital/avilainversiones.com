@@ -71,7 +71,7 @@ $this->title = 'Propiedad';
                                 <div class="row">
                                     <div class="col-md-8 px-5">
                                         <h2 class="heading heading-2 strong-500 c-white">
-                                            <?= Html::encode("¿Búscas un nuevo lugar?") ?>
+                                            <?= Html::encode("¿Buscas un nuevo lugar?") ?>
                                         </h2>
                                         <p class="heading-6 mt-3 c-white">
                                             <?= Html::encode("Revisa nuestras ofertas y contacta a nuestros agentes ahora.") ?>

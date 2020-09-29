@@ -75,7 +75,7 @@ $this->title = Html::encode('Propiedades');
                                 <div class="row">
                                     <div class="col-md-8 px-5">
                                         <h2 class="heading heading-2 strong-500 c-white">
-                                            <?= Html::encode("¿Búscas un nuevo lugar?") ?>
+                                            <?= Html::encode("¿Buscas un nuevo lugar?") ?>
                                         </h2>
                                         <p class="heading-6 mt-3 c-white">
                                             <?= Html::encode("Revisa nuestras ofertas y contacta a nuestros agentes ahora.") ?>
@@ -122,8 +122,8 @@ $this->title = Html::encode('Propiedades');
                             </div>
 
                             <div class="aux-info-wrapper border-bottom">
-                                <ul class="aux-info">
-                                    <li class="heading strong-400 text-center">
+                                <ul class="aux-info row">
+                                    <li class="heading strong-400 text-center col-xs-4">
                                         <div class="custom-tooltip">
                                             <i class="icon-real-estate-017"></i> <?= $property->getArea() ?></span>
                                             <div class="custom-tooltip-hover">
@@ -131,7 +131,7 @@ $this->title = Html::encode('Propiedades');
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="heading strong-400 text-center">
+                                    <li class="heading strong-400 text-center col-xs-4">
                                         <div class="custom-tooltip">
                                             <i class="icon-hotel-restaurant-022"></i> <?= $property->rooms ?>
                                             <div class="custom-tooltip-hover">
@@ -139,11 +139,27 @@ $this->title = Html::encode('Propiedades');
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="heading strong-400 text-center">
+                                    <li class="heading strong-400 text-center col-xs-4">
                                         <div class="custom-tooltip">
                                             <i class="icon-hotel-restaurant-158"></i> <?= $property->toilets ?>
                                             <div class="custom-tooltip-hover">
                                                 <h6 class="c-gray-lighter">Baños</h6>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="heading strong-400 text-center col-xs-4">
+                                        <div class="custom-tooltip">
+                                            <i class="icon-hotel-restaurant-098"></i> <?= $property->garage ?>
+                                            <div class="custom-tooltip-hover">
+                                                <h6 class="c-gray-lighter">Estacionamiento</h6>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="heading strong-400 text-center col-xs-4">
+                                        <div class="custom-tooltip">
+                                            <i class="icon-hotel-restaurant-202"></i> <?= $property->pantry ?>
+                                            <div class="custom-tooltip-hover">
+                                                <h6 class="c-gray-lighter">Bodega</h6>
                                             </div>
                                         </div>
                                     </li>

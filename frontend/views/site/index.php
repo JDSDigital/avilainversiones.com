@@ -7,40 +7,36 @@ use yii\web\View;
 
 $this->title = Yii::$app->name;
 ?>
-<section class="swiper-js-container background-image-holder" data-holder-type="fullscreen" data-holder-offset="">
-    <div class="swiper-container" data-swiper-autoplay="true" data-swiper-effect="fade" data-swiper-items="1" data-swiper-space-between="0">
-        <div class="swiper-wrapper">
-            <!-- Slide -->
-            <div class="swiper-slide" data-swiper-autoplay="8000">
-                <div class="slice holder-item holder-item-light has-bg-cover bg-size-cover" style="background-image: url(./images/banners/home.jpg); background-position: bottom center;">
-                <span class="mask mask-dark--style-2"></span>
-                    <div class="container d-flex align-items-center">
-                        <div class="col">
-                            <div class="row text-left">
-                                <div class="col-lg-7">
-                                    <h2 class="heading heading-lg strong-600 text-uppercase animated" data-animation-in="fadeInDownBig" data-animation-delay="200">
-                                        ¿Deseas invertir en bienes raíces?
-                                    </h2>
-                                    <p class="lead animated" data-animation-in="fadeInUpBig" data-animation-delay="200">
-                                        Aprende uno de los negocios mas lucrativos del mundo de la mano de expertos.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="row text-center">
-                                <div class="col-lg-7">
-                                    <div class="btn-container">
-                                        <?= Html::a(
-                                            'Conócenos',
-                                            ['site/about'],
-                                            [
-                                                'class' => [
-                                                    'btn btn-styled btn-golden btn-circle mt-3 text-uppercase strong-400 animated'
-                                                ],
-                                                'data-animation-in' => "fadeInUpBig",
-                                                'data-animation-delay' => "1000"
-                                            ]
-                                        ) ?>
-                                    </div>
+
+<section class="background-image-holder" data-holder-type="fullscreen">
+    <div class="swiper-container">
+        <!-- Slide -->
+        <div class="swiper-slide">
+            <div class="slice holder-item holder-item-light has-bg-cover bg-size-cover" style="background-image: url(./images/banners/home.jpg); background-position: bottom center;">
+                <!-- <span class="mask mask-dark--style-3"></span> -->
+                <div class="container-fluid align-bottom p-0">
+                    <div class="col-lg-12">
+                        <span class="mask mask-dark--style-2"></span>
+                        <div class="row text-center slice-sm">
+                            <div class="col">
+                                <h2 class="heading heading-lg strong-600 text-uppercase animated" data-animation-in="fadeInDownBig" data-animation-delay="200">
+                                    ¿Deseas invertir en bienes raíces?
+                                </h2>
+                                <p class="lead animated" data-animation-in="fadeInUpBig" data-animation-delay="200">
+                                    Aprende uno de los negocios más lucrativos del mundo de la mano de expertos.
+                                </p>
+                                <div class="btn-container mb-2">
+                                    <?= Html::a(
+                                        'Conócenos',
+                                        ['site/about'],
+                                        [
+                                            'class' => [
+                                                'btn btn-styled btn-golden btn-circle mt-3 text-uppercase strong-400 animated'
+                                            ],
+                                            'data-animation-in' => "fadeInUpBig",
+                                            'data-animation-delay' => "1000"
+                                        ]
+                                    ) ?>
                                 </div>
                             </div>
                         </div>

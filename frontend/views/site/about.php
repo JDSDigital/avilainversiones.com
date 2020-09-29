@@ -10,14 +10,14 @@ $this->title = 'Empresa';
     <span class="mask mask-dark--style-2"></span>
     <div class="container">
         <div class="row">
-            <div class="col-12 col-lg-7 ml-lg-auto">
+            <div class="col-12 col-lg-5 offset-lg-5">
                 <h2 class="heading heading-xl strong-600 text-capitalize">
                     Empresa
                 </h2>
-                <div class="c-white mt-3 text-justify">
-                    <p class="heading heading-5 mb-2">Una empresa es el respaldo de un sistema operativo que funciona por medio de equipos.</p>
-                    <p class="heading heading-5 mb-2">Un equipo apoya una empresa a través del esfuerzo mancomunado de cada individuo.</p>
-                    <p class="heading heading-5 mb-2">Un individuo es un eslabón fundamental para que se brinde un buen servicio.</p>
+                <div class="c-white mt-3">
+                    <p class="heading heading-5 mb-3">Una empresa es el respaldo de un sistema operativo que funciona por medio de equipos.</p>
+                    <p class="heading heading-5 mb-3">Un equipo apoya una empresa a través del esfuerzo mancomunado de cada individuo.</p>
+                    <p class="heading heading-5 mb-3">Un individuo es un eslabón fundamental para que se brinde un buen servicio.</p>
                     <p class="heading heading-5">Un buen servicio solo se logra cuando todos trabajan juntos en armonía.</p>
                 </div>
             </div>
@@ -199,7 +199,23 @@ $this->title = 'Empresa';
             <div class="col-lg-4 col-md-6">
                 <div class="block block--style-3 block--style-3-v2">
                     <div class="block-image">
-                        <img src="./images/prv/team/jose.jpg">
+                        <img src="./images/prv/team/mariangela.jpg">
+                    </div>
+                    <div class="block-body text-center py-3">
+                        <h3 class="heading heading-6 strong-600 mb-0">Mariangela Naranjo</h3>
+                        <h4 class="heading heading-sm strong-300 mb-0">Gerente Comercial</h4>
+                    </div>
+                    <div class="block-body border-top border-color-golden py-3">
+                        <!-- <p class="mb-0">
+                            Quisque ut nulla at nunc vehicula lacinia proin adipiscing porta tellus feugiat.
+                        </p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="block block--style-3 block--style-3-v2">
+                    <div class="block-image">
+                        <img src="./images/prv/team/jose2.jpg">
                     </div>
                     <div class="block-body text-center py-3">
                         <h3 class="heading heading-6 strong-600 mb-0">José Velásquez</h3>

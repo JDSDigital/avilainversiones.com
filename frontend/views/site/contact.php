@@ -164,12 +164,18 @@ $url = Yii::getAlias('@web') . '/images/banners/banner-contacto.jpg';
                 </h3>
 
                 <p class="lead mt-4 mb-4">
-                    +56 9 5614 2921
+                    Contáctanos: +56 9 5614 2921
                 </p>
 
-                <p class="">
-                    Aprende uno de los negocios mas lucrativos del mundo de la mano de expertos.
-                </p>
+                <?= Html::a(
+                    Html::img('@web/images/elements/direccion.png', ['class' => 'img-fluid']),
+                    Yii::getAlias('@web') . '/images/elements/direccion.png',
+                    [
+                        'class' => 'item',
+                        'data-fancybox' => true
+                    ]
+                ) ?>
+
             </div>
         </div>
     </div>
