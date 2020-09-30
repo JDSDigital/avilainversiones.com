@@ -7,7 +7,7 @@ use yii\helpers\Html;
 $this->title = Html::encode('Eventos');
 ?>
 
-<section class="slice-lg slice--offset-top has-bg-cover bg-size-cover" style="background-image: url('../images/banners/banner-eventos.jpg'); background-position: center center;">
+<section class="slice-lg slice--offset-top has-bg-cover bg-size-cover" style="background-image: url('<?= $model->getCover()->getImage() ?>'); background-position: center center;">
     <span class="mask mask-dark--style-2"></span>
     <div class="container">
         <div class="row">

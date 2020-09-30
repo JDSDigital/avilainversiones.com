@@ -133,7 +133,7 @@ $this->title = Html::encode('Propiedades');
                                     </li>
                                     <li class="heading strong-400 text-center col-xs-4">
                                         <div class="custom-tooltip">
-                                            <i class="icon-hotel-restaurant-022"></i> <?= $property->rooms ?>
+                                            <i class="icon-hotel-restaurant-022"></i> <?= $property->rooms ? $property->rooms : 0 ?>
                                             <div class="custom-tooltip-hover">
                                                 <h6 class="c-gray-lighter">Habitaciones</h6>
                                             </div>
@@ -141,7 +141,7 @@ $this->title = Html::encode('Propiedades');
                                     </li>
                                     <li class="heading strong-400 text-center col-xs-4">
                                         <div class="custom-tooltip">
-                                            <i class="icon-hotel-restaurant-158"></i> <?= $property->toilets ?>
+                                            <i class="icon-hotel-restaurant-158"></i> <?= $property->toilets ? $property->toilets : 0 ?>
                                             <div class="custom-tooltip-hover">
                                                 <h6 class="c-gray-lighter">Baños</h6>
                                             </div>
@@ -149,7 +149,7 @@ $this->title = Html::encode('Propiedades');
                                     </li>
                                     <li class="heading strong-400 text-center col-xs-4">
                                         <div class="custom-tooltip">
-                                            <i class="icon-hotel-restaurant-098"></i> <?= $property->garage ?>
+                                            <i class="icon-hotel-restaurant-098"></i> <?= $property->garage ? $property->garage : 0 ?>
                                             <div class="custom-tooltip-hover">
                                                 <h6 class="c-gray-lighter">Estacionamiento</h6>
                                             </div>
@@ -157,7 +157,7 @@ $this->title = Html::encode('Propiedades');
                                     </li>
                                     <li class="heading strong-400 text-center col-xs-4">
                                         <div class="custom-tooltip">
-                                            <i class="icon-hotel-restaurant-202"></i> <?= $property->pantry ?>
+                                            <i class="icon-hotel-restaurant-202"></i> <?= $property->pantry ? $property->pantry : 0 ?>
                                             <div class="custom-tooltip-hover">
                                                 <h6 class="c-gray-lighter">Bodega</h6>
                                             </div>

@@ -175,24 +175,38 @@ $this->title = 'Propiedad';
                         <div class="row">
                             <div class="col-sm-4">
                                 <dl>
-                                    <dt>Tamaño:</dt>
-                                    <dd><?= Html::encode($property->getArea()) ?></dd>
                                     <dt>Precio:</dt>
                                     <dd><?= Yii::$app->formatter->asCurrency($property->price) ?></dd>
                                 </dl>
                             </div>
                             <div class="col-sm-4">
                                 <dl>
+                                    <dt>Tamaño:</dt>
+                                    <dd><?= Html::encode($property->getArea()) ?></dd>
+                                </dl>
+                            </div>
+                            <div class="col-sm-4">
+                                <dl>
                                     <dt>Habitaciones:</dt>
-                                    <dd><?= Html::encode($property->rooms) ?></dd>
+                                    <dd><?= Html::encode($property->rooms ? $property->rooms : 0) ?></dd>
+                                </dl>
+                            </div>
+                            <div class="col-sm-4">
+                                <dl>
                                     <dt>Baños:</dt>
-                                    <dd><?= Html::encode($property->toilets) ?></dd>
+                                    <dd><?= Html::encode($property->toilets ? $property->toilets : 0) ?></dd>
                                 </dl>
                             </div>
                             <div class="col-sm-4">
                                 <dl>
                                     <dt>Estacionamiento:</dt>
-                                    <dd><?= Html::encode($property->garage) ?></dd>
+                                    <dd><?= Html::encode($property->garage ? $property->garage : 0) ?></dd>
+                                </dl>
+                            </div>
+                            <div class="col-sm-4">
+                                <dl>
+                                    <dt>Bodega:</dt>
+                                    <dd><?= Html::encode($property->pantry ? $property->pantry : 0) ?></dd>
                                 </dl>
                             </div>
                         </div>
