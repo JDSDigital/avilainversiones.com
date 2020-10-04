@@ -160,7 +160,7 @@ $url = Yii::getAlias('@web') . '/images/banners/banner-contacto.jpg';
                 <h3 class="heading heading-3 strong-300">
                     Avenida Presidente Kennedy 5600.
                     <br>
-                    Santiago, Chile.
+                    Vitacura, Chile.
                 </h3>
 
                 <p class="lead mt-4 mb-4">

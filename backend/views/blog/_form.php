@@ -39,6 +39,10 @@ $template = '<div class="form-group row">
             'rows' => 4
         ]) ?>
 
+        <?= $form->field($model, 'author', [
+            'template' => $template,
+        ])->textInput(['maxlength' => true, 'class' => 'form-control']) ?>
+
         <?= $form->field($model, 'source', [
             'template' => $template,
         ])->textInput(['maxlength' => true, 'class' => 'form-control']) ?>

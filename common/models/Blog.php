@@ -57,7 +57,7 @@ class Blog extends \yii\db\ActiveRecord
             [['user_id', 'title', 'article'], 'required'],
             [['article'], 'string'],
             [['user_id', 'views', 'status'], 'integer'],
-            [['title', 'summary', 'file', 'thumb'], 'string', 'max' => 255],
+            [['title', 'summary', 'author', 'file', 'thumb'], 'string', 'max' => 255],
             ['source', 'url', 'defaultScheme' => 'https'],
         ];
     }
@@ -74,6 +74,7 @@ class Blog extends \yii\db\ActiveRecord
             'summary' => 'Resumen',
             'article' => 'Artículo',
             'thumb' => 'Miniatura',
+            'author' => 'Autor',
             'file' => 'Archivo',
             'source' => 'Fuente',
             'views' => 'Vistas',
