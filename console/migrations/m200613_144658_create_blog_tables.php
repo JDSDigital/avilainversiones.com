@@ -24,6 +24,7 @@ class m200613_144658_create_blog_tables extends Migration
             'title' => $this->string()->notNull(),
             'summary' => $this->string()->null(),
             'article' => $this->text()->notNull(),
+            'author' => $this->string()->null(),
             'thumb' => $this->string()->null(),
             'file' => $this->string()->null(),
             'source' => $this->string()->null(),

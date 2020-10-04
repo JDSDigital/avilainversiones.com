@@ -174,7 +174,7 @@ $this->title = Yii::$app->name;
                             <div class="author-info">
                               <div class="author-name">
                                   <i class="fa fa-user mr-1"></i>
-                                  <?= Html::a($entry->user->name, ['blog/view', 'id' => $entry->id], ['class' => 'strong-600']) ?>
+                                  <?= Html::a($entry->author ? $entry->author : $entry->user->name, ['blog/view', 'id' => $entry->id], ['class' => 'strong-600']) ?>
                               </div>
                             </div>
                           </div>

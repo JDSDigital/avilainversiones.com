@@ -26,6 +26,8 @@ $this->title = Html::encode('Blog');
                     <?= $model->article ?>
                 </div>
                 <div class="mt-3">
+                    <?= '<i class="fa fa-user mr-2"></i>'.($model->author ? $model->author : $model->user->name) ?>	
+                    <br />
                     <?php if ($model->source) : ?>
                         <?= 'Fuente: ' . Html::a($model->source, $model->source, ['target' => 'blank']) ?>
                     <?php endif; ?>

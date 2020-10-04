@@ -249,7 +249,7 @@ AppAsset::register($this);
                             Contáctanos
                         </h4>
                         <p class="mt-3 mb-1">+56 9 5614 2921</p>
-                        <p class="my-1">Avenida Presidente Kennedy 5600, Santiago, Chile.</p>
+                        <p class="my-1">Avenida Presidente Kennedy 5600, Vitacura, Chile.</p>
 
                         <ul class="social-media social-media--style-1-v4">
                             <li>
