@@ -25,6 +25,24 @@ $this->title = Html::encode('Cursos');
     </div>
 </section>
 
+<section class="has-bg-cover bg-size-cover" style="background-image: url('./images/banners/banner-cursos-2.jpg'); background-position: center;">
+    <span class="mask mask-dark--style-2"></span>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-right">
+                <div class="py-5">
+                    <p class="heading-xl text-uppercase c-white line-height-1_2">
+                        Estamos <strong>creando</strong>
+                    </p>
+                    <p class="heading-1 text-uppercase color-golden">
+                        Los mejores cursos para ti
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="slice sct-color-1">
     <div class="container">
         <?php if (count($models) > 0) : ?>
@@ -35,7 +53,7 @@ $this->title = Html::encode('Cursos');
                             <div class="card z-depth-2-top">
                                 <div class="row ">
                                     <div class="col-md-5 crop-course">
-                                        <?= Html::img('@web/images/courses/'.$course->file, ['class' => 'img-fluid']) ?>
+                                        <?= Html::img('@web/images/courses/' . $course->file, ['class' => 'img-fluid']) ?>
                                     </div>
                                     <div class="col-md-7">
                                         <div class="card-body">

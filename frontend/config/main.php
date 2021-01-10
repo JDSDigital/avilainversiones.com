@@ -52,6 +52,7 @@ return [
                 'contacto' => 'site/contact',
                 'blog' => 'blog/index',
                 'blog/<id:\d+>' => 'blog/view',
+                'blog/<title:[A-Za-z-]+>' => 'blog/view',
                 'propiedades' => 'properties/index',
                 'propiedades/<id:\d+>' => 'properties/view',
                 'eventos' => 'events/index',

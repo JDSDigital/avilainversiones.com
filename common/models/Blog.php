@@ -199,6 +199,11 @@ class Blog extends \yii\db\ActiveRecord
         return $this->hasOne(User::className(), ['id' => 'user_id']);
     }
 
+    public function getSeoTitle(): string
+    {
+        return str_replace(' ', '-', strtolower( $this->title ));
+    }
+
     /**
      * {@inheritdoc}
      * @return BlogQuery the active query used by this AR class.

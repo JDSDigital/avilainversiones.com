@@ -100,14 +100,14 @@
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
 
-  &:hover {
-    background: $golden-gradient-inverse;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-transition: all 1s ease;
-    transition: all 1s ease;
-  }
+  // &:hover {
+  //   background: $golden-gradient-inverse;
+  //   background-clip: text;
+  //   -webkit-background-clip: text;
+  //   -webkit-text-fill-color: transparent;
+  //   -webkit-transition: all 1s ease;
+  //   transition: all 1s ease;
+  // }
 }
 
 .alliances {
@@ -250,4 +250,8 @@
   border-width: 2px;
   border-style: solid;
   border-image: $golden-gradient-box;
+}
+.vertical-align {
+  display: flex;
+  align-items: center;
 }

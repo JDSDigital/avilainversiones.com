@@ -22814,15 +22814,6 @@ pre {
   transition: all 1s ease;
 }
 
-.text-golden-gradient:hover {
-  background: linear-gradient(to right, gold, #be9418, gold);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
-}
-
 .alliances {
   padding: 50px;
 }
@@ -22961,4 +22952,9 @@ pre {
   border-width: 2px;
   border-style: solid;
   border-image: linear-gradient(130deg, rgba(190, 148, 24, 0.9), gold, rgba(190, 148, 24, 0.9)) 1;
+}
+
+.vertical-align {
+  display: flex;
+  align-items: center;
 }

@@ -37,14 +37,18 @@ $this->title = Html::encode('Blog');
                           <div class="view view-first crop-blog">
                             <?= Html::a(
                                 Html::img('@web/images/blog/thumbs/'.$entry->thumb),
-                                ['blog/view', 'id' => $entry->id]
+                                ['blog/view', 'title' => $entry->getSeoTitle()]
                             ) ?>
                           </div>
                         </div>
 
                         <div class="card-body">
                           <h3 class="heading heading-3 strong-600 mb-0">
-                            <?= Html::a($entry->title, ['blog/view', 'id' => $entry->id]) ?>
+                            <?= 
+                              Html::a(
+                                $entry->title,
+                                ['blog/view', 'title' => $entry->getSeoTitle()]
+                            ) ?>
                           </h3>
                           <p class="heading-6">
                               <?= Html::encode($entry->summary) ?>
@@ -58,7 +62,11 @@ $this->title = Html::encode('Blog');
                                 <div class="author-info">
                                   <div class="author-name">
                                       <i class="fa fa-user mr-1"></i>
-                                      <?= Html::a($entry->author ? $entry->author : $entry->user->name, ['blog/view', 'id' => $entry->id], ['class' => 'strong-600']) ?>
+                                      <?= Html::a(
+                                        $entry->author ? $entry->author : $entry->user->name, 
+                                        ['blog/view', 'title' => $entry->getSeoTitle()],
+                                        ['class' => 'strong-600']
+                                      ) ?>
                                   </div>
                                 </div>
                               </div>
