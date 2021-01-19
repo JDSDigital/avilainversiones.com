@@ -73,7 +73,7 @@ class SiteController extends Controller
     {
         $blogs = Blog::find()
         ->active()
-        ->orderBy(['created_at' => SORT_DESC])
+        ->orderBy(['created_at' => SORT_ASC])
         ->limit(3)
         ->all();
 

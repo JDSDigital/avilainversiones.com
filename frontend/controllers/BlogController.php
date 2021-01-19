@@ -57,7 +57,7 @@ class BlogController extends \yii\web\Controller
     {
 
         $model = Blog::find()
-            ->where(['like', 'title', str_replace('-', ' ', $title) . '%', false])
+            ->where(['like', 'title', Blog::sanitizeString($title), false])
             ->one();
 
         if ($model !== null) {
