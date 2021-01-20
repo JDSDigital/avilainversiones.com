@@ -228,6 +228,54 @@ $this->title = 'Empresa';
                     </div>
                 </div>
             </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="block block--style-3 block--style-3-v2">
+                    <div class="block-image">
+                        <img src="./images/prv/team/gustavo.jpg">
+                    </div>
+                    <div class="block-body text-center py-3">
+                        <h3 class="heading heading-6 strong-600 mb-0">Gustavo Méndez</h3>
+                        <h4 class="heading heading-sm strong-300 mb-0">Asesor Inmobiliario</h4>
+                    </div>
+                    <div class="block-body border-top border-color-golden py-3">
+                        <!-- <p class="mb-0">
+                            Quisque ut nulla at nunc vehicula lacinia proin adipiscing porta tellus feugiat.
+                        </p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="block block--style-3 block--style-3-v2">
+                    <div class="block-image">
+                        <img src="./images/prv/team/daniel.jpg">
+                    </div>
+                    <div class="block-body text-center py-3">
+                        <h3 class="heading heading-6 strong-600 mb-0">Daniel Sánchez</h3>
+                        <h4 class="heading heading-sm strong-300 mb-0">Asesor Inmobiliario</h4>
+                    </div>
+                    <div class="block-body border-top border-color-golden py-3">
+                        <!-- <p class="mb-0">
+                            Quisque ut nulla at nunc vehicula lacinia proin adipiscing porta tellus feugiat.
+                        </p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="block block--style-3 block--style-3-v2">
+                    <div class="block-image">
+                        <img src="./images/prv/team/irene.jpg">
+                    </div>
+                    <div class="block-body text-center py-3">
+                        <h3 class="heading heading-6 strong-600 mb-0">Irene López</h3>
+                        <h4 class="heading heading-sm strong-300 mb-0">Encargada de Marketing</h4>
+                    </div>
+                    <div class="block-body border-top border-color-golden py-3">
+                        <!-- <p class="mb-0">
+                            Quisque ut nulla at nunc vehicula lacinia proin adipiscing porta tellus feugiat.
+                        </p> -->
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>

@@ -178,7 +178,7 @@ $url = Yii::getAlias('@web') . '/images/banners/banner-contacto.jpg';
                             Oficina:
                         </p>
                         <p class="lead mb-0">
-                            +56 2 3252 9122
+                            +56 2 3339 9467
                         </p>
                     </div>
                 </div>
