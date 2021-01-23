@@ -199,7 +199,8 @@ AppAsset::register($this);
                             )
                         ?>
                         <span class="clearfix"></span>
-                        <p class="mt-3">Aprende uno de los negocios más lucrativos del mundo de la mano de expertos.</p>
+                        <p class="mt-3 d-none d-sm-block">Aprende uno de los negocios más lucrativos del mundo<br />de la mano de expertos.</p>
+                        <p class="mt-3 d-sm-none">Aprende uno de los negocios más lucrativos del mundo de la mano de expertos.</p>
                     </div>
                 </div>
 
