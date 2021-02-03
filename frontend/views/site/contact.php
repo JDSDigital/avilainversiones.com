@@ -49,131 +49,161 @@ $url = Yii::getAlias('@web') . '/images/banners/banner-contacto.jpg';
                         'class' => 'form-default form-material'
                     ],
                 ]); ?>
-                    <div class="row">
-                        <div class="col-12">
-                            <?= $form->field($model, 'name', [
-                                'template' => '<div class="form-group has-floating-label">
+                <div class="row">
+                    <div class="col-12">
+                        <?= $form->field($model, 'name', [
+                            'template' => '<div class="form-group has-floating-label">
                                     {label}
                                     {input}
                                     <span class="bar"></span>
                                     {error}
                                 </div>',
-                                'labelOptions' => [
-                                    'class' => 'control-label'
-                                ]
-                            ])->textInput([
-                                'autofocus' => true,
-                                'class' => 'form-control form-control-lg',
-                            ]) ?>
-                        </div>
+                            'labelOptions' => [
+                                'class' => 'control-label'
+                            ]
+                        ])->textInput([
+                            'autofocus' => true,
+                            'class' => 'form-control form-control-lg',
+                        ]) ?>
                     </div>
-                    <div class="row">
-                        <div class="col-12">
+                </div>
+                <div class="row">
+                    <div class="col-12">
 
-                            <?= $form->field($model, 'email', [
-                                'template' => '<div class="form-group has-floating-label">
+                        <?= $form->field($model, 'email', [
+                            'template' => '<div class="form-group has-floating-label">
                                     {label}
                                     {input}
                                     <span class="bar"></span>
                                     {error}
                                 </div>',
-                                'labelOptions' => [
-                                    'class' => 'control-label'
-                                ]
-                            ])->textInput([
-                                'class' => 'form-control form-control-lg',
-                            ]) ?>
-                        </div>
+                            'labelOptions' => [
+                                'class' => 'control-label'
+                            ]
+                        ])->textInput([
+                            'class' => 'form-control form-control-lg',
+                        ]) ?>
                     </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <?= $form->field($model, 'subject', [
-                                'template' => '<div class="form-group has-floating-label">
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <?= $form->field($model, 'subject', [
+                            'template' => '<div class="form-group has-floating-label">
                                     {label}
                                     {input}
                                     <span class="bar"></span>
                                     {error}
                                 </div>',
-                                'labelOptions' => [
-                                    'class' => 'control-label'
-                                ]
-                            ])->textInput([
-                                'class' => 'form-control form-control-lg',
-                            ]) ?>
-                        </div>
+                            'labelOptions' => [
+                                'class' => 'control-label'
+                            ]
+                        ])->textInput([
+                            'class' => 'form-control form-control-lg',
+                        ]) ?>
                     </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <?= $form->field($model, 'body', [
-                                'template' => '<div class="form-group has-floating-label">
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <?= $form->field($model, 'body', [
+                            'template' => '<div class="form-group has-floating-label">
                                     {label}
                                     {input}
                                     <span class="bar"></span>
                                     {error}
                                 </div>',
-                                'labelOptions' => [
-                                    'class' => 'control-label'
-                                ]
-                            ])->textarea([
-                                'rows' => 6,
-                                'class' => 'form-control form-control-lg',
-                            ]) ?>
-                        </div>
+                            'labelOptions' => [
+                                'class' => 'control-label'
+                            ]
+                        ])->textarea([
+                            'rows' => 6,
+                            'class' => 'form-control form-control-lg',
+                        ]) ?>
                     </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <?= $form->field($model, 'verifyCode', [
-                                'template' => '<div class="form-group has-floating-label">
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <?= $form->field($model, 'verifyCode', [
+                            'template' => '<div class="form-group has-floating-label">
                                     {label}
                                     {input}
                                     <span class="bar"></span>
                                     {error}
                                 </div>',
-                                'labelOptions' => [
-                                    'class' => 'control-label'
-                                ]
-                            ])->widget(Captcha::className(), [
-                                'template' => '<div class="row">
+                            'labelOptions' => [
+                                'class' => 'control-label'
+                            ]
+                        ])->widget(Captcha::className(), [
+                            'template' => '<div class="row">
                                     <div class="col-sm-9">{input}<span class="bar"></span></div>
                                     <div class="col-sm-3">{image}</div>
                                 </div>',
-                                'options' => [
-                                    'class' => 'form-control form-control-xl',
-                                ]
+                            'options' => [
+                                'class' => 'form-control form-control-xl',
+                            ]
+                        ]) ?>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <?= Html::submitButton('Enviar mensaje', [
+                                'class' => 'btn btn-styled btn-golden btn-circle mt-3 text-uppercase strong-400',
+                                'name' => 'contact-button'
                             ]) ?>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="form-group">
-                                <?= Html::submitButton('Enviar mensaje', [
-                                    'class' => 'btn btn-styled btn-golden btn-circle mt-3 text-uppercase strong-400',
-                                    'name' => 'contact-button'
-                                ]) ?>
-                            </div>
-                        </div>
-                    </div>
+                </div>
                 <?php ActiveForm::end(); ?>
             </div>
 
             <div class="col-lg-5 ml-lg-auto mt-5">
-                <h3 class="heading heading-3 strong-300">
-                    Avenida Presidente Kennedy 5600.
-                    <br>
-                    Vitacura, Chile.
-                </h3>
-
-                <p class="lead mt-4 mb-4">
-                    Contáctanos: +56 9 5614 2921
-                </p>
+                <div class="row vertical-align mb-3">
+                    <div class="col-xs-2">
+                        <i class="text-golden-gradient fa fa-map-marker fa-2x mx-3"></i>
+                    </div>
+                    <div class="col-xs-10">
+                        <p class="lead mb-0">
+                            Avenida Presidente Kennedy 5600.
+                            <br />
+                            Vitacura, Chile.
+                        </p>
+                    </div>
+                </div>
+                <div class="row vertical-align mb-3">
+                    <div class="col-xs-2">
+                        <i class="text-golden-gradient fa fa-phone fa-2x mx-3"></i>
+                    </div>
+                    <div class="col-xs-10">
+                        <p class="font-italic mb-0">
+                            Oficina:
+                        </p>
+                        <p class="lead mb-0">
+                            +56 2 3339 9467
+                        </p>
+                    </div>
+                </div>
+                <div class="row vertical-align mb-3">
+                    <div class="col-xs-2">
+                        <i class="text-golden-gradient fa fa-phone fa-2x mx-3"></i>
+                    </div>
+                    <div class="col-xs-10">
+                        <p class="font-italic mb-0">
+                            Móvil:
+                        </p>
+                        <p class="lead mb-0">
+                            <?= Html::a(
+                                '+56 9 5614 2921',
+                                'https://wa.me/56956142921',
+                                ['target' => '_blank', 'class' => 'c-white']
+                            ) ?>
+                        </p>
+                    </div>
+                </div>
 
                 <?= Html::a(
                     Html::img('@web/images/elements/direccion.png', ['class' => 'img-fluid']),
-                    Yii::getAlias('@web') . '/images/elements/direccion.png',
-                    [
-                        'class' => 'item',
-                        'data-fancybox' => true
-                    ]
+                    'https://goo.gl/maps/WNBrJ1CVJECs7gBC6',
+                    ['target' => '_blank']
                 ) ?>
 
             </div>

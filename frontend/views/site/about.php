@@ -116,118 +116,24 @@ $this->title = 'Empresa';
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-lg-4 col-md-6">
-                <div class="block block--style-3 block--style-3-v2">
-                    <div class="block-image">
-                        <img src="./images/prv/team/ruben.jpg">
-                    </div>
-                    <div class="block-body text-center py-3">
-                        <h3 class="heading heading-6 strong-600 mb-0">Rubén Ávila</h3>
-                        <h4 class="heading heading-sm strong-300 mb-0">CEO - Presidente Ávila Inversiones</h4>
-                    </div>
-                    <div class="block-body border-top border-color-golden py-3">
-                        <!-- <p class="mb-0">
-                            Quisque ut nulla at nunc vehicula lacinia proin adipiscing porta tellus feugiat.
-                        </p> -->
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="block block--style-3 block--style-3-v2">
-                    <div class="block-image">
-                        <img src="./images/prv/team/rita.jpg">
-                    </div>
-                    <div class="block-body text-center py-3">
-                        <h3 class="heading heading-6 strong-600 mb-0">Rita Rivera</h3>
-                        <h4 class="heading heading-sm strong-300 mb-0">Asistente Administrativo</h4>
-                    </div>
-                    <div class="block-body border-top border-color-golden py-3">
-                        <!-- <p class="mb-0">
-                            Quisque ut nulla at nunc vehicula lacinia proin adipiscing porta tellus feugiat.
-                        </p> -->
+            <?php foreach ($employees as $employee) : ?>
+                <div class="col-lg-4 col-md-6">
+                    <div class="block block--style-3 block--style-3-v2">
+                        <div class="block-image">
+                            <img src="./images/prv/team/<?= $employee['image'] ?>">
+                        </div>
+                        <div class="block-body text-center py-3">
+                            <h3 class="heading heading-6 strong-600 mb-0"><?= $employee['name'] ?></h3>
+                            <h4 class="heading heading-sm strong-300 mb-0"><?= $employee['position'] ?></h4>
+                        </div>
+                        <div class="block-body border-top border-color-golden py-3">
+                            <!-- <p class="mb-0">
+                                Quisque ut nulla at nunc vehicula lacinia proin adipiscing porta tellus feugiat.
+                            </p> -->
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="block block--style-3 block--style-3-v2">
-                    <div class="block-image">
-                        <img src="./images/prv/team/betzabe.jpg">
-                    </div>
-                    <div class="block-body text-center py-3">
-                        <h3 class="heading heading-6 strong-600 mb-0">Betzabe Ávila</h3>
-                        <h4 class="heading heading-sm strong-300 mb-0">Asesor Inmobiliario</h4>
-                    </div>
-                    <div class="block-body border-top border-color-golden py-3">
-                        <!-- <p class="mb-0">
-                            Quisque ut nulla at nunc vehicula lacinia proin adipiscing porta tellus feugiat.
-                        </p> -->
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="block block--style-3 block--style-3-v2">
-                    <div class="block-image">
-                        <img src="./images/prv/team/laura.jpg">
-                    </div>
-                    <div class="block-body text-center py-3">
-                        <h3 class="heading heading-6 strong-600 mb-0">Laura Sanchez</h3>
-                        <h4 class="heading heading-sm strong-300 mb-0">Productora Audiovisual</h4>
-                    </div>
-                    <div class="block-body border-top border-color-golden py-3">
-                        <!-- <p class="mb-0">
-                            Quisque ut nulla at nunc vehicula lacinia proin adipiscing porta tellus feugiat.
-                        </p> -->
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="block block--style-3 block--style-3-v2">
-                    <div class="block-image">
-                        <img src="./images/prv/team/anabel.jpg">
-                    </div>
-                    <div class="block-body text-center py-3">
-                        <h3 class="heading heading-6 strong-600 mb-0">Anabel Barbieri</h3>
-                        <h4 class="heading heading-sm strong-300 mb-0">Diseñadora Gráfico</h4>
-                    </div>
-                    <div class="block-body border-top border-color-golden py-3">
-                        <!-- <p class="mb-0">
-                            Quisque ut nulla at nunc vehicula lacinia proin adipiscing porta tellus feugiat.
-                        </p> -->
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="block block--style-3 block--style-3-v2">
-                    <div class="block-image">
-                        <img src="./images/prv/team/mariangela.jpg">
-                    </div>
-                    <div class="block-body text-center py-3">
-                        <h3 class="heading heading-6 strong-600 mb-0">Mariangela Naranjo</h3>
-                        <h4 class="heading heading-sm strong-300 mb-0">Gerente Comercial</h4>
-                    </div>
-                    <div class="block-body border-top border-color-golden py-3">
-                        <!-- <p class="mb-0">
-                            Quisque ut nulla at nunc vehicula lacinia proin adipiscing porta tellus feugiat.
-                        </p> -->
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="block block--style-3 block--style-3-v2">
-                    <div class="block-image">
-                        <img src="./images/prv/team/jose2.jpg">
-                    </div>
-                    <div class="block-body text-center py-3">
-                        <h3 class="heading heading-6 strong-600 mb-0">José Velásquez</h3>
-                        <h4 class="heading heading-sm strong-300 mb-0">Encargado de Finanzas</h4>
-                    </div>
-                    <div class="block-body border-top border-color-golden py-3">
-                        <!-- <p class="mb-0">
-                            Quisque ut nulla at nunc vehicula lacinia proin adipiscing porta tellus feugiat.
-                        </p> -->
-                    </div>
-                </div>
-            </div>
+            <?php endforeach; ?>
         </div>
     </div>
 </section>

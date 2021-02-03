@@ -73,7 +73,7 @@ class SiteController extends Controller
     {
         $blogs = Blog::find()
         ->active()
-        ->orderBy(['created_at' => SORT_DESC])
+        ->orderBy(['created_at' => SORT_ASC])
         ->limit(3)
         ->all();
 
@@ -136,9 +136,62 @@ class SiteController extends Controller
     public function actionAbout()
     {
         $statistics = Statistics::find()->active()->all();
+        $employees = [
+            [
+                "name" => "Rubén Ávila",
+                "position" => "CEO - Presidente Ávila Inversiones",
+                "image" => "ruben.jpg",
+            ],
+            [
+                "name" => "Mariangela Naranjo",
+                "position" => "Gerente Comercial",
+                "image" => "mariangela.jpg",
+            ],
+            [
+                "name" => "José Velásquez",
+                "position" => "Encargado de Finanzas",
+                "image" => "jose.jpg",
+            ],
+            [
+                "name" => "Rita Rivera",
+                "position" => "Asistente Administrativo",
+                "image" => "rita.jpg",
+            ],
+            [
+                "name" => "Irene López",
+                "position" => "Encargada de Marketing",
+                "image" => "irene.jpg",
+            ],
+            [
+                "name" => "Anabel Barbieri",
+                "position" => "Diseñadora Gráfico",
+                "image" => "anabel.jpg",
+            ],
+            [
+                "name" => "Laura Sanchez",
+                "position" => "Productora Audiovisual",
+                "image" => "laura.jpg",
+            ],
+            [
+                "name" => "Betzabe Ávila",
+                "position" => "Asesor Inmobiliario",
+                "image" => "betzabe.jpg",
+            ],
+            [
+                "name" => "Gustavo Méndez",
+                "position" => "Asesor Inmobiliario",
+                "image" => "gustavo.jpg",
+            ],
+            [
+                "name" => "Daniel Sánchez",
+                "position" => "Asesor Inmobiliario",
+                "image" => "daniel.jpg",
+            ],
+        ];
 
         return $this->render('about', [
-            'statistics' => $statistics
+            'statistics' => $statistics,
+            'employees' => $employees,
         ]);
     }
 

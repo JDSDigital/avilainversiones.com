@@ -199,6 +199,30 @@ class Blog extends \yii\db\ActiveRecord
         return $this->hasOne(User::className(), ['id' => 'user_id']);
     }
 
+    public function getSeoTitle(): string
+    {
+        $string = str_replace(' ', '-', strtolower( $this->title ));
+        $string = str_replace('á', 'a', strtolower( $string ));
+        $string = str_replace('Á', 'a', strtolower( $string ));
+        $string = str_replace('é', 'e', strtolower( $string ));
+        $string = str_replace('É', 'e', strtolower( $string ));
+        $string = str_replace('í', 'i', strtolower( $string ));
+        $string = str_replace('Í', 'i', strtolower( $string ));
+        $string = str_replace('ó', 'o', strtolower( $string ));
+        $string = str_replace('Ó', 'o', strtolower( $string ));
+        $string = str_replace('ú', 'u', strtolower( $string ));
+        $string = str_replace('Ú', 'u', strtolower( $string ));
+
+        return $string;
+    }
+
+    static function sanitizeString($string): string
+    {
+        $string = str_replace('-', ' ', strtolower( $string ));
+
+        return $string;
+    }
+
     /**
      * {@inheritdoc}
      * @return BlogQuery the active query used by this AR class.

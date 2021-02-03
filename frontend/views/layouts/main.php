@@ -199,7 +199,8 @@ AppAsset::register($this);
                             )
                         ?>
                         <span class="clearfix"></span>
-                        <p class="mt-3">Aprende uno de los negocios más lucrativos del mundo de la mano de expertos.</p>
+                        <p class="mt-3 d-none d-sm-block">Aprende uno de los negocios más lucrativos del mundo<br />de la mano de expertos.</p>
+                        <p class="mt-3 d-sm-none">Aprende uno de los negocios más lucrativos del mundo de la mano de expertos.</p>
                     </div>
                 </div>
 
@@ -248,7 +249,7 @@ AppAsset::register($this);
                         <h4 class="heading heading-sm strong-600 text-uppercase mb-1">
                             Contáctanos
                         </h4>
-                        <p class="mt-3 mb-1">+56 9 5614 2921</p>
+                        <p class="mt-3 mb-1">+56 2 3339 9467</p>
                         <p class="my-1">Avenida Presidente Kennedy 5600, Vitacura, Chile.</p>
 
                         <ul class="social-media social-media--style-1-v4">
