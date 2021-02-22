@@ -148,11 +148,6 @@ class SiteController extends Controller
                 "image" => "mariangela.jpg",
             ],
             [
-                "name" => "José Velásquez",
-                "position" => "Encargado de Finanzas",
-                "image" => "jose.jpg",
-            ],
-            [
                 "name" => "Rita Rivera",
                 "position" => "Asistente Administrativo",
                 "image" => "rita.jpg",
@@ -186,6 +181,21 @@ class SiteController extends Controller
                 "name" => "Daniel Sánchez",
                 "position" => "Asesor Inmobiliario",
                 "image" => "daniel.jpg",
+            ],
+            [
+                "name" => "Airuska Ayala",
+                "position" => "Recepcionista",
+                "image" => "airuska.jpg",
+            ],
+            [
+                "name" => "Jinette Brizuela",
+                "position" => "Gerente de Finanzas",
+                "image" => "jinette.jpg",
+            ],
+            [
+                "name" => "Egueisa Jimenez",
+                "position" => "Encargada de Corretaje de Propiedades",
+                "image" => "egueisa.jpg",
             ],
         ];
 
