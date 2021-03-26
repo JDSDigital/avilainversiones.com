@@ -114,7 +114,7 @@ $this->title = Html::encode('Propiedades');
                             <div class="block-image relative">
                                 <div class="view view-first crop-blog">
                                     <?= Html::a(
-                                        Html::img($property->getCover()->getThumb(), ['class' => 'img-fluid']),
+                                        Html::img($property->getCover() ? $property->getCover()->getThumb() : Yii::getAlias('@web/images/logo/isotipo-golden.png'), ['class' => 'img-fluid']),
                                         ['properties/view', 'id' => $property->id]
                                     ) ?>
                                 </div>

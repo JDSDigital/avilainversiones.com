@@ -96,8 +96,8 @@ $this->title = 'Propiedad';
                     <!-- Gallery -->
                     <div class="gallery-top">
                         <?= Html::a(
-                            Html::img($property->getCover()->getImage()),
-                            $property->getCover()->getImage(),
+                            Html::img($property->getCover() ? $property->getCover()->getImage() : Yii::getAlias('@web/images/logo/isotipo-golden.png')),
+                            $property->getCover() ? $property->getCover()->getImage() : Yii::getAlias('@web/images/logo/isotipo-golden.png'),
                             [
                                 'class' => 'item',
                                 'data-fancybox' => true
